@@ -1,18 +1,14 @@
-import {
-  world,
-  system,
-  ItemStack
-} from "@minecraft/server";
+import { world, system, ItemStack } from "@minecraft/server";
 
 export class TeraManager {
   constructor() {
-    // Initialize dynamic properties for all players on join.
+    // Initialize dynamic properties for each player when they join.
     world.afterEvents.playerJoin.subscribe(event => {
       this.initializePlayer(event.player);
     });
     world.getPlayers().forEach(player => this.initializePlayer(player));
 
-    // Run the update loop every tick.
+    // Run our update loop every tick.
     system.runInterval(() => this.update(), 1);
   }
 
@@ -30,12 +26,13 @@ export class TeraManager {
   }
 
   update() {
-    // Run all our update methods.
+    // Call all update methods each tick.
     this.giveTeraGuide();
     this.giveOrClearDodgeItem();
     this.updateArrowTags();
     this.teleportBasedOnScore();
-    this.updateReaperSummon(); 
+    this.updateReaperSummon();
+    this.updateReaperVictim();
     this.updateBossEffects();
     this.clearAreaAroundBosses();
     this.killBossNearbyEntities();
@@ -45,15 +42,15 @@ export class TeraManager {
     this.fixItemsInLava();
     this.updateFog();
     this.updateShulkLive();
-    this.updateReaperVictim();
     this.updateSoulStorm();
+    // Additional methods can be called here as needed.
   }
 
   // ─────────────────────────────────────────────
-  // Player Methods
+  // Player Item & Tag Management
 
   giveTeraGuide() {
-    // Give the guide item to players without the tag "tg_given2".
+    // Equivalent to: give @a[tag=!tg_given2] tera:teronic_guide 1 0; tag @a[tag=!tg_given2] add tg_given2
     world.getPlayers().forEach(player => {
       if (!player.hasTag("tg_given2")) {
         const inv = player.getComponent("minecraft:inventory")?.container;
@@ -67,12 +64,13 @@ export class TeraManager {
   }
 
   giveOrClearDodgeItem() {
-    // Give dodge item to players without "td_given"; if tagged "gindable", clear dodge items.
+    // Equivalent to giving the dodge item if not given, or clearing it if the player is tagged "gindable"
     world.getPlayers().forEach(player => {
       const inv = player.getComponent("minecraft:inventory")?.container;
       if (!player.hasTag("td_given")) {
         if (inv) {
           const dodge = new ItemStack("tera:tera_dodge_off", 1, 0);
+          // Set extra data on the item.
           dodge.setData({
             "minecraft:item_lock": { mode: "lock_in_inventory" },
             "minecraft:keep_on_death": {}
@@ -88,7 +86,7 @@ export class TeraManager {
   }
 
   updateArrowTags() {
-    // Update arrow tags based on the player's offhand item.
+    // Check offhand for specific arrow items and add/remove tags accordingly.
     const arrowTypes = ["earth", "ice", "lightning", "diamond", "iron", "fire"];
     world.getPlayers().forEach(player => {
       const offhand = player.getItemInSlot("slot.weapon.offhand");
@@ -104,63 +102,60 @@ export class TeraManager {
     });
   }
 
+  // ─────────────────────────────────────────────
+  // Teleportation & Dynamic Reaper Palace
+
   teleportBasedOnScore() {
-    // Adjust player's rpr_pal_ent score and teleport them based on its value.
+    // Instead of hardcoded coordinates, read the current Reaper Palace location from world dynamic properties.
+    const palace = world.getDynamicProperty("reaper_palace");
+    if (!palace) return; // No palace defined.
+    
     world.getPlayers().forEach(player => {
       let score = player.getDynamicProperty("rpr_pal_ent") || 0;
       if (score >= 1) {
+        // Decrement the player's score over time.
         player.setDynamicProperty("rpr_pal_ent", score - 1);
       }
-      let target = null;
-      if (score >= 900 && score <= 1200) {
-        target = { pos: { x: 75087, y: 210, z: 75333 }, facing: { x: 0, y: -2, z: 0 } };
-      } else if (score >= 600 && score <= 899) {
-        target = { pos: { x: 75090, y: 220, z: 75287 }, facing: { x: 0, y: -2, z: 0 } };
-      } else if (score >= 300 && score <= 499) {
-        target = { pos: { x: 75037, y: 220, z: 75331 }, facing: { x: 0, y: -2, z: 0 } };
-      } else if (score >= 5 && score <= 299) {
-        target = { pos: { x: 75032, y: 202, z: 75277 }, facing: { x: 0, y: -2, z: 0 } };
-      } else if (score >= 1 && score <= 4) {
-        target = { pos: { x: 75063, y: 175, z: 75366 }, facing: { x: 75063, y: 177, z: 75362 } };
-      }
-      if (target) {
-        player.teleport(target.pos, { facingLocation: target.facing });
-        // Display an actionbar message.
+      // When the score is high enough, teleport the player to the current palace location.
+      if (score >= 900) {
+        player.teleport(palace.pos, { facingLocation: palace.facing });
         player.nameTag = "The Reaper's Palace forms before you...";
+        // Apply effects using string names.
         if (score >= 3) {
-          player.addEffect(MinecraftEffectTypes.Resistance, 5, { amplifier: 255 });
-          player.addEffect(MinecraftEffectTypes.Invisibility, 5, { amplifier: 255 });
+          player.addEffect("minecraft:resistance", 5, { amplifier: 255 });
+          player.addEffect("minecraft:invisibility", 5, { amplifier: 255 });
         } else {
-          player.removeEffect(MinecraftEffectTypes.Resistance);
-          player.removeEffect(MinecraftEffectTypes.Invisibility);
+          player.removeEffect("minecraft:resistance");
+          player.removeEffect("minecraft:invisibility");
         }
       }
     });
   }
 
-  // ─────────────────────────────────────────────
-  // Dynamic Reaper Summon Logic
-
   updateReaperSummon() {
-    // This method dynamically "summons" the reaper when a player's rpr_pal_ent score is in the 900–1200 range.
-    // It spawns a reaper entity near the player if they haven't already triggered a summon.
+    // This method dynamically summons the reaper when a player's "rpr_pal_ent" score is high.
+    // Additionally, if the player is standing on a special block (e.g. "tera:soul_bedrock"), a reaper checkpoint is spawned.
     const dim = world.getDimension("overworld");
     world.getPlayers().forEach(player => {
       const score = player.getDynamicProperty("rpr_pal_ent") || 0;
-      // When score is between 900 and 1200, summon the reaper if not already summoned.
       if (score >= 900 && score <= 1200 && !player.hasTag("reaper_summoned")) {
-        // For example, spawn the reaper 2 blocks to the east of the player.
-        const spawnLoc = {
-          x: player.location.x + 2,
-          y: player.location.y,
-          z: player.location.z
-        };
-        dim.spawnEntity("tera:reaper", spawnLoc);
-        player.addTag("reaper_summoned");
-        // Optionally, send a title message.
-        player.nameTag = "The Reaper has been summoned!";
+        // Check if the player is standing on the designated block.
+        const blockBelow = dim.getBlock({
+          x: Math.floor(player.location.x),
+          y: Math.floor(player.location.y) - 1,
+          z: Math.floor(player.location.z)
+        });
+        if (blockBelow && blockBelow.id === "tera:soul_bedrock") {
+          // Spawn a reaper checkpoint at the player's location.
+          dim.spawnEntity("tera:reaper_checkpoint", {
+            x: player.location.x,
+            y: player.location.y,
+            z: player.location.z
+          });
+          player.addTag("reaper_summoned");
+          player.nameTag = "The Reaper has arrived!";
+        }
       }
-      // If the score is outside the range, clear the flag.
       if (score < 900 || score > 1200) {
         player.removeTag("reaper_summoned");
       }
@@ -168,7 +163,57 @@ export class TeraManager {
   }
 
   // ─────────────────────────────────────────────
-  // Environment & Entity Methods
+  // Reaper Victim Handling
+
+  updateReaperVictim() {
+    const dim = world.getDimension("overworld");
+    world.getPlayers().forEach(player => {
+      if (player.hasTag("reaper_victim")) {
+        ["strength", "resistance", "speed", "jump_boost", "instant_health", "regeneration", "absorption"].forEach(effect => {
+          player.removeEffect(effect);
+        });
+      }
+    });
+    ["tera:reaper_rest", "tera:reaper", "tera:reaper_checkpoint", "tera:reaper_minion"].forEach(type => {
+      dim.getEntities({ type: type }).forEach(entity => entity.addTag("r_mad"));
+    });
+    dim.getEntities({ tags: ["r_mad"] }).forEach(entity => {
+      dim.getPlayersNear(entity.location, 5).forEach(player => {
+        if (!player.hasTag("reaper_victim")) {
+          player.addTag("reaper_victim");
+        }
+      });
+    });
+    world.getPlayers().forEach(player => {
+      if (player.hasTag("reaper_victim") && !player.hasTag("reaper_victim_d")) {
+        const blockBelow = dim.getBlock({
+          x: Math.floor(player.location.x),
+          y: Math.floor(player.location.y) - 1,
+          z: Math.floor(player.location.z)
+        });
+        if (blockBelow && blockBelow.id === "tera:soul_bedrock") {
+          dim.spawnEntity("tera:reaper_checkpoint", player.location);
+          player.addTag("reaper_victim_d");
+        }
+      }
+    });
+    const checkpoints = dim.getEntities({ type: "tera:reaper_checkpoint" });
+    const reapers = dim.getEntities({ type: "tera:reaper" });
+    if (checkpoints.length && reapers.length) {
+      checkpoints[0].teleport(reapers[0].location);
+    }
+    world.getPlayers().forEach(player => {
+      if (player.hasTag("reaper_victim")) {
+        const inv = player.getComponent("minecraft:inventory")?.container;
+        if (inv) {
+          inv.clearItem("tera:reaper_spawn_egg");
+        }
+      }
+    });
+  }
+
+  // ─────────────────────────────────────────────
+  // Other Environmental & Entity Methods
 
   updateBossEffects() {
     const dim = world.getDimension("overworld");
@@ -186,25 +231,25 @@ export class TeraManager {
   }
 
   clearAreaAroundBosses() {
-    const dim = world.getDimension("the_end");
+    const dim = world.getDimension("overworld");
     const bosses = dim.getEntities({ tags: ["tera_bosses"] });
     bosses.forEach(boss => {
       const { x, y, z } = boss.location;
       dim.fillBlocks(
         { x: x + 3, y: y + 9, z: z + 3 },
-        { x: x - 3, y: y,    z: z - 3 },
+        { x: x - 3, y: y, z: z - 3 },
         "air",
         { replace: "tera:limbo_stone" }
       );
       dim.fillBlocks(
         { x: x + 3, y: y + 9, z: z + 3 },
-        { x: x - 3, y: y,    z: z - 3 },
+        { x: x - 3, y: y, z: z - 3 },
         "air",
         { replace: "dirt" }
       );
       dim.fillBlocks(
         { x: x + 7, y: y + 9, z: z + 7 },
-        { x: x - 7, y: y,    z: z - 7 },
+        { x: x - 7, y: y, z: z - 7 },
         "air",
         { replace: "fire" }
       );
@@ -241,7 +286,6 @@ export class TeraManager {
   }
 
   setGamerulesForPlayers() {
-    // Assuming actual gamerule changes are handled elsewhere.
     world.getPlayers().forEach(player => {
       if (!player.hasTag("scf_rule")) {
         player.addTag("scf_rule");
@@ -312,45 +356,6 @@ export class TeraManager {
       if (live >= 2 && !entity.hasTag("shulk_live")) {
         entity.addTag("shulk_live");
         entity.kill();
-      }
-    });
-  }
-
-  updateReaperVictim() {
-    const dim = world.getDimension("overworld");
-    world.getPlayers().forEach(player => {
-      if (player.hasTag("reaper_victim")) {
-        ["strength", "resistance", "speed", "jump_boost", "instant_health", "regeneration", "absorption"].forEach(effect => {
-          player.removeEffect(effect);
-        });
-      }
-    });
-    ["tera:reaper_rest", "tera:reaper", "tera:reaper_checkpoint", "tera:reaper_minion"].forEach(type => {
-      dim.getEntities({ type: type }).forEach(entity => entity.addTag("r_mad"));
-    });
-    dim.getEntities({ tags: ["r_mad"] }).forEach(entity => {
-      dim.getPlayersNear(entity.location, 5).forEach(player => {
-        if (!player.hasTag("reaper_victim")) {
-          player.addTag("reaper_victim");
-        }
-      });
-    });
-    const checkpoints = dim.getEntities({ type: "tera:reaper_checkpoint" });
-    const reapers = dim.getEntities({ type: "tera:reaper" });
-    if (checkpoints.length && reapers.length) {
-      checkpoints[0].teleport(reapers[0].location);
-    }
-    world.getPlayers().forEach(player => {
-      if (player.hasTag("reaper_victim")) {
-        const inv = player.getComponent("minecraft:inventory")?.container;
-        if (inv) {
-          inv.clearItem("tera:reaper_spawn_egg");
-        }
-        dim.getEntities({ location: player.location, distance: 5 }).forEach(entity => {
-          if (entity.type !== "player" && !entity.hasTag("r_mad")) {
-            entity.kill();
-          }
-        });
       }
     });
   }
