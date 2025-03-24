@@ -18,3 +18,19 @@ import { Dimension, system, world  } from "@minecraft/server";
     };
   }
 }
+
+
+
+// Method for pushing fog settings
+Player.prototype.pushFog = function (configs = fogConfigs) {
+  configs.forEach(config => {
+    system.runCommand(`fog @a push "${config.source}" "${config.target}"`);
+  });
+};
+
+// Method for popping fog settings
+Player.prototype.popFog = function (configs = fogConfigs) {
+  configs.forEach(config => {
+    system.runCommand(`fog @a pop "${config.target}"`);
+  });
+};
