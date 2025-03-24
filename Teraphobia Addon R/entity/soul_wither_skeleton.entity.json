@@ -1,0 +1,54 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:soul_wither_skeleton",
+			"materials": {
+				"default": "husk"
+			},
+			"textures": {
+				"default": "textures/entity/soul_wither_skeleton"
+			},
+			"geometry": {
+				"default": "geometry.basic_human_enemy.skeleton"
+			},
+			"particle_effects": {
+				"transform": "tera:soulfire_emitter"
+			},
+			"scripts": {
+				"pre_animation": ["variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"]
+			},
+			"animations": {
+				"idle": "animation.basic_human_enemy.idle",
+				"move": "animation.basic_human_enemy.move",
+				"death": "animation.basic_human_enemy.skeleton_death",
+				"attack1": "animation.basic_human_enemy.attack1",
+				"attack2": "animation.basic_human_enemy.attack2",
+				"attack3": "animation.basic_human_enemy.attack3"
+			},
+			"animation_controllers": [
+				{
+					"idle": "controller.animation.tera_general.idle"
+				},
+				{
+					"move": "controller.animation.tera_general.move"
+				},
+				{
+					"death": "controller.animation.tera_general.death"
+				},
+				{
+					"attack": "controller.animation.tera_general.dynamic_attack"
+				},
+				{
+					"flame": "controller.animation.tera_partblaze.particle"
+				}
+			],
+			"render_controllers": ["controller.render.default"],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"base_color": "#00b7b9",
+				"overlay_color": "#4be3ee"
+			}
+		}
+	}
+}

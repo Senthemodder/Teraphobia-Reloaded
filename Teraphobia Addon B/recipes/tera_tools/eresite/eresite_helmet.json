@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:eresite_helmet"
+    },
+
+    
+    "tags": [ "tier_3_table" ],
+    "pattern": [
+      "XXX",
+      "X X"
+    ],
+    "key": {
+      "X": {
+        "item": "tera:eresite"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:eresite_helmet"
+    }
+  }
+}

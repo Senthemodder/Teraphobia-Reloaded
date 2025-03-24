@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:sidron_helmet"
+    },
+
+    
+    "tags": [ "tier_4_table" ],
+    "pattern": [
+      "XXX",
+      "X X"
+    ],
+    "key": {
+      "X": {
+        "item": "tera:sidron"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:sidron_helmet"
+    }
+  }
+}

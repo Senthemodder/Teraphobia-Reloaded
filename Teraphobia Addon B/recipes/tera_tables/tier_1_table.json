@@ -1,0 +1,45 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:tier_1_table"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "#R#",
+      "GFS",
+      "ADA"
+    ],
+    "key": {
+      "#": {
+        "item": "tera:soul"
+      },
+      "A": {
+        "item": "tera:yagazin"
+      },
+      "D": {
+        "item": "minecraft:crafting_table"
+      },
+      "F": {
+        "item": "minecraft:anvil"
+      },
+      "R": {
+        "item": "minecraft:diamond"
+      },
+      "G": {
+        "item": "tera:silver"
+      },
+      "S": {
+        "item": "tera:opal"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:tier_1_table"
+    }
+  }
+}

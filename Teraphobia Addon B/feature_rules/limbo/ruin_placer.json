@@ -1,0 +1,48 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:feature_rules": {
+      "description": {
+          "identifier": "tera:limbo/ruin_placer",
+          "places_feature": "tera:limbo/random_ruin"
+      },
+      "conditions": {
+          "placement_pass": "before_surface_pass",
+          "minecraft:biome_filter": [
+              {
+                "any_of": [
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "the_end"
+                  }
+                ]
+              }
+            ]
+          },
+      "distribution": {
+        "scatter_chance": 64,
+          "iterations": "(v.originx > 50000 && v.originz > -50000 && v.originx < 100000 && v.originz < 0) * 1",
+          "x": {
+              "distribution": "uniform",
+              "extent": [
+                  0,
+                  15
+              ]
+          },
+          "y": {
+            "distribution": "uniform",
+            "extent": [
+                "q.above_top_solid(v.originx, v.originz)",
+                190
+            ]
+        },
+          "z": {
+              "distribution": "uniform",
+              "extent": [
+                  0,
+                  15
+              ]
+          }
+      }
+  }
+}

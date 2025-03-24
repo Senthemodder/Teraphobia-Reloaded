@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:soul_tainted_beacon"
+    },
+
+    
+    "tags": [ "tier_3_table" ],
+    "pattern": [
+      "RFR",
+      "FAF",
+      "RFR"
+    ],
+    "key": {
+      "R": {
+        "item": "tera:soul"
+      },
+      "A": {
+        "item": "minecraft:beacon"
+      },
+      "F": {
+        "item": "tera:damnashin"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:soul_tainted_beacon"
+    }
+  }
+}

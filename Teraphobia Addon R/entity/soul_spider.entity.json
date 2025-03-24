@@ -1,0 +1,47 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:soul_spider",
+			"materials": {
+				"default": "spider",
+				"invisible": "spider_invisible"
+			},
+			"textures": {
+				"default": "textures/entity/soul_spider"
+			},
+			"geometry": {
+				"default": "geometry.soul_spider"
+			},
+			"particle_effects": {
+				"transform": "tera:soulfire_emitter"
+			},
+			"animations": {
+				"default_leg_pose": "animation.soul_spider.default_leg_pose",
+				"look_at_target": "animation.soul_spider.idle",
+				"walk": "animation.soul_spider.walk",
+				"attack": "animation.soul_spider.attack",
+				"death": "animation.soul_spider.death"
+			},
+			"animation_controllers": [
+				{
+					"move": "controller.animation.spider.move"
+				},
+				{
+					"attack": "controller.animation.tera_general.attack"
+				},
+				{
+					"death": "controller.animation.tera_general.death"
+				},
+				{
+					"flame": "controller.animation.tera_partblaze.particle"
+				}
+			],
+			"render_controllers": ["controller.render.spider"],
+			"spawn_egg": {
+				"base_color": "#5184db",
+				"overlay_color": "#2c008e"
+			}
+		}
+	}
+}

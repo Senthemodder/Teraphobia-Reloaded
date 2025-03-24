@@ -1,0 +1,49 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:soul_chestplate",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.chestplate"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+                "tags": [
+            "mythic:myc_lih"
+        ]
+    },
+	"minecraft:display_name": {
+		"value": "Soul Chestplate\n\n§8§o-Quite literally made with the souls of the damned...\n-Full set needed for effect\n-The Soul-Vision effect is activated\n-You can see in the dark"
+	},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "soul_chestplate"
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.chest",
+				"protection": 8
+			},
+			"minecraft:enchantable": {
+				"slot": "armor_torso",
+				"value": 9
+			},
+			"minecraft:durability": {
+				"damage_chance": {
+					"min": 0,
+					"max": 100
+			},
+				"max_durability": 1300
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": ["tera:soul"],
+						"repair_amount": 500
+					}
+				]
+			}
+		}
+	}
+}

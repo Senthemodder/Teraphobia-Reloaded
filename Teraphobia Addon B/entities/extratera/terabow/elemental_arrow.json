@@ -1,0 +1,261 @@
+{
+  "format_version": "1.16.0",
+ "minecraft:entity": {
+  "description": {
+    "identifier": "tera:elemental_arrow",
+    "is_spawnable": false,
+    "is_summonable": true,
+    "is_experimental": false,
+    "runtime_identifier": "minecraft:snowball"
+  },
+
+  "component_groups": {
+   "minecraft:exploding": {
+    "minecraft:explode": {
+     "fuse_length": 0.05,
+     "fuse_lit": true,
+     "power": 1,
+     "causes_fire": true,
+     "breaks_blocks": true,
+     "fire_affected_by_griefing": true,
+     "destroy_affected_by_griefing": true
+    }
+   },
+   
+   "die": {
+    "minecraft:explode": {
+     "fuse_length": 0.1,
+     "fuse_lit": true,
+     "power": 0,
+     "causes_fire": true,
+     "breaks_blocks": true,
+     "fire_affected_by_griefing": true,
+     "destroy_affected_by_griefing": true
+    }
+   }
+  },
+
+  "components": {
+   "minecraft:collision_box": {
+    "width": 0.31,
+    "height": 0.31
+   },
+   "minecraft:projectile": {
+    
+    "on_hit": {
+     "definition_event": {
+      "affect_projectile": true,
+      "event_trigger": {
+            "event": "minecraft:explode",
+            "target": "self"
+      }
+     }
+    },
+    "power": 1.6,
+    "gravity": 0.02,
+    "inertia": 1,
+    "liquid_inertia": 1,
+    "uncertainty_base": 0,
+    "uncertainty_multiplier": 0,
+    "anchor": 1,
+    "offset": [ 0, -0.1, 0 ],
+    "reflect_on_hurt": true,
+    "catch_fire": true
+   },
+   "minecraft:physics": {
+   },
+   "minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+   },
+   "minecraft:timer": {
+    "looping": false,
+    "time": 0.2,
+    "time_down_event": {
+      "event": "die"
+    }
+  },
+   "minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+      "max_optimized_distance": 80.0,
+      "max_dropped_ticks": 10,
+      "use_motion_prediction_hints": true
+    }
+  }
+  },
+      "events": {
+    "die": {
+      "sequence":[
+        {
+          "filters": {
+            "all_of":[ 
+            {"test": "has_tag", "subject": "self", "operator":"!=","value": "fiery_arrow"},
+            {"test": "has_tag", "subject": "self", "operator":"!=","value": "ice_arrow"},
+            {"test": "has_tag", "subject": "self", "operator":"!=","value": "earth_arrow"},
+            {"test": "has_tag", "subject": "self", "operator":"!=","value": "lightning_arrow"},
+            {"test": "has_tag", "subject": "self", "operator":"!=","value": "diamond_arrow"},
+            {"test": "has_tag", "subject": "self", "operator":"!=","value": "iron_arrow"} 
+            ]
+          },
+          "add": {
+            "component_groups": [
+             "die"
+            ]
+           }
+        }
+      ]
+     },
+     "minecraft:explode": {
+      "queue_command": {
+        "command": [
+          "function small_impact",
+
+          "execute as @s[tag=lightning_arrow] run execute at @s positioned as @s run summon lightning_bolt ~~~",
+          "execute at @s[tag=lightning_arrow] run execute at @e[tag=!lightning_arrow,family=mob,r=4] positioned as @s run summon lightning_bolt ~~~",
+          "execute at @s[tag=lightning_arrow] run execute at @e[tag=!lightning_arrow,family=player,r=4] positioned as @s run summon lightning_bolt ~~~",
+
+          "execute as @s[tag=fiery_arrow] run execute at @s positioned as @s run fill ~1~1~1 ~-1~-1~-1 fire [] replace air",
+          "execute as @s[tag=fiery_arrow] run execute at @s positioned as @s run effect @e[r=5] wither 10 1",
+          "execute at @s[tag=fiery_arrow] run execute at @e[tag=!fiery_arrow,family=mob,r=5] positioned as @s run fill ~~~ ~~~ fire [] replace air",
+          "execute at @s[tag=fiery_arrow] run execute at @e[tag=!fiery_arrow,family=player,r=5] positioned as @s run fill ~~~ ~~~ fire [] replace air",
+
+          "execute as @s[tag=iron_arrow] run execute at @s positioned as @s run effect @e[r=8] slowness 15 1",
+          "execute as @s[tag=iron_arrow] run execute at @s positioned as @s run effect @e[r=8] weakness 15 1",
+
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run effect @e[r=5] slowness 10 255",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run effect @e[r=5] blindness 10 255",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run effect @e[r=5] poison 10 1",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run fill ~2 ~-2 ~2 ~-2 ~2 ~-2 ice [] replace stone",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run fill ~2 ~-2 ~2 ~-2 ~2 ~-2 ice [] replace grass",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run fill ~2 ~-2 ~2 ~-2 ~2 ~-2 ice [] replace dirt",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run fill ~2 ~-2 ~2 ~-2 ~2 ~-2 ice [] replace planks",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run fill ~2 ~-2 ~2 ~-2 ~2 ~-2 ice [] replace leaves",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run fill ~2 ~-2 ~2 ~-2 ~2 ~-2 ice [] replace leaves2",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run fill ~2 ~-2 ~2 ~-2 ~2 ~-2 ice [] replace log",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run fill ~2 ~-2 ~2 ~-2 ~2 ~-2 ice [] replace log2",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run fill ~2 ~-2 ~2 ~-2 ~2 ~-2 ice [] replace sand",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run fill ~2 ~-2 ~2 ~-2 ~2 ~-2 ice [] replace water",
+          "execute as @s[tag=ice_arrow] run execute at @s positioned as @s run fill ~2 ~-2 ~2 ~-2 ~2 ~-2 ice [] replace flowing_water",
+
+          "execute as @s[tag=earth_arrow] run execute at @s positioned as @s run effect @e[r=5] poison 5 3",
+          "execute at @s[tag=earth_arrow] run execute at @s positioned as @s run fill ~-2~-2~-2 ~2~2~2 dirt [] replace air",
+
+          "execute as @s[tag=diamond_arrow] run execute at @s positioned as @s run summon lightning_bolt ~~~",
+          "execute at @s[tag=diamond_arrow] run execute at @e[tag=!diamond_arrow,family=monster,r=2,c=1] positioned as @s run fill ~~~ ~~~ diamond_ore [] replace air"
+        ]
+      },
+      "add": {
+       "component_groups": [
+        "minecraft:exploding"
+       ]
+      }
+     },
+     "minecraft:entity_spawned": {
+      "sequence":[
+        {
+          "filters": { "test": "has_tag", "subject": "other", "value": "tera_earth_arrow"},
+          "queue_command": {
+            "command": [
+              "tag @e[r=5,c=1,type=tera:elemental_arrow] add earth_arrow",
+              "playsound mob.wither.shoot @a[r=40] ~~~",
+              "replaceitem entity @s slot.weapon.mainhand 0 tera:elemental_bow 1 0",
+              "tag @s add tera_cooldown",
+              "clear @s tera:earth_arrow 0 1"
+            ],
+            "target":"other"
+          }
+        },
+        {
+          "filters": { "test": "has_tag", "subject": "other", "value": "tera_diamond_arrow"},
+          "queue_command": {
+            "command": [
+              "tag @e[r=5,c=1,type=tera:elemental_arrow] add diamond_arrow",
+              "playsound mob.wither.shoot @a[r=40] ~~~",
+              "replaceitem entity @s slot.weapon.mainhand 0 tera:elemental_bow 1 0",
+              "tag @s add tera_cooldown",
+              "clear @s tera:diamond_arrow 0 1"
+            ],
+            "target":"other"
+          }
+        },
+        {
+          "filters": { "test": "has_tag", "subject": "other", "value": "tera_iron_arrow"},
+          "queue_command": {
+            "command": [
+              "tag @e[r=5,c=1,type=tera:elemental_arrow] add iron_arrow",
+              "playsound mob.wither.shoot @a[r=40] ~~~",
+              "replaceitem entity @s slot.weapon.mainhand 0 tera:elemental_bow 1 0",
+              "tag @s add tera_cooldown",
+              "clear @s tera:iron_arrow 0 1"
+            ],
+            "target":"other"
+          }
+        },
+        {
+          "filters": { "test": "has_tag", "subject": "other", "value": "tera_lightning_arrow"},
+          "queue_command": {
+            "command": [
+              "tag @e[r=5,c=1,type=tera:elemental_arrow] add lightning_arrow",
+              "playsound mob.wither.shoot @a[r=40] ~~~",
+              "replaceitem entity @s slot.weapon.mainhand 0 tera:elemental_bow 1 0",
+              "tag @s add tera_cooldown",
+              "clear @s tera:lightning_arrow 0 1"
+            ],
+            "target":"other"
+          }
+        },
+        {
+          "filters": { "test": "has_tag", "subject": "other", "value": "tera_ice_arrow"},
+          "queue_command": {
+            "command": [
+              "tag @e[r=5,c=1,type=tera:elemental_arrow] add ice_arrow",
+              "playsound mob.wither.shoot @a[r=40] ~~~",
+              "replaceitem entity @s slot.weapon.mainhand 0 tera:elemental_bow 1 0",
+              "tag @s add tera_cooldown",
+              "clear @s tera:ice_arrow 0 1"
+            ],
+            "target":"other"
+          }
+        },
+        {
+          "filters": { "test": "has_tag", "subject": "other", "value": "tera_fire_arrow"},
+          "queue_command": {
+            "command": [
+              "tag @e[r=5,c=1,type=tera:elemental_arrow] add fiery_arrow",
+              "playsound mob.wither.shoot @a[r=40] ~~~",
+              "replaceitem entity @s slot.weapon.mainhand 0 tera:elemental_bow 1 0",
+              "tag @s add tera_cooldown",
+              "clear @s tera:fire_arrow 0 1"
+            ],
+            "target":"other"
+          }
+        },
+        {
+          "filters": {
+            "all_of":[ 
+            {"test": "has_tag", "subject": "other", "operator":"!=","value": "tera_fire_arrow"},
+            {"test": "has_tag", "subject": "other", "operator":"!=","value": "tera_ice_arrow"},
+            {"test": "has_tag", "subject": "other", "operator":"!=","value": "tera_earth_arrow"},
+            {"test": "has_tag", "subject": "other", "operator":"!=","value": "tera_lightning_arrow"},
+            {"test": "has_tag", "subject": "other", "operator":"!=","value": "tera_diamond_arrow"},
+            {"test": "has_tag", "subject": "other", "operator":"!=","value": "tera_iron_arrow"} 
+            ]
+          },
+          "queue_command": {
+            "command": [
+              "replaceitem entity @s slot.weapon.mainhand 0 tera:elemental_bow 1 0",
+              "tag @s add tera_cooldown"
+            ],
+            "target":"other"
+          },
+          "add": {
+            "component_groups": [
+             "die"
+            ]
+           }
+        }
+      ]
+     }
+      }
+  }
+}

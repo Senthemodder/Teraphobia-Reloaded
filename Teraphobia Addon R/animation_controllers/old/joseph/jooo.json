@@ -1,0 +1,228 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.joseph.attack": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_delayed_attacking" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "attack": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_delayed_attacking" }
+          ]
+        }
+      }
+    },
+    "controller.animation.joseph.idle": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_sheared" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "idle": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_sheared" }
+          ]
+        }
+      }
+    },
+    "controller.animation.joseph.fly": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_illager_captain" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "fly": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_illager_captain" }
+          ]
+        }
+      }
+    },
+    "controller.animation.joseph.fall": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_chested" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "fall": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_chested" }
+          ]
+        }
+      }
+    },
+    "controller.animation.joseph.land": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_baby" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "land": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_baby" }
+          ]
+        }
+      }
+    },
+
+    "controller.animation.joseph.spin": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_ignited" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "spin": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_ignited" }
+          ]
+        }
+      }
+    },
+    "controller.animation.joseph.teleport": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_stunned" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "teleport": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_stunned" }
+          ]
+        }
+      }
+    },
+    "controller.animation.joseph.fire": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_saddled" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "fire": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_saddled" }
+          ]
+        }
+      }
+    },
+    "controller.animation.joseph.ram": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_tamed" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "ram": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_tamed" }
+          ]
+        }
+      }
+    },
+    "controller.animation.joseph.sweep": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_stackable" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "sweep": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_stackable" }
+          ]
+        }
+      }
+    },
+
+    "controller.animation.joseph.look": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_sheared" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "look": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_sheared" }
+          ]
+        }
+      }
+    },
+    "controller.animation.joseph.idle_roar": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "!query.has_target || query.is_sheared" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "idle_roar": [] }
+          ],
+          "transitions": [
+            { "default": "query.has_target && !query.is_sheared" }
+          ]
+        }
+      }
+    },
+    "controller.animation.joseph.move": {
+      "states": {
+        "default": {
+          "parameters": [ "(query.modified_move_speed * query.is_sheared) * 3" ],
+          "animations": [
+            {
+              "move": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

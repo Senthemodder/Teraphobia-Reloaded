@@ -1,0 +1,552 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "tera:3headed_wolf",
+			"runtime_identifier": "minecraft:wolf",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"dead": {
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:scale": {
+					"value": 0
+				},
+				"minecraft:spawn_entity": {
+					"entities": {
+						"min_wait_time": 0,
+						"max_wait_time": 0,
+						"num_to_spawn": 50,
+						"single_use": true,
+						"spawn_entity": "minecraft:xp_orb"
+					}
+				}
+			},
+			"minecraft:wolf_baby": {
+				"minecraft:is_baby": {},
+				"minecraft:scale": {
+					"value": 0.5
+				},
+				"minecraft:ageable": {
+					"duration": 1200,
+					"feed_items": [
+						"chicken",
+						"cooked_chicken",
+						"beef",
+						"cooked_beef",
+						"muttonRaw",
+						"muttonCooked",
+						"porkchop",
+						"cooked_porkchop",
+						"rabbit",
+						"cooked_rabbit",
+						"rotten_flesh"
+					],
+					"grow_up": {
+						"event": "minecraft:ageable_grow_up",
+						"target": "self"
+					}
+				}
+			},
+			"minecraft:wolf_adult": {
+				"minecraft:boss": {
+					"name": "Three-Headed Wolf",
+					"should_darken_sky": true,
+					"hud_range": 25
+				},
+				"minecraft:scale": {
+					"value": 3
+				},
+				"minecraft:experience_reward": {
+					"on_death": "100"
+				},
+				"minecraft:breedable": {
+					"require_tame": true,
+					"require_full_health": true,
+					"breeds_with": {
+						"mate_type": "tera:3headed_wolf",
+						"baby_type": "tera:3headed_wolf",
+						"breed_event": {
+							"event": "minecraft:entity_born",
+							"target": "baby"
+						}
+					},
+					"breed_items": [
+						"chicken",
+						"cooked_chicken",
+						"beef",
+						"cooked_beef",
+						"muttonRaw",
+						"muttonCooked",
+						"porkchop",
+						"cooked_porkchop",
+						"rabbit",
+						"cooked_rabbit",
+						"rotten_flesh"
+					]
+				}
+			},
+			"minecraft:wolf_angry": {
+				"minecraft:angry": {
+					"duration": 25,
+					"broadcast_anger": true,
+					"broadcast_range": 20,
+					"calm_event": {
+						"event": "minecraft:on_calm",
+						"target": "self"
+					}
+				},
+				"minecraft:on_target_acquired": {},
+				"minecraft:rideable": {
+					"seat_count": 1,
+					"family_types": ["zombie"],
+					"seats": {
+						"position": [0, 0.675, -0.1]
+					}
+				}
+			},
+			"minecraft:wolf_wild": {
+				"minecraft:behavior.avoid_mob_type": {
+					"priority": 3,
+					"entity_types": [
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "tera_golem"
+							},
+							"max_dist": 24,
+							"walk_speed_multiplier": 1.5,
+							"sprint_speed_multiplier": 1.5
+						}
+					],
+					"probability_per_strength": 0.14
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 4,
+					"reselect_targets": true,
+					"must_see": true,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "skeleton"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "sheep"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "rabbit"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "fox"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									}
+								]
+							},
+							"max_dist": 45
+						}
+					]
+				},
+				
+			"minecraft:follow_range": {
+				"value": 64
+			},
+				"minecraft:on_target_acquired": {
+					"event": "minecraft:become_angry",
+					"target": "self"
+				},
+				"minecraft:rideable": {
+					"seat_count": 1,
+					"family_types": ["zombie"],
+					"seats": {
+						"position": [0, 0.675, -0.1]
+					}
+				}
+			},
+			"minecraft:wolf_tame": {
+				"minecraft:is_tamed": {},
+				"minecraft:health": {
+					"value": 50,
+					"max": 50
+				},
+				"minecraft:behavior.follow_owner": {
+					"priority": 6,
+					"speed_multiplier": 1,
+					"start_distance": 10,
+					"stop_distance": 2
+				},
+				"minecraft:attack": {
+					"damage": 7
+				},
+				"minecraft:behavior.breed": {
+					"priority": 2,
+					"speed_multiplier": 1
+				},
+				"minecraft:behavior.owner_hurt_by_target": {
+					"priority": 1
+				},
+				"minecraft:behavior.owner_hurt_target": {
+					"priority": 2
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 5,
+					"must_see": true,
+					"entity_types": [
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "skeleton"
+							},
+							"max_dist": 16
+						}
+					]
+				},
+				"minecraft:sittable": {},
+				"minecraft:leashable": {
+					"soft_distance": 4,
+					"hard_distance": 6,
+					"max_distance": 10,
+					"on_leash": {
+						"event": "minecraft:on_leash",
+						"target": "self"
+					},
+					"on_unleash": {
+						"event": "minecraft:on_unleash",
+						"target": "self"
+					}
+				}
+			}
+		},
+				"components": {
+					"minecraft:on_death": {
+						"event": "dead",
+						"target": "self"
+					},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/tera_entity/3head_wolf.json"
+			},
+
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"bamboo_sapling",
+					"beetroot",
+					"brown_mushroom",
+					"carrots",
+					"carved_pumpkin",
+					"chorus_flower",
+					"chorus_plant",
+					"deadbush",
+					"double_plant",
+					"leaves",
+					"leaves2",
+					"lit_pumpkin",
+					"melon_block",
+					"melon_stem",
+					"potatoes",
+					"pumpkin",
+					"pumpkin_stem",
+					"red_flower",
+					"red_mushroom",
+					"crimson_fungus",
+					"warped_fungus",
+					"reeds",
+					"sapling",
+					"snow_layer",
+					"sweet_berry_bush",
+					"tallgrass",
+					"turtle_egg",
+					"vine",
+					"waterlily",
+					"wheat",
+					"yellow_flower"
+				]
+			},
+			"minecraft:nameable": {},
+			"minecraft:type_family": {
+				"family": ["tera_bosses","wolf", "mob"]
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 0.8
+			},
+			"minecraft:health": {
+				"value": 200,
+				"max": 200
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:movement": {
+				"value": 0.33
+			},
+			"minecraft:knockback_resistance": {
+				"value": 100
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:attack": {
+				"damage": 5
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "porkchop",
+						"heal_amount": 3
+					},
+					{
+						"item": "cooked_porkchop",
+						"heal_amount": 8
+					},
+					{
+						"item": "fish",
+						"heal_amount": 2
+					},
+					{
+						"item": "salmon",
+						"heal_amount": 2
+					},
+					{
+						"item": "clownfish",
+						"heal_amount": 1
+					},
+					{
+						"item": "pufferfish",
+						"heal_amount": 1
+					},
+					{
+						"item": "cooked_fish",
+						"heal_amount": 5
+					},
+					{
+						"item": "cooked_salmon",
+						"heal_amount": 6
+					},
+					{
+						"item": "beef",
+						"heal_amount": 3
+					},
+					{
+						"item": "cooked_beef",
+						"heal_amount": 8
+					},
+					{
+						"item": "chicken",
+						"heal_amount": 2
+					},
+					{
+						"item": "cooked_chicken",
+						"heal_amount": 6
+					},
+					{
+						"item": "muttonRaw",
+						"heal_amount": 2
+					},
+					{
+						"item": "muttonCooked",
+						"heal_amount": 6
+					},
+					{
+						"item": "rotten_flesh",
+						"heal_amount": 4
+					},
+					{
+						"item": "rabbit",
+						"heal_amount": 3
+					},
+					{
+						"item": "cooked_rabbit",
+						"heal_amount": 5
+					},
+					{
+						"item": "rabbit_stew",
+						"heal_amount": 10
+					}
+				]
+			},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:behavior.mount_pathing": {
+				"priority": 1,
+				"speed_multiplier": 1.25,
+				"target_dist": 0,
+				"track_target": true
+			},
+			"minecraft:behavior.stay_while_sitting": {
+				"priority": 3
+			},
+			"minecraft:behavior.leap_at_target": {
+				"priority": 4,
+				"target_dist": 0.4
+			},
+			
+			"minecraft:behavior.delayed_attack": {
+				"priority": 5,
+				"attack_once": false,
+				"track_target": true,
+				"require_complete_path": false,
+				"random_stop_interval": 0,
+				"reach_multiplier": 1.75,
+				"speed_multiplier": 1.25,
+				"attack_duration": 0.75,
+				"hit_delay_pct": 0.5
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 8,
+				"speed_multiplier": 1
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 6,
+				"target_distance": 6,
+				"probability": 0.02
+			},
+			"minecraft:behavior.beg": {
+				"priority": 9,
+				"look_distance": 8,
+				"look_time": [2, 4],
+				"items": [
+					"bone",
+					"porkchop",
+					"cooked_porkchop",
+					"chicken",
+					"cooked_chicken",
+					"beef",
+					"cooked_beef",
+					"rotten_flesh",
+					"muttonraw",
+					"muttoncooked",
+					"rabbit",
+					"cooked_rabbit"
+				]
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 3
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"events": {
+			"dead": {
+			  "queue_command": {
+				  "command": [
+					"particle tera:boss_flash ~ ~2 ~",
+					  "summon tera:3headed_wolf_death"
+				  ]
+			  },
+				"add": {
+					"component_groups": [
+						"dead"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"randomize": [
+					{
+						"weight": 1,
+						"remove": {},
+						"add": {
+							"component_groups": ["minecraft:wolf_adult", "minecraft:wolf_wild"]
+						}
+					},
+					{
+						"weight": 0,
+						"remove": {},
+						"add": {
+							"component_groups": ["minecraft:wolf_baby", "minecraft:wolf_wild"]
+						}
+					}
+				]
+			},
+			"minecraft:entity_born": {
+				"remove": {},
+				"add": {
+					"component_groups": ["minecraft:wolf_baby", "minecraft:wolf_tame"]
+				}
+			},
+			"minecraft:ageable_grow_up": {
+				"remove": {
+					"component_groups": ["minecraft:wolf_baby"]
+				},
+				"add": {
+					"component_groups": ["minecraft:wolf_adult"]
+				}
+			},
+			"minecraft:ageable_set_baby": {
+				"remove": {
+					"component_groups": ["minecraft:wolf_adult"]
+				},
+				"add": {
+					"component_groups": ["minecraft:wolf_baby"]
+				}
+			},
+			"minecraft:on_tame": {
+				"remove": {
+					"component_groups": ["minecraft:wolf_wild"]
+				},
+				"add": {
+					"component_groups": ["minecraft:wolf_tame"]
+				}
+			},
+			"minecraft:become_angry": {
+				"remove": {
+					"component_groups": ["minecraft:wolf_wild"]
+				},
+				"add": {
+					"component_groups": ["minecraft:wolf_angry"]
+				}
+			},
+			"minecraft:on_calm": {
+				"remove": {
+					"component_groups": ["minecraft:wolf_angry"]
+				},
+				"add": {
+					"component_groups": ["minecraft:wolf_wild"]
+				}
+			}
+		}
+	}
+}

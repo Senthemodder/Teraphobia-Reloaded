@@ -1,0 +1,39 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.werewolf.move": {
+      "states": {
+        "default": {
+          "parameters": [ "query.modified_move_speed" ],
+          "animations": [
+            {
+              "move": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.yeti.die": {
+      "states": {
+        "default": {
+          "parameters": [ "query.health == 0" ],
+          "animations": [
+            {
+              "die": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

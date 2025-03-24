@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:elemental_bow"
+    },
+
+    
+    "tags": [ "elemental_table" ],
+    "pattern": [
+      "#D#",
+      "#X#",
+      "#G#"
+    ],
+    "key": {
+      "#": {
+        "item": "tera:soul"
+      },
+      "X": {
+        "item": "minecraft:bow"
+      },
+      "D": {
+        "item": "minecraft:diamond"
+      },
+      "G": {
+        "item": "minecraft:netherite_scrap"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:elemental_bow"
+    }
+  }
+}

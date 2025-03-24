@@ -1,0 +1,108 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:soul_hammer",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:use_modifiers": {
+	"use_duration": 9999999,
+	"movement_modifier": 0.5
+},
+"minecraft:use_animation": "bow",
+"minecraft:food": {
+	"nutrition": 0,
+	"saturation_modifier": 1,
+	"can_always_eat": true
+},
+			"minecraft:tags": {
+                "tags": [
+			"mythic:myc_hmr",
+			"mythic:myc_def"
+		]
+	},
+			"minecraft:glint": true,
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:damage": 13,
+            "minecraft:enchantable": {
+                "value": 7,
+                "slot": "sword"
+            },
+			"minecraft:icon": {
+				"texture": "soul_hammer"
+			},
+			"minecraft:display_name": {
+				"value": "Soul Hammer\n\n§8§o-A grand yet strange weapon, God knows why it exists\n-While falling, you will be given strength\n-Applies the Soul Vision effect"
+			}
+		},
+		"events": {
+            "fantasy:damage_event": {
+                "damage": {
+                    "type": "durability",
+                    "amount": 1
+                }
+            },
+			"fulger2": {
+				"sequence": [
+					{
+					"condition": "query.is_on_ground && query.is_sneaking",
+					"swing": {},
+					"run_command": {
+						"command": [
+							"effect @s mining_fatigue 1 15 true",
+							"playsound block.end_portal.spawn @a[r=30]",
+							"summon tera:soul_hammer_slam ~~~",
+							"playanimation @s animation.player.soul_axe",
+							"effect @s slowness 1 6 true"
+						]
+					}
+					},
+					{
+						"condition": "!query.is_on_ground && !query.is_sneaking",
+						"swing": {},
+						"run_command": {
+							"command": [
+								"playsound block.end_portal.spawn @a[r=45]",
+								"execute @e[rm=2,r=15] ~~~ summon ender_crystal ~~~ minecraft:crystal_explode"
+							]
+						}
+						},
+						{
+							"condition": "!query.is_on_ground && query.is_sneaking",
+							"swing": {},
+							"run_command": {
+								"command": [
+									"playanimation @s animation.player.flip",
+									"playsound block.end_portal.spawn @a[r=15]",
+									"effect @s levitation 1 15 true",
+									"effect @s slow_falling 5 1 true"
+								]
+							}
+							},
+					{
+					"condition": "query.is_on_ground && !query.is_sneaking",
+					"swing": {},
+					"run_command": {
+						"command": [
+							"playsound mob.ghast.fireball @a[r=40]"
+						]
+					},
+					"shoot": {
+						"projectile": "tera:soul_hammer_ball",
+						"launch_power": 1,
+						"angle_offset": 0.5
+					   },
+					   "damage": {
+						"type": "durability",
+						"amount": 1
+					}
+					}
+				]
+			}
+		}
+	}
+}

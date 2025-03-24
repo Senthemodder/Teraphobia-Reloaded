@@ -1,0 +1,87 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:fire_akin_axe",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:use_modifiers": {
+	"use_duration": 9999999,
+	"movement_modifier": 0.5
+},
+"minecraft:use_animation": "bow",
+"minecraft:food": {
+	"nutrition": 0,
+	"saturation_modifier": 1,
+	"can_always_eat": true
+},
+			"minecraft:tags": {
+                "tags": [
+			"mythic:myc_wax",
+			"mythic:myc_def"
+		]
+	},
+			"minecraft:glint": true,
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:damage": 8,
+            "minecraft:enchantable": {
+                "value": 7,
+                "slot": "sword"
+            },
+			"minecraft:icon": {
+				"texture": "fire_akin_axe"
+			},
+			"minecraft:display_name": {
+				"value": "Fire-Akin Axe\n\n§8§o-As its name states, the flames of Hell fuel this thing\n-Applies the effect of Hellish Marking\n-Sneaking, you will be given the effect Ghast's Blessing"
+			}
+		},
+		"events": {
+            "fantasy:damage_event": {
+                "damage": {
+                    "type": "durability",
+                    "amount": 1
+                }
+            },
+			"fulger2": {
+				"sequence": [
+					{
+					"condition": "query.is_sneaking",
+					"swing": {},
+					"run_command": {
+						"command": [
+							"playsound block.end_portal.spawn @a[r=30]",
+							"execute @e[rm=2,r=15] ~~~ summon tera:fiery_spike2 ~~~",
+							"summon tera:fiery_spike2 ~3 ~ ~",
+							"summon tera:fiery_spike2 ~-3 ~ ~",
+							"summon tera:fiery_spike2 ~ ~ ~-3",
+							"summon tera:fiery_spike2 ~ ~ ~3"
+						]
+					}
+					},
+					{
+					"condition": "!query.is_sneaking",
+					"swing": {},
+					"run_command": {
+						"command": [
+							"playsound mob.ghast.fireball @a[r=40]"
+						]
+					},
+					"shoot": {
+						"projectile": "tera:fiery_ball",
+						"launch_power": 1,
+						"angle_offset": 0.5
+					   },
+					   "damage": {
+						"type": "durability",
+						"amount": 1
+					}
+					}
+				]
+			}
+		}
+	}
+}

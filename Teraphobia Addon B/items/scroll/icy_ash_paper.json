@@ -1,0 +1,20 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "tera:icy_ash_paper",
+            "menu_category": {
+				"category": "equipment"
+			}
+        },
+        "components": {
+            "minecraft:allow_off_hand": true,
+			
+            "minecraft:icon": "icy_ash_paper",
+            "minecraft:display_name": {
+                "value": "Icy Ash Paper\n\n§8§o-Strange frost engulfs this scrap\n-Maybe that ice could be burnt off..."
+            },
+            "minecraft:max_stack_size": 64
+        }
+    }
+}

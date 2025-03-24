@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:giant_skull",
+      "materials": {
+        "default": "iron_golem"
+      },
+      "textures": {
+        "default": "textures/entity/giant_wither"
+      },
+      "geometry": {
+        "default": "geometry.tera_skull"
+      },
+			"particle_effects": {
+				"transform": "tera:earth_emitter"
+			},
+      "animations": {
+        "face_player": "animation.tera_skull.move",
+        "flame": "controller.animation.tera_partblaze.particle"
+      },
+      "scripts": {
+        "scale": "3.5",
+        "animate": [
+          "face_player",
+        "flame"
+        ]
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

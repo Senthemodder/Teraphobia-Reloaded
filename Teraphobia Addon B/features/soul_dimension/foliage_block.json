@@ -1,0 +1,21 @@
+{
+    "format_version": "1.20.20",
+    "minecraft:single_block_feature": {
+      "description": {
+        "identifier": "tera:soul_dimension/foliage_block"
+      },
+      "places_block": {
+        "name": "tera:soul_foliage"
+      },
+      "enforce_survivability_rules": true,
+      "enforce_placement_rules": true,
+      "may_replace": [
+        "minecraft:air"
+      ],
+      "may_attach_to": {
+        "bottom": [
+          "tera:soul_grass"
+        ]
+      }
+    }
+  }

@@ -1,0 +1,384 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+      "description": {
+          "identifier": "tera:night_abomination",
+          "is_spawnable": true,
+          "is_summonable": true,
+          "is_experimental": false
+      },
+      "component_groups": {
+        "dead": {
+            "minecraft:movement": {
+                "value": 0.0
+            },
+            "minecraft:scale": {
+                "value": 0
+            },
+            "minecraft:spawn_entity": {
+                "entities": {
+                    "min_wait_time": 0,
+                    "max_wait_time": 0,
+                    "num_to_spawn": 50,
+                    "single_use": true,
+                    "spawn_entity": "minecraft:xp_orb"
+                }
+            }
+        },
+          "random": {
+            "minecraft:behavior.look_at_player": {
+                "priority": 7,
+                "look_distance": 8
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 8
+            },
+              "minecraft:attack": {
+                  "damage": 5,
+                  "effect_name": "slowness",
+                  "effect_duration": 5
+              },
+              "minecraft:behavior.delayed_attack": {
+                "priority": 4,
+                "attack_once": false,
+                "track_target": true,
+                "require_complete_path": false,
+                "random_stop_interval": 0,
+                "reach_multiplier": 2.9,
+                "speed_multiplier": 1.0,
+                "attack_duration": 1.0,
+                "hit_delay_pct": 0.5,
+                "melee_fov": 360
+            },
+              "minecraft:timer": {
+                  "looping": true,
+                  "time": 10,
+                  "time_down_event": {
+                      "event": "random_do"
+                  }
+              },
+              "minecraft:is_sheared": {},
+              "minecraft:movement": {
+                  "value": 0.28
+              }
+          },
+          "smash": {
+              "minecraft:is_stunned": {},
+              "minecraft:movement": {
+                  "value": 0.0
+              },
+              "minecraft:timer": {
+                "looping": true,
+                "time": 0.6,
+                "time_down_event": {
+                    "event": "smash_do"
+                }
+            },
+              "minecraft:behavior.knockback_roar": {
+                  "priority": 1,
+                  "duration": 2,
+                  "attack_time": 0.6,
+                  "knockback_damage": 5,
+                  "knockback_strength": 4,
+                  "knockback_range": 7,
+                  "knockback_filters": {
+                      "test": "is_family",
+                      "subject": "other",
+                      "operator": "!=",
+                      "value": "night_abomination"
+                  },
+                  "damage_filters": {
+                      "test": "is_family",
+                      "subject": "other",
+                      "operator": "!=",
+                      "value": "night_abomination"
+                  },
+                  "on_roar_end": {
+                      "event": "random"
+                  },
+                  "cooldown_time": 0.1
+              }
+          },
+          "shoot": {
+              "minecraft:behavior.look_at_target":{
+                "priority": 1,
+                "probability": 1.0,
+                "look_distance": 48.0
+              },
+              "minecraft:is_saddled": {},
+              "minecraft:timer": {
+                  "looping": false,
+                  "time": 0.9,
+                  "time_down_event": {
+                      "event": "shoot_do"
+                  }
+              },
+              "minecraft:movement": {
+                  "value": 0.0
+              }
+          },
+          "shoot_do": {
+            "minecraft:spawn_entity": {
+                "entities": {
+                    "min_wait_time": 0,
+                    "max_wait_time": 0,
+                    "num_to_spawn": 1,
+                    "single_use": true,
+                    "spawn_entity": "57:night_abomination_ice"
+                }
+            },
+              "minecraft:timer": {
+                  "looping": false,
+                  "time": 0.7,
+                  "time_down_event": {
+                      "event": "random"
+                  }
+              }
+          }
+      },
+      		"components": {
+			"minecraft:loot": {
+				"table": "loot_tables/entities/tera_entity/night_abomination.json"
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"bamboo_sapling",
+					"beetroot",
+					"brown_mushroom",
+					"carrots",
+					"carved_pumpkin",
+					"chorus_flower",
+					"chorus_plant",
+					"deadbush",
+					"double_plant",
+					"leaves",
+					"leaves2",
+					"lit_pumpkin",
+					"melon_block",
+					"melon_stem",
+					"potatoes",
+					"pumpkin",
+					"pumpkin_stem",
+					"red_flower",
+					"red_mushroom",
+					"crimson_fungus",
+					"warped_fungus",
+					"reeds",
+					"sapling",
+					"snow_layer",
+					"sweet_berry_bush",
+					"tallgrass",
+					"turtle_egg",
+					"vine",
+					"waterlily",
+					"wheat",
+					"yellow_flower"
+				]
+			},
+        "minecraft:scale": {
+            "value": 1.6
+        },
+        "minecraft:underwater_movement": {
+          "value": 0.15
+      },
+        "minecraft:damage_sensor": {
+            "triggers": [          
+                {
+                    "cause": "fall",
+                    "deals_damage": false
+                }
+            ]
+        },
+          "minecraft:boss": {
+              "name": "Night Abomination",
+
+              "should_darken_sky": true,
+              "hud_range": 35
+              
+          },
+          "minecraft:on_death": {
+              "event": "dead",
+              "target": "self"
+          },
+          "minecraft:is_hidden_when_invisible": {},
+
+          "minecraft:nameable": {},
+          "minecraft:breathable": {
+              "total_supply": 15,
+              "suffocate_time": 0,
+              "breathes_water": true
+          },
+          "minecraft:health": {
+              "value": 200,
+              "max": 200
+          },
+          "minecraft:knockback_resistance": {
+              "value": 100
+          },
+          "minecraft:collision_box": {
+              "width": 1.4,
+              "height": 1.5
+          },
+
+          "minecraft:movement": {
+              "value": 0.28
+          },
+          "minecraft:navigation.walk": {
+                  "can_swim": true,
+              "is_amphibious": true,
+              "avoid_sun": true,
+              "avoid_water": true
+          },
+          "minecraft:movement.basic": {},
+          "minecraft:jump.static": {},
+          "minecraft:can_climb": {},
+          "minecraft:fire_immune": {},
+          "minecraft:behavior.hurt_by_target": {
+              "priority": 1
+          },
+          "minecraft:behavior.nearest_attackable_target": {
+              "priority": 2,
+              "must_see": true,
+              "entity_types": [
+                {
+                    "filters": {
+                      "all_of":
+                      [
+                        {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "player"
+                        },
+                        {
+                          "test": "has_tag",
+                          "subject": "other",
+                          "operator": "!=",
+                          "value": "teraww"
+                          }
+                      ]
+                    },
+                    "max_dist": 48
+                  },
+                  {
+                      "filters": {
+                          "test": "is_family",
+                          "subject": "other",
+                          "value": "irongolem"
+                      },
+                      "max_dist": 48
+                  },
+                  {
+                      "filters": {
+                          "test": "is_family",
+                          "subject": "other",
+                          "value": "villager"
+                      },
+                      "max_dist": 48
+                  }
+              ]
+          },
+          "minecraft:behavior.random_stroll": {
+              "priority": 6,
+              "speed_multiplier": 1
+          },
+          "minecraft:type_family": {
+              "family": ["tera_bosses","monster", "mob", "night_abomination","sorcerer"]
+          },
+          "minecraft:physics": {},
+          "minecraft:pushable": {
+              "is_pushable": false,
+              "is_pushable_by_piston": true
+          },
+          "minecraft:timer": {
+              "looping": false,
+              "time": 0.1,
+              "time_down_event": {
+                  "event": "random"
+              }
+          },
+          "minecraft:conditional_bandwidth_optimization": {}
+      },
+
+      "events": {
+          "random_do": {
+              "randomize": [{
+                      "filters": {
+                          "test": "has_target"
+                      },
+                      "weight": 10,
+                      "add": {
+                          "component_groups": ["smash"]
+                      },
+                      "remove": {
+                          "component_groups": ["random", "shoot", "shoot_do"]
+                      }
+                  }
+              ]
+          },
+          "shoot_do": {
+              "add": {
+                  "component_groups": [
+                      "shoot_do"
+                  ]
+              }
+          },
+          "smash_do": {
+            "queue_command": {
+                "command": [
+                    "effect @e[type=!tera:night_abomination,r=4] poison 10 1",
+                    "function small_impact"
+                ]
+            }
+        },
+          "random": {
+              "remove": {
+                  "component_groups": [
+                      "smash", "shoot", "shoot_do", "smash_do"
+                  ]
+              },
+              "add": {
+                  "component_groups": [
+                      "random"
+                  ]
+              }
+          },
+          "chance": {
+            "randomize": [{
+              "weight": 25,
+              "remove": {
+              },
+              "add": {
+                "component_groups": [
+                  "nont"
+                ]
+              }
+            },
+            {
+              "weight": 50,
+              "remove": {
+              },
+              "add": {
+                "component_groups": [
+                  "no"
+                ]
+              }
+            }
+          ]
+          },
+          "dead": {
+            "queue_command": {
+                "command": [
+                    "particle tera:boss_flash ~ ~2 ~",
+                    "summon tera:night_abomination_death"
+                ]
+            },
+              "add": {
+                  "component_groups": [
+                      "dead"
+                  ]
+              }
+          }
+      }
+  }
+}

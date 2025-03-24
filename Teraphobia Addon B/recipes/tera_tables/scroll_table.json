@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:scroll_table"
+    },
+
+    
+    "tags": [ "tier_2_table" ],
+    "pattern": [
+      "TTT",
+      "FRF",
+      "FDF"
+    ],
+    "key": {
+      "T": {
+        "item": "tera:ash_paper"
+      },
+      "F": {
+        "item": "tera:soul"
+      },
+      "D": {
+        "item": "minecraft:crafting_table"
+      },
+      "R": {
+        "item": "minecraft:stick"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:scroll_table"
+    }
+  }
+}

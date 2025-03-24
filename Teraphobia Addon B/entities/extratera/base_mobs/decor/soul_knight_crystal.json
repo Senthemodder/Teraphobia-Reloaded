@@ -1,0 +1,123 @@
+{
+	"format_version": "1.16.0",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "tera:soul_knight_crystal",
+              "is_spawnable": false,
+        "is_summonable": true,
+        "is_experimental": false
+      },
+           "component_groups": {
+               "kill_cloud":{               
+                "minecraft:scale": {
+                  "value": 0
+                }
+                  }
+           },                 "components": {
+                     "minecraft:collision_box": {
+          "width": 2,
+          "height": 4
+        },
+        "minecraft:despawn": {
+          "despawn_from_distance": {}
+        },
+        "minecraft:knockback_resistance": {
+          "value": 100
+        },
+        "minecraft:boss": {
+          "name": "Teronic Crystal",
+          "should_darken_sky": true,
+          "hud_range": 15
+        },
+        "minecraft:on_death": {
+          "event": "kill_cloud",
+          "target": "self"
+        },
+          "minecraft:health":{
+        "value":50,
+          "max":50
+           },        
+                 "minecraft:type_family": {
+          "family": [ "summon","inanimate" ]
+        },
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+              "minecraft:physics": {
+          "has_gravity": false,
+          "has_collision": true
+        },   
+        "minecraft:damage_sensor": {
+          "triggers": [          
+            {
+              "cause": "fall",
+              "deals_damage": false
+            },
+            {
+              "cause": "block_explosion",
+              "deals_damage": false
+            },
+            {
+              "cause": "entity_explosion",
+              "deals_damage": false
+            },
+            {
+              "on_damage": {
+                "filters": {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "inanimate"
+                }
+              },
+              "deals_damage": false
+            },
+            {
+            "on_damage": {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "undead"
+              }
+            },
+            "deals_damage": false
+          },
+          {
+            "on_damage": {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "wither"
+              }
+            },
+            "deals_damage": false
+          },
+          {
+          "on_damage": {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "tera_monster"
+            }
+          },
+          "deals_damage": false
+        }
+          ]
+        }
+           },                       "events": {
+                   "kill_cloud": {
+                    "queue_command": {
+                      "command": [
+                        "tag @e[tag=sk_inv] remove sk_inv",
+                        "function small_impact",
+                        "playsound mob.warden.sonic_boom @a[r=90]",
+                        "camerashake add @a[r=90] 1 0.5"
+                      ]
+                    },
+          "add": {
+            "component_groups": [
+              "kill_cloud"
+            ]
+          }
+        }
+           }}}

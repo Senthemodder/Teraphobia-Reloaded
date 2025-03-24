@@ -1,0 +1,19 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "tera:tera_end/lands"
+		},
+		"iterations": "t.height = q.heightmap (v.worldx,v.worldz) > 0 ? 1+(q.noise(v.originz/128,v.originx/128))*24 : 0; return t.height;",
+		"places_feature": "tera:tera_end/biomes/determinant",
+		"x": 0,
+		"z": 0,
+		"y": {
+			"extent": [
+				0,
+				"t.height"
+			],
+			"distribution": "fixed_grid"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:fire_potion",
+            "menu_category": {
+                "group": "itemGroup.name.potion",
+                "category": "equipment",
+                "is_hidden_in_commands": false
+            }
+        },
+		"components": {
+			
+			"minecraft:max_stack_size": 1,
+			"minecraft:entity_placer": {
+				"entity": "tera:fire_potion_effect"
+			},
+			
+			"minecraft:glint": true,
+			
+			"minecraft:icon": "fire_potion",
+			"minecraft:display_name": {
+				"value": "Potion of Fire Burst\n\n§8§o-Use on ground\n-Fly into the air as balls of fire take your place around you"
+			}
+		}
+	}
+}

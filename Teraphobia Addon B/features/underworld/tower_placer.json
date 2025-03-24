@@ -1,0 +1,17 @@
+{
+	"format_version": "1.20.20",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "tera:underworld/tower_placer"
+		},
+
+		"places_feature": "tera:underworld/random_tower",
+
+		"iterations": 1,
+
+		"x": 0,
+		"z": 0,
+		"y": "q.above_top_solid(v.originx,v.originz) - 1"
+	}
+}

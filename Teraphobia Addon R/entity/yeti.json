@@ -1,0 +1,47 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:yeti",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/yeti",
+        "eyes": "textures/entity/yeti_eyes"
+      },
+      "geometry": {
+        "default": "geometry.yeti"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;"
+        ]
+      },
+      "sound_effects": {
+        "smash": "mob.wither.break_block",
+        "shoot": "mob.ghast.fireball"
+    },
+      "animations": {
+        "attack": "animation.yeti.attack",
+        "idle": "animation.yeti.idle",
+        "move": "animation.yeti.move",
+        "smash": "animation.yeti.smash",
+        "shoot": "animation.yeti.shoot",
+        "die": "animation.yeti.die"
+      },
+      "animation_controllers": [
+        { "attack": "controller.animation.tera_delay.attack" },
+        { "move": "controller.animation.werewolf.move" },
+        { "smash": "controller.animation.yeti.smash" },
+        { "idle": "controller.animation.yeti.idle" },
+        { "shoot": "controller.animation.yeti.shoot" },
+        { "die": "controller.animation.yeti.die" }
+      ],
+      "render_controllers": [ "controller.render.iron_golem", "controller.render.night_wanderer_eyes" ],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 25
+      }
+    }
+  }
+}

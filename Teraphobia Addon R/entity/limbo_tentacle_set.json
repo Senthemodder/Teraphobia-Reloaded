@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:limbo_tentacle_set",
+      "materials": {
+        "default": "iron_golem"
+      },
+      "textures": {
+        "default": "textures/blocks/limbo_stone"
+      },
+      "geometry": {
+        "default": "geometry.limbo_tentacle_set"
+      },
+      "animations": {
+        "face_player": "animation.limbo_tentacle_set.idle",
+        "appear": "animation.limbo_tentacle_set.appear",
+        "leave": "animation.limbo_tentacle_set.leave",
+        "camera": "controller.animation.tera_general.camera"
+      },
+      "scripts": {
+        "scale": "1",
+        "animate": [
+          "face_player",
+          "camera"
+        ],
+        "should_update_bones_and_effects_offscreen": "1.0"
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

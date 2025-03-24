@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:structure_template_feature": {
+      "description": {
+          "identifier": "tera:underworld/underworld_lamp"
+      },
+      "structure_name": "mystructure:underworld_lamp",
+      "adjustment_radius": 16,
+      "facing_direction": "south",
+      "constraints": {
+          "unburied": {},
+          "block_intersection": {
+            "block_allowlist": [
+              "minecraft:air",  
+              "tera:underworld_stone"
+            ],
+            "block_whitelist": [
+              "minecraft:lava",  
+              "minecraft:flowing_lava",  
+              "minecraft:polished_blackstone_bricks"
+            ]
+          },
+          "grounded": {}
+      }
+  }
+}

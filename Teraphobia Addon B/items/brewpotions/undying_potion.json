@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:undying_potion",
+            "menu_category": {
+                "group": "itemGroup.name.potion",
+                "category": "equipment",
+                "is_hidden_in_commands": false
+            }
+		},
+		"components": {
+			
+			"minecraft:max_stack_size": 1,
+			"minecraft:entity_placer": {
+				"entity": "tera:undying_potion_effect"
+			},
+			
+			"minecraft:glint": true,
+			
+			"minecraft:icon": "undying_potion",
+			"minecraft:display_name": {
+				"value": "Potion of Undying\n\n§8§o-Use on ground\n-You are invincible for a while, but very weakened"
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:structure_template_feature": {
+      "description": {
+          "identifier": "tera:limbo/ruin/limbo_ruin4"
+      },
+      "structure_name": "mystructure:limbo_ruin4",
+      "adjustment_radius": 4,
+      "facing_direction": "random",
+      "constraints": {
+          "unburied": {},
+          "block_intersection": {
+            "block_allowlist": [
+              "minecraft:air",
+
+"tera:limbo_stone"
+            ]
+          },
+          "grounded": {}
+      }
+  }
+}

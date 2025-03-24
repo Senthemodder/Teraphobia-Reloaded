@@ -1,0 +1,62 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:tree_feature": {
+    "description": {
+      "identifier": "tera:ash_lands_trees"
+    },
+    "mega_trunk": {
+      "trunk_width": 2,
+      "trunk_height": {
+        "base": 13,
+        "intervals": [
+          3,
+          15
+        ]
+      },
+      "trunk_block": {
+        "name": "minecraft:log",
+        "states": {
+          "old_log_type": "spruce"
+        }
+      }
+    },
+    "mega_pine_canopy": {
+      "canopy_height": {
+        "range_min": 13,
+        "range_max": 18
+      },
+      "base_radius": 0,
+      "radius_step_modifier": 3.5,
+      "core_width": 2,
+      "leaf_block": {
+        "name": "tera:ash_leaves"
+      }
+    },
+    "base_block": "tera:ash_snow",
+    "base_cluster": {
+      "may_replace": [
+        "tera:ash_leaves",
+        {
+          "name": "minecraft:dirt",
+          "states": {
+            "dirt_type": "normal"
+          }
+        }
+      ],
+      "num_clusters": 5,
+      "cluster_radius": 2
+    },
+    "may_grow_on": [
+      "tera:ash_snow",
+      "minecraft:dirt"
+    ],
+    "may_replace": [
+      "minecraft:air",
+      "tera:ash_leaves"
+    ],
+    "may_grow_through": [
+      "minecraft:dirt",
+      "tera:ash_snow"
+    ]
+  }
+}

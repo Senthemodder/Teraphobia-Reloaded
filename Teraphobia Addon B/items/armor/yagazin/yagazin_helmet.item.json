@@ -1,0 +1,46 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:yagazin_helmet",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.helmet"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+                "tags": [
+            "mythic:myc_lih"
+        ]
+    },
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "yagazin_helmet"
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.head",
+				"protection": 4
+			},
+			"minecraft:enchantable": {
+				"slot": "armor_head",
+				"value": 9
+			},
+			"minecraft:durability": {
+				"damage_chance": {
+					"min": 0,
+					"max": 100
+			},
+				"max_durability": 800
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": ["tera:yagazin"],
+						"repair_amount": 300
+					}
+				]
+			}
+		}
+	}
+}

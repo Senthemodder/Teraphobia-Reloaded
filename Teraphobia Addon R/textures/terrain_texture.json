@@ -1,0 +1,134 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"reaper_decor": {
+			"textures": "textures/blocks/reaper_decor.png"
+		},
+		"tera_fog_block": {
+			"textures": "textures/blocks/tera_fog_block.png"
+		},
+		"soul_bedrock": {
+			"textures": "textures/blocks/soul_bedrock.png"
+		},
+		"soul_floor": {
+			"textures": "textures/blocks/soul_floor.png"
+		},
+		"soul_wither_skull": {
+			"textures": "textures/entity/soul_wither.png"
+		},
+		"odd_wither_skull": {
+			"textures": "textures/entity/giant_wither.png"
+		},
+		"scroll_table": {
+			"textures": "textures/blocks/scroll_table.png"
+		},
+		"elemental_table": {
+			"textures": "textures/blocks/elemental_table.png"
+		},
+		"totem_table": {
+			"textures": "textures/blocks/totem_table.png"
+		},
+		"tier_4_table": {
+			"textures": "textures/blocks/tier_4_table.png"
+		},
+		"tier_5_table": {
+			"textures": "textures/blocks/tier_5_table.png"
+		},
+		"tier_4_block": {
+			"textures": "textures/blocks/tier_4_block.png"
+		},
+		"tier_3_table": {
+			"textures": "textures/blocks/tier_3_table.png"
+		},
+		"tier_2_table": {
+			"textures": "textures/blocks/tier_2_table.png"
+		},
+		"tier_1_table": {
+			"textures": "textures/blocks/tier_1_table.png"
+		},
+		"solos_ore_underworld": {
+			"textures": "textures/blocks/solos_ore_underworld.png"
+		},
+		"opal_ore_underworld": {
+			"textures": "textures/blocks/opal_ore_underworld.png"
+		},
+		"yagazin_ore_overworld": {
+			"textures": "textures/blocks/yagazin_ore_overworld.png"
+		},
+		"godsteel_ore": {
+			"textures": "textures/blocks/godsteel_ore.png"
+		},
+		"damnashin_ore": {
+			"textures": "textures/blocks/damnashin_ore.png"
+		},
+		"solos_ore": {
+			"textures": "textures/blocks/solos_ore.png"
+		},
+		"sidron_ore": {
+			"textures": "textures/blocks/sidron_ore.png"
+		},
+		"agarnite_ore": {
+			"textures": "textures/blocks/agarnite_ore.png"
+		},
+		"deth_ore": {
+			"textures": "textures/blocks/deth_ore.png"
+		},
+		"eresite_ore": {
+			"textures": "textures/blocks/eresite_ore.png"
+		},
+		"yagazin_ore": {
+			"textures": "textures/blocks/yagazin_ore.png"
+		},
+		"nythium_ore": {
+			"textures": "textures/blocks/nythium_ore.png"
+		},
+		"opal_ore": {
+			"textures": "textures/blocks/opal_ore.png"
+		},
+		"silver_ore": {
+			"textures": "textures/blocks/silver_ore.png"
+		},
+		"ash_leaves": {
+			"textures": "textures/blocks/ash_leaves.png"
+		},
+		"ash_snow": {
+			"textures": "textures/blocks/ash_snow.png"
+		},
+		"limbo_portal": {
+			"textures": "textures/blocks/limbo_portal.png"
+		},
+		"limbo_stone": {
+			"textures": "textures/blocks/limbo_stone.png"
+		},
+		"underworld_portal": {
+			"textures": "textures/blocks/underworld_portal.png"
+		},
+		"underworld_stone": {
+			"textures": "textures/blocks/underworld_stone.png"
+		},
+		"soul_leaves": {
+			"textures": "textures/blocks/soul_leaves.png"
+		},
+		"soul_foliage": {
+			"textures": "textures/blocks/soul_foliage.png"
+		},
+		"soul_dim_portal": {
+			"textures": "textures/blocks/soul_dim_portal.png"
+		},
+		"soul_grass": {
+			"textures": "textures/blocks/soul_grass.png"
+		},
+		"soul_stone": {
+			"textures": "textures/blocks/soul_stone.png"
+		},
+		"soul_grass_top": {
+			"textures": "textures/blocks/soul_grass_top.png"
+		},
+		"soul_grass_side": {
+			"textures": "textures/blocks/soul_grass_side.png"
+		}
+	}
+}

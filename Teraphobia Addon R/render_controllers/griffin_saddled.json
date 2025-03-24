@@ -1,0 +1,45 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.teragon": {
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        { "*": "query.has_target" }
+      ],
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.default" ]
+    },
+    "controller.render.teragon.rest": {
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        { "*": "!query.has_target" }
+      ],
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.rest" ]
+    },
+    "controller.render.griffin_saddled": {
+      "geometry": "Geometry.saddled",
+      "part_visibility": [
+        { "*": "query.is_saddled" }
+      ],
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.saddled" ]
+    },
+    "controller.render.soul_wither": {
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        { "*": "!query.is_stunned" }
+      ],
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.default" ]
+    },
+    "controller.render.soul_wither.spawn": {
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        { "*": "query.is_stunned" }
+      ],
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.spawn" ]
+    }
+  }
+}

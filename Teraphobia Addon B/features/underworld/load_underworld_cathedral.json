@@ -1,0 +1,19 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:structure_template_feature": {
+      "description": {
+          "identifier": "tera:underworld/load_underworld_cathedral"
+      },
+      "structure_name": "mystructure:load_underworld_cathedral",
+      "adjustment_radius": 8,
+      "facing_direction": "south",
+      "constraints": {
+          "block_intersection": {
+            "block_allowlist": [
+              "minecraft:air",
+"minecraft:lava"
+            ]
+          }
+      }
+  }
+}

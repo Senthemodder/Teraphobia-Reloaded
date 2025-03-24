@@ -1,0 +1,46 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:silver_golem",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/silver_golem"
+      },
+      "geometry": {
+        "default": "geometry.tera_golem.alt"
+      },
+			"spawn_egg": {
+				"base_color": "#4a4a4a",
+				"overlay_color": "#818181"
+			},
+      "animations": {
+
+        "del_attack_con":  "controller.animation.tera_general.dynamic_attack",
+        "move.con":  "controller.animation.tera_general.move",
+        "idle.con":  "controller.animation.tera_general.idle",
+        "death.con":  "controller.animation.tera_general.death",
+
+        "attack1": "animation.tera_golem.attack1",
+        "attack2": "animation.tera_golem.attack2",
+        "attack3": "animation.tera_golem.attack3",
+        "move": "animation.tera_golem.move",
+        "idle": "animation.tera_golem.idle",
+        "death": "animation.tera_golem.death"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.modified_tcos0 = Math.clamp(((Math.cos(query.modified_distance_moved * 13.5) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 25.0), -12.5, 12.5);"
+        ],
+        "animate": [
+          "idle.con",
+          "move.con",
+          "del_attack_con",
+          "death.con"
+        ]
+      },
+      "render_controllers": [ "controller.render.iron_golem" ]
+    }
+  }
+}

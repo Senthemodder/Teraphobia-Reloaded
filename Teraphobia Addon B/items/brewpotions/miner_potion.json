@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:miner_potion",
+            "menu_category": {
+                "group": "itemGroup.name.potion",
+                "category": "equipment",
+                "is_hidden_in_commands": false
+            }
+		},
+		"components": {
+			
+			"minecraft:max_stack_size": 1,
+			"minecraft:entity_placer": {
+				"entity": "tera:miner_potion_effect"
+			},
+			
+			"minecraft:glint": true,
+			
+			"minecraft:icon": "miner_potion",
+			"minecraft:display_name": {
+				"value": "Potion of Miner's Potential\n\n§8§o-Use on ground\n-Any tough stone found commonly shall crumble around you"
+			}
+		}
+	}
+}

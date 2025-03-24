@@ -1,0 +1,45 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:living_tower",
+			"materials": {
+				"default": "ghast"
+			},
+			"textures": {
+				"default": "textures/entity/living_tower/living_tower",
+				"shooting": "textures/entity/living_tower/shooting"
+			},
+			"particle_effects": {
+				"transform": "tera:soulfire_emitter"
+			},
+			"geometry": {
+				"default": "geometry.living_tower"
+			},
+			"spawn_egg": {
+				"base_color": "#4949ff",
+				"overlay_color": "#00cfff"
+			},
+			"animations": {
+				"move": "animation.soul_ghast.move",
+				"scale": "animation.soul_ghast.scale",
+				"death": "animation.soul_ghast.death"
+			},
+			"animation_controllers": [
+				{
+					"move": "controller.animation.ghast.move"
+				},
+				{
+					"scale": "controller.animation.ghast.scale"
+				},
+				{
+					"death": "controller.animation.tera_general.death"
+				},
+				{
+					"flame": "controller.animation.tera_partblaze.particle"
+				}
+			],
+			"render_controllers": ["controller.render.ghast"]
+		}
+	}
+}

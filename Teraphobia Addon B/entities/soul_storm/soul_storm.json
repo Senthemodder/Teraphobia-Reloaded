@@ -1,0 +1,482 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "tera:soul_storm",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:ender_dragon"
+		},
+		"component_groups":{
+			"mass1":{
+
+				"minecraft:variant": {
+					"value": 10
+				}
+			},
+			"mass2":{
+
+				"minecraft:variant": {
+					"value": 20
+				}
+			},
+			"dead": {
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:spawn_entity": {
+					"entities": {
+						"min_wait_time": 0,
+						"max_wait_time": 0,
+						"num_to_spawn": 50,
+						"single_use": true,
+						"spawn_entity": "minecraft:xp_orb"
+					}
+				}
+			},
+			"ability1":{
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:is_saddled": {},
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1.5,
+					"time_down_event": {
+						"event": "ability1_do"
+					}
+				}
+			},
+			"ability1_do":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1.5,
+					"time_down_event": {
+						"event": "random"
+					}
+				}
+			},
+			"ability2":{
+				"minecraft:movement": {
+					"value": 0
+				},
+				"minecraft:physics": {
+					"has_gravity": false
+				},
+				"minecraft:movement.glide": {
+					"start_speed": 0.9,
+					"speed_when_turning": 0.9
+				},
+				"minecraft:behavior.swoop_attack": {
+				  "priority": 1,
+				  "damage_reach": 0.2,
+				  "speed_multiplier": 2.0,
+				  "delay_range": [ 0.25, 0.5 ]
+				},
+				"minecraft:attack": {
+					"damage": 9
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 8,
+					"time_down_event": {
+						"event": "random"
+					}
+				},
+				"minecraft:behavior.circle_around_anchor": {
+					"priority": 3,
+					"radius_change": 1.0,
+					"radius_adjustment_chance": 0.004,
+					"height_adjustment_chance": 0.002857,
+					"goal_radius": 1.0,
+					"angle_change": 15.0,
+					"radius_range": [ 5.0, 15.0 ],
+					"height_offset_range": [ -4.0, 5.0 ],
+					"height_above_target_range": [ 10.0, 20.0 ]
+				  },
+				"minecraft:is_sheared": {}
+			},
+			"ability3":{
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:shooter": {
+					"def": "minecraft:literally_nothing"
+				  },
+				"minecraft:behavior.ranged_attack": {
+					"priority": 2,
+					"attack_radius": 64,
+					"charge_shoot_trigger": 99,
+					"charge_charged_trigger": 99
+				  },
+				"minecraft:knockback_resistance": {
+					"value": 0.725
+				},
+				"minecraft:is_ignited": {},
+				"minecraft:is_pregnant": {},
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.8,
+					"time_down_event": {
+						"event": "ability3_do"
+					}
+				}
+			},
+			"ability3_do":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1.2,
+					"time_down_event": {
+						"event": "random"
+					}
+				}
+			},
+			"cant_jump":{
+				"minecraft:knockback_resistance": {
+					"value": 100
+				}
+			},
+			"ability_flight":{
+				"minecraft:navigation.float": {
+					"can_path_over_water": true
+				  },
+				  "minecraft:can_fly": {
+				  },
+	
+				"minecraft:physics": {
+					"has_gravity": true
+				},
+				"minecraft:shooter": {
+					"def": "minecraft:none"
+				  },
+				"minecraft:behavior.ranged_attack": {
+					"priority": 2,
+					"attack_radius": 64,
+					"charge_shoot_trigger": 99,
+					"charge_charged_trigger": 99
+				  },
+				  "minecraft:jump.static": {
+				},
+				"minecraft:behavior.float": {
+					"priority": 0
+				  }
+			},
+			"random":{
+				"minecraft:shooter": {
+					"def": "minecraft:none"
+				  },
+				"minecraft:behavior.ranged_attack": {
+					"priority": 1,
+					"attack_radius": 64,
+					"charge_shoot_trigger": 0.25,
+					"charge_charged_trigger": 0.25
+				  },
+				"minecraft:navigation.float": {
+					"can_path_over_water": true
+				  },
+				  "minecraft:can_fly": {
+				  },
+				  "minecraft:movement": {
+					"value": 0.0
+				},
+	
+				"minecraft:physics": {
+					"has_gravity": true
+				},
+				  "minecraft:jump.static": {
+				},
+				"minecraft:behavior.float": {
+					"priority": 0
+				  }
+			}
+		},
+				"components": {
+					
+					"minecraft:persistent": {
+					},
+			"minecraft:on_death": {
+				"event": "dead",
+				"target": "self"
+			},
+					
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"bamboo_sapling",
+					"beetroot",
+					"brown_mushroom",
+					"carrots",
+					"carved_pumpkin",
+					"chorus_flower",
+					"chorus_plant",
+					"deadbush",
+					"double_plant",
+					"leaves",
+					"leaves2",
+					"lit_pumpkin",
+					"melon_block",
+					"melon_stem",
+					"potatoes",
+					"pumpkin",
+					"pumpkin_stem",
+					"red_flower",
+					"red_mushroom",
+					"crimson_fungus",
+					"warped_fungus",
+					"reeds",
+					"sapling",
+					"snow_layer",
+					"sweet_berry_bush",
+					"tallgrass",
+					"turtle_egg",
+					"vine",
+					"waterlily",
+					"wheat",
+					"yellow_flower"
+				]
+			},
+			"minecraft:experience_reward": {
+				"on_death": "100"
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:nameable": {},
+			"minecraft:health": {
+				"value": 5000,
+				"max": 5000
+			},
+			"minecraft:tick_world":{
+    "never_despawn": true,
+    "radius": 6
+},
+			"minecraft:collision_box": {
+				"width": 3,
+				"height": 3
+			},
+			"minecraft:movement": {
+				"value": 0.0
+			},
+			"minecraft:knockback_resistance": {
+				"value": 100
+			},
+			"minecraft:rideable": {
+				"seat_count": 5,
+				"pull_in_entities": true,
+				"family_types": [
+				  "ss_pawn"
+				],
+				"seats": [
+				  {
+					"min_rider_count": 0,
+					"max_rider_count": 5,
+					"position": [ 0.0, 2.5, 0.5 ]
+				  },
+				  {
+					"min_rider_count": 1,
+					"max_rider_count": 5,
+					"position": [ -7.5, 8, 3 ]
+				  },
+				  {
+					"min_rider_count": 2,
+					"max_rider_count": 5,
+					"position": [ 8.5, 6, -1 ]
+				  }
+				]
+			  },
+			"minecraft:type_family": {
+				"family": ["tera_bosses","ghast", "tera_monster","monster", "mob","undead","soul_storm"]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "fall",
+					"deals_damage": false
+				}
+			},
+			"minecraft:follow_range": {
+				"value": 45,
+				"max": 45
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 1
+			},
+			
+			"minecraft:boss": {
+				"name": "Soul Storm",
+				"should_darken_sky": true,
+				"hud_range": 50
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "who_now"
+						},
+						"max_dist": 45
+					}
+				],
+				"must_see": true
+			},
+
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"events": {
+			"ss_tick": {
+				"queue_command": {
+					"command": [
+						"function soul_storm"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"tp @s ~ ~10 ~",
+						"function small_impact",
+						"ride @s summon_rider tera:soul_storm_pawn",
+						"ride @s summon_rider tera:soul_storm_pawn2",
+						"ride @s summon_rider tera:soul_storm_pawn3",
+						"summon tera:soul_storm_dark"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"random","cant_jump"
+					]
+				}
+			},
+			"random_do": {
+				"randomize": [{
+						"filters": {
+							"test": "has_target"
+						},
+						"weight": 10,
+						"add": {
+							"component_groups": ["ability1","ability_flight"]
+						},
+						"remove": {
+							"component_groups": ["random"]
+						}
+					},
+					{
+						"filters": {
+							"test": "has_target"
+						},
+						"weight": 10,
+						"add": {
+							"component_groups": ["ability2"]
+						},
+						"remove": {
+							"component_groups": ["random"]
+						}
+					},
+					{
+						"filters": {
+							"test": "has_target"
+						},
+						"weight": 10,
+						"add": {
+							"component_groups": ["ability3","ability_flight"]
+						},
+						"remove": {
+							"component_groups": ["random"]
+						}
+					}
+				]
+			},
+			"random": {
+				"remove": {
+					"component_groups": [
+						"ability1", "ability2", "ability3", 
+						"ability1_do", "ability2_do", "ability_flight", 
+						"stun"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"random","cant_jump"
+					]
+				}
+			},
+			"ability1_do": {
+				"queue_command": {
+					"command": [
+						"function large_aoe_exp"
+					],
+					"target":"target"
+				},
+				"add": {
+					"component_groups": [
+						"ability1_do"
+					]
+				}
+			},
+			"ability3_do": {
+				"queue_command": {
+					"command": [
+						"summon tera:complex_dash ^2 ^2 ^"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ability3_do"
+					]
+				}
+			},
+			"dead": {
+				"queue_command": {
+					"command": [
+						"particle tera:mainboss_flash ^ ^7 ^-8",
+						"event entity @e[family=ss_pawn,r=150] dead",
+						"playsound mob.ss_death @a[r=120]"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dead"
+					]
+				}
+			},
+			"mass1": {
+				"sequence": [{
+						"filters": {
+							"test": "has_tag",
+							"value":"ss_mass2",
+							"operator":"!="
+						},
+						"add": {
+							"component_groups": [
+								"mass1"
+							]
+						}
+					}
+				]
+			},
+			"mass2": {
+				"queue_command": {
+					"command": [
+						"execute as @s[tag=!ss_mass2] run summon tera:soul_storm_part",
+						"execute as @s[tag=!ss_mass2] run summon tera:soul_storm_part2",
+						"execute as @s[tag=!ss_mass2] run tag @s add ss_mass2"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"mass2"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"mass1"
+					]
+				}
+			}
+		}
+	}
+}

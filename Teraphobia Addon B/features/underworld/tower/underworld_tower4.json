@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:structure_template_feature": {
+      "description": {
+          "identifier": "tera:underworld/tower/underworld_tower4"
+      },
+      "structure_name": "mystructure:underworld_tower4",
+      "adjustment_radius": 4,
+      "facing_direction": "random",
+      "constraints": {
+          "unburied": {},
+          "block_intersection": {
+            "block_allowlist": [
+              "minecraft:air",
+
+"tera:underworld_stone"
+            ]
+          },
+          "grounded": {}
+      }
+  }
+}

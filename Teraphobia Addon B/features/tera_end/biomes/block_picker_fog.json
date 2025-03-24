@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:aggregate_feature": {
+		"description": {
+		  "identifier": "tera:tera_end/biomes/block_picker_fog"
+		  /*
+		  places the block associated with this biome
+		  see the conditions folder for the conditions
+		  to add more biomes, add more conditions (make sure to also make an entry in the conditions folder)
+		  */
+		},
+		"features": [
+			"tera:tera_end/conditions/biome_0_condition_fog",
+			"tera:tera_end/conditions/biome_1_condition_fog",
+			"tera:tera_end/conditions/biome_2_condition_fog",
+			"tera:tera_end/conditions/biome_3_condition_fog",
+			"tera:tera_end/conditions/biome_4_condition_fog",
+			"tera:tera_end/conditions/biome_5_condition_fog"
+		],
+		"early_out": "first_success"
+	}
+}

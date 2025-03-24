@@ -1,0 +1,19 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "tera:tera_ore/agarnite_ore"
+    },
+    "count": 3,
+    "replace_rules": [
+      {
+        "places_block": "tera:agarnite_ore",
+        "may_replace": [
+          {
+            "name": "minecraft:stone"
+          }
+        ]
+      }
+    ]
+  }
+}

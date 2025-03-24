@@ -1,0 +1,34 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:flame_apostle_rest",
+			"materials": {
+				"default": "spider",
+				"invisible": "spider_invisible"
+			},
+			"textures": {
+				"default": "textures/entity/flame_apostle"
+			},
+			"geometry": {
+				"default": "geometry.soul_spider"
+			},
+			"particle_effects": {
+				"transform": "tera:hell_emitter"
+			},
+			"animations": {
+			  "wake": "animation.flame_apostle.wake",
+			  "idle": "animation.forest_spider.sit"
+			},
+			"animation_controllers": [
+			  {"idle":  "controller.animation.tera_general.idle"},
+			  {"wake":  "controller.animation.tera_general.wake"}
+			],
+			"render_controllers": ["controller.render.spider"],
+			"spawn_egg": {
+				"base_color": "#5184db",
+				"overlay_color": "#2c008e"
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:deathworm_rest",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/deathworm"
+      },
+      "geometry": {
+        "default": "geometry.deathworm"
+      },
+      "scripts": {
+        "scale": "3.2",
+        "pre_animation": [
+          "variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;"
+        ]
+      },
+			"spawn_egg": {
+				"base_color": "#0d7400",
+				"overlay_color": "#e9d1f4"
+			},
+			"animations": {
+			  "wake": "animation.deathworm.wake",
+			  "idle": "animation.deathworm.sit"
+			},
+			"animation_controllers": [
+			  {"idle":  "controller.animation.tera_general.idle"},
+			  {"wake":  "controller.animation.tera_general.wake"}
+			],
+      "render_controllers": [ "controller.render.iron_golem" ],
+      "enable_attachables": true
+    }
+  }
+}

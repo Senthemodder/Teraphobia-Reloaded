@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:stone_totem"
+    },
+
+    
+    "tags": [ "totem_table" ],
+    "pattern": [
+      "GAG",
+      "A#A",
+      " A "
+    ],
+    "key": {
+      "#": {
+        "item": "tera:soul"
+      },
+      "A": {
+        "item": "minecraft:cobblestone"
+      },
+      "G": {
+        "item": "minecraft:emerald"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:stone_totem"
+    }
+  }
+}

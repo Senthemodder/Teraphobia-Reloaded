@@ -1,0 +1,77 @@
+{
+	"format_version": "1.16.0",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "tera:prime_soul_tp",
+              "is_spawnable": false,
+        "is_summonable": true,
+        "is_experimental": false
+      },
+           "component_groups": {
+               "kill_cloud":{               
+                "minecraft:explode": {
+                    "fuse_length": 0,
+                    "fuse_lit": true,
+                    "power": 0,
+                    "breaks_blocks": true,
+                    "causes_fire": false,
+                    "destroy_affected_by_griefing": true
+                  }
+                  }
+           },                 "components": {
+                     "minecraft:collision_box": {
+          "width": 0.1,
+          "height": 2
+        },
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.1,
+					"time_down_event": {
+						"event": "kill_cloud"
+					}
+				},
+        "minecraft:knockback_resistance": {
+          "value": 100
+        },
+        "minecraft:persistent": {
+        },
+          "minecraft:health":{
+        "value":1,
+          "min":1,
+          "max":1
+           },        
+                 "minecraft:type_family": {
+          "family": [ "summon","inanimate" ]
+        },
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+              "minecraft:physics": {
+          "has_gravity": false,
+          "has_collision": true
+        },    "minecraft:damage_sensor": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+           },                       "events": {
+                   "kill_cloud": {
+          "add": {
+            "component_groups": [
+              "kill_cloud"
+            ]
+          }
+        },
+        "minecraft:entity_spawned": {
+          "queue_command": {
+            "command": [
+              "particle tera:prime_soul_tp ~~~",
+              "tp @s ^ ^0.12 ^-0.1",
+            "execute as @s run execute at @s positioned as @s run tp @e[type=tera:prime_soul,c=1] ^ ^0.1 ^1",
+            "tp @e[type=tera:prime_soul,c=1] ~~~ facing @e[r=8,c=1,type=tera:prime_soul_tp,family=!prime_soul]"
+            ]
+          }
+        }
+           }}}

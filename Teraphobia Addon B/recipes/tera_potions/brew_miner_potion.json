@@ -1,0 +1,15 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "tera:brew_miner_potion"
+    },
+
+    "tags": [ "brewing_stand" ],
+
+    "input": "tera:abnormal_potion",
+    "reagent": "minecraft:iron_pickaxe",
+    "output": "tera:miner_potion"
+  }
+
+}

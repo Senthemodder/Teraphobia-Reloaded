@@ -1,0 +1,32 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:fire_arrow"
+    },
+
+    
+    "tags": [ "elemental_table" ],
+    "pattern": [
+      " A ",
+      "A#A",
+      " A "
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:arrow",
+        "data": 0
+      },
+      "A": {
+        "item": "minecraft:blaze_powder"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:fire_arrow",
+      "count": 4
+    }
+  }
+}

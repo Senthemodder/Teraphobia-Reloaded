@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+
+    "controller.render.prime_soul.inside": {
+      "geometry": "Geometry.inside",
+      "materials": [ { "*": "Material.inside" } ],
+      "textures": [ "Texture.inside" ],
+      "ignore_lighting": true
+    },
+    "controller.render.prime_soul": {
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.default" ],
+      "ignore_lighting": true
+    }
+  }
+}

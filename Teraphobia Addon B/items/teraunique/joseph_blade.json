@@ -1,0 +1,96 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:joseph_blade",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:use_modifiers": {
+	"use_duration": 9999999,
+	"movement_modifier": 0.5
+},
+"minecraft:use_animation": "bow",
+"minecraft:food": {
+	"nutrition": 0,
+	"saturation_modifier": 1,
+	"can_always_eat": true
+},
+			"minecraft:tags": {
+                "tags": [
+			"mythic:myc_kat",
+			"mythic:myc_def"
+		]
+	},
+			"minecraft:glint": true,
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:damage": 10,
+            "minecraft:enchantable": {
+                "value": 7,
+                "slot": "sword"
+            },
+			"minecraft:icon": {
+				"texture": "joseph_blade"
+			},
+			"minecraft:display_name": {
+				"value": "Joseph's Blade\n\n§8§o-This weapon is extremely dangerous... possibly Agarthan?\n-The Tornado Caller effect will be applied as you sneak\n-The wind has no problem hurting you, be careful\n-The Sky Affiliater effect will be applied"
+			}
+		},
+		"events": {
+            "fantasy:damage_event": {
+				"run_command": {
+					"command": [
+						"playsound block.end_portal.spawn @a[r=70]",
+			"particle tera:joseph_ability ~~~",
+						"camerashake add @a[r=70] 0.5 1 rotational",
+						"execute @e[r=70,family=mob] ~~~ summon lightning_bolt ~~~",
+						"execute @e[r=70,family=player,rm=3] ~~~ summon lightning_bolt ~~~",
+						"damage @e[r=70,family=mob] 100",
+						
+						"damage @e[r=70,family=player,rm=3] 100"
+						
+					]
+				}
+            },
+			"fulger2": {
+				"sequence": [
+					{
+					"condition": "query.is_sneaking",
+					"swing": {},
+					"run_command": {
+						"command": [
+							"playsound block.end_portal.spawn @a[r=30]",
+							"execute @e[rm=2,r=15] ~~~ summon tera:fiery_spike2 ~~~",
+							"summon tera:fiery_spike2 ~3 ~ ~",
+							"summon tera:fiery_spike2 ~-3 ~ ~",
+							"summon tera:fiery_spike2 ~ ~ ~-3",
+							"summon tera:fiery_spike2 ~ ~ ~3"
+						]
+					}
+					},
+					{
+					"condition": "!query.is_sneaking",
+					"swing": {},
+					"run_command": {
+						"command": [
+							"playsound mob.ghast.fireball @a[r=40]"
+						]
+					},
+					"shoot": {
+						"projectile": "tera:fiery_ball",
+						"launch_power": 1,
+						"angle_offset": 0.5
+					   },
+					   "damage": {
+						"type": "durability",
+						"amount": 1
+					}
+					}
+				]
+			}
+		}
+	}
+}

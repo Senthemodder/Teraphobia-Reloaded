@@ -1,0 +1,25 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:teronic_guide",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:projectile": {
+			  "projectile_entity": "tera:teronic_guide"
+			},
+			"minecraft:throwable": {
+		"do_swing_animation": true
+		},
+						
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "teronic_guide"
+			},
+			"minecraft:glint": true
+		}
+	}
+}

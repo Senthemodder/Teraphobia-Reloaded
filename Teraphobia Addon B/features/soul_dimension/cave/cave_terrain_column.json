@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.20",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "tera:soul_dimension/cave/cave_terrain_column"
+		},
+
+		"places_feature": "tera:soul_dimension/cave/cave_terrain_block",
+
+		"iterations": "t.y1_xzinterpolation = query.noise(v.worldx / 32, v.worldz / 32); t.y2_xzinterpolation = query.noise((v.worldx - 768) / 32, (v.worldz + 768) / 32); return 32;",
+
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [0, 31]
+		}
+	}
+}

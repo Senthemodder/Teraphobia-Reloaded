@@ -1,0 +1,42 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:serpent",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/serpent"
+      },
+      "geometry": {
+        "default": "geometry.serpent"
+      },
+      "scripts": {
+        "scale": "2.5",
+        "pre_animation": [
+          "variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;"
+        ]
+      },
+      "animations": {
+        "attack": "animation.serpent.attack",
+        "go": "animation.serpent.idle",
+        "breach_up": "animation.serpent.breach_up",
+        "breach_down": "animation.serpent.breach_down",
+        "now": "animation.serpent.move",
+        "die": "animation.serpent.die"
+      },
+      "animation_controllers": [
+        { "go": "controller.animation.serpent.go" },
+        { "now": "controller.animation.serpent.now" },
+        { "breach_up": "controller.animation.serpent.breach_up" },
+        { "breach_down": "controller.animation.serpent.breach_down" },
+        { "attack": "controller.animation.tera_general.attack" },
+        { "die": "controller.animation.yeti.die" }
+      ],
+      "render_controllers": [ "controller.render.iron_golem" ],
+			"spawn_egg": {
+				"base_color": "#00b7b9",
+				"overlay_color": "#4be3ee"
+			}
+    }
+  }
+}

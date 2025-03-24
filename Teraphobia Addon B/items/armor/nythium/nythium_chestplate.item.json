@@ -1,0 +1,49 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:nythium_chestplate",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.chestplate"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+                "tags": [
+            "mythic:myc_mid"
+        ]
+    },
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "nythium_chestplate"
+			},
+			"minecraft:display_name": {
+				"value": "Nythium Chestplate\n\n§8§o-Careful, this stuff may or may not be radioactive\n-Full set needed for effect\n-With immunity to Poison, you will poison others near you"
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.chest",
+				"protection": 7
+			},
+			"minecraft:enchantable": {
+				"slot": "armor_torso",
+				"value": 9
+			},
+			"minecraft:durability": {
+				"damage_chance": {
+					"min": 0,
+					"max": 100
+			},
+				"max_durability": 900
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": ["tera:nythium"],
+						"repair_amount": 379
+					}
+				]
+			}
+		}
+	}
+}

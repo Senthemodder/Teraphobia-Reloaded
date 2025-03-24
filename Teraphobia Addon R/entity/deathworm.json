@@ -1,0 +1,37 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:deathworm",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/deathworm"
+      },
+      "geometry": {
+        "default": "geometry.deathworm"
+      },
+      "scripts": {
+        "scale": "3.2",
+        "pre_animation": [
+          "variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;"
+        ]
+      },
+			"spawn_egg": {
+				"base_color": "#0d7400",
+				"overlay_color": "#e9d1f4"
+			},
+      "animations": {
+        "attacking": "animation.deathworm.attacking",
+        "roaming": "animation.deathworm.roaming",
+        "die": "animation.deathworm.die"
+      },
+      "animation_controllers": [
+        { "attacking": "controller.animation.deathworm.attacking" },
+        { "roaming": "controller.animation.deathworm.roaming" },
+        { "die": "controller.animation.yeti.die" }
+      ],
+      "render_controllers": [ "controller.render.iron_golem" ],
+      "enable_attachables": true
+    }
+  }
+}

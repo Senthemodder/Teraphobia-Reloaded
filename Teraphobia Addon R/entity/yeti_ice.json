@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:yeti_ice",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/yeti_ice"
+      },
+      "geometry": {
+        "default": "geometry.yeti_ice"
+      },
+      "animations": {
+        "go": "animation.yeti_ice.idle"
+      },
+      "animation_controllers": [
+        { "go": "controller.animation.renva.go" }
+      ],
+      "render_controllers": [ "controller.render.iron_golem" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 29
+      }
+    }
+  }
+}

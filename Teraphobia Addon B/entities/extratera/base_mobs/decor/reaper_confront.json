@@ -1,0 +1,77 @@
+{
+	"format_version": "1.16.0",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "tera:reaper_confront",
+              "is_spawnable": false,
+        "is_summonable": true,
+        "is_experimental": false
+      },
+           "component_groups": {
+               "kill_cloud":{               
+                "minecraft:explode": {
+                    "fuse_length": 0,
+                    "fuse_lit": true,
+                    "power": 0,
+                    "breaks_blocks": true,
+                    "causes_fire": false,
+                    "destroy_affected_by_griefing": true
+                  }
+                  }
+           },                 "components": {
+        "minecraft:despawn": {
+          "despawn_from_distance": {}
+        },
+        "minecraft:knockback_resistance": {
+          "value": 100
+        },
+        "minecraft:health":{
+          "value":1,
+            "min":1,
+            "max":1
+             },     
+       "minecraft:collision_box": {
+        "width": 1,
+        "height": 1
+       },       
+                 "minecraft:type_family": {
+          "family": [ "summon","inanimate","npc" ]
+        },
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+        "minecraft:npc": {
+          "npc_data": {
+            "portrait_offsets": {
+              "translate": [-7, 50, 0],
+              "scale": [1.75, 1.75, 1.75]
+            }
+          }
+        },
+              "minecraft:physics": {
+          "has_gravity": false,
+          "has_collision": false
+        },    "minecraft:damage_sensor": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+           },                       "events": {
+            
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"dialogue open @s @p reaper_confront"
+					]
+				}
+			},
+                   "kill_cloud": {
+          "add": {
+            "component_groups": [
+              "kill_cloud"
+            ]
+          }
+        }
+           }}}

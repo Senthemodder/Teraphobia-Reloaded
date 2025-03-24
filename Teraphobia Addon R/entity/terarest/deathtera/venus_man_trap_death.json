@@ -1,0 +1,42 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:venus_man_trap_death",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/venus_man_trap"
+      },
+      "geometry": {
+        "default": "geometry.venus_man_trap"
+      },
+      "scripts": {
+        "scale": "1.2",
+        "pre_animation": [
+          "variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;"
+        ]
+      },
+			"particle_effects": {
+				"transform": "tera:tera_boss_death",
+				"exp": "tera:medium_impact"
+			},
+      "sound_effects": {
+        "death": "mob.enderdragon.death",
+        "exp": "ambient.weather.lightning.impact"
+    },
+    "animations": {
+      "death": "animation.tera_boss.death"
+    },
+    "animation_controllers": [
+      
+      {"death":  "controller.animation.tera_general.death_boss"},
+        {"flame": "controller.animation.tera_partblaze.particle"}
+    ],
+      "render_controllers": [ "controller.render.iron_golem" ],
+			"spawn_egg": {
+				"base_color": "#00b7b9",
+				"overlay_color": "#4be3ee"
+			}
+    }
+  }
+}

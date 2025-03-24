@@ -1,0 +1,16 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "tera:soul_knight_sword",
+          "weight": 1,
+          "functions": [
+          ]
+        }
+      ]
+    }
+  ]
+}

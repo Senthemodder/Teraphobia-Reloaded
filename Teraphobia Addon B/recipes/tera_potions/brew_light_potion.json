@@ -1,0 +1,15 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "tera:brew_light_potion"
+    },
+
+    "tags": [ "brewing_stand" ],
+
+    "input": "tera:abnormal_potion",
+    "reagent": "tera:eresite",
+    "output": "tera:light_potion"
+  }
+
+}

@@ -1,0 +1,19 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "tera:tera_ore/solos_ore_underworld"
+    },
+    "count": 4,
+    "replace_rules": [
+      {
+        "places_block": "tera:solos_ore_underworld",
+        "may_replace": [
+          {
+            "name": "tera:underworld_stone"
+          }
+        ]
+      }
+    ]
+  }
+}

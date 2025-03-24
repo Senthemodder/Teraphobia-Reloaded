@@ -1,0 +1,43 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:night_abomination_death",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/night_abomination"
+      },
+      "geometry": {
+        "default": "geometry.night_abomination"
+      },
+      "scripts": {
+        "scale": "1",
+        "pre_animation": [
+          "variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;"
+        ]
+      },
+			"particle_effects": {
+				"transform": "tera:tera_boss_death",
+				"exp": "tera:medium_impact"
+			},
+      "sound_effects": {
+        "death": "mob.enderdragon.death",
+        "exp": "ambient.weather.lightning.impact"
+    },
+    "animations": {
+      "death": "animation.tera_boss.death"
+    },
+    "animation_controllers": [
+      
+      {"death":  "controller.animation.tera_general.death_boss"},
+        {"flame": "controller.animation.tera_partblaze.particle"}
+    ],
+      "render_controllers": [ "controller.render.iron_golem" ],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 25
+      }
+    }
+  }
+}

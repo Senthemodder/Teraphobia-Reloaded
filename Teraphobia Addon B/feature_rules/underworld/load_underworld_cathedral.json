@@ -1,0 +1,42 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:feature_rules": {
+      "description": {
+          "identifier": "tera:underworld/load_underworld_cathedral",
+          "places_feature": "tera:underworld/load_underworld_cathedral"
+      },
+      "conditions": {
+          "placement_pass": "surface_pass",
+          "minecraft:biome_filter": [
+              {
+                "any_of": [
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "the_end"
+                  }
+                ]
+              }
+            ]
+          },
+      "distribution": {
+          "scatter_chance": 0.2,
+          "iterations": "(v.originx > 50000 && v.originz > 0 && v.originx < 100000 && v.originz < 50000) * 1",
+          "x": {
+              "distribution": "uniform",
+              "extent": [
+                  0,
+                  15
+              ]
+          },
+          "y": 180,
+          "z": {
+              "distribution": "uniform",
+              "extent": [
+                  0,
+                  15
+              ]
+          }
+      }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:night_abomination_rest",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/night_abomination"
+      },
+      "geometry": {
+        "default": "geometry.night_abomination"
+      },
+      "scripts": {
+        "scale": "1",
+        "pre_animation": [
+          "variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;"
+        ]
+      },
+      "sound_effects": {
+        "roar": "mob.wither.death"
+    },
+    "animations": {
+      "wake": "animation.night_abomination.wake",
+      "idle": "animation.night_abomination.rest"
+    },
+    "animation_controllers": [
+      {"idle":  "controller.animation.tera_general.idle"},
+      {"wake":  "controller.animation.tera_general.wake"}
+    ],
+      "render_controllers": [ "controller.render.iron_golem" ],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 25
+      }
+    }
+  }
+}

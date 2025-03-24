@@ -1,0 +1,179 @@
+{
+	"tera:reaper_decor": {
+		"sound": "glass",
+		"textures": "reaper_decor"
+	},
+	"tera:fog_warping_ways": {
+		"sound": "glass",
+		"textures": "tera_fog_block"
+	},
+	"tera:fog_dead_lands": {
+		"sound": "glass",
+		"textures": "tera_fog_block"
+	},
+	"tera:fog_soul_plains": {
+		"sound": "glass",
+		"textures": "tera_fog_block"
+	},
+	"tera:fog_dying_cove": {
+		"sound": "glass",
+		"textures": "tera_fog_block"
+	},
+	"tera:fog_flesh_masses": {
+		"sound": "glass",
+		"textures": "tera_fog_block"
+	},
+	"tera:fog_stone_marks": {
+		"sound": "glass",
+		"textures": "tera_fog_block"
+	},
+	"soul_bedrock": {
+		"sound": "stone",
+		"textures": "soul_bedrock"
+	},
+	"soul_floor": {
+		"sound": "stone",
+		"textures": "soul_floor"
+	},
+	"soul_wither_skull": {
+		"sound": "glass"
+	},
+	"odd_wither_skull": {
+		"sound": "glass"
+	},
+	"scroll_table": {
+		"sound": "stone",
+		"textures": "scroll_table"
+	},
+	"elemental_table": {
+		"sound": "stone",
+		"textures": "elemental_table"
+	},
+	"totem_table": {
+		"sound": "stone",
+		"textures": "totem_table"
+	},
+	"tier_4_table": {
+		"sound": "stone",
+		"textures": "tier_4_table"
+	},
+	"tier_5_table": {
+		"sound": "stone",
+		"textures": "tier_5_table"
+	},
+	"tier_3_table": {
+		"sound": "stone",
+		"textures": "tier_3_table"
+	},
+	"tier_2_table": {
+		"sound": "stone",
+		"textures": "tier_2_table"
+	},
+	"tier_1_table": {
+		"sound": "stone",
+		"textures": "tier_1_table"
+	},
+	"solos_ore_underworld": {
+		"sound": "stone",
+		"textures": "solos_ore_underworld"
+	},
+	"opal_ore_underworld": {
+		"sound": "stone",
+		"textures": "opal_ore_underworld"
+	},
+	"yagazin_ore_overworld": {
+		"sound": "stone",
+		"textures": "yagazin_ore_overworld"
+	},
+	"godsteel_ore": {
+		"sound": "stone",
+		"textures": "godsteel_ore"
+	},
+	"damnashin_ore": {
+		"sound": "stone",
+		"textures": "damnashin_ore"
+	},
+	"solos_ore": {
+		"sound": "stone",
+		"textures": "solos_ore"
+	},
+	"sidron_ore": {
+		"sound": "stone",
+		"textures": "sidron_ore"
+	},
+	"agarnite_ore": {
+		"sound": "stone",
+		"textures": "agarnite_ore"
+	},
+	"deth_ore": {
+		"sound": "stone",
+		"textures": "deth_ore"
+	},
+	"eresite_ore": {
+		"sound": "stone",
+		"textures": "eresite_ore"
+	},
+	"yagazin_ore": {
+		"sound": "stone",
+		"textures": "yagazin_ore"
+	},
+	"nythium_ore": {
+		"sound": "stone",
+		"textures": "nythium_ore"
+	},
+	"opal_ore": {
+		"sound": "stone",
+		"textures": "opal_ore"
+	},
+	"silver_ore": {
+		"sound": "stone",
+		"textures": "silver_ore"
+	},
+	"ash_leaves": {
+		"sound": "grass",
+		"textures": "ash_leaves"
+	},
+	"ash_snow": {
+		"sound": "snow",
+		"textures": "ash_snow"
+	},
+	"tera:underworld_stone": {
+		"sound": "stone",
+		"textures": "underworld_stone"
+	},
+	"tera:underworld_portal": {
+		"sound": "glass",
+		"textures": "underworld_portal"
+	},
+	"tera:soul_leaves": {
+		"sound": "grass",
+		"textures": "soul_leaves"
+	},
+	"soul_foliage": {
+		"sound": "grass"
+	},
+	"tera:soul_grass": {
+		"sound": "grass",
+		"textures": {
+			"down": "dirt",
+			"side": "soul_grass_side",
+			"up": "soul_grass_top"
+		}
+	},
+	"tera:soul_stone": {
+		"sound": "stone",
+		"textures": "soul_stone"
+	},
+	"tera:soul_dim_portal": {
+		"sound": "glass",
+		"textures": "soul_dim_portal"
+	},
+	"tera:limbo_stone": {
+		"sound": "stone",
+		"textures": "limbo_stone"
+	},
+	"tera:limbo_portal": {
+		"sound": "glass",
+		"textures": "limbo_portal"
+	}
+}

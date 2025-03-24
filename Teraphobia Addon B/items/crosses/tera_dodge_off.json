@@ -1,0 +1,26 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+      "description": {
+        "identifier": "tera:tera_dodge_off",
+		"menu_category": {
+			"category": "equipment"
+		}
+      },
+      "components": {
+		"minecraft:glint": true,
+		"minecraft:icon": "tera_dodge_off",
+		"minecraft:display_name": {
+			"value": "Dodge: Off\n\n§8§o-An item to toggle the dodge mechanic"
+		},
+        "minecraft:max_stack_size": 1,
+        "minecraft:projectile": {
+          "projectile_entity": "tera:tera_dodge_off"
+        },
+        "minecraft:throwable": {
+          "do_swing_animation": true
+        }
+      }
+    }
+  }
+  

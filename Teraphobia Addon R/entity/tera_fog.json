@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:tera_fog",
+      "materials": {
+        "default": "iron_golem"
+      },
+      "textures": {
+        "default": "textures/entity/soul_wither"
+      },
+      "geometry": {
+        "default": "geometry.tera_skull"
+      },
+			"particle_effects": {
+				"transform": "tera:mist_fog"
+			},
+      "animations": {
+        "face_player": "animation.tera_skull.move",
+        "flame": "controller.animation.tera_partblaze.particle"
+      },
+      "scripts": {
+        "scale": "0",
+        "animate": [
+          "face_player"
+        ],
+        "should_update_bones_and_effects_offscreen": "1.0"
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

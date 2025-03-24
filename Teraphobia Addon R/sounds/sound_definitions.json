@@ -1,0 +1,404 @@
+{
+   "format_version" : "1.20.20",
+   "sound_definitions" : {
+      "music.game.end" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "music",
+         "max_distance" : null,
+         "min_distance" : null,
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/music/game/end/end",
+               "stream" : true,
+               "volume" : 1.1
+            }
+         ]
+      },
+      "random.explode" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "block",
+         "max_distance" : null,
+         "min_distance" : null,
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/random/explode1",
+               "volume" : 3
+            },
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/random/explode2",
+               "volume" : 3
+            },
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/random/explode3",
+               "volume" : 3
+            },
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/random/explode4",
+               "volume" : 3
+            }
+         ]
+      },
+      "music.soul_storm" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "music",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/boss_music/soul_storm",
+               "volume" : 1.2
+            }
+         ]
+      },
+      "music.soul_storm_small" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "music",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/boss_music/soul_storm_small",
+               "volume" : 1.2
+            }
+         ]
+      },
+      "mob.ss_death" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "music",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/ss_death",
+               "volume" : 1.3
+            }
+         ]
+      },
+      "music.withering" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "music",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/boss_music/withering",
+               "volume" : 1.1
+            }
+         ]
+      },
+      "music.idol_abandoned" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "music",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/boss_music/idol_abandoned",
+               "volume" : 1.7
+            }
+         ]
+      },
+      "mob.reaper.laugh" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "music",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/reaper_laugh",
+               "volume" : 1.7
+            }
+         ]
+      },
+      "music.fallen_perishment" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "music",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/boss_music/fallen_perishment",
+               "volume" : 1.2
+            }
+         ]
+      },
+      "music.soul_dimension" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "music",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/dimension_music/soul_dimension",
+               "volume" : 1
+            }
+         ]
+      },
+      "music.underworld" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "music",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/dimension_music/underworld",
+               "volume" : 1
+            }
+         ]
+      },
+      "music.limbo" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "music",
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/dimension_music/limbo",
+               "volume" : 1.85
+            }
+         ]
+      },
+      "mob.tera_beam" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "hostile",
+         "min_distance" : 80.0,
+         "sounds" : [
+            {
+               "load_on_low_memory" : true,
+               "name" : "sounds/tera_beam",
+               "volume" : 0.7
+            }
+         ]
+      },
+
+      "mob.the_maw.agitated" : {
+         "category" : "hostile",
+         "max_distance" : 80.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/agitated_1",
+            "sounds/mob/the_maw/agitated_2",
+            "sounds/mob/the_maw/agitated_3",
+            "sounds/mob/the_maw/agitated_4",
+            "sounds/mob/the_maw/agitated_5",
+            "sounds/mob/the_maw/agitated_6"
+         ]
+      },
+      "mob.the_maw.angry" : {
+         "category" : "hostile",
+         "max_distance" : 80.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/angry_1",
+            "sounds/mob/the_maw/angry_2",
+            "sounds/mob/the_maw/angry_3",
+            "sounds/mob/the_maw/angry_4",
+            "sounds/mob/the_maw/angry_5",
+            "sounds/mob/the_maw/angry_6"
+         ]
+      },
+      "mob.the_maw.attack" : {
+         "category" : "hostile",
+         "max_distance" : 80.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/attack_impact_1",
+            "sounds/mob/the_maw/attack_impact_2"
+         ]
+      },
+      "mob.the_maw.clicking" : {
+         "category" : "hostile",
+         "max_distance" : 80.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/tendril_clicks_1",
+            "sounds/mob/the_maw/tendril_clicks_2",
+            "sounds/mob/the_maw/tendril_clicks_3",
+            "sounds/mob/the_maw/tendril_clicks_4",
+            "sounds/mob/the_maw/tendril_clicks_5",
+            "sounds/mob/the_maw/tendril_clicks_6"
+         ]
+      },
+      "mob.the_maw.death" : {
+         "category" : "hostile",
+         "max_distance" : null,
+         "min_distance" : null,
+         "sounds" : [ "sounds/mob/the_maw/death_1", "sounds/mob/the_maw/death_2" ]
+      },
+      "mob.the_maw.dig" : {
+         "category" : "hostile",
+         "max_distance" : 80.0,
+         "min_distance" : null,
+         "sounds" : [ "sounds/mob/the_maw/dig" ]
+      },
+      "mob.the_maw.emerge" : {
+         "category" : "hostile",
+         "max_distance" : 80.0,
+         "min_distance" : null,
+         "sounds" : [ "sounds/mob/warden/emerge" ]
+      },
+      "mob.the_maw.heartbeat" : {
+         "category" : "hostile",
+         "max_distance" : 80.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/heartbeat_1",
+            "sounds/mob/the_maw/heartbeat_2",
+            "sounds/mob/the_maw/heartbeat_3",
+            "sounds/mob/the_maw/heartbeat_4"
+         ]
+      },
+      "mob.the_maw.hurt" : {
+         "category" : "hostile",
+         "max_distance" : null,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/hurt_1",
+            "sounds/mob/the_maw/hurt_2",
+            "sounds/mob/the_maw/hurt_3",
+            "sounds/mob/the_maw/hurt_4"
+         ]
+      },
+      "mob.the_maw.idle" : {
+         "category" : "hostile",
+         "max_distance" : 64.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/idle_1",
+            "sounds/mob/the_maw/idle_2",
+            "sounds/mob/the_maw/idle_3",
+            "sounds/mob/the_maw/idle_4",
+            "sounds/mob/the_maw/idle_5",
+            "sounds/mob/the_maw/idle_6",
+            "sounds/mob/the_maw/idle_7",
+            "sounds/mob/the_maw/idle_8",
+            "sounds/mob/the_maw/idle_9",
+            "sounds/mob/the_maw/idle_10",
+            "sounds/mob/the_maw/idle_11",
+            "sounds/mob/the_maw/idle_12"
+         ]
+      },
+      "mob.the_maw.listening" : {
+         "category" : "hostile",
+         "max_distance" : 160.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/listening_1",
+            "sounds/mob/the_maw/listening_2",
+            "sounds/mob/the_maw/listening_3",
+            "sounds/mob/the_maw/listening_4",
+            "sounds/mob/the_maw/listening_5"
+         ]
+      },
+      "mob.the_maw.listening_angry" : {
+         "category" : "hostile",
+         "max_distance" : 160.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/listening_angry_1",
+            "sounds/mob/the_maw/listening_angry_2",
+            "sounds/mob/the_maw/listening_angry_3",
+            "sounds/mob/the_maw/listening_angry_4",
+            "sounds/mob/the_maw/listening_angry_5"
+         ]
+      },
+      "mob.the_maw.nearby_close" : {
+         "category" : "hostile",
+         "max_distance" : 80.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/nearby_close_1",
+            "sounds/mob/the_maw/nearby_close_2",
+            "sounds/mob/the_maw/nearby_close_3",
+            "sounds/mob/the_maw/nearby_close_4"
+         ]
+      },
+      "mob.the_maw.nearby_closer" : {
+         "category" : "hostile",
+         "max_distance" : 80.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/nearby_closer_1",
+            "sounds/mob/the_maw/nearby_closer_2",
+            "sounds/mob/the_maw/nearby_closer_3"
+         ]
+      },
+      "mob.the_maw.nearby_closest" : {
+         "category" : "hostile",
+         "max_distance" : 80.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/nearby_closest_1",
+            "sounds/mob/the_maw/nearby_closest_2",
+            "sounds/mob/the_maw/nearby_closest_3"
+         ]
+      },
+      "mob.the_maw.roar" : {
+         "category" : "hostile",
+         "max_distance" : 48.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/roar_1",
+            "sounds/mob/the_maw/roar_2",
+            "sounds/mob/the_maw/roar_3",
+            "sounds/mob/the_maw/roar_4",
+            "sounds/mob/the_maw/roar_5"
+         ]
+      },
+      "mob.the_maw.sniff" : {
+         "category" : "hostile",
+         "max_distance" : 80.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/sniff_1",
+            "sounds/mob/the_maw/sniff_2",
+            "sounds/mob/the_maw/sniff_3",
+            "sounds/mob/the_maw/sniff_4"
+         ]
+      },
+      "mob.the_maw.sonic_boom" : {
+         "category" : "hostile",
+         "max_distance" : 160.0,
+         "min_distance" : null,
+         "sounds" : [
+            {
+               "name" : "sounds/mob/the_maw/sonic_boom1"
+            },
+            {
+               "name" : "sounds/mob/the_maw/sonic_boom2"
+            },
+            {
+               "name" : "sounds/mob/the_maw/sonic_boom3"
+            },
+            {
+               "name" : "sounds/mob/the_maw/sonic_boom4"
+            }
+         ]
+      },
+      "mob.the_maw.sonic_charge" : {
+         "category" : "hostile",
+         "max_distance" : 160.0,
+         "min_distance" : null,
+         "sounds" : [
+            {
+               "name" : "sounds/mob/the_maw/sonic_charge1"
+            },
+            {
+               "name" : "sounds/mob/the_maw/sonic_charge2"
+            },
+            {
+               "name" : "sounds/mob/the_maw/sonic_charge3"
+            },
+            {
+               "name" : "sounds/mob/the_maw/sonic_charge4"
+            }
+         ]
+      },
+      "mob.the_maw.step" : {
+         "category" : "hostile",
+         "max_distance" : 160.0,
+         "min_distance" : null,
+         "sounds" : [
+            "sounds/mob/the_maw/step_1",
+            "sounds/mob/the_maw/step_2",
+            "sounds/mob/the_maw/step_3",
+            "sounds/mob/the_maw/step_4"
+         ]
+      }
+   }
+}

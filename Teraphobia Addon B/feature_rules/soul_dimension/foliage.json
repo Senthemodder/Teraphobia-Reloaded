@@ -1,0 +1,37 @@
+
+  {
+    "format_version": "1.20.20",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "tera:soul_dimension/foliage",
+            "places_feature": "tera:soul_dimension/foliage"
+        },
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": [
+                {
+                    "any_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "the_end"
+                        }
+                    ]
+                }
+            ]
+        },
+        "distribution": {
+            "iterations": "(v.originx > 50000 && v.originz > 50000 && v.originx < 100000 && v.originz < 100000)*8", 
+            "coordinate_eval_order": "xzy",
+            "x": {
+                "distribution": "uniform",
+                "extent": [0, 8]
+            },
+            "y": "q.above_top_solid(v.originx,v.originz)",
+            "z": {
+                "distribution": "uniform",
+                "extent": [0, 8]
+            }
+        }
+    }
+}

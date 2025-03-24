@@ -1,0 +1,81 @@
+
+{
+	"format_version": "1.20.20",
+	"minecraft:tree_feature": {
+		"description": {
+			"identifier": "tera:tera_end/spark"
+		},
+		"base_block": [
+			"minecraft:dead_brain_coral_block"
+		],
+		"may_grow_on": [
+			"minecraft:dead_brain_coral_block"
+		],
+		"may_replace": [
+			"minecraft:dead_brain_coral_block",
+			"minecraft:air"
+		],
+		"may_grow_through": [
+			"minecraft:dead_brain_coral_block"
+		],
+		"mega_trunk": {
+			"trunk_height": {
+				"base": 20,
+				"intervals": [
+					4,
+					8
+				]
+			},
+			"trunk_width": 2,
+			"trunk_block": {
+				"name": "minecraft:dead_brain_coral_block"
+			},
+			"branches": {
+				"branch_length": 4,
+				"branch_slope": 0.1,
+				"branch_interval": {
+					"range_min": 1,
+					"range_max": 2
+				},
+				"branch_altitude_factor": {
+					"min": 0.3,
+					"max": 0.99
+				},
+				"branch_canopy": {
+					"mega_canopy": {
+						"canopy_height": {
+							"range_min": 3,
+							"range_max": 3
+						},
+						"core_width": 1,
+						"base_radius": 1,
+						"simplify_canopy": true,
+						"leaf_block": {
+							"name": "minecraft:basalt"
+						}
+					}
+				}
+			},
+			"trunk_decoration": {
+				"decoration_chance": {
+					"numerator": 1,
+					"denominator": 10
+				},
+				"decoration_block": {
+					"name": "minecraft:basalt"
+				},
+				"num_steps": 3,
+				"step_direction": "down"
+			}
+		},
+		"roofed_canopy": {
+			"canopy_height": 4,
+			"core_width": 2,
+			"outer_radius": 2,
+			"inner_radius": 3,
+			"leaf_block": {
+				"name": "minecraft:basalt"
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:structure_template_feature": {
+      "description": {
+          "identifier": "tera:boss/boss_yeti"
+      },
+      "structure_name": "mystructure:boss_yeti",
+      "adjustment_radius": 4,
+      "facing_direction": "south",
+      "constraints": {
+          "unburied": {},
+          "block_intersection": {
+            "block_allowlist": [
+              "minecraft:stone",
+
+              "minecraft:air",
+
+"minecraft:dirt",
+
+"minecraft:grass",
+
+"minecraft:snow",
+
+"minecraft:snow_layer",
+
+"minecraft:ice",
+
+"minecraft:packed_ice",
+
+"minecraft:log",
+
+"minecraft:log2",
+
+"minecraft:leaves",
+
+"minecraft:leaves2",
+
+"minecraft:tall_grass"
+            ]
+          },
+          "grounded": {}
+      }
+  }
+}

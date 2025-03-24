@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:soul_stone"
+    },
+
+    
+    "tags": [ "tier_1_table" ],
+    "pattern": [
+      "#A#",
+      "A#A",
+      "#A#"
+    ],
+    "key": {
+      "#": {
+        "item": "tera:soul"
+      },
+      "A": {
+        "item": "minecraft:cobblestone"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:soul_stone"
+    }
+  }
+}

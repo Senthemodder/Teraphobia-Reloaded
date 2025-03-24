@@ -1,0 +1,53 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:soul_storm_part2",
+      "materials": {
+        "default": "iron_golem",
+        "beam": "charged_creeper",
+        "beam_material": "entity_beam",
+        "death_material": "entity_beam_additive",
+        "dissolve_0": "entity_dissolve_layer0.skinning",
+        "dissolve_1": "entity_dissolve_layer1.skinning"
+      },
+      "textures": {
+        "default": "textures/entity/soul_storm/soul_storm",
+        "exploding": "textures/entity/dead_exploding",
+        "beam": "textures/entity/soul_storm/soul_storm_beam"
+      },
+      "geometry": {
+        "default": "geometry.soul_storm.part",
+        "beam": "geometry.soul_storm.beam"
+      },
+
+      "sound_effects": {
+        "roar": "mob.the_maw.roar"
+    },
+      "animations": {
+          "writhe": "animation.soul_storm.writhe",
+          "look": "animation.soul_storm.main",
+          "idle": "animation.soul_storm.idle"
+      },
+      "render_controllers": [
+        { "controller.render.ender_dragon_death_pre_pass": "query.death_ticks > 1.0" },
+        { "controller.render.ender_dragon_death_main_pass": "query.death_ticks > 1.0" },
+        { "controller.render.iron_golem": "query.death_ticks <= 1.0" },
+        "controller.render.soul_storm.beam"
+      ],
+      "scripts": {
+        "pre_animation": [          
+        "variable.death_effect_duration = 200.0;",
+        "variable.death_alpha = (1.0 - (query.death_ticks + query.frame_alpha) / variable.death_effect_duration) * 2.0 + 0.3;"
+      ],
+        "scale": "3",
+        "animate": [
+          "writhe",
+          "look",
+          "idle"
+        ],
+        "should_update_bones_and_effects_offscreen": "1.0"
+      }
+    }
+  }
+}

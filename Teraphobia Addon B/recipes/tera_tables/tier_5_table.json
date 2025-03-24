@@ -1,0 +1,45 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:tier_5_table"
+    },
+
+    
+    "tags": [ "tier_4_table" ],
+    "pattern": [
+      "#R#",
+      "GFS",
+      "ADA"
+    ],
+    "key": {
+      "#": {
+        "item": "tera:damnashin"
+      },
+      "A": {
+        "item": "tera:agarnite"
+      },
+      "D": {
+        "item": "minecraft:crafting_table"
+      },
+      "F": {
+        "item": "minecraft:anvil"
+      },
+      "R": {
+        "item": "tera:godsteel"
+      },
+      "G": {
+        "item": "minecraft:netherite_block"
+      },
+      "S": {
+        "item": "minecraft:nether_star"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:tier_5_table"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:giant_wither",
+      "materials": { 
+        "default": "iron_golem",
+				"charged": "charged_creeper"
+      },
+      "textures": {
+        "default": "textures/entity/giant_wither",
+				"charged": "textures/entity/giant_wither_armor"
+      },
+      "geometry": {
+        "default": "geometry.tera_flying_boss.wither",
+				"charged": "geometry.tera_flying_boss.wither_armor"
+      },
+			"spawn_egg": {
+				"base_color": "#4a4a4a",
+				"overlay_color": "#818181"
+			},
+			"particle_effects": {
+				"transform": "tera:earth_emitter"
+			},
+			"sound_effects": {
+				"dash": "mob.wither.shoot",
+				"swoop": "mob.wither.death",
+				"summon": "mob.warden.death"
+			},
+      "animations": {
+
+        "ability1.con":  "controller.animation.tera_general.ability1",
+        "ability2.con":  "controller.animation.tera_general.ability2",
+        "ability3.con":  "controller.animation.tera_general.ability3",
+        "idle.con":  "controller.animation.tera_general.idle",
+        "death.con":  "controller.animation.tera_general.death",
+        "flame": "controller.animation.tera_partblaze.particle",
+
+        "ability1": "animation.tera_flying_boss.ability1",
+        "ability2": "animation.tera_flying_boss.ability2",
+        "ability3": "animation.tera_flying_boss.ability3",
+        "idle": "animation.tera_flying_boss.wither_idle",
+        "death": "animation.tera_flying_boss.death"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.modified_tcos0 = Math.clamp(((Math.cos(query.modified_distance_moved * 13.5) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 25.0), -12.5, 12.5);"
+        ],
+        "animate": [
+          "idle.con",
+          "del_attack_con",
+          "death.con",
+          "ability1.con",
+          "ability2.con",
+          "ability3.con",
+          "flame"
+        ]
+      },
+      "render_controllers": [ "controller.render.iron_golem", "controller.render.creeper_armor" ]
+    }
+  }
+}

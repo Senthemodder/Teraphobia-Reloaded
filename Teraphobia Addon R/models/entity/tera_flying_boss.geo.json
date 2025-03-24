@@ -1,0 +1,620 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.tera_flying_boss",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "death",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "all",
+					"parent": "death",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "all",
+					"pivot": [-1.9, 12, -5],
+					"rotation": [34.49813, 12.53116, 5.47968],
+					"cubes": [
+						{"origin": [-4.05, 0, -7], "size": [4, 12, 4], "uv": [16, 48]},
+						{"origin": [-4.25, 0, -7], "size": [4, 12, 4], "inflate": 0.25, "uv": [0, 48]}
+					]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "all",
+					"pivot": [1.9, 12, 0],
+					"rotation": [25, -25, -5],
+					"cubes": [
+						{"origin": [0.05, 0, -2], "size": [4, 12, 4], "uv": [32, 48], "mirror": true},
+						{"origin": [0.25, 0, -2], "size": [4, 12, 4], "inflate": 0.25, "uv": [0, 32], "mirror": true}
+					]
+				},
+				{
+					"name": "waist",
+					"parent": "all",
+					"pivot": [0, 12, 0],
+					"rotation": [5, 5, 0],
+					"cubes": [
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "inflate": 0.2, "uv": [16, 32]},
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "uv": [16, 16]}
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "waist",
+					"pivot": [4, 21, 0],
+					"rotation": [-1.8246, -6.82811, -40.10958],
+					"cubes": [
+						{"origin": [4, 11, -2], "size": [4, 12, 4], "uv": [40, 16], "mirror": true},
+						{"origin": [4, 11, -2], "size": [4, 12, 4], "inflate": 0.2, "uv": [40, 32], "mirror": true}
+					]
+				},
+				{
+					"name": "leftItem",
+					"parent": "leftArm",
+					"pivot": [6, 14, 1]
+				},
+				{
+					"name": "rightArm",
+					"parent": "waist",
+					"pivot": [-4, 21, 0],
+					"rotation": [-6.73857, -2.13288, 37.40714],
+					"cubes": [
+						{"origin": [-8, 11, -2], "size": [4, 12, 4], "uv": [0, 16]},
+						{"origin": [-8, 11, -2], "size": [4, 12, 4], "inflate": 0.2, "uv": [48, 48]}
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "rightArm",
+					"pivot": [-7, 14, 1]
+				},
+				{
+					"name": "head",
+					"parent": "waist",
+					"pivot": [0, 25, 0],
+					"rotation": [-5, -5, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 0]},
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.5, "uv": [32, 0]}
+					]
+				}
+			]
+		},
+		{
+			"description": {
+				"identifier": "geometry.tera_flying_boss.fiery_ghast",
+				"texture_width": 64,
+				"texture_height": 32,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 10,
+				"visible_bounds_offset": [0, 4, 0]
+			},
+			"bones": [
+				{
+					"name": "death",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "all",
+					"parent": "death",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "all",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "ghast",
+					"parent": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "ghast",
+					"pivot": [0, 1.5, 0],
+					"cubes": [
+						{"origin": [-8, 0, -8], "size": [16, 16, 16], "uv": [0, 0]},
+						{"origin": [-1, 14, -7], "size": [2, 8, 2], "uv": [0, 0]},
+						{"origin": [-5, 13, -7], "size": [2, 8, 2], "uv": [0, 0]},
+						{"origin": [3, 13, -7], "size": [2, 8, 2], "uv": [0, 0]},
+						{"origin": [5, 12, -5], "size": [2, 8, 2], "uv": [0, 0]},
+						{"origin": [5, 11, -1], "size": [2, 8, 2], "uv": [0, 0]},
+						{"origin": [5, 12, 3], "size": [2, 8, 2], "uv": [0, 0]},
+						{"origin": [3, 11, 5], "size": [2, 8, 2], "uv": [0, 0]},
+						{"origin": [-1, 10, 5], "size": [2, 8, 2], "uv": [0, 0]},
+						{"origin": [-5, 11, 5], "size": [2, 8, 2], "uv": [0, 0]},
+						{"origin": [-7, 12, 3], "size": [2, 8, 2], "uv": [0, 0]},
+						{"origin": [-7, 11, -1], "size": [2, 8, 2], "uv": [0, 0]},
+						{"origin": [-7, 12, -5], "size": [2, 8, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tentacles_0",
+					"parent": "body",
+					"pivot": [-3.8, 1, -5],
+					"cubes": [
+						{"origin": [-4.8, -8, -6], "size": [2, 9, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tentacles_1",
+					"parent": "body",
+					"pivot": [1.3, 1, -5],
+					"cubes": [
+						{"origin": [0.3, -10, -6], "size": [2, 11, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tentacles_2",
+					"parent": "body",
+					"pivot": [6.3, 1, -5],
+					"cubes": [
+						{"origin": [5.3, -7, -6], "size": [2, 8, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tentacles_3",
+					"parent": "body",
+					"pivot": [-6.3, 1, 0],
+					"cubes": [
+						{"origin": [-7.3, -8, -1], "size": [2, 9, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tentacles_4",
+					"parent": "body",
+					"pivot": [-1.3, 1, 0],
+					"cubes": [
+						{"origin": [-2.3, -12, -1], "size": [2, 13, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tentacles_5",
+					"parent": "body",
+					"pivot": [3.8, 1, 0],
+					"cubes": [
+						{"origin": [2.8, -10, -1], "size": [2, 11, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tentacles_6",
+					"parent": "body",
+					"pivot": [-3.8, 1, 5],
+					"cubes": [
+						{"origin": [-4.8, -11, 4], "size": [2, 12, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tentacles_7",
+					"parent": "body",
+					"pivot": [1.3, 1, 5],
+					"cubes": [
+						{"origin": [0.3, -11, 4], "size": [2, 12, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tentacles_8",
+					"parent": "body",
+					"pivot": [6.3, 1, 5],
+					"cubes": [
+						{"origin": [5.3, -12, 4], "size": [2, 13, 2], "uv": [0, 0]}
+					]
+				}
+			]
+		},
+		{
+			"description": {
+				"identifier": "geometry.tera_flying_boss.kraken",
+				"texture_width": 64,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "death",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "all",
+					"parent": "death",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "all",
+					"pivot": [0, 8, 0],
+					"cubes": [
+						{"origin": [-6, 0, -6], "size": [12, 16, 12], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "thing",
+					"parent": "body",
+					"pivot": [0, 14, 0],
+					"rotation": [0, 0, 45],
+					"cubes": [
+						{"origin": [-7, 7, -0.6], "size": [14, 14, 1], "inflate": 0.5, "uv": [3, 13]}
+					]
+				},
+				{
+					"name": "tentacle1",
+					"parent": "body",
+					"pivot": [5, 1, 0],
+					"rotation": [0, 90, 0],
+					"cubes": [
+						{"origin": [4, -5, -1], "size": [2, 6, 2], "uv": [48, 0]}
+					]
+				},
+				{
+					"name": "tentacle17",
+					"parent": "tentacle1",
+					"pivot": [5, -5, 0],
+					"cubes": [
+						{"origin": [4, -11, -1], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle18",
+					"parent": "tentacle17",
+					"pivot": [5.5, -11, -0.5],
+					"cubes": [
+						{"origin": [4, -17, -1], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle2",
+					"parent": "body",
+					"pivot": [3.5, 1, 3.5],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{"origin": [2.5, -5, 2.5], "size": [2, 6, 2], "uv": [48, 0]}
+					]
+				},
+				{
+					"name": "tentacle23",
+					"parent": "tentacle2",
+					"pivot": [3.5, -5, 3.5],
+					"cubes": [
+						{"origin": [2.5, -11, 2.5], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle24",
+					"parent": "tentacle23",
+					"pivot": [3.5, -11, 3.5],
+					"cubes": [
+						{"origin": [2.5, -17, 2.5], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle3",
+					"parent": "body",
+					"pivot": [0, 1, 5],
+					"cubes": [
+						{"origin": [-1, -5, 4], "size": [2, 6, 2], "uv": [48, 0]}
+					]
+				},
+				{
+					"name": "tentacle15",
+					"parent": "tentacle3",
+					"pivot": [0, -5, 5],
+					"cubes": [
+						{"origin": [-1, -11, 4], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle16",
+					"parent": "tentacle15",
+					"pivot": [0.5, -11, 4.5],
+					"cubes": [
+						{"origin": [-1, -17, 4], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle4",
+					"parent": "body",
+					"pivot": [-3.5, 1, 3.5],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [-4.5, -5, 2.5], "size": [2, 6, 2], "uv": [48, 0]}
+					]
+				},
+				{
+					"name": "tentacle21",
+					"parent": "tentacle4",
+					"pivot": [-3.5, -5, 3.5],
+					"cubes": [
+						{"origin": [-4.5, -11, 2.5], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle22",
+					"parent": "tentacle21",
+					"pivot": [-3.5, -11, 3.5],
+					"cubes": [
+						{"origin": [-4.5, -17, 2.5], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle5",
+					"parent": "body",
+					"pivot": [-5, 1, 0],
+					"rotation": [0, -90, 0],
+					"cubes": [
+						{"origin": [-6, -5, -1], "size": [2, 6, 2], "uv": [48, 0]}
+					]
+				},
+				{
+					"name": "tentacle13",
+					"parent": "tentacle5",
+					"pivot": [-5, -5, 0],
+					"cubes": [
+						{"origin": [-6, -11, -1], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle14",
+					"parent": "tentacle13",
+					"pivot": [-4.5, -11, -0.5],
+					"cubes": [
+						{"origin": [-6, -17, -1], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle6",
+					"parent": "body",
+					"pivot": [-3.5, 1, -3.5],
+					"rotation": [0, -135, 0],
+					"cubes": [
+						{"origin": [-4.5, -5, -4.5], "size": [2, 6, 2], "uv": [48, 0]}
+					]
+				},
+				{
+					"name": "tentacle19",
+					"parent": "tentacle6",
+					"pivot": [-3.5, -5, -3.5],
+					"cubes": [
+						{"origin": [-4.5, -11, -4.5], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle20",
+					"parent": "tentacle19",
+					"pivot": [-3.5, -11, -3.5],
+					"cubes": [
+						{"origin": [-4.5, -17, -4.5], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle7",
+					"parent": "body",
+					"pivot": [0, 1, -5],
+					"rotation": [0, -180, 0],
+					"cubes": [
+						{"origin": [-1, -5, -6], "size": [2, 6, 2], "uv": [48, 0]}
+					]
+				},
+				{
+					"name": "tentacle11",
+					"parent": "tentacle7",
+					"pivot": [0, -5, -5],
+					"cubes": [
+						{"origin": [-1, -11, -6], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle12",
+					"parent": "tentacle11",
+					"pivot": [0.5, -11, -5.5],
+					"cubes": [
+						{"origin": [-1, -17, -6], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle8",
+					"parent": "body",
+					"pivot": [3.5, 1, -3.5],
+					"rotation": [0, -225, 0],
+					"cubes": [
+						{"origin": [2.5, -5, -4.5], "size": [2, 6, 2], "uv": [48, 0]}
+					]
+				},
+				{
+					"name": "tentacle9",
+					"parent": "tentacle8",
+					"pivot": [3.5, -5, -3.5],
+					"cubes": [
+						{"origin": [2.5, -11, -4.5], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				},
+				{
+					"name": "tentacle10",
+					"parent": "tentacle9",
+					"pivot": [3.5, -11, -3.5],
+					"cubes": [
+						{"origin": [2.5, -17, -4.5], "size": [2, 6, 2], "uv": [48, 3]}
+					]
+				}
+			]
+		},
+		{
+			"description": {
+				"identifier": "geometry.tera_flying_boss.wither",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "death",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "all",
+					"parent": "death",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "all",
+					"pivot": [0, 12, 0],
+					"rotation": [5, 5, 0]
+				},
+				{
+					"name": "rim",
+					"parent": "waist",
+					"pivot": [0, 21.5, -0.5],
+					"cubes": [
+						{"origin": [-10, 21, -2], "size": [20, 3, 3], "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "head2",
+					"parent": "rim",
+					"pivot": [10, 25, 0],
+					"rotation": [-5, -5, 0],
+					"cubes": [
+						{"origin": [7, 24, -3], "size": [6, 6, 6], "uv": [32, 0]}
+					]
+				},
+				{
+					"name": "head3",
+					"parent": "rim",
+					"pivot": [-10, 25, 0],
+					"rotation": [-5, -5, 0],
+					"cubes": [
+						{"origin": [-13, 24, -3], "size": [6, 6, 6], "uv": [32, 0]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "waist",
+					"pivot": [0, 25, 0],
+					"rotation": [-5, -5, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "other_taisld",
+					"parent": "waist",
+					"pivot": [0, 21, -1],
+					"cubes": [
+						{"origin": [-1.5, 11, -2], "size": [3, 10, 3], "uv": [0, 22]},
+						{"origin": [-5.5, 18, -1.6], "size": [11, 2, 2], "uv": [24, 22]},
+						{"origin": [-5.5, 15, -1.6], "size": [11, 2, 2], "uv": [24, 22]},
+						{"origin": [-5.5, 12, -1.6], "size": [11, 2, 2], "uv": [24, 22]}
+					]
+				},
+				{
+					"name": "raiil",
+					"parent": "other_taisld",
+					"pivot": [0, 11, 0],
+					"rotation": [35, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, 5, -2], "size": [3, 6, 3], "uv": [12, 22]}
+					]
+				}
+			]
+		},
+		{
+			"description": {
+				"identifier": "geometry.tera_flying_boss.wither_armor",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "death",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "all",
+					"parent": "death",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "all",
+					"pivot": [0, 12, 0],
+					"rotation": [5, 5, 0]
+				},
+				{
+					"name": "rim",
+					"parent": "waist",
+					"pivot": [0, 21.5, -0.5],
+					"cubes": [
+						{"origin": [-10, 21, -2], "size": [20, 3, 3], "inflate": 1, "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "head2",
+					"parent": "rim",
+					"pivot": [10, 25, 0],
+					"rotation": [-5, -5, 0],
+					"cubes": [
+						{"origin": [7, 24, -3], "size": [6, 6, 6], "inflate": 1, "uv": [32, 0]}
+					]
+				},
+				{
+					"name": "head3",
+					"parent": "rim",
+					"pivot": [-10, 25, 0],
+					"rotation": [-5, -5, 0],
+					"cubes": [
+						{"origin": [-13, 24, -3], "size": [6, 6, 6], "inflate": 1, "uv": [32, 0]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "waist",
+					"pivot": [0, 25, 0],
+					"rotation": [-5, -5, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 1, "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "other_taisld",
+					"parent": "waist",
+					"pivot": [0, 21, -1],
+					"cubes": [
+						{"origin": [-1.5, 11, -2], "size": [3, 10, 3], "inflate": 1, "uv": [0, 22]},
+						{"origin": [-5.5, 18, -1.6], "size": [11, 2, 2], "inflate": 1, "uv": [24, 22]},
+						{"origin": [-5.5, 15, -1.6], "size": [11, 2, 2], "inflate": 1, "uv": [24, 22]},
+						{"origin": [-5.5, 12, -1.6], "size": [11, 2, 2], "inflate": 1, "uv": [24, 22]}
+					]
+				},
+				{
+					"name": "raiil",
+					"parent": "other_taisld",
+					"pivot": [0, 11, 0],
+					"rotation": [35, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, 5, -2], "size": [3, 6, 3], "inflate": 1, "uv": [12, 22]}
+					]
+				}
+			]
+		}
+	]
+}

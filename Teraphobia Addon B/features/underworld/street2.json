@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "tera:underworld/street2"
+    },
+    "iterations": 64,
+    "x": {
+      "distribution": "fixed_grid",
+      "extent": [ 0, 2 ]
+    },
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [180, "q.above_top_solid(v.originx,v.originz)"]
+		},
+    "z": {
+      "distribution": "fixed_grid",
+      "extent": [ 0, 15 ]
+    },
+    "coordinate_eval_order": "yxz",
+    "places_feature": "tera:underworld/street_block"
+  }
+}

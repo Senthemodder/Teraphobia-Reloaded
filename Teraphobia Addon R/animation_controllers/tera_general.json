@@ -1,0 +1,506 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.tera_general.camera": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.distance_from_camera > 59.99" }
+          ],
+          "animations": [
+            { "appear": [] }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "leave": [] }
+          ],
+          "transitions": [
+            { "default": "query.distance_from_camera < 60" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.attack": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_delayed_attacking" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "attack": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_delayed_attacking" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.exploding": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_pregnant" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "exploding": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_pregnant" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.slender_angry": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.has_target" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "slender_angry": [] }
+          ],
+          "transitions": [
+            { "default": "!query.has_target" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.shoot": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_charged" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "shoot": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_charged" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.dynamic_attack": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "attack_ex": "query.is_delayed_attacking && Math.Random(1,5)<3" },
+            { "attack_ex2": "query.is_delayed_attacking && Math.Random(1,5)>2" }
+          ]
+        },
+        "attack_ex": {
+          "transitions": [
+            { "attack": "query.is_delayed_attacking && Math.Random(1,3)<2" },
+            { "attack2": "query.is_delayed_attacking && Math.Random(1,3)>1" }
+          ]
+        },
+        "attack_ex2": {
+          "transitions": [
+            { "attack3": "query.is_delayed_attacking && Math.Random(1,3)<2" },
+          { "attack4": "query.is_delayed_attacking && Math.Random(1,3)>1" }
+          ]
+        },
+        "attack": {
+          "animations": [
+            { "attack1": [] }
+          ],
+          "transitions": [
+            { "default": "query.all_animations_finished == 1 || !query.is_delayed_attacking" }
+          ]
+        },
+        "attack2": {
+          "animations": [
+            { "attack2": [] }
+          ],
+          "transitions": [
+            { "default": "query.all_animations_finished == 1 || !query.is_delayed_attacking" }
+          ]
+        },
+        "attack3": {
+          "animations": [
+            { "attack2": [] }
+          ],
+          "transitions": [
+            { "default": "query.all_animations_finished == 1 || !query.is_delayed_attacking" }
+          ]
+        },
+        "attack4": {
+          "animations": [
+            { "attack3": [] }
+          ],
+          "transitions": [
+            { "default": "query.all_animations_finished == 1 || !query.is_delayed_attacking" }
+          ]
+        },
+        "attack5": {
+          "animations": [
+            { "attack3": [] }
+          ],
+          "transitions": [
+            { "default": "query.all_animations_finished == 1 || !query.is_delayed_attacking" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_item.swing": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "attack_ex": "c.is_first_person && variable.attack_time && Math.Random(1,5)<3" },
+            { "attack_ex2": "c.is_first_person && variable.attack_time && Math.Random(1,5)>2" }
+          ]
+        },
+        "attack_ex": {
+          "transitions": [
+            { "attack": "c.is_first_person && variable.attack_time && Math.Random(1,3)<2" },
+            { "attack2": "c.is_first_person && variable.attack_time && Math.Random(1,3)>1" }
+          ]
+        },
+        "attack_ex2": {
+          "transitions": [
+            { "attack3": "c.is_first_person && variable.attack_time && Math.Random(1,3)<2" },
+          { "attack4": "c.is_first_person && variable.attack_time && Math.Random(1,3)>1" }
+          ]
+        },
+        "attack": {
+          "animations": [
+            { "swing1": [] }
+          ],
+          "transitions": [
+            { "default": "query.all_animations_finished == 1 || !c.is_first_person || !variable.attack_time" }
+          ]
+        },
+        "attack2": {
+          "animations": [
+            { "swing2": [] }
+          ],
+          "transitions": [
+            { "default": "query.all_animations_finished == 1 || !c.is_first_person || !variable.attack_time" }
+          ]
+        },
+        "attack3": {
+          "animations": [
+            { "swing1": [] }
+          ],
+          "transitions": [
+            { "default": "query.all_animations_finished == 1 || !c.is_first_person || !variable.attack_time" }
+          ]
+        },
+        "attack4": {
+          "animations": [
+            { "swing3": [] }
+          ],
+          "transitions": [
+            { "default": "query.all_animations_finished == 1 || !c.is_first_person || !variable.attack_time" }
+          ]
+        },
+        "attack5": {
+          "animations": [
+            { "swing3": [] }
+          ],
+          "transitions": [
+            { "default": "query.all_animations_finished == 1 || !c.is_first_person || !variable.attack_time" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.ability1": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_saddled" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "ability1": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_saddled" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.ability2": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_sheared" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "ability2": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_sheared" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.ability3": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_ignited" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "ability3": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_ignited" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.ability4": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_tamed" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "ability4": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_tamed" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.ability5": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_illager_captain" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "ability5": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_illager_captain" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.stun": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_stunned" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "stun": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_stunned" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.sleep": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_chested" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "sleep": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_chested" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.wake": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.is_stackable" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "wake": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_stackable" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.death_boss": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "!query.is_in_love" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "death": [] }
+          ],
+          "transitions": [
+            { "default": "query.is_in_love" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.wake.alt": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "query.mark_variant != 10" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "wake": [] }
+          ],
+          "transitions": [
+            { "default": "query.mark_variant == 10" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.idle": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "!query.is_chested && !query.is_stackable" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "idle": [] }
+          ],
+          "transitions": [
+            { "default": "query.is_chested || query.is_stackable" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.look": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "bash": "!query.is_chested && !query.is_stackable" }
+          ]
+        },
+        "bash": {
+          "animations": [
+            { "look": [] }
+          ],
+          "transitions": [
+            { "default": "query.is_chested || query.is_stackable" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.move": {
+      "states": {
+        "default": {
+          "parameters": [ "query.modified_move_speed * 1.75" ],
+          "animations": [
+            {
+              "move": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.move_double": {
+      "states": {
+        "default": {
+          "parameters": [ "query.modified_move_speed * 3.5" ],
+          "animations": [
+            {
+              "move": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.walk": {
+      "states": {
+        "default": {
+          "parameters": [ "(query.modified_move_speed * 1.75) * !query.has_target" ],
+          "animations": [
+            {
+              "walk": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.run": {
+      "states": {
+        "default": {
+          "parameters": [ "(query.modified_move_speed * 1.75) * query.has_target" ],
+          "animations": [
+            {
+              "run": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_general.death": {
+      "states": {
+        "default": {
+          "parameters": [ "query.health == 0" ],
+          "animations": [
+            {
+              "death": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

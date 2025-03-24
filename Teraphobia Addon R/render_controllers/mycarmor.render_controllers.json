@@ -1,0 +1,21 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+      "controller.render.myc.male.armor": {
+        "geometry": "Geometry.male",
+        "materials": [ { "*": "variable.is_enchanted ? Material.enchanted : Material.default" } ],
+        "textures": [ "variable.has_trim ? variable.trim_path : Texture.default", "Texture.enchanted" ],
+        "part_visibility": [
+          { "*": "!query.is_ignited" }
+        ]
+      },
+      "controller.render.myc.female.armor": {
+        "geometry": "Geometry.female",
+        "materials": [ { "*": "variable.is_enchanted ? Material.enchanted : Material.default" } ],
+        "textures": [ "variable.has_trim ? variable.trim_path : Texture.default", "Texture.enchanted" ],
+        "part_visibility": [
+          { "*": "query.is_ignited" }
+        ]
+      }
+    }
+  }

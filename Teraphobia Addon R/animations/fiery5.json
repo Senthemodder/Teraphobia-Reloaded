@@ -1,0 +1,27 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.fiery5.wield_first_person": {
+			"loop": true,
+			"bones": {
+				"pole": {
+					"rotation": [159.89816, -9.63318, 28.38109],
+					"position": [-9, -3, -8],
+					"scale": 0.6
+				},
+				"hammerhead": {
+					"scale": 0.75
+				}
+			}
+		},
+		"animation.fiery5.wield_third_person": {
+			"loop": true,
+			"bones": {
+				"pole": {
+					"rotation": [90, 12.5, 90],
+					"position": [0.75, 0.5, -16.5]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:light_laser",
+      "materials": { "default": "charged_creeper" },
+      "textures": {
+        "default": "textures/entity/light_laser"
+      },
+      "geometry": {
+        "default": "geometry.light_laser"
+      },
+      "sound_effects": {
+        "explode": "ambient.weather.lightning.impact"
+    },
+      "animations": {
+        "go": "animation.light_laser.the"
+      },
+      "animation_controllers": [
+        { "go": "controller.animation.renva.go" }
+      ],
+      "render_controllers": [ "controller.render.iron_golem" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 29
+      }
+    }
+  }
+}

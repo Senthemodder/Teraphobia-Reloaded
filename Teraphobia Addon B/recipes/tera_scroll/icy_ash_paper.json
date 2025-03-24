@@ -1,0 +1,28 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "tera:icy_ash_paper"
+        },
+        "tags": [ "scroll_table" ],
+        "pattern": [
+            " R ",
+            "RAR",
+            " R"
+        ],
+        "key": {
+            "R": {
+                "item": "tera:ash_snow"
+            },
+            "A": {
+                "item": "minecraft:paper"
+            }
+        },
+        "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+            "item": "tera:icy_ash_paper"
+        }
+    }
+}

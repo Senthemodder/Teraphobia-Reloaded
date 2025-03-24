@@ -1,0 +1,15 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "tera:brew_poison_resistance_potion"
+    },
+
+    "tags": [ "brewing_stand" ],
+
+    "input": "tera:abnormal_potion",
+    "reagent": "tera:naga_spit",
+    "output": "tera:poison_resistance_potion"
+  }
+
+}

@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:lightning_cross"
+    },
+
+    
+    "tags": [ "cross_table" ],
+    "pattern": [
+      " A ",
+      "ATA",
+      " A "
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:copper_ingot"
+      },
+      "T": {
+        "item": "tera:cross"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:lightning_cross"
+    }
+  }
+}

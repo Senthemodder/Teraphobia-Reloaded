@@ -1,0 +1,345 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.renva.move": {
+      "states": {
+        "default": {
+          "parameters": [ "query.is_moving && query.is_on_ground" ],
+          "animations": [
+            {
+              "move": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.renva.sit": {
+      "states": {
+        "default": {
+          "parameters": [ "query.is_sitting && !query.is_moving && query.is_on_ground" ],
+          "animations": [
+            {
+              "sit": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.renva.fall": {
+      "states": {
+        "default": {
+          "parameters": [ "!query.is_on_ground" ],
+          "animations": [
+            {
+              "fall": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.reaper.death": {
+      "states": {
+        "default": {
+          "parameters": [ "query.is_stunned" ],
+          "animations": [
+            {
+              "death": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.renva.land": {
+      "states": {
+        "default": {
+          "parameters": [ "query.is_on_ground" ],
+          "animations": [
+            {
+              "land": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.renva.fly": {
+      "states": {
+        "default": {
+          "parameters": [ "query.modified_move_speed && !query.is_on_ground" ],
+          "animations": [
+            {
+              "fly": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.bulky_warden.move": {
+      "states": {
+        "default": {
+          "parameters": [ "query.modified_move_speed * !query.has_target" ],
+          "animations": [
+            {
+              "move": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.bulky_warden.move2": {
+      "states": {
+        "default": {
+          "parameters": [ "query.modified_move_speed * query.has_target" ],
+          "animations": [
+            {
+              "move2": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.griffin.fly": {
+      "states": {
+        "default": {
+          "parameters": [ "!query.is_on_ground" ],
+          "animations": [
+            {
+              "fly": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.griffin.move": {
+      "states": {
+        "default": {
+          "parameters": [ "query.modified_move_speed * query.is_on_ground" ],
+          "animations": [
+            {
+              "move": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.renva.setup": {
+      "states": {
+        "default": {
+          "parameters": [ "!query.is_on_ground" ],
+          "animations": [
+            {
+              "setup": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.renva.idle": {
+      "states": {
+        "default": {
+          "parameters": [ "query.is_on_ground && !query.is_moving && !query.is_sitting" ],
+          "animations": [
+            {
+              "idle": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.renva.exist": {
+      "states": {
+        "default": {
+          "parameters": [ "!query.is_on_ground" ],
+          "animations": [
+            {
+              "exist": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.renva.go": {
+      "states": {
+        "default": {
+          "parameters": [ "!query.is_riding" ],
+          "animations": [
+            {
+              "go": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.serpent.go2": {
+      "states": {
+        "default": {
+          "parameters": [ "!query.is_in_love" ],
+          "animations": [
+            {
+              "go2": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.renva.now": {
+      "states": {
+        "default": {
+          "parameters": [ "!query.is_riding" ],
+          "animations": [
+            {
+              "now": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.serpent.go": {
+      "states": {
+        "default": {
+          "parameters": [ "query.is_sheared" ],
+          "animations": [
+            {
+              "go": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.serpent.now": {
+      "states": {
+        "default": {
+          "parameters": [ "query.is_sheared" ],
+          "animations": [
+            {
+              "now": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.renva.part": {
+      "states": {
+        "default": {
+          "parameters": [ "!query.is_riding" ],
+          "animations": [
+            {
+              "part": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.teragon.move": {
+      "states": {
+        "default": {
+          "parameters": [ "query.modified_move_speed" ],
+          "animations": [
+            {
+              "move": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

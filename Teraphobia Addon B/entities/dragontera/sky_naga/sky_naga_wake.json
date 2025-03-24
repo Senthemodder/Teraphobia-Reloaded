@@ -1,0 +1,74 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+      "description": {
+          "identifier": "tera:sky_naga_wake",
+          "is_spawnable": false,
+          "is_summonable": true,
+          "is_experimental": false
+      },
+      "component_groups": {
+              
+          "wake": {
+            "minecraft:transformation": {
+                "into": "tera:sky_naga"
+              }
+          }
+      },
+      "components": {
+        "minecraft:scale": {
+            "value": 0.75
+        },
+        "minecraft:timer": {
+            "looping": true,
+            "time": 2.2,
+            "time_down_event": {
+                "event": "wake"
+            }
+        },
+        "minecraft:knockback_resistance": {
+            "value": 100
+          },
+
+          "minecraft:nameable": {},
+          "minecraft:type_family": {
+              "family": ["summon","inanimate"]
+          },
+          "minecraft:collision_box": {
+            "width": 0.4,
+            "height": 0.75
+          },
+          "minecraft:health": {
+              "value": 2000,
+              "max": 2000,
+              "min": 2000
+          },
+          "minecraft:fire_immune": true,
+          "minecraft:damage_sensor": {
+            "triggers": {
+                "cause": "all",
+                "deals_damage": false
+            }
+        },
+
+          "minecraft:physics": {
+              "has_gravity": true,
+              "has_collision": true
+          },
+          "minecraft:pushable": {
+              "is_pushable": false,
+              "is_pushable_by_piston": false
+          }
+      },
+      "events": {
+        "wake": {
+            "add": {
+                "component_groups": [
+                    "wake"
+                ]
+            }
+          }
+      
+  }
+  }
+}

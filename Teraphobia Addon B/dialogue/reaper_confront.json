@@ -1,0 +1,222 @@
+{
+	"format_version": "1.14",
+	"minecraft:npc_dialogue":
+	{
+		"scenes":
+		[
+			{
+				"scene_tag": "reaper_confront",
+				"npc_name": { "rawtext": [ { "translate": "..." } ] },
+				"text": { "rawtext": [ { "translate": "...what are you doing?", "with": ["\n"] } ] },
+				"on_close_commands":[
+                    "/dialogue open @s @initiator[tag=!did_talk] reaper_confront"
+                ],
+				"on_open_commands":[
+                    "/tag @initiator remove did_talk"
+                ],
+				"buttons": [
+					{
+						"name": { "rawtext": [ { "translate": "?" } ] },
+						"commands": [
+							"/tag @initiator add did_talk",
+							"/dialogue open @s @initiator reaper_ask"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "reaper_ask",
+				"npc_name": { "rawtext": [ { "translate": "..." } ] },
+				"text": { "rawtext": [ { "translate": "...are you cheating?", "with": ["\n"] } ] },
+				"on_close_commands":[
+                    "/dialogue open @s @initiator[tag=!did_talk] reaper_ask"
+                ],
+				"on_open_commands":[
+                    "/tag @initiator remove did_talk"
+                ],
+				"buttons": [
+					{
+						"name": { "rawtext": [ { "translate": "?" } ] },
+						"commands": [
+							"/tag @initiator add did_talk",
+							"/dialogue open @s @initiator reaper_well"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "reaper_well",
+				"npc_name": { "rawtext": [ { "translate": "..." } ] },
+				"text": { "rawtext": [ { "translate": "You moron... You have the NERVE to use ME like a puppet for YOUR desires!?", "with": ["\n"] } ] },
+				
+				"on_close_commands":[
+                    "/dialogue open @s @initiator[tag=!did_talk] reaper_well"
+                ],
+				"on_open_commands":[
+                    "/tag @initiator remove did_talk"
+                ],
+				"buttons": [
+					{
+						"name": { "rawtext": [ { "translate": "?" } ] },
+						"commands": [
+							"/tag @initiator add did_talk",
+							"/dialogue open @s @initiator reaper_uhoh"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "reaper_uhoh",
+				"npc_name": { "rawtext": [ { "translate": "..." } ] },
+				"text": { "rawtext": [ { "translate": "Do you think you can just walk all over me and use me like a rag!? Do I amuse you!?", "with": ["\n"] } ] },
+				
+				"on_close_commands":[
+                    "/dialogue open @s @initiator[tag=!did_talk] reaper_uhoh"
+                ],
+				"on_open_commands":[
+                    "/tag @initiator remove did_talk"
+                ],
+				"buttons": [
+					{
+						"name": { "rawtext": [ { "translate": "?" } ] },
+						"commands": [
+							"/tag @initiator add did_talk",
+							"/dialogue open @s @initiator reaper_jo"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "reaper_jo",
+				"npc_name": { "rawtext": [ { "translate": "..." } ] },
+				"text": { "rawtext": [ { "translate": "This is a joke to you, isn't it?", "with": ["\n"] } ] },
+				
+				"on_close_commands":[
+                    "/dialogue open @s @initiator[tag=!did_talk] reaper_jo"
+                ],
+				"on_open_commands":[
+                    "/tag @initiator remove did_talk"
+                ],
+				"buttons": [
+					{
+						"name": { "rawtext": [ { "translate": "?" } ] },
+						"commands": [
+							"/tag @initiator add did_talk",
+							"/dialogue open @s @initiator reaper_since"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "reaper_since",
+				"npc_name": { "rawtext": [ { "translate": "..." } ] },
+				"text": { "rawtext": [ { "translate": "Since you want to break the \"rules\"...", "with": ["\n"] } ] },
+				
+				"on_close_commands":[
+                    "/dialogue open @s @initiator[tag=!did_talk] reaper_since"
+                ],
+				"on_open_commands":[
+                    "/tag @initiator remove did_talk"
+                ],
+				"buttons": [
+					{
+						"name": { "rawtext": [ { "translate": "?" } ] },
+						"commands": [
+							"/tag @initiator add did_talk",
+							"/dialogue open @s @initiator reaper_hwg"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "reaper_hwg",
+				"npc_name": { "rawtext": [ { "translate": "..." } ] },
+				"text": { "rawtext": [ { "translate": "Show me you're worth even messing with them.", "with": ["\n"] } ] },
+				
+				"on_close_commands":[
+                    "/dialogue open @s @initiator[tag=!did_talk] reaper_hwg"
+                ],
+				"on_open_commands":[
+                    "/tag @initiator remove did_talk"
+                ],
+				"buttons": [
+					{
+						"name": { "rawtext": [ { "translate": "?" } ] },
+						"commands": [
+							"/tag @initiator add did_talk",
+							"/dialogue open @s @initiator reaper_tag"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "reaper_tag",
+				"npc_name": { "rawtext": [ { "translate": "..." } ] },
+				"text": { "rawtext": [ { "translate": "You're coming with me, whether you like it or not.", "with": ["\n"] } ] },
+				
+				"on_close_commands":[
+                    "/dialogue open @s @initiator[tag=!did_talk] reaper_tag"
+                ],
+				"on_open_commands":[
+                    "/tag @initiator remove did_talk"
+                ],
+				"buttons": [
+					{
+						"name": { "rawtext": [ { "translate": "?" } ] },
+						"commands": [
+							"/tag @initiator add did_talk",
+							"/dialogue open @s @initiator reaper_gear"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "reaper_gear",
+				"npc_name": { "rawtext": [ { "translate": "..." } ] },
+				"text": { "rawtext": [ { "translate": "You damned coward...", "with": ["\n"] } ] },
+				"on_close_commands":[
+					"/clear @initiator",
+                    "/effect @initiator clear",
+					"/tag @initiator remove tg_given2",
+					"/tag @initiator remove td_given",
+						"/difficulty e",
+							"/gamemode survival @initiator",
+							"/tag @initiator add reaper_victim",
+							"/give @initiator golden_apple 12 0",
+							"/give @initiator cooked_beef 32 0",
+							"/give @initiator diamond_sword 1 0",
+							"/replaceitem entity @initiator slot.armor.head 0 diamond_helmet 1 0",
+							"/replaceitem entity @initiator slot.armor.chest 0 diamond_chestplate 1 0",
+							"/replaceitem entity @initiator slot.armor.legs 0 diamond_leggings 1 0",
+							"/replaceitem entity @initiator slot.armor.feet 0 diamond_boots 1 0",
+							"/gamerule keepinventory true",
+							"/execute as @initiator run execute at @s positioned as @s run execute in the_end run tp 104000 215 104000"
+                ],
+				"buttons": [
+					{
+						"name": { "rawtext": [ { "translate": "..." } ] },
+						"commands": [
+							
+							"/clear @initiator",
+							"/effect @initiator clear",
+							"/tag @initiator remove tg_given2",
+							"/tag @initiator remove td_given",
+						"/difficulty e",
+							"/gamemode survival @initiator",
+							"/tag @initiator add reaper_victim",
+							"/give @initiator golden_apple 12 0",
+							"/give @initiator cooked_beef 32 0",
+							"/give @initiator diamond_sword 1 0",
+							"/replaceitem entity @initiator slot.armor.head 0 diamond_helmet 1 0",
+							"/replaceitem entity @initiator slot.armor.chest 0 diamond_chestplate 1 0",
+							"/replaceitem entity @initiator slot.armor.legs 0 diamond_leggings 1 0",
+							"/replaceitem entity @initiator slot.armor.feet 0 diamond_boots 1 0",
+							"/gamerule keepinventory true",
+							"/execute as @initiator run execute at @s positioned as @s run execute in the_end run tp 104000 215 104000"
+						]
+					}
+				]
+			}
+		]
+	}
+}

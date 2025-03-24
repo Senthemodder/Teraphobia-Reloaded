@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:nausea_potion",
+            "menu_category": {
+                "group": "itemGroup.name.potion",
+                "category": "equipment",
+                "is_hidden_in_commands": false
+            }
+		},
+		"components": {
+			
+			"minecraft:max_stack_size": 1,
+			"minecraft:entity_placer": {
+				"entity": "tera:nausea_potion_effect"
+			},
+			
+			"minecraft:glint": true,
+			
+			"minecraft:icon": "nausea_potion",
+			"minecraft:display_name": {
+				"value": "Potion of Nausea\n\n§8§o-Use on ground\n-Will give nearby players nausea"
+			}
+		}
+	}
+}

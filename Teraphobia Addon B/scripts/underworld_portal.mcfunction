@@ -1,0 +1,2 @@
+execute as @s if block 74965 217 25024 tera:underworld_stone [] run execute as @s[scores={tera_en=1}] run fill 74965 217 25024 74969 217 25028 bedrock
+execute as @s if block 74966 217 25025 bedrock [] run execute as @s[scores={tera_en=1}] run fill 74966 217 25025 74968 217 25027 end_portal

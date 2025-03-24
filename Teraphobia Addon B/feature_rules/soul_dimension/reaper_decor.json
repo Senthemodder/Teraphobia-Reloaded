@@ -1,0 +1,39 @@
+{
+	"format_version": "1.20.20",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "tera:soul_dimension/reaper_decor",
+			"places_feature": "tera:soul_dimension/reaper_spikes"
+		},
+
+		"conditions": {
+			"placement_pass": "after_surface_pass",
+			"minecraft:biome_filter": {
+				"any_of": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "the_end"
+					}
+				]
+			}
+		},
+
+		"distribution": {
+			"iterations": "(v.originx > 102000 && v.originz > 102000 && v.originx < 106000 && v.originz < 106000) * 12",
+
+			"x": {
+				"distribution": "uniform",
+				"extent": [0, 15]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [0, 15]
+			},
+			"y": 180
+		}
+	}
+}
+
+///execute in the_end run tp 104000 215 104000

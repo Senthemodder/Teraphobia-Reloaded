@@ -1,0 +1,1006 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "tera:soul_knight",
+			"runtime_identifier": "minecraft:skeleton",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups":{
+			"dead": {
+				"minecraft:scale": {
+					"value": 0
+				},
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:spawn_entity": {
+					"entities": {
+						"min_wait_time": 0,
+						"max_wait_time": 0,
+						"num_to_spawn": 40,
+						"single_use": true,
+						"spawn_entity": "minecraft:xp_orb"
+					}
+				}
+			},
+			"stun":{
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:is_stunned": {},
+				"minecraft:timer": {
+					"looping": false,
+					"time": 2,
+					"time_down_event": {
+						"event": "random"
+					}
+				}
+			},
+			"ability1":{
+				"minecraft:knockback_resistance": {
+					"value": 0.25
+				},
+				"minecraft:is_pregnant": {},
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:behavior.knockback_roar": {
+					"priority": 1,
+					"duration": 1,
+					"attack_time": 1,
+					"knockback_damage": 17,
+					"knockback_strength": 4,
+					"knockback_range": 20,
+					"knockback_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "tera_monster"
+					},
+					"damage_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "tera_monster"
+					},
+					"on_roar_end": {
+						"event": "ability1_do"
+					},
+					"cooldown_time": 99
+				},
+				"minecraft:is_saddled": {},
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.8,
+					"time_down_event": {
+						"event": "dash"
+					}
+				}
+			},
+			"ability1_do":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 2,
+					"time_down_event": {
+						"event": "random"
+					}
+				}
+			},
+			"ability2":{
+				"minecraft:knockback_resistance": {
+					"value": 0.25
+				},
+				"minecraft:is_pregnant": {},
+				"minecraft:behavior.knockback_roar": {
+					"priority": 1,
+					"duration": 1,
+					"attack_time": 1,
+					"knockback_damage": 12,
+					"knockback_strength": 9,
+					"knockback_range": 14,
+					"knockback_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "tera_monster"
+					},
+					"damage_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "tera_monster"
+					},
+					"on_roar_end": {
+						"event": "ability2_do"
+					},
+					"cooldown_time": 99
+				},
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:is_sheared": {},
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.8,
+					"time_down_event": {
+						"event": "dash"
+					}
+				}
+			},
+			"ability2_do":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 2,
+					"time_down_event": {
+						"event": "random"
+					}
+				}
+			},
+			"ability3":{
+				"minecraft:knockback_resistance": {
+					"value": 0.25
+				},
+				"minecraft:is_pregnant": {},
+				"minecraft:behavior.knockback_roar": {
+					"priority": 1,
+					"duration": 1,
+					"attack_time": 1,
+					"knockback_damage": 14,
+					"knockback_strength": 8,
+					"knockback_range": 15,
+					"knockback_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "tera_monster"
+					},
+					"damage_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "tera_monster"
+					},
+					"on_roar_end": {
+						"event": "ability3_do"
+					},
+					"cooldown_time": 99
+				},
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:is_ignited": {},
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.8,
+					"time_down_event": {
+						"event": "dash"
+					}
+				}
+			},
+			"ability3_do":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 2,
+					"time_down_event": {
+						"event": "random"
+					}
+				}
+			},
+			"ability4":{
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:knockback_resistance": {
+					"value": 0
+				},
+				"minecraft:is_tamed": {},
+				"minecraft:is_pregnant": {},
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.3,
+					"time_down_event": {
+						"event": "ability4_do"
+					}
+				}
+			},
+			"ability4_do":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1.7,
+					"time_down_event": {
+						"event": "random"
+					}
+				}
+			},
+			"cant_jump":{
+				"minecraft:knockback_resistance": {
+					"value": 100
+				}
+			},
+			"random_extra":{
+
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1.25,
+					"time_down_event": {
+						"event": "extra_do"
+					}
+				},
+				"minecraft:movement": {
+					"value": 0.15
+				},
+				"minecraft:behavior.delayed_attack": {
+					"priority": 4,
+					"attack_once": false,
+					"track_target": true,
+					"require_complete_path": false,
+					"random_stop_interval": 0,
+					"reach_multiplier": 0,
+					"speed_multiplier": 1,
+					"attack_duration": 99,
+					"hit_delay_pct": 0.99
+				}
+
+
+			},
+			"extra_do":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1.25,
+					"time_down_event": {
+						"event": "reset_random"
+					}
+				}
+			},
+			"random":{
+
+				"minecraft:timer": {
+					"looping": true,
+					"time": 2,
+					"time_down_event": {
+						"event": "random_do"
+					}
+				},
+				"minecraft:movement": {
+					"value": 0.25
+				},
+				"minecraft:behavior.delayed_attack": {
+					"priority": 4,
+					"attack_once": false,
+					"track_target": true,
+					"require_complete_path": false,
+					"random_stop_interval": 0,
+					"reach_multiplier": 0,
+					"speed_multiplier": 1,
+					"attack_duration": 99,
+					"hit_delay_pct": 0.99
+				}
+
+
+			},
+			"begin":{
+				"minecraft:mark_variant":{
+    				"value": 10
+				}
+			}
+		},
+				"components": {
+			"minecraft:loot": {
+				"table": "loot_tables/entities/tera_entity/soul_knight.json"
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"bamboo_sapling",
+					"beetroot",
+					"brown_mushroom",
+					"carrots",
+					"carved_pumpkin",
+					"chorus_flower",
+					"chorus_plant",
+					"deadbush",
+					"double_plant",
+					"leaves",
+					"leaves2",
+					"lit_pumpkin",
+					"melon_block",
+					"melon_stem",
+					"potatoes",
+					"pumpkin",
+					"pumpkin_stem",
+					"red_flower",
+					"red_mushroom",
+					"crimson_fungus",
+					"warped_fungus",
+					"reeds",
+					"sapling",
+					"snow_layer",
+					"sweet_berry_bush",
+					"tallgrass",
+					"turtle_egg",
+					"vine",
+					"waterlily",
+					"wheat",
+					"yellow_flower"
+				]
+			},
+			"minecraft:attack": {
+				"damage": 1
+			  },
+			  "minecraft:timer": {
+				"looping": false,
+				"time": 0.1,
+				"time_down_event": {
+					"event": "begin"
+				}
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 7,
+				"look_distance": 8
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 8
+			},
+			"minecraft:underwater_movement": {
+				"value": 0.15
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [          
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"cause": "block_explosion",
+						"deals_damage": false
+					},
+					{
+						"cause": "entity_explosion",
+						"deals_damage": false
+					},
+					{
+					  "on_damage": {
+						  "filters": {
+							  "test": "is_family",
+							  "subject": "other",
+							  "value": "inanimate"
+						  }
+					  },
+					  "deals_damage": false
+				  },
+				  {
+					"on_damage": {
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "undead"
+						}
+					},
+					"deals_damage": false
+				},
+				{
+				  "on_damage": {
+					  "filters": {
+						  "test": "is_family",
+						  "subject": "other",
+						  "value": "wither"
+					  }
+				  },
+				  "deals_damage": false
+			  },
+			  {
+				"on_damage": {
+					"filters": {
+						"test": "is_family",
+						"subject": "other",
+						"value": "tera_monster"
+					}
+				},
+				"deals_damage": false
+			},
+			{
+			  "on_damage": {
+				  "filters": {
+					  "test": "has_tag",
+					  "subject": "self",
+					  "value": "sk_inv"
+				  }
+			  },
+			  "deals_damage": false
+		  }
+				]
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 6,
+				"speed_multiplier": 1
+			},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player ? 150"
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_water": true
+			},
+			"minecraft:navigation.walk": {
+				"is_amphibious": true,
+				"avoid_sun": false,
+				"avoid_water": true,
+				"can_swim": true
+			},
+			"minecraft:behavior.hurt_by_target": {
+    "priority": 1
+},
+		"minecraft:movement.basic": {},
+		"minecraft:jump.static": {},
+		"minecraft:can_climb": {},
+			"minecraft:boss": {
+				"name": "Knight of the Damned Souls",
+				"should_darken_sky": true,
+				"hud_range": 55
+			},
+			"minecraft:health": {
+				"value": 3000,
+				"max": 3000
+			},
+			"minecraft:collision_box": {
+				"width": 0.72,
+				"height": 2.01
+			},
+
+			"minecraft:equipment": {
+				"table": "loot_tables/entities/soul_knight_gear.json"
+			},
+			"minecraft:movement": {
+				"value": 0.23
+			},
+
+			"minecraft:scale": {
+				"value": 4
+			},
+			
+			"minecraft:fire_immune": {},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"reselect_targets": true,
+				"must_see": true,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "player"
+						},
+						"max_dist": 99
+					}
+				]
+			},
+
+			"minecraft:follow_range": {
+				"value": 99
+			},
+			"minecraft:on_death": {
+				"event": "dead",
+				"target": "self"
+			},
+			"minecraft:type_family": {
+				"family": ["tera_bosses","tera_boss", "monster", "mob"]
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+
+			
+		},
+		"events": {
+			"begin": {
+			"queue_command": {
+				"command": [
+					"summon tera:sk_storm ~ ~23 ~"
+				]
+			},
+				"add": {
+					"component_groups": [
+						"random","cant_jump","begin"
+					]
+				}
+			},
+			"random_do": {
+				"randomize": [{
+						"filters": {
+							"test": "has_target"
+						},
+						"weight": 10,
+						"add": {
+							"component_groups": ["ability1"]
+						},
+						"remove": {
+							"component_groups": ["random","cant_jump"]
+						},
+						"queue_command": {
+							"command": [
+								"playsound mob.warden.sonic_charge @a[r=90]",
+								"camerashake add @a[r=90] 0.4 0.2"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "has_target"
+						},
+						"weight": 10,
+						"add": {
+							"component_groups": ["ability2"]
+						},
+						"remove": {
+							"component_groups": ["random","cant_jump"]
+						},
+						"queue_command": {
+							"command": [
+								"playsound mob.warden.sonic_charge @a[r=90]",
+								"camerashake add @a[r=90] 0.4 0.2"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "has_target"
+						},
+						"weight": 10,
+						"add": {
+							"component_groups": ["ability3"]
+						},
+						"remove": {
+							"component_groups": ["random","cant_jump"]
+						},
+						"queue_command": {
+							"command": [
+								"playsound mob.warden.sonic_charge @a[r=90]",
+								"camerashake add @a[r=90] 0.4 0.2"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "has_target"
+						},
+						"weight": 10,
+						"add": {
+							"component_groups": ["ability4"]
+						},
+						"remove": {
+							"component_groups": ["random","cant_jump"]
+						},
+						"queue_command": {
+							"command": [
+								"playsound mob.warden.sonic_charge @a[r=90]",
+								"camerashake add @a[r=90] 0.4 0.2"
+							]
+						}
+					}
+				]
+			},
+			"random": {
+				"randomize": [
+				{
+					"weight": 6,
+					"remove": {
+						"component_groups": [
+							"ability1", "ability2", "ability3", "ability4",
+							"ability1_do", "ability2_do", "ability3_do", "ability4_do",
+							"stun"
+						]
+					},
+					"add": {
+						"component_groups": [
+							"random","cant_jump"
+						]
+					}
+				},
+				{
+					"weight": 10,
+					"remove": {
+						"component_groups": [
+							"ability1", "ability2", "ability3", "ability4",
+							"ability1_do", "ability2_do", "ability3_do", "ability4_do",
+							"stun"
+						]
+					},
+					"add": {
+						"component_groups": [
+							"random_extra","cant_jump"
+						]
+					},
+					"queue_command": {
+						"command": [
+							"playanimation @s animation.soul_knight.extra",
+							"playsound beacon.power @a[r=90]",
+							"playsound beacon.power @a[r=90]",
+							"playsound beacon.power @a[r=90]",
+							"playsound mob.warden.sonic_charge @a[r=90]",
+							"camerashake add @a[r=90] 1 0.3"
+						]
+					}
+				}
+			]
+			},
+			"reset_random": {
+				"remove": {
+					"component_groups": [
+						"ability1", "ability2", "ability3", "ability4",
+						"ability1_do", "ability2_do", "ability3_do", "ability4_do",
+						"stun","random_extra","extra_do"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"random","cant_jump"
+					]
+				}
+			},
+			"extra_do": {
+				"randomize": [
+				{
+					"filters": 
+					{
+						"all_of":[
+							{
+						"test": "has_tag",
+						"operator": "!=",
+						"value": "sk_inv"
+							},
+							{
+								"test": "is_biome",
+								"operator": "==",
+								"value": "the_end"
+							}
+						]
+					},
+					"weight": 7,
+					"queue_command": {
+						"command": [
+							"tag @s add sk_inv",
+							"summon tera:soul_knight_crystal 75001 184 -24799",
+							"playsound mob.warden.sonic_boom @a[r=90]",
+							"playsound mob.warden.sonic_boom @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"camerashake add @a[r=90] 1 0.5"
+						]
+					},
+					"add": {
+						"component_groups": [
+							"extra_do"
+						]
+					}
+				},
+				{
+					"filters": 
+					{
+						"all_of":[
+							{
+						"test": "has_tag",
+						"operator": "!=",
+						"value": "sk_inv"
+							},
+							{
+								"test": "is_biome",
+								"operator": "!=",
+								"value": "the_end"
+							}
+						]
+					},
+					"weight": 7,
+					"queue_command": {
+						"command": [
+							"tag @s add sk_inv",
+							"summon tera:soul_knight_crystal ~ ~3 ~",
+							"playsound mob.warden.sonic_boom @a[r=90]",
+							"playsound mob.warden.sonic_boom @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"camerashake add @a[r=90] 1 0.5"
+						]
+					},
+					"add": {
+						"component_groups": [
+							"extra_do"
+						]
+					}
+				},
+				{
+					"filters": 
+					{
+						"all_of":[
+							{
+								"test": "is_biome",
+								"operator": "==",
+								"value": "the_end"
+							}
+						]
+					},
+					"weight": 10,
+					"queue_command": {
+						"command": [
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"summon tera:light_laser ~~~ ~~ spread",
+							"playsound mob.warden.sonic_boom @a[r=90]",
+							"playsound mob.warden.sonic_boom @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"camerashake add @a[r=90] 1 0.5"
+						]
+					},
+					"add": {
+						"component_groups": [
+							"extra_do"
+						]
+					}
+				},
+				{
+					"filters": 
+					{
+						"all_of":[
+							{
+								"test": "is_biome",
+								"operator": "!=",
+								"value": "the_end"
+							}
+						]
+					},
+					"weight": 10,
+					"queue_command": {
+						"command": [
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"summon tera:light_laser ~~~ ~~ spread2",
+							"playsound mob.warden.sonic_boom @a[r=90]",
+							"playsound mob.warden.sonic_boom @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"camerashake add @a[r=90] 1 0.5"
+						]
+					},
+					"add": {
+						"component_groups": [
+							"extra_do"
+						]
+					}
+				},
+				{
+					"weight": 10,
+					"queue_command": {
+						"command": [
+							"summon tera:soul_crystal ^ ^4 ^2 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^7 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^12 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^17 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^22 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^27 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^32 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^37 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^42 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^47 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^52 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^57 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^62 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^67 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^72 ~~ minecraft:crystal_explode",
+							"summon tera:soul_crystal ^ ^4 ^77 ~~ minecraft:crystal_explode",
+							"playsound mob.warden.sonic_boom @a[r=90]",
+							"playsound mob.warden.sonic_boom @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"camerashake add @a[r=90] 2 0.5"
+						]
+					},
+					"add": {
+						"component_groups": [
+							"extra_do"
+						]
+					}
+				},
+				{
+					"weight": 10,
+					"queue_command": {
+						"command": [
+							"function large_aoe_exp2",
+							"playsound mob.warden.sonic_boom @a[r=90]",
+							"playsound mob.warden.sonic_boom @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"playsound block.end_portal.spawn @a[r=90]",
+							"camerashake add @a[r=90] 2 0.5"
+						],
+						"target":"target"
+					},
+					"add": {
+						"component_groups": [
+							"extra_do"
+						]
+					}
+				}
+			]
+			},
+			"stun": {
+				"remove": {
+					"component_groups": [
+						"random"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"stun"
+					]
+				}
+			},
+			"ability1_do": {
+				"queue_command": {
+					"command": [
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"function medium_impact"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ability1_do"
+					]
+				}
+			},
+			"ability2_do": {
+				"queue_command": {
+					"command": [
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"function small_impact"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ability2_do"
+					]
+				}
+			},
+			"ability3_do": {
+				"queue_command": {
+					"command": [
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"function medium_impact"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ability3_do"
+					]
+				}
+			},			
+			"dash": {
+				"queue_command": {
+					"command": [
+						"summon tera:complex_dash ^ ^2 ^-2"
+					]
+				}
+			},
+			"ability4_do": {
+				"randomize": [
+					{
+						"weight": 5,
+						"queue_command": {
+							"command": [
+								"playsound mob.warden.sonic_boom @a[r=90]",
+								"playsound mob.warden.sonic_boom @a[r=90]",
+								"summon tera:complex_dash ^ ^2 ^2"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"ability4_do"
+							]
+						}
+					},
+					{
+						"weight": 5,
+						"queue_command": {
+							"command": [
+								"playsound mob.warden.sonic_boom @a[r=90]",
+								"playsound mob.warden.sonic_boom @a[r=90]",
+								"summon tera:complex_dash ^ ^2 ^-2"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"ability4_do"
+							]
+						}
+					},
+					{
+						"weight": 5,
+						"queue_command": {
+							"command": [
+								"playsound mob.warden.sonic_boom @a[r=90]",
+								"playsound mob.warden.sonic_boom @a[r=90]",
+								"summon tera:complex_dash ^2 ^2 ^"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"ability4_do"
+							]
+						}
+					},
+					{
+						"weight": 5,
+						"queue_command": {
+							"command": [
+								"playsound mob.warden.sonic_boom @a[r=90]",
+								"playsound mob.warden.sonic_boom @a[r=90]",
+								"summon tera:complex_dash ^-2 ^2 ^2"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"ability4_do"
+							]
+						}
+					}
+				]
+			},
+			"dead": {
+				"queue_command": {
+					"command": [
+						"particle tera:mainboss_flash ~ ~3 ~",
+						"summon tera:soul_knight_death",
+						"event entity @e[type=tera:sk_storm] kill_cloud"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dead"
+					]
+				}
+			}
+		}
+	}
+}

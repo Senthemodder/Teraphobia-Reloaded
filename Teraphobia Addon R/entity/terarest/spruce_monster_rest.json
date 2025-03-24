@@ -1,0 +1,41 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:spruce_monster_rest",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/spruce_monster"
+      },
+      "geometry": {
+        "default": "geometry.tera_golem.monster"
+      },
+			"spawn_egg": {
+				"base_color": "#4a4a4a",
+				"overlay_color": "#818181"
+			},
+			"particle_effects": {
+				"transform": "tera:earth_emitter"
+			},
+			"animations": {
+	  
+			  "idle.con":  "controller.animation.tera_general.idle",
+			  "wake.con":  "controller.animation.tera_general.wake",
+	  
+        "wake": "animation.tera_golem.wake",
+        "idle": "animation.tera_golem.sit"
+			},
+			"scripts": {
+			  "pre_animation": [
+				"variable.modified_tcos0 = Math.clamp(((Math.cos(query.modified_distance_moved * 13.5) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 25.0), -12.5, 12.5);"
+			  ],
+			  "animate": [
+				"idle.con",
+				"wake.con"
+			  ]
+			},
+      "render_controllers": [ "controller.render.iron_golem" ]
+    }
+  }
+}

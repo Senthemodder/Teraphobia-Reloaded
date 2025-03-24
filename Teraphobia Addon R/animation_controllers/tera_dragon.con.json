@@ -1,0 +1,179 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.tera_dragon.naga": {
+      "states": {
+        "default": {
+          "animations": [ { "naga": [] } ]
+        }
+      }
+    },
+    "controller.animation.tera_dragon.look": {
+      "states": {
+        "default": {
+          "animations": [ { "look": [] } ]
+        }
+      }
+    },
+    "controller.animation.tera_dragon.idle": {
+      "states": {
+        "default": {
+          "animations": [ { "idle": [] } ]
+        }
+      }
+    },
+    "controller.animation.tera_dragon.landing": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "stunned": "query.is_baby" }
+          ]
+        },
+        "stunned": {
+          "animations": [
+            { "landing": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_baby" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_dragon.landed": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "stunned": "query.is_saddled" }
+          ]
+        },
+        "stunned": {
+          "animations": [
+            { "landed": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_saddled" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_dragon.flying": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "stunned": "query.is_tamed" }
+          ]
+        },
+        "stunned": {
+          "animations": [
+            { "flying": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_tamed" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_dragon.hover": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "stunned": "query.is_stunned" }
+          ]
+        },
+        "stunned": {
+          "animations": [
+            { "hover": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_stunned" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_dragon.fire": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "stunned": "query.is_chested" }
+          ]
+        },
+        "stunned": {
+          "animations": [
+            { "fire": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_chested" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_dragon.bite": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "stunned": "query.is_delayed_attacking" }
+          ]
+        },
+        "stunned": {
+          "animations": [
+            { "bite": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_delayed_attacking || query.all_animations_finished" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_dragon.slam": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "stunned": "query.is_illager_captain" }
+          ]
+        },
+        "stunned": {
+          "animations": [
+            { "slam": [] }
+          ],
+          "transitions": [
+            { "default": "!query.is_illager_captain" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_dragon.roar": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "stunned": "!query.has_target" }
+          ]
+        },
+        "stunned": {
+          "animations": [
+            { "roar": [] }
+          ],
+          "transitions": [
+            { "default": "query.has_target" }
+          ]
+        }
+      }
+    },
+    "controller.animation.tera_dragon.walk": {
+      "states": {
+        "default": {
+          "parameters": [ "(query.modified_move_speed * query.is_sheared) * 2" ],
+          "animations": [
+            {
+              "walk": [
+                {
+                  "0.0": 0.0,
+                  "1.0": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

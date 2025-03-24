@@ -1,0 +1,53 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.elemental_bow.fire_arrow": {
+			"loop": true,
+			"bones": {
+				"fire_arrow": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.elemental_bow.lightning_arrow": {
+			"loop": true,
+			"bones": {
+				"lightning_arrow": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.elemental_bow.ice_arrow": {
+			"loop": true,
+			"bones": {
+				"ice_arrow": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.elemental_bow.earth_arrow": {
+			"loop": true,
+			"bones": {
+				"earth_arrow": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.elemental_bow.diamond_arrow": {
+			"loop": true,
+			"bones": {
+				"diamond_arrow": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.elemental_bow.iron_arrow": {
+			"loop": true,
+			"bones": {
+				"iron_arrow": {
+					"scale": 0
+				}
+			}
+		}
+	}
+}

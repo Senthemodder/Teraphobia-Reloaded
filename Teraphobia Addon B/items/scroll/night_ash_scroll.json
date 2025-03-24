@@ -1,0 +1,69 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:item": {
+      "description": {
+          "identifier": "tera:night_ash_scroll",
+          "menu_category": {
+				"category": "equipment"
+			}
+      },
+      "components": {
+"minecraft:glint": true,
+        
+        
+        "minecraft:cooldown": {
+          "category": "night_ash_scroll",
+          "duration": 30
+          },
+    
+          "minecraft:icon": "night_ash_scroll",
+          "minecraft:display_name": {
+              "value": "Night Ash Scroll\n\n§8§o-For a swift getaway, the Moon shall tug on your foes as you run"
+          },
+          "minecraft:max_stack_size": 1,
+        			"minecraft:tags": {
+                "tags": [
+			"tera:tera_cooldown"
+		]
+	},
+"minecraft:throwable": {
+            "do_swing_animation": true
+          },
+"minecraft:projectile": {
+          "projectile_entity": "tera:night_ash_scroll"
+        }
+        
+        
+/*"minecraft:shooter":{
+    "ammunition" :[{
+"item" :"tera:night_ash_scroll",
+"use_offhand" :true,
+"search_inventory" :true,
+"use_in_creative" :true
+    }],
+    "max_draw_duration": 0.1,
+    "scale_power_by_draw_duration": true,
+    "charge_on_draw": false
+}*/
+      },
+      "events": {
+        "totem": {
+          "swing": {},
+          "damage": {
+            "type": "durability",
+            "amount": 1
+            },
+          "run_command": {
+            "command": [
+              "effect @e[rm=2,r=12] slowness 10 255",
+              "effect @e[rm=2,r=12] weakness 10 255",
+              "effect @e weakness 10 255",
+              "effect @e speed 5 20",
+              "effect @e jump_boost 5 2",
+              "playsound block.end_portal.spawn @a[r=20]"
+            ]
+          }
+        }
+      }
+  }
+}

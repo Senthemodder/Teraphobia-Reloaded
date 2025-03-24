@@ -1,0 +1,64 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:earth_creeper",
+			"materials": {
+				"default": "entity_alphatest",
+				"charged": "charged_creeper"
+			},
+			"textures": {
+				"default": "textures/entity/earth_creeper",
+				"charged": "textures/entity/creeper/creeper_armor"
+			},
+			"geometry": {
+				"default": "geometry.tera_creeper.earth",
+				"charged": "geometry.tera_creeper.charged"
+			},
+			"particle_effects": {
+				"transform": "tera:earth_emitter"
+			},
+			"spawn_egg": {
+				"base_color": "#0d7400",
+				"overlay_color": "#e9d1f4"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.wobble = Math.sin(query.swell_amount * 5730) * query.swell_amount * 0.01 + 1.0;",
+					"variable.swelling_scale1 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.4 + 1.0) * variable.wobble;",
+					"variable.swelling_scale2 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.1 + 1.0) / variable.wobble;",
+					"variable.leg_rot = Math.cos(query.modified_distance_moved * 38.17326) * 80.22 * query.modified_move_speed;",
+					"variable.flash = Math.mod(Math.Round(query.swell_amount * 10.0), 2.0);"
+				]
+			},
+			"animations": {
+				"move": "animation.tera_creeper.move",
+				"idle": "animation.tera_creeper.idle",
+				"death": "animation.tera_creeper.death",
+				"exploding": "animation.tera_creeper.exploding",
+				"creeper_swelling": "animation.soul_creeper.swelling"
+			},
+			"animation_controllers": [
+				{
+					"move": "controller.animation.tera_general.move"
+				},
+				{
+					"idle": "controller.animation.tera_general.idle"
+				},
+				{
+					"death": "controller.animation.tera_general.death"
+				},
+				{
+					"creeper_swelling": "controller.animation.creeper.swelling"
+				},
+				{
+					"exploding": "controller.animation.tera_general.exploding"
+				},
+				{
+					"flame": "controller.animation.tera_partblaze.particle"
+				}
+			],
+			"render_controllers": ["controller.render.creeper", "controller.render.creeper_armor"]
+		}
+	}
+}

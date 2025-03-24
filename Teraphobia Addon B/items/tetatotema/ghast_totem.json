@@ -1,0 +1,46 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:ghast_totem",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			
+			"minecraft:max_stack_size": 1,
+        "minecraft:projectile": {
+          "projectile_entity": "tera:ghast_totem"
+        },
+        "minecraft:throwable": {
+    "do_swing_animation": true
+    },
+					
+			"minecraft:icon":  "ghast_totem",
+			"minecraft:display_name": {
+				"value": "Ghast Totem\n\n§8§o-Cast a powerful fireball, and soar like a Ghastly Beast"
+			}
+		},
+		"events": {
+			"totem": {
+				"swing": {},
+				"shoot": {
+					"projectile": "tera:ghast_ball",
+					"launch_power": 1,
+					"angle_offset": 0.5
+				   },
+				
+				"run_command": {
+					"command": [
+						"effect @s levitation 10 1",
+						"effect @s slow_falling 15 1",
+						"particle minecraft:totem_particle ~~~",
+						"playsound random.totem",
+						"replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				}
+			}
+		}
+	}
+}

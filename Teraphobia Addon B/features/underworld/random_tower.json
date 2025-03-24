@@ -1,0 +1,19 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:weighted_random_feature": {
+	  "description": {
+		"identifier": "tera:underworld/random_tower"
+	  },
+	  "features": [
+		[ "tera:underworld/tower/underworld_tower1", 24 ],
+		[ "tera:underworld/tower/underworld_tower2", 1 ],
+		[ "tera:underworld/tower/underworld_tower3", 24 ],
+		[ "tera:underworld/tower/underworld_tower4", 24 ],
+		[ "tera:underworld/tower/underworld_tower5", 24 ],
+		[ "tera:underworld/tower/underworld_tower6", 24 ],
+		[ "tera:underworld/tower/underworld_tower7", 24 ],
+		[ "tera:underworld/tower/underworld_tower8", 24 ],
+		[ "tera:underworld/tower/underworld_tower9", 24 ]
+	  ]
+	}
+  }

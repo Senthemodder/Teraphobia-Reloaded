@@ -1,0 +1,20 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:item": {
+      "description": {
+          "identifier": "tera:ash_scroll",
+          "menu_category": {
+				"category": "equipment"
+			}
+      },
+      "components": {
+          "minecraft:allow_off_hand": true,
+    
+          "minecraft:icon": "ash_scroll",
+          "minecraft:display_name": {
+              "value": "Ash Scroll\n\n§8§o-A relic that feels strangely powerful"
+          },
+          "minecraft:max_stack_size": 1
+      }
+  }
+}

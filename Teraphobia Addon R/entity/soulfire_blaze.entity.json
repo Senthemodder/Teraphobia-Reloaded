@@ -1,0 +1,54 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:soulfire_blaze",
+			"materials": {
+				"body": "blaze_body",
+				"head": "blaze_head"
+			},
+			"textures": {
+				"default": "textures/entity/soulfire_blaze"
+			},
+			"geometry": {
+				"default": "geometry.soulfire_blaze"
+			},
+			"animations": {
+				"look_at_target": "animation.common.look_at_target",
+				"move": "animation.soulfire_blaze.move",
+				"idle": "animation.soulfire_blaze.idle",
+				"shoot": "animation.soulfire_blaze.shoot",
+				"attack": "animation.soulfire_blaze.attack",
+				"death": "animation.soulfire_blaze.death"
+			},
+			"particle_effects": {
+				"transform": "tera:soulfire_emitter"
+			},
+			"animation_controllers": [
+				{
+					"move": "controller.animation.tera_general.move"
+				},
+				{
+					"death": "controller.animation.tera_general.death"
+				},
+				{
+					"attack": "controller.animation.tera_general.attack"
+				},
+				{
+					"idle": "controller.animation.tera_general.idle"
+				},
+				{
+					"shoot": "controller.animation.tera_general.shoot"
+				},
+				{
+					"flame": "controller.animation.tera_partblaze.particle"
+				}
+			],
+			"render_controllers": ["controller.render.blaze"],
+			"spawn_egg": {
+				"base_color": "#00b7ff",
+				"overlay_color": "#ffffff"
+			}
+		}
+	}
+}

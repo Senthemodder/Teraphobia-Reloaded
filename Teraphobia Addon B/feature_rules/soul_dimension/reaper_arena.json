@@ -1,0 +1,37 @@
+{
+	"format_version": "1.20.20",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "tera:soul_dimension/reaper_arena",
+			"places_feature": "tera:soul_dimension/reaper_arena"
+		},
+
+		"conditions": {
+			"placement_pass": "after_underground_pass",
+			"minecraft:biome_filter": {
+				"any_of": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "the_end"
+					}
+				]
+			}
+		},
+
+		"distribution": {
+			"iterations": "(v.originx > 102000 && v.originz > 102000 && v.originx < 106000 && v.originz < 106000) * 256",
+
+			"x": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"z": {
+				"distribution": "fixed_grid",
+				"extent": [0, 15]
+			},
+			"y": 0
+		}
+	}
+}

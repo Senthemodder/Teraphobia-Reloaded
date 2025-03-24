@@ -1,0 +1,73 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.reaper_scythe.first_person_hold": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [66, 60, -60],
+					"position": [3, 23, 4]
+				}
+			}
+		},
+		"animation.reaper_scythe.third_person_hold": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [90, 0, 0],
+					"position": [0.5, 22.5, -0.5]
+				}
+			}
+		},
+		"animation.tera_big_item.width": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"scale": [0.5, 1, 1]
+				}
+			}
+		},
+		"animation.tera_tool.swing1": {
+			"animation_length": 0.375,
+			"bones": {
+				"root_item": {
+					"rotation": {
+						"0.0": [-10, 0, -62.5],
+						"0.0833": [84.87924, -12.45167, -87.64307],
+						"0.1667": [165, 0, -115]
+					},
+					"position": [0, 0, -16]
+				}
+			}
+		},
+		"animation.tera_tool.swing2": {
+			"animation_length": 0.375,
+			"bones": {
+				"root_item": {
+					"rotation": {
+						"0.0": [10, 0, 62.5],
+						"0.0833": [87.24194, 24.97457, 87.58476],
+						"0.1667": [165, 0, 115]
+					},
+					"position": [0, 0, -16]
+				}
+			}
+		},
+		"animation.tera_tool.swing3": {
+			"animation_length": 0.375,
+			"bones": {
+				"root_item": {
+					"rotation": {
+						"0.0": [-40, -17.5, 0],
+						"0.1667": [157.5, -17.5, 0]
+					},
+					"position": {
+						"0.0": [0, 6, -16],
+						"0.0833": [-5, 5, -16],
+						"0.1667": [-4, 4, -16]
+					}
+				}
+			}
+		}
+	}
+}

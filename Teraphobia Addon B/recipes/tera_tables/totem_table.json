@@ -1,0 +1,42 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:totem_table"
+    },
+
+    
+    "tags": [ "tier_1_table" ],
+    "pattern": [
+      "#R#",
+      "SSS",
+      "ADF"
+    ],
+    "key": {
+      "#": {
+        "item": "tera:soul"
+      },
+      "D": {
+        "item": "minecraft:crafting_table"
+      },
+      "F": {
+        "item": "tera:silver"
+      },
+      "A": {
+        "item": "tera:opal"
+      },
+      "R": {
+        "item": "tera:stone_totem"
+      },
+      "S": {
+        "item": "minecraft:emerald"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:totem_table"
+    }
+  }
+}

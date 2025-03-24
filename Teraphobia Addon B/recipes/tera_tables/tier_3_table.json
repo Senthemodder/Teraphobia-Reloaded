@@ -1,0 +1,45 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:tier_3_table"
+    },
+
+    
+    "tags": [ "tier_2_table" ],
+    "pattern": [
+      "#R#",
+      "GFS",
+      "ADA"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:emerald_block"
+      },
+      "A": {
+        "item": "tera:deth"
+      },
+      "D": {
+        "item": "minecraft:crafting_table"
+      },
+      "F": {
+        "item": "minecraft:anvil"
+      },
+      "R": {
+        "item": "tera:solos"
+      },
+      "G": {
+        "item": "minecraft:netherite_scrap"
+      },
+      "S": {
+        "item": "tera:sidron"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:tier_3_table"
+    }
+  }
+}

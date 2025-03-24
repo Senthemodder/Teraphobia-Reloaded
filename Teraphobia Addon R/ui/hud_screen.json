@@ -1,0 +1,489 @@
+{
+	"boss_health_panel": {
+		"type": "panel",
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"size": [
+			182,
+			20
+		],
+		"$progress_bar_collection": "boss_bars",
+		"bindings": [
+			{
+				"binding_name": "#bar_visible",
+				"binding_type": "collection",
+				"binding_collection_name": "boss_bars",
+				"binding_name_override": "#visible"
+			},
+			{
+				"binding_name": "#bossName",
+				"binding_type": "collection",
+				"binding_collection_name": "boss_bars"
+			}
+		],
+		"controls": [
+			{
+				"boss_name@boss_name_panel": {
+					"offset": "$offset_var",
+					"$offset_var|default": [
+						0,
+						30
+					],
+					"variables": [
+						{
+							"requires": "$pocket_edition",
+							"$offset_var": [
+								0,
+								14
+							]
+						}
+					]
+				}
+			},
+			{
+				"progress_bar_for_collections@common.progress_bar_for_collections": {
+					"offset": "$offset_var",
+					"$offset_var|default": [
+						0,
+						40
+					],
+					"variables": [
+						{
+							"requires": "$pocket_edition",
+							"$offset_var": [
+								0,
+								24
+							]
+						}
+					]
+				}
+			},
+									///
+									{
+										"soul_knight_health@soul_knight_health": {
+											"offset": "$offset_var",
+											"$offset_var|default": [
+												0,
+												-2
+											],
+											"layer": 2,
+											"variables": [
+												{
+													"requires": "$pocket_edition",
+													"$offset_var": [
+														0,
+														-18
+													]
+												}
+											],
+											"bindings": [
+												{
+													"binding_name": "#progress_percentage",
+													"binding_type": "collection",
+													"binding_collection_name": "boss_bars"
+												},
+												{
+													"binding_name": "#bossName",
+													"binding_type": "collection",
+													"binding_collection_name": "boss_bars"
+												},
+												{
+													"binding_type": "view",
+													"source_property_name": "(#bossName = 'Knight of the Damned Souls')",
+													"target_property_name": "#visible"
+												}
+											]
+										}
+									},
+									///
+						///
+						{
+							"reaper_health@reaper_health": {
+								"offset": "$offset_var",
+								"$offset_var|default": [
+									0,
+									-2
+								],
+								"layer": 2,
+								"variables": [
+									{
+										"requires": "$pocket_edition",
+										"$offset_var": [
+											0,
+											-18
+										]
+									}
+								],
+								"bindings": [
+									{
+										"binding_name": "#progress_percentage",
+										"binding_type": "collection",
+										"binding_collection_name": "boss_bars"
+									},
+									{
+										"binding_name": "#bossName",
+										"binding_type": "collection",
+										"binding_collection_name": "boss_bars"
+									},
+									{
+										"binding_type": "view",
+										"source_property_name": "(#bossName = 'Reaper')",
+										"target_property_name": "#visible"
+									}
+								]
+							}
+						},
+						///
+
+						///
+						{
+							"underworld_golem_health@underworld_golem_health": {
+								"offset": "$offset_var",
+								"$offset_var|default": [
+									0,
+									-2
+								],
+								"layer": 2,
+								"variables": [
+									{
+										"requires": "$pocket_edition",
+										"$offset_var": [
+											0,
+											-18
+										]
+									}
+								],
+								"bindings": [
+									{
+										"binding_name": "#progress_percentage",
+										"binding_type": "collection",
+										"binding_collection_name": "boss_bars"
+									},
+									{
+										"binding_name": "#bossName",
+										"binding_type": "collection",
+										"binding_collection_name": "boss_bars"
+									},
+									{
+										"binding_type": "view",
+										"source_property_name": "(#bossName = 'Underworld Golem')",
+										"target_property_name": "#visible"
+									}
+								]
+							}
+						},
+						///
+
+						///
+						{
+							"joseph_health@joseph_health": {
+								"offset": "$offset_var",
+								"$offset_var|default": [
+									0,
+									-2
+								],
+								"layer": 2,
+								"variables": [
+									{
+										"requires": "$pocket_edition",
+										"$offset_var": [
+											0,
+											-18
+										]
+									}
+								],
+								"bindings": [
+									{
+										"binding_name": "#progress_percentage",
+										"binding_type": "collection",
+										"binding_collection_name": "boss_bars"
+									},
+									{
+										"binding_name": "#bossName",
+										"binding_type": "collection",
+										"binding_collection_name": "boss_bars"
+									},
+									{
+										"binding_type": "view",
+										"source_property_name": "(#bossName = 'Joseph')",
+										"target_property_name": "#visible"
+									}
+								]
+							}
+						}
+						///
+
+						
+		]
+	},
+		///
+		"soul_knight_health": {
+			"type": "panel",
+			"anchor_from": "top_middle",
+			"anchor_to": "top_middle",
+			"size": [
+				190,
+				106.02
+			],
+			"bindings": [
+				{
+					"binding_name": "(#bossName = 'Knight of the Damned Souls')",
+					"binding_type": "collection",
+					"binding_collection_name": "boss_bars",
+					"binding_name_override": "#visible"
+				}
+			],
+			"controls": [
+				{
+					"empty_soul_knight_health@empty_soul_knight_health": {
+						"layer": 1,
+						"size": [
+							210,
+							99.66
+						],
+						"offset": [
+							0,
+							-0.5
+						],
+						"keep_ratio": false
+					}
+				},
+				{
+					"soul_knight@soul_knight": {
+						"layer": 2,
+						"keep_ratio": false
+					}
+				}
+			]
+		},
+		"empty_soul_knight_health": {
+			"type": "image",
+			"texture": "textures/ui/bossbars/soul_knight/health_empty"
+		},
+		"soul_knight@filled_soul_knight_health": {
+			"clip_pixelperfect": false,
+			"bindings": [
+				{
+					"binding_name": "#progress_percentage",
+					"binding_name_override": "#clip_ratio",
+					"binding_type": "collection",
+					"binding_collection_name": "$progress_bar_collection"
+				}
+			]
+		},
+		"filled_soul_knight_health": {
+			"type": "image",
+			"texture": "textures/ui/bossbars/soul_knight/health_full",
+			"clip_direction": "left",
+			"bindings": [
+				{
+					"binding_name": "#progress_percentage",
+					"binding_name_override": "#clip_ratio"
+				}
+			]
+		},
+		///
+	///
+	"reaper_health": {
+		"type": "panel",
+		"anchor_from": "top_middle",
+		"anchor_to": "top_middle",
+		"size": [
+			190,
+			106.02
+		],
+		"bindings": [
+			{
+				"binding_name": "(#bossName = 'Reaper')",
+				"binding_type": "collection",
+				"binding_collection_name": "boss_bars",
+				"binding_name_override": "#visible"
+			}
+		],
+		"controls": [
+			{
+				"empty_reaper_health@empty_reaper_health": {
+					"layer": 1,
+					"size": [
+						210,
+						99.66
+					],
+					"offset": [
+						0,
+						-0.5
+					],
+					"keep_ratio": false
+				}
+			},
+			{
+				"reaper@reaper": {
+					"layer": 2,
+					"keep_ratio": false
+				}
+			}
+		]
+	},
+	"empty_reaper_health": {
+		"type": "image",
+		"texture": "textures/ui/bossbars/reaper/health_empty"
+	},
+	"reaper@filled_reaper_health": {
+		"clip_pixelperfect": false,
+		"bindings": [
+			{
+				"binding_name": "#progress_percentage",
+				"binding_name_override": "#clip_ratio",
+				"binding_type": "collection",
+				"binding_collection_name": "$progress_bar_collection"
+			}
+		]
+	},
+	"filled_reaper_health": {
+		"type": "image",
+		"texture": "textures/ui/bossbars/reaper/health_full",
+		"clip_direction": "left",
+		"bindings": [
+			{
+				"binding_name": "#progress_percentage",
+				"binding_name_override": "#clip_ratio"
+			}
+		]
+	},
+	///
+		///
+		"underworld_golem_health": {
+			"type": "panel",
+			"anchor_from": "top_middle",
+			"anchor_to": "top_middle",
+			"size": [
+				190,
+				106.02
+			],
+			"bindings": [
+				{
+					"binding_name": "(#bossName = 'Underworld Golem')",
+					"binding_type": "collection",
+					"binding_collection_name": "boss_bars",
+					"binding_name_override": "#visible"
+				}
+			],
+			"controls": [
+				{
+					"empty_underworld_golem_health@empty_underworld_golem_health": {
+						"layer": 1,
+						"size": [
+							210,
+							99.66
+						],
+						"offset": [
+							0,
+							-0.5
+						],
+						"keep_ratio": false
+					}
+				},
+				{
+					"underworld_golem@underworld_golem": {
+						"layer": 2,
+						"keep_ratio": false
+					}
+				}
+			]
+		},
+		"empty_underworld_golem_health": {
+			"type": "image",
+			"texture": "textures/ui/bossbars/underworld_golem/health_empty"
+		},
+		"underworld_golem@filled_underworld_golem_health": {
+			"clip_pixelperfect": false,
+			"bindings": [
+				{
+					"binding_name": "#progress_percentage",
+					"binding_name_override": "#clip_ratio",
+					"binding_type": "collection",
+					"binding_collection_name": "$progress_bar_collection"
+				}
+			]
+		},
+		"filled_underworld_golem_health": {
+			"type": "image",
+			"texture": "textures/ui/bossbars/underworld_golem/health_full",
+			"clip_direction": "left",
+			"bindings": [
+				{
+					"binding_name": "#progress_percentage",
+					"binding_name_override": "#clip_ratio"
+				}
+			]
+		},
+		///
+		
+		///
+		"joseph_health": {
+			"type": "panel",
+			"anchor_from": "top_middle",
+			"anchor_to": "top_middle",
+			"size": [
+				190,
+				106.02
+			],
+			"bindings": [
+				{
+					"binding_name": "(#bossName = 'Joseph')",
+					"binding_type": "collection",
+					"binding_collection_name": "boss_bars",
+					"binding_name_override": "#visible"
+				}
+			],
+			"controls": [
+				{
+					"empty_joseph_health@empty_joseph_health": {
+						"layer": 1,
+						"size": [
+							210,
+							99.66
+						],
+						"offset": [
+							0,
+							-0.5
+						],
+						"keep_ratio": false
+					}
+				},
+				{
+					"joseph@joseph": {
+						"layer": 2,
+						"keep_ratio": false
+					}
+				}
+			]
+		},
+		"empty_joseph_health": {
+			"type": "image",
+			"texture": "textures/ui/bossbars/joseph/health_empty"
+		},
+		"joseph@filled_joseph_health": {
+			"clip_pixelperfect": false,
+			"bindings": [
+				{
+					"binding_name": "#progress_percentage",
+					"binding_name_override": "#clip_ratio",
+					"binding_type": "collection",
+					"binding_collection_name": "$progress_bar_collection"
+				}
+			]
+		},
+		"filled_joseph_health": {
+			"type": "image",
+			"texture": "textures/ui/bossbars/joseph/health_full",
+			"clip_direction": "left",
+			"bindings": [
+				{
+					"binding_name": "#progress_percentage",
+					"binding_name_override": "#clip_ratio"
+				}
+			]
+		}
+		///
+		
+}

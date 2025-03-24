@@ -1,0 +1,13 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:weighted_random_feature": {
+	  "description": {
+		"identifier": "tera:limbo/random_spike"
+	  },
+	  "features": [
+		[ "tera:limbo/rollingplains_column_grass", 16 ],
+		[ "tera:limbo/rollingplains_column_stonespan_stone", 12 ],
+		[ "tera:limbo/crying_stone", 4 ]
+	  ]
+	}
+  }

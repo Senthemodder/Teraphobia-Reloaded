@@ -1,0 +1,58 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:cobblestone_monster",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/cobblestone_monster"
+      },
+      "geometry": {
+        "default": "geometry.tera_golem.monster"
+      },
+			"spawn_egg": {
+				"base_color": "#4a4a4a",
+				"overlay_color": "#818181"
+			},
+			"particle_effects": {
+				"transform": "tera:soulfire_emitter"
+			},
+      "animations": {
+
+        "del_attack_con":  "controller.animation.tera_general.attack",
+        "move.con":  "controller.animation.tera_general.move",
+        "ability1.con":  "controller.animation.tera_general.ability1",
+        "ability2.con":  "controller.animation.tera_general.ability2",
+        "ability3.con":  "controller.animation.tera_general.ability3",
+        "idle.con":  "controller.animation.tera_general.idle",
+        "death.con":  "controller.animation.tera_general.death",
+
+        "attack": "animation.tera_golem.boss_attack",
+        "ability1": "animation.tera_golem.boss_ability1",
+        "ability2": "animation.tera_golem.boss_ability2",
+        "ability3": "animation.tera_golem.boss_ability3",
+        "move": "animation.tera_golem.boss_move",
+        "idle": "animation.tera_golem.idle",
+        "death": "animation.tera_golem.death",
+        "flame": "controller.animation.tera_partblaze.particle"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.modified_tcos0 = Math.clamp(((Math.cos(query.modified_distance_moved * 13.5) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 25.0), -12.5, 12.5);"
+        ],
+        "animate": [
+          "idle.con",
+          "move.con",
+          "del_attack_con",
+          "death.con",
+          "ability1.con",
+          "ability2.con",
+          "ability3.con",
+          "flame"
+        ]
+      },
+      "render_controllers": [ "controller.render.iron_golem" ]
+    }
+  }
+}

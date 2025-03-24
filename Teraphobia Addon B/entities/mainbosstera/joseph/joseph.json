@@ -1,0 +1,746 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+      "description": {
+          "identifier": "tera:joseph",
+          "is_spawnable": true,
+          "is_summonable": true,
+          "is_experimental": false,
+          "minecraft:runtime_identifier": "minecraft:ender_dragon"
+      },
+      "component_groups": {
+        "nont":{},
+        "spawned":{
+            "minecraft:is_saddled":{} 
+        },
+        "no":{
+            "minecraft:explode": {
+                "fuse_length": 0,
+                "fuse_lit": true,
+                "power": 1,
+                "causes_fire": false,
+                "destroy_affected_by_griefing": true
+              }
+        },
+          "dead": {
+              "minecraft:transformation": {
+            "into": "tera:joseph_death<shine>"
+          }
+          },
+          "dead2": {
+            "minecraft:transformation": {
+          "into": "tera:joseph_death<grief>"
+        }
+        },
+        "rest": {
+            "minecraft:transformation": {
+          "into": "tera:joseph_rest"
+        }
+        },
+        "landing":{
+            "minecraft:navigation.float": {
+                "can_path_over_water": true
+              },
+              "minecraft:behavior.float_wander": {
+                "priority": 2,
+                "must_reach": true
+              },
+              "minecraft:physics": {
+                "has_gravity": true
+            },
+              "minecraft:can_fly": {
+              },
+              "minecraft:movement": {
+                "value": 0.0
+            },
+              "minecraft:jump.static": {
+            },
+            "minecraft:is_baby": {
+            },
+            "minecraft:behavior.float": {
+                "priority": 0
+              }
+        },
+        "hover":{
+            "minecraft:shooter": {
+                "def": "minecraft:literally_nothing"
+              },
+            "minecraft:behavior.ranged_attack": {
+                "priority": 1,
+                "attack_radius": 64,
+                "charge_shoot_trigger": 2,
+                "charge_charged_trigger": 1
+              },
+            "minecraft:navigation.float": {
+                "can_path_over_water": true
+              },
+              "minecraft:behavior.float_wander": {
+                "priority": 2,
+                "must_reach": true
+              },
+              "minecraft:can_fly": {
+              },
+              "minecraft:movement": {
+                "value": 0.0
+            },
+
+            "minecraft:physics": {
+                "has_gravity": true
+            },
+            "minecraft:timer": {
+                "looping": true,
+                "time": 3,
+                "time_down_event": {
+                    "event": "fly_or_fire"
+                }
+            },
+              "minecraft:jump.static": {
+            },
+            "minecraft:is_stunned": {
+            },
+            "minecraft:behavior.float": {
+                "priority": 0
+              }
+        },
+        "fire":{
+            "minecraft:spawn_entity": {
+                "entities": {
+                    "min_wait_time": 1.5,
+                    "max_wait_time": 1.5,
+                    "num_to_spawn": 1,
+                    "single_use": true,
+                    "spawn_entity": "tera:joseph_ball"
+                }
+            },
+            "minecraft:is_chested": {
+              }
+        },
+        "flying":{
+              "minecraft:is_tamed": {
+            },
+            "minecraft:movement": {
+                "value": 5.0
+            },
+            "minecraft:physics": {
+                "has_gravity": false
+            },
+            "minecraft:movement.glide": {
+                "start_speed": 0.9,
+                "speed_when_turning": 0.9
+            },
+            "minecraft:behavior.swoop_attack": {
+              "priority": 1,
+              "damage_reach": 0.3,
+              "speed_multiplier": 2.0,
+              "delay_range": [ 0.2, 0.3 ]
+            },
+            "minecraft:attack": {
+                "damage": 10
+            },
+            "minecraft:timer": {
+                "looping": true,
+                "time": 15,
+                "time_down_event": {
+                    "event": "land_or_hover"
+                }
+            },
+            "minecraft:behavior.circle_around_anchor": {
+                "priority": 3,
+                "radius_change": 1.0,
+                "radius_adjustment_chance": 0.004,
+                "height_adjustment_chance": 0.002857,
+                "goal_radius": 1.0,
+                "angle_change": 15.0,
+                "radius_range": [ 5.0, 15.0 ],
+                "height_offset_range": [ -4.0, 5.0 ],
+                "height_above_target_range": [ 10.0, 20.0 ]
+              }
+        },
+        "landed": {
+            "minecraft:physics": {
+                "has_gravity": true
+            },
+            "minecraft:navigation.walk": {
+                "is_amphibious": true,
+                "avoid_sun": true,
+                "avoid_water": true
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:behavior.random_stroll": {
+                "priority": 6,
+                "speed_multiplier": 1
+            },
+              "minecraft:timer": {
+                  "looping": true,
+                  "time": 0.5,
+                  "time_down_event": {
+                      "event": "ground"
+                  }
+              },
+              "minecraft:is_saddled": {},
+              "minecraft:movement": {
+                  "value": 0.0
+              }
+          },
+          "ground": {
+            "minecraft:physics": {
+                "has_gravity": true
+            },
+            "minecraft:navigation.walk": {
+                "is_amphibious": true,
+                "avoid_sun": true,
+                "avoid_water": true
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:behavior.random_stroll": {
+                "priority": 6,
+                "speed_multiplier": 1
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 7,
+                "look_distance": 8
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 8
+            },
+              "minecraft:attack": {
+                  "damage": 11,
+                  "effect_name": "wither",
+                  "effect_duration": 1
+              },
+              "minecraft:behavior.delayed_attack": {
+                "cooldown_time": 1.5,
+                "priority": 4,
+                "attack_once": false,
+                "track_target": true,
+                "require_complete_path": false,
+                "random_stop_interval": 0,
+                "hit_delay_pct": 0.67,
+                "speed_multiplier": 1.0,
+                "reach_multiplier": 4,
+                "melee_fov": 360,
+                "attack_duration": 1.5
+              },
+              "minecraft:timer": {
+                  "looping": true,
+                  "time": 12,
+                  "time_down_event": {
+                      "event": "slam_or_fly"
+                  }
+              },
+              "minecraft:is_sheared": {},
+              "minecraft:movement": {
+                  "value": 0.3
+              }
+          },
+          "slam": {
+            "minecraft:physics": {
+                "has_gravity": true
+            },
+            "minecraft:navigation.walk": {
+                "is_amphibious": true,
+                "avoid_sun": true,
+                "avoid_water": true
+            },
+            "minecraft:timer": {
+                "looping": false,
+                "time": 1,
+                "time_down_event": {
+                    "event": "slam_effect"
+                }
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:behavior.knockback_roar": {
+                "attack_time": 1,
+                "cooldown_time": 0,
+                "duration": 2,
+                "knockback_damage": 12,
+                "knockback_strength": 9,
+                "knockback_range": 24,
+                "damage_filters": {
+                    "any_of": [{
+                        "test": "is_family",
+                        "operator": "!=",
+                        "subject": "other",
+                        "value": "joseph"
+                     }
+                  ]
+               },
+               "knockback_filters": {
+                 "any_of": [{
+                    "test": "is_family",
+                    "operator": "!=",
+                    "subject": "other",
+                    "value": "joseph"
+                }
+              ]
+            },
+            "on_roar_end": {
+              "event": "ground"
+              }
+            },
+              "minecraft:is_illager_captain": {},
+              "minecraft:movement": {
+                  "value": 0.0
+              }
+          }
+      },
+      		"components": {
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"bamboo_sapling",
+					"beetroot",
+					"brown_mushroom",
+					"carrots",
+					"carved_pumpkin",
+					"chorus_flower",
+					"chorus_plant",
+					"deadbush",
+					"double_plant",
+					"leaves",
+					"leaves2",
+					"lit_pumpkin",
+					"melon_block",
+					"melon_stem",
+					"potatoes",
+					"pumpkin",
+					"pumpkin_stem",
+					"red_flower",
+					"red_mushroom",
+					"crimson_fungus",
+					"warped_fungus",
+					"reeds",
+					"sapling",
+					"snow_layer",
+					"sweet_berry_bush",
+					"tallgrass",
+					"turtle_egg",
+					"vine",
+					"waterlily",
+					"wheat",
+					"yellow_flower"
+				]
+			},
+        "minecraft:persistent": {
+        },
+        "minecraft:damage_sensor": {
+            "triggers": [    
+                
+                {
+                    "cause": "fall",
+                    "deals_damage": false
+                }
+            ]
+        },
+          "minecraft:boss": {
+              "name": "Joseph",
+
+              "should_darken_sky": true,
+              "hud_range": 50
+          },
+          "minecraft:on_death": {
+              "event": "dead",
+              "target": "self"
+          },
+          "minecraft:is_hidden_when_invisible": {},
+
+          "minecraft:nameable": {},
+          "minecraft:breathable": {
+              "total_supply": 15,
+              "suffocate_time": 0,
+              "breathes_water": true
+          },
+          "minecraft:health": {
+              "value": 7500,
+              "max": 7500
+          },
+          "minecraft:knockback_resistance": {
+              "value": 100
+          },
+          "minecraft:collision_box": {
+            "width": 3,
+            "height": 2
+          },
+
+          "minecraft:movement": {
+              "value": 0.0
+          },
+          "minecraft:underwater_movement": {
+            "value": 0.2
+        },
+          "minecraft:fire_immune": {},
+          "minecraft:behavior.hurt_by_target": {
+              "priority": 1
+          },
+          "minecraft:behavior.nearest_attackable_target": {
+              "priority": 2,
+              "must_see": true,
+              "entity_types": [{
+                      "filters": {
+                          "test": "is_family",
+                          "subject": "other",
+                          "value": "player"
+                      },
+                      "max_dist": 64
+                  },
+                  {
+                      "filters": {
+                          "test": "is_family",
+                          "subject": "other",
+                          "value": "irongolem"
+                      },
+                      "max_dist": 64
+                  },
+                  {
+                      "filters": {
+                          "test": "is_family",
+                          "subject": "other",
+                          "value": "villager"
+                      },
+                      "max_dist": 64
+                  }
+              ]
+          },
+          "minecraft:follow_range": {
+            "value": 64,
+            "max": 64
+          },
+          "minecraft:timer": {
+            "looping": false,
+            "time": 0.1,
+            "time_down_event": {
+                "event": "start"
+            }
+        },
+          "minecraft:type_family": {
+              "family": ["tera_bosses","monster", "mob", "joseph", "jose_music"]
+          },
+          "minecraft:physics": {},
+          "minecraft:pushable": {
+              "is_pushable": false,
+              "is_pushable_by_piston": true
+          },
+          "minecraft:conditional_bandwidth_optimization": {}
+      },
+
+      "events": {
+        "start": {
+            "sequence": [
+            {
+                "add": {
+                    "component_groups": [
+                        "ground"
+                    ]
+                }
+              }
+        ]
+          },
+          "slam_effect": {
+            "queue_command": {
+                "command": [
+                    "function medium_impact"
+                ]
+            }
+        },
+          "land_or_hover": {
+              "sequence": [
+                  {
+                    "filters": {
+                        "all_of":[
+                            {
+                        "test": "has_target"
+                            },
+                            {
+                                "test": "has_tag", "subject": "self", "operator": "==", "value": "jose_hover_d"
+                                    }
+                        ]
+                    },
+                    "queue_command": {
+                        "command": [
+                            "tag @s remove jose_hover_d",
+                            "tag @s add jose_land"
+                        ]
+                    },
+                    "add": {
+                        "component_groups": ["landing"]
+                    },
+                    "remove": {
+                        "component_groups": ["flying"]
+                    }
+                },
+                {
+                    "filters": {
+                        "all_of":[
+                            {
+                        "test": "has_target"
+                            },
+                            {
+                                "test": "has_tag", "subject": "self", "operator": "!=", "value": "jose_hover_d"
+                                    }
+                        ]
+                    },
+                    "queue_command": {
+                        "command": [
+                            "tag @s add jose_hover_d",
+                            "tag @s add jose_upw"
+                        ]
+                    },
+                    "add": {
+                        "component_groups": ["hover"]
+                    },
+                    "remove": {
+                        "component_groups": ["flying"]
+                    }
+                }
+              ]
+          },
+          "fly_or_fire": {
+            "sequence": [
+                {
+                  "filters": {
+                      "all_of":[
+                          {
+                      "test": "has_target"
+                          },
+                          {
+                              "test": "has_tag", "subject": "self", "operator": "==", "value": "jose_fire_d2"
+                                  },
+                                  {
+                                    "test": "has_tag", "subject": "self", "operator": "==", "value": "jose_fire_d"
+                                        }
+                      ]
+                  },
+                  "queue_command": {
+                      "command": [
+                          "tag @s remove jose_fire_d",
+                          
+                          "tag @s remove jose_fire_d2",
+                            "tag @s remove jose_upw"
+                      ]
+                  },
+                  "add": {
+                      "component_groups": ["flying"]
+                  },
+                  "remove": {
+                      "component_groups": ["hover","fire"]
+                  }
+              },
+              {
+                  "filters": {
+                      "all_of":[
+                          {
+                      "test": "has_target"
+                          },
+                          {
+                              "test": "has_tag", "subject": "self", "operator": "!=", "value": "jose_fire_d"
+                                  },
+                                  {
+                                    "test": "has_tag", "subject": "self", "operator": "!=", "value": "jose_fire_d2"
+                                        }
+                      ]
+                  },
+                  "add": {
+                    "component_groups": ["fire"]
+                },
+                  "queue_command": {
+                      "command": [
+                          "tag @s add jose_fire_d",
+                          "tag @s add jose_fire_d2"
+                      ]
+                  }
+              }
+            ]
+        },
+        "slam_or_fly": {
+            "sequence": [
+                {
+                  "filters": {
+                      "all_of":[
+                          {
+                      "test": "has_target"
+                          },
+                          {
+                              "test": "has_tag", "subject": "self", "operator": "==", "value": "jose_slam_d"
+                                  }
+                      ]
+                  },
+                  "queue_command": {
+                      "command": [
+                          "tag @s remove jose_slam_d",
+                          "tag @s remove jose_test_ag"
+                      ]
+                  },
+                  "add": {
+                      "component_groups": ["flying"]
+                  },
+                  "remove": {
+                      "component_groups": ["ground"]
+                  }
+              },
+              {
+                  "filters": {
+                      "all_of":[
+                          {
+                      "test": "has_target"
+                          },
+                          {
+                              "test": "has_tag", "subject": "self", "operator": "!=", "value": "jose_slam_d"
+                                  }
+                      ]
+                  },
+                  "queue_command": {
+                      "command": [
+                          "tag @s add jose_slam_d",
+                          "tag @s remove jose_test_ag"
+                      ]
+                  },
+                  "add": {
+                      "component_groups": ["slam"]
+                  },
+                  "remove": {
+                      "component_groups": ["ground"]
+                  }
+              },
+              {
+                  "filters": {
+                      "all_of":[
+                          {
+                      "test": "has_target",
+                      "operator": "!="
+                          },
+                          {
+                              "test": "has_tag", "subject": "self", "operator": "!=", "value": "jose_test_ag"
+                                  }
+                      ]
+                  },
+                  "queue_command": {
+                      "command": [
+                          "tag @s add jose_test_ag"
+                      ]
+                  }
+              },
+              {
+                  "filters": {
+                      "all_of":[
+                          {
+                      "test": "has_target",
+                      "operator": "!="
+                          },
+                          {
+                              "test": "has_tag", "subject": "self", "operator": "==", "value": "jose_test_ag"
+                                  }
+                      ]
+                  },
+                  "queue_command": {
+                      "command": [
+                          "tag @s remove jose_test_ag"
+                      ]
+                  },
+                  "add": {
+                      "component_groups": ["rest"]
+                  }
+              }
+            ]
+        },
+        "landed": {
+            "sequence": [
+                {
+                  "queue_command": {
+                      "command": [
+                          "tag @s remove jose_land",
+                          "function small_impact"
+                      ]
+                  },
+                  "add": {
+                      "component_groups": ["landed"]
+                  },
+                  "remove": {
+                      "component_groups": ["landing"]
+                  }
+              },
+              {
+                  "filters": {
+                      "all_of":[
+                          {
+                            "test": "on_ground", "subject": "self", "operator": "!="
+                                  }
+                      ]
+                  },
+                  "queue_command": {
+                      "command": [
+                          ""
+                      ]
+                  }
+              }
+            ]
+        },
+        "ground": {
+            "queue_command": {
+                "command": [
+                    ""
+                ]
+            },
+            "remove": {
+                "component_groups": [
+                    "slam","landed"
+                ]
+            },
+            "add": {
+                "component_groups": [
+                    "ground"
+                ]
+            }
+        },
+
+          "chance": {
+            "randomize": [{
+              "weight": 0,
+              "remove": {
+              },
+              "add": {
+                "component_groups": [
+                  "nont"
+                ]
+              }
+            },
+            {
+              "weight": 100,
+              "remove": {
+              },
+              "add": {
+                "component_groups": [
+                  "no"
+                ]
+              }
+            }
+          ]
+          },
+          "target_tag": {
+            "queue_command": {
+                "command": [
+                    "scoreboard players add @s[scores={jose_tar=..7}] jose_tar 2"
+                ],
+                "target": "target"
+            }
+        },
+          "dead": {
+            "sequence": [
+            {
+                "add": {
+                    "component_groups": [
+                        "dead"
+                    ]
+                }
+              }
+        ]
+          }
+      }
+  }
+}

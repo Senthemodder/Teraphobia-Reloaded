@@ -1,0 +1,45 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:tera_dragon_rest",
+      "materials": { 
+        "default": "iron_golem",
+        "beam_material": "entity_beam",
+        "death_material": "entity_beam_additive",
+        "dissolve_0": "entity_dissolve_layer0.skinning",
+        "dissolve_1": "entity_dissolve_layer1.skinning"
+      },
+      "textures": {
+        "default": "textures/entity/tera_dragon_rest",
+        "exploding": "textures/entity/dead_exploding",
+        "beam": "textures/entity/endercrystal/endercrystal_beam"
+      },
+      "geometry": {
+        "default": "geometry.tera_dragon"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.death_effect_duration = 200.0;",
+          "variable.death_alpha = (1.0 - (query.death_ticks + query.frame_alpha) / variable.death_effect_duration) * 2.0 + 0.3;"
+        ],
+        "scale": "1",
+        "animate": [
+          "go"
+        ]
+      },
+      "sound_effects": {
+        "death": "mob.wither.death",
+        "slam": "random.anvil_land"
+    },
+      "animations": {
+        "go": "animation.tera_dragon.sleep"
+      },
+      "render_controllers": [
+        { "controller.render.ender_dragon_death_pre_pass": "query.death_ticks > 1.0" },
+        { "controller.render.ender_dragon_death_main_pass": "query.death_ticks > 1.0" },
+        { "controller.render.ender_dragon_default": "query.death_ticks <= 1.0" }
+      ]
+    }
+  }
+}

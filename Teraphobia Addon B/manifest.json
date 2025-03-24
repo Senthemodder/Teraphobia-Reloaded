@@ -1,0 +1,55 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "B: Teraphobia: Out of Beta",
+		"description": "!!!WARNING!!! - THERE IS AN OPTIONAL END UPDATE ENABLED BY DEFAULT YOU CAN TOGGLE IF YOU HAVE ISSUES WITH OTHER END UPDATE ADDONS : Teraphobic Realm Behavior Pack 1.20.30+, a remake of an old, unbalanced piece of crap.",
+		"uuid": "f7d4811a-958a-4d60-8efa-6fca757174f0",
+		"version": [1, 0, 0],
+		"min_engine_version": [1, 20, 40]
+	},
+	"metadata": {
+		"authors": ["57"]
+	},
+	"modules": [
+		{
+			"description": "Behavior",
+			"version": [1, 0, 0],
+			"uuid": "f1c36cdb-7b13-4218-a5eb-a696114b093a",
+			"type": "data"
+		},
+        {
+            "description": "Gametest Module",
+            "type": "script",
+            "language": "javascript",
+            "entry": "scripts/index.js",
+            "uuid": "da9e8418-553e-4664-8cb0-86b644d23757",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+	],
+	"dependencies": [
+		{
+			"uuid": "462886fe-df42-4804-b31a-f56e7da337a0",
+			"version": [1, 0, 0]
+		},
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.15.0"
+        }
+	],
+    "subpacks": [
+        {
+            "folder_name": "no_tera_end",
+            "name": "End Update Disabled",
+            "memory_tier": 0
+        },
+        {
+            "folder_name": "tera_end",
+            "name": "End Update Enabled",
+            "memory_tier": 0
+        }
+    ]
+}

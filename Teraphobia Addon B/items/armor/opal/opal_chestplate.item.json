@@ -1,0 +1,49 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:opal_chestplate",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.chestplate"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+                "tags": [
+            "mythic:myc_mid"
+        ]
+    },
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "opal_chestplate"
+			},
+			"minecraft:display_name": {
+				"value": "Opal Chestplate\n\n§8§o-This armor was quite valuable to a people that idolized the Sun, now dead because of it\n-Full set needed for effect\n-You will be immune to fire and Withering"
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.chest",
+				"protection": 7
+			},
+			"minecraft:enchantable": {
+				"slot": "armor_torso",
+				"value": 9
+			},
+			"minecraft:durability": {
+				"damage_chance": {
+					"min": 0,
+					"max": 100
+			},
+				"max_durability": 780
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": ["tera:opal"],
+						"repair_amount": 279
+					}
+				]
+			}
+		}
+	}
+}

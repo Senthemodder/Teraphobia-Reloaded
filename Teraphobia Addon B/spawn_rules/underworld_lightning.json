@@ -1,0 +1,42 @@
+
+{
+	"format_version": "1.8.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "tera:underworld_lightning",
+			"population_control": "pillager"
+		},
+		"conditions": [
+			
+			{
+				"minecraft:spawns_underground": {},
+				"minecraft:brightness_filter": {
+					"min": 0,
+					"max": 15,
+					"adjust_for_weather": true
+				},
+				"minecraft:density_limit": {
+					"surface": 3,
+					"underground": 3
+				},
+				"minecraft:spawns_on_block_filter": "tera:underworld_stone",
+				"minecraft:weight": {
+					"default": 17
+				},
+				"minecraft:herd": {
+					"min_size": 1,
+					"max_size": 1
+				},
+				"minecraft:biome_filter": {
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "the_end"
+						}
+					]
+				}
+			}
+		]
+	}
+}

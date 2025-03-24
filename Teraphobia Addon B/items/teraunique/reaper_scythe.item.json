@@ -1,0 +1,44 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:reaper_scythe",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.sword"
+			}
+		},
+		"components": {
+						"minecraft:use_modifiers": {
+                "use_duration": 9999999,
+                "movement_modifier": 0.5
+            },
+			"minecraft:use_animation": "bow",
+			"minecraft:food": {
+				"nutrition": 0,
+				"saturation_modifier": 1,
+				"can_always_eat": true
+			},
+			"minecraft:display_name": {
+				"value": "Reaper's Scythe\n\n§8§o-This scythe bears the fruits of Adam's mistakes\n-The effect of Frosty Aura will be applied\n-Sneaking, you will get the effect of Blinding Smoke"
+			},
+			"minecraft:tags": {
+                "tags": [
+            "mythic:myc_scy",
+			"mythic:myc_def"
+        ]
+    },
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "reaper_scythe"
+			},
+			"minecraft:glint": true,
+			"minecraft:damage": 8,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:enchantable": {
+				"slot": "sword",
+				"value": 14
+			}
+		}
+	}
+}

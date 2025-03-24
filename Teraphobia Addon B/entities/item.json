@@ -1,0 +1,18 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:item",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false
+    },
+    "component_groups": {
+    },
+    "components": {
+			"minecraft:fire_immune": {}
+    },
+    "events": {
+    }
+  }
+}

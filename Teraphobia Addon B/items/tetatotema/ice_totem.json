@@ -1,0 +1,40 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:ice_totem",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			
+			"minecraft:max_stack_size": 1,
+        "minecraft:projectile": {
+          "projectile_entity": "tera:ice_totem"
+        },
+        "minecraft:throwable": {
+    "do_swing_animation": true
+    },
+					
+			"minecraft:icon":  "ice_totem",
+			"minecraft:display_name": {
+				"value": "Ice Totem\n\n§8§o-All creatures nearby will be engulfed in a few meters of freezing ice"
+			}
+		},
+		"events": {
+			"totem": {
+				"swing": {},
+				"run_command": {
+					"command": [
+						"execute @e[r=30,rm=2] ~~~ fill ~2 ~3 ~2 ~-2 ~-2 ~-2 ice 0 hollow",
+						"effect @e[r=30,rm=2] slowness 10 10",
+						"particle minecraft:totem_particle ~~~",
+						"playsound random.totem",
+						"replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				}
+			}
+		}
+	}
+}

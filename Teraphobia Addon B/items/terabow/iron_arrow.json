@@ -1,0 +1,22 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "tera:iron_arrow",
+            "menu_category": {
+				"category": "equipment"
+			}
+        },
+        "components": {
+            "minecraft:allow_off_hand": true,
+			
+            "minecraft:icon": {
+                "texture": "iron_arrow"
+            },
+            "minecraft:display_name": {
+                "value": "Iron Arrow\n\n§8§o-The weight of iron will crush and slow down any nearby targets"
+            },
+            "minecraft:max_stack_size": 64
+        }
+    }
+}

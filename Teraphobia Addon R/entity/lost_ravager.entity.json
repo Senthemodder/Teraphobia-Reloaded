@@ -1,0 +1,52 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:lost_ravager",
+			"textures": {
+				"default": "textures/entity/lost_ravager"
+			},
+			"materials": {
+				"default": "ravager"
+			},
+			"geometry": {
+				"default": "geometry.lost_ravager"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#4a4a4a",
+				"overlay_color": "#818181"
+			},
+			"animations": {
+				"move": "animation.lost_ravager.move",
+				"idle": "animation.lost_ravager.idle",
+				"attack": "animation.lost_ravager.attack",
+				"stun": "animation.lost_ravager.stun",
+				"ability1": "animation.lost_ravager.roar",
+				"death": "animation.lost_ravager.death",
+
+				"move.con": "controller.animation.tera_general.move",
+				"idle.con": "controller.animation.tera_general.idle",
+				"attack.con": "controller.animation.tera_general.attack",
+				"stun.con": "controller.animation.tera_general.stun",
+				"ability1.con": "controller.animation.tera_general.ability1",
+				"death.con": "controller.animation.tera_general.death"
+
+			},
+			"scripts": {
+				"pre_animation": ["variable.roar_length = 1.0;", "variable.bite_anim_duration = 0.75f;", "variable.bite_neck_length = 10;"],
+				"animate": [
+					"move.con", 
+					"idle.con", 
+					"attack.con", 
+					"stun.con", 
+					"ability1.con", 
+					"death.con"
+			]
+			},
+			"particle_effects": {
+				"stun_particles": "minecraft:stunned_emitter"
+			}
+		}
+	}
+}

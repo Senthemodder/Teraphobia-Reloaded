@@ -1,0 +1,49 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.soul_tainted_beacon.wield_first_person": {
+			"loop": true,
+			"bones": {
+				"pole": {
+					"rotation": [344.89816, -9.63318, 28.38109],
+					"position": [2, 11, -8],
+					"scale": 0.6
+				},
+				"guanauna": {
+					"rotation": [223.9571, -165.12173, 121.16401],
+					"position": [-5, 7, 17],
+					"scale": 1.5
+				},
+				"terabeam": {
+					"rotation": [0, 0, "(query.life_time * 730)"],
+					"scale": "query.is_sneaking ? 1 : 0"
+				},
+				"head_mimic": {
+					"rotation": ["85.1488+query.target_x_rotation", "-12.3629+query.target_y_rotation", -44.66262],
+					"position": [0, 9, -10.2]
+				}
+			}
+		},
+		"animation.soul_tainted_beacon.wield_third_person": {
+			"loop": true,
+			"bones": {
+				"pole": {
+					"rotation": [-89.99998, -90, 89.99998],
+					"position": [0.75, 21.5, 0.5]
+				},
+				"guanauna": {
+					"rotation": [45, 0, 0],
+					"position": [-1.5, -1, 2.75],
+					"scale": 0.7
+				},
+				"terabeam": {
+					"rotation": [0, 0, "(query.life_time * 730)"],
+					"scale": "(query.is_sneaking ? (query.is_illager_captain ? 0.5 : 2.5) : 0)"
+				},
+				"head_mimic": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				}
+			}
+		}
+	}
+}

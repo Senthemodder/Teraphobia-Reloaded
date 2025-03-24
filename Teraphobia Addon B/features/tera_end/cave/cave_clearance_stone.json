@@ -1,0 +1,14 @@
+{
+	"format_version": "1.20.20",
+
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "tera:tera_end/cave/cave_clearance_stone"
+		},
+
+		"places_block": "minecraft:no",
+
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false
+	}
+}

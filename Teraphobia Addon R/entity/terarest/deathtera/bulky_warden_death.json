@@ -1,0 +1,44 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:bulky_warden_death",
+			"materials": {
+				"default": "iron_golem"
+			},
+			"textures": {
+				"default": "textures/entity/bulky_warden"
+			},
+			"geometry": {
+				"default": "geometry.bulky_warden"
+			},
+			"particle_effects": {
+				"transform": "tera:tera_boss_death",
+				"exp": "tera:medium_impact"
+			},
+      "sound_effects": {
+        "death": "mob.enderdragon.death",
+        "exp": "ambient.weather.lightning.impact"
+    },
+    "animations": {
+      "death": "animation.tera_boss.death",
+	  "flame": "controller.animation.tera_partblaze.particle"
+    },
+			"scripts": {
+			  "pre_animation": [
+				"variable.modified_tcos0 = Math.clamp(((Math.cos(query.modified_distance_moved * 13.5) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 25.0), -12.5, 12.5);"
+			  ],
+			  "animate": [
+				"death",
+				"flame"
+			  ]
+			},
+			"render_controllers": ["controller.render.default"],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"base_color": "#006b7d",
+				"overlay_color": "#0be8f5"
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "tera:tera_end/rock",
+      "places_feature": "tera:tera_end/rock"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": {
+        "any_of": [
+          {
+            "test": "has_biome_tag",
+            "operator": "==",
+            "value": "the_end"
+          }
+        ]
+      }
+    },
+    "distribution": {
+      "iterations": 0, //: "(v.originx > -50000 && v.originz > -50000 && v.originx < 50000 && v.originz < 50000)*35",
+      "coordinate_eval_order": "zyx",
+      "x": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [ "query.heightmap(variable.worldx, variable.worldz) + 0", "query.heightmap(variable.worldx, variable.worldz) + 0" ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      }
+    }
+  }
+}

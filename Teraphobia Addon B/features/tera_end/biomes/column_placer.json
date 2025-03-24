@@ -1,0 +1,26 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "tera:tera_end/biomes/column_placer"
+			//places a column for each column of blocks in the chunk
+		},
+		"places_feature": "tera:tera_end/biomes/determinant",
+		"iterations": 256,
+		"x": {
+			"distribution": "fixed_grid",
+			"extent": [
+				0,
+				15
+			]
+		},
+		"z": {
+			"distribution": "fixed_grid",
+			"extent": [
+				0,
+				15
+			]
+		},
+		"y": 0
+	}
+}

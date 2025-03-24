@@ -1,0 +1,65 @@
+{
+	"format_version": "1.16.0",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "tera:reaper_checkpoint",
+              "is_spawnable": false,
+        "is_summonable": true,
+        "is_experimental": false
+      },
+           "component_groups": {
+               "kill_cloud":{               
+                "minecraft:explode": {
+                    "fuse_length": 0,
+                    "fuse_lit": true,
+                    "power": 0,
+                    "breaks_blocks": true,
+                    "causes_fire": false,
+                    "destroy_affected_by_griefing": true
+                  }
+                  }
+           },                 "components": {
+                     "minecraft:collision_box": {
+          "width": 0.1,
+          "height": 0.1
+        },
+        "minecraft:persistent": {
+        },
+        "minecraft:tick_world":{
+      "never_despawn": true,
+      "radius": 1
+  },
+        "minecraft:knockback_resistance": {
+          "value": 100
+        },
+          "minecraft:health":{
+        "value":1,
+          "min":1,
+          "max":1
+           },        
+                 "minecraft:type_family": {
+          "family": [ "summon","inanimate" ]
+        },
+        "minecraft:pushable": {
+          "is_pushable": false,
+          "is_pushable_by_piston": false
+        },
+              "minecraft:physics": {
+          "has_gravity": false,
+          "has_collision": true
+        },   
+         "minecraft:damage_sensor": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+           },                       "events": {
+                   "kill_tp": {
+          "add": {
+            "component_groups": [
+              "kill_cloud"
+            ]
+          }
+        }
+           }}}

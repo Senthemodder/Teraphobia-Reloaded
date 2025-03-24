@@ -1,0 +1,16 @@
+{
+	"format_version": "1.20.20",
+
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "tera:underworld/lava_block"
+		},
+
+		"places_block": "minecraft:lava",
+		"may_replace": [
+			"minecraft:air"
+		  ],
+		"enforce_placement_rules": true,
+		"enforce_survivability_rules": true
+	}
+}

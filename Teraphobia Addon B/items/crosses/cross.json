@@ -1,0 +1,26 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+      "description": {
+        "identifier": "tera:cross",
+		"menu_category": {
+			"category": "equipment"
+		}
+      },
+      "components": {
+		"minecraft:glint": true,
+		"minecraft:icon": "cross",
+		"minecraft:display_name": {
+			"value": "Teraphobic Cross\n\n§8§o-An item that can be used against your foes as assistance from On High"
+		},
+        "minecraft:max_stack_size": 4,
+        "minecraft:projectile": {
+          "projectile_entity": "tera:cross"
+        },
+        "minecraft:throwable": {
+          "do_swing_animation": true
+        }
+      }
+    }
+  }
+  

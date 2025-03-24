@@ -1,0 +1,57 @@
+[
+  {
+    "flipbook_texture": "textures/blocks/reaper_decor",
+    "atlas_tile": "reaper_decor",
+    "ticks_per_frame": 1
+  },
+  {
+    "flipbook_texture": "textures/blocks/soul_dim_portal",
+    "atlas_tile": "soul_dim_portal",
+    "ticks_per_frame": 1
+  },
+  {
+    "flipbook_texture": "textures/blocks/record_player2",
+    "atlas_tile": "record_player2",
+    "ticks_per_frame": 1
+  },
+  {
+    "flipbook_texture": "textures/blocks/other_demonsion_portal",
+    "atlas_tile": "other_demonsion_portal",
+    "ticks_per_frame": 1
+  },
+  {
+    "flipbook_texture": "textures/blocks/demonsion_exit_portal",
+    "atlas_tile": "demonsion_exit_portal",
+    "ticks_per_frame": 1
+  },
+  {
+    "flipbook_texture": "textures/blocks/underworld_portal",
+    "atlas_tile": "underworld_portal",
+    "ticks_per_frame": 1
+  },
+  {
+    "flipbook_texture": "textures/blocks/other_underworld_portal",
+    "atlas_tile": "other_underworld_portal",
+    "ticks_per_frame": 1
+  },
+  {
+    "flipbook_texture": "textures/blocks/underworld_exit_portal",
+    "atlas_tile": "underworld_exit_portal",
+    "ticks_per_frame": 1
+  },
+  {
+    "flipbook_texture": "textures/blocks/limbo_portal",
+    "atlas_tile": "limbo_portal",
+    "ticks_per_frame": 1
+  },
+  {
+    "flipbook_texture": "textures/blocks/other_limbo_portal",
+    "atlas_tile": "other_limbo_portal",
+    "ticks_per_frame": 1
+  },
+  {
+    "flipbook_texture": "textures/blocks/limbo_exit_portal",
+    "atlas_tile": "limbo_exit_portal",
+    "ticks_per_frame": 1
+  }
+]

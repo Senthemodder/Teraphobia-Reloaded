@@ -1,0 +1,39 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:yeti_rest",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/yeti",
+        "eyes": "textures/entity/yeti_eyes"
+      },
+      "geometry": {
+        "default": "geometry.yeti"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;"
+        ]
+      },
+      "sound_effects": {
+        "smash": "mob.wither.break_block",
+        "shoot": "mob.ghast.fireball"
+    },
+    "animations": {
+      "wake": "animation.yeti.wake",
+      "idle": "animation.yeti.sit"
+    },
+    "animation_controllers": [
+      {"idle":  "controller.animation.tera_general.idle"},
+      {"wake":  "controller.animation.tera_general.wake"}
+    ],
+      "render_controllers": [ "controller.render.iron_golem", "controller.render.night_wanderer_eyes" ],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 25
+      }
+    }
+  }
+}

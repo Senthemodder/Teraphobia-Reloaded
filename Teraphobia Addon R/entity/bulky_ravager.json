@@ -1,0 +1,71 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:bulky_ravager",
+			"textures": {
+				"default": "textures/entity/bulky_ravager"
+			},
+			"materials": {
+				"default": "ravager"
+			},
+			"geometry": {
+				"default": "geometry.bulky_ravager"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#4a4a4a",
+				"overlay_color": "#818181"
+			},
+			"sound_effects": {
+				"stomp": "mob.wither.break_block",
+				"scream": "mob.wither.death",
+				"slam": "ambient.weather.lightning.impact"
+			},
+			"animations": {
+				"move": "animation.lost_ravager.move",
+				"idle": "animation.lost_ravager.idle",
+				"attack1": "animation.bulky_ravager.attack1",
+				"attack2": "animation.bulky_ravager.attack2",
+				"attack3": "animation.bulky_ravager.attack3",
+				"stun": "animation.lost_ravager.stun",
+				"ability1": "animation.lost_ravager.roar",
+				"ability2": "animation.bulky_ravager.stomp",
+				"ability3": "animation.bulky_ravager.scream",
+				"ability4": "animation.bulky_ravager.slam",
+				"death": "animation.lost_ravager.death",
+
+				"move.con": "controller.animation.tera_general.move",
+				"idle.con": "controller.animation.tera_general.idle",
+				"attack.con": "controller.animation.tera_general.dynamic_attack",
+				"stun.con": "controller.animation.tera_general.stun",
+				"ability1.con": "controller.animation.tera_general.ability1",
+				"ability2.con": "controller.animation.tera_general.ability2",
+				"ability3.con": "controller.animation.tera_general.ability3",
+				"ability4.con": "controller.animation.tera_general.ability4",
+				"death.con": "controller.animation.tera_general.death",
+				"flame": "controller.animation.tera_partblaze.particle"
+
+			},
+			"scripts": {
+				"pre_animation": ["variable.roar_length = 1.0;", "variable.bite_anim_duration = 0.75f;", "variable.bite_neck_length = 10;"],
+				"animate": [
+					"move.con", 
+					"idle.con", 
+					"attack.con", 
+					"stun.con", 
+					"ability1.con", 
+					"ability2.con", 
+					"ability3.con", 
+					"ability4.con", 
+					"death.con",
+					"flame"
+			]
+			},
+			"particle_effects": {
+				"stun_particles": "minecraft:stunned_emitter",
+				"transform": "tera:hell_emitter"
+			}
+		}
+	}
+}

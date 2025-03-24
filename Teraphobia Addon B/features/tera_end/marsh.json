@@ -1,0 +1,17 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "tera:tera_end/marsh"
+    },
+    "count": 15,
+    "replace_rules": [
+      {
+        "places_block": "minecraft:water",
+        "may_replace": [
+          "minecraft:mud"
+        ]
+      }
+    ]
+  }
+}

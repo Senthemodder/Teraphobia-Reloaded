@@ -1,0 +1,36 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:forest_tentacle",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/forest_tentacle"
+      },
+      "geometry": {
+        "default": "geometry.forest_tentacle"
+      },
+      "scripts": {
+        "scale": "1.1",
+        "pre_animation": [
+          "variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;"
+        ]
+      },
+      "animations": {
+        "attack": "animation.tentacle.attack",
+        "go": "animation.tentacle.idle",
+        "die": "animation.tentacle.die"
+      },
+      "animation_controllers": [
+        { "go": "controller.animation.serpent.go" },
+        { "attack": "controller.animation.tentacle.attack" },
+        { "die": "controller.animation.yeti.die" }
+      ],
+      "render_controllers": [ "controller.render.iron_golem" ],
+			"spawn_egg": {
+				"base_color": "#00b7b9",
+				"overlay_color": "#4be3ee"
+			}
+    }
+  }
+}

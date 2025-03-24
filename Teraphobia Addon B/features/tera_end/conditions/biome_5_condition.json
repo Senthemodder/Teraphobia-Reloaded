@@ -1,0 +1,13 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "tera:tera_end/conditions/biome_5_condition"
+		},
+		"places_feature": "tera:tera_end/blocks/soul_plains",
+		"iterations": "t.biome_idx == 5 && (math.abs(v.originx) > 200 || math.abs(v.originz) > 200)",
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

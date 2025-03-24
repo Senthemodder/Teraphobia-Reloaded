@@ -1,0 +1,45 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.forest_tentacle",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 9.5,
+				"visible_bounds_offset": [0, 4.25, 0]
+			},
+			"bones": [
+				{
+					"name": "dead",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "bone",
+					"parent": "dead",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, -8], "size": [16, 48, 16], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "bone2",
+					"parent": "bone",
+					"pivot": [0, 46, 0],
+					"cubes": [
+						{"origin": [-8, 46, -8], "size": [16, 48, 16], "inflate": -2, "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "bone3",
+					"parent": "bone2",
+					"pivot": [0, 88, 0],
+					"cubes": [
+						{"origin": [-8, 88, -8], "size": [16, 48, 16], "inflate": -4, "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

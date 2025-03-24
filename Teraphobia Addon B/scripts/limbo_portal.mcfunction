@@ -1,0 +1,2 @@
+execute as @s if block 75000 179 -25000 tera:limbo_stone [] run execute as @s[scores={tera_en=1}] run fill 75000 179 -25000 75004 179 -25004 bedrock
+execute as @s if block 75001 179 -25001 bedrock [] run execute as @s[scores={tera_en=1}] run fill 75001 179 -25001 75003 179 -25003 end_portal

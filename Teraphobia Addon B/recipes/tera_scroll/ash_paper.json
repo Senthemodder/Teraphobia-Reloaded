@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_furnace": {
+        "description": {
+            "identifier": "tera:ash_paper"
+        },
+        "input": "tera:icy_ash_paper",
+        "output": "tera:ash_paper",
+        "tags": [
+            "furnace"
+        ]
+    }
+}

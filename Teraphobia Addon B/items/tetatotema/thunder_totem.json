@@ -1,0 +1,44 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:thunder_totem",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			
+			"minecraft:max_stack_size": 1,
+        "minecraft:projectile": {
+          "projectile_entity": "tera:thunder_totem"
+        },
+        "minecraft:throwable": {
+    "do_swing_animation": true
+    },
+					
+			"minecraft:icon":  "thunder_totem",
+			"minecraft:display_name": {
+				"value": "Thunder Totem\n\n§8§o-Throw a ball of lightning"
+			}
+		},
+		"events": {
+			"totem": {
+				"swing": {},
+				"shoot": {
+					"projectile": "tera:kraken_ball",
+					"launch_power": 1,
+					"angle_offset": 0.5
+				   },
+				
+				"run_command": {
+					"command": [
+						"particle minecraft:totem_particle ~~~",
+						"playsound random.totem",
+						"replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				}
+			}
+		}
+	}
+}

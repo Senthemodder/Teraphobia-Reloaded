@@ -1,0 +1,19 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "tera:tera_ore/opal_ore_underworld"
+    },
+    "count": 5,
+    "replace_rules": [
+      {
+        "places_block": "tera:opal_ore_underworld",
+        "may_replace": [
+          {
+            "name": "tera:underworld_stone"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "tera:brew_beacon_potion"
+    },
+
+    "tags": [ "brewing_stand" ],
+
+    "input": "tera:abnormal_potion",
+    "reagent": "minecraft:crying_obsidian",
+    "output": "tera:beacon_potion"
+  }
+
+}

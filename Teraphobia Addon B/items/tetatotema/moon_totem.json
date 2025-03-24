@@ -1,0 +1,40 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:moon_totem",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			
+			"minecraft:max_stack_size": 1,
+        "minecraft:projectile": {
+          "projectile_entity": "tera:moon_totem"
+        },
+        "minecraft:throwable": {
+    "do_swing_animation": true
+    },
+					
+			"minecraft:icon":  "moon_totem",
+			"minecraft:display_name": {
+				"value": "Moon Totem\n\n§8§o-The Moon shall strike all nearby in several meter radius"
+			}
+		},
+		"events": {
+			"totem": {
+				"swing": {},
+				"run_command": {
+					"command": [
+						"execute @e[r=40,rm=2] ~~~ summon lightning_bolt ~~~",
+						"execute @e[r=40,rm=2] ~~~ effect @s levitation 1 20 true",
+						"particle minecraft:totem_particle ~~~",
+						"playsound random.totem",
+						"replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				}
+			}
+		}
+	}
+}

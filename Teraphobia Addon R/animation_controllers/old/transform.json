@@ -1,0 +1,387 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.transform" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"flaming" : "query.is_transforming"
+						}
+					]
+				},
+				"flaming" : {
+					"particle_effects" : [
+						{
+							"effect" : "transform"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "!query.is_transforming"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.reder_die" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"flaming" : "!query.is_alive"
+						}
+					]
+				},
+				"flaming" : {
+					"particle_effects" : [
+						{
+							"effect" : "die",
+							"locator": "die"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "query.is_alive"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.necro" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"flaming" : "query.is_casting"
+						}
+					]
+				},
+				"flaming" : {
+					"particle_effects" : [
+						{
+							"effect" : "necro"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "!query.is_casting"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.earth_charge" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"flaming" : "query.is_powered"
+						}
+					]
+				},
+				"flaming" : {
+					"particle_effects" : [
+						{
+							"effect" : "charge"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "!query.is_powered"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.earth_explode" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"flaming" : "query.is_stunned"
+						}
+					]
+				},
+				"flaming" : {
+					"particle_effects" : [
+						{
+							"effect" : "explode"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "!query.is_stunned"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.night_man" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"night" : "!query.is_in_love"
+						}
+					]
+				},
+				"night" : {
+					"particle_effects" : [
+						{
+							"effect" : "night"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "query.is_in_love"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.night_man2" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"night" : "!query.is_saddled"
+						}
+					]
+				},
+				"night" : {
+					"particle_effects" : [
+						{
+							"effect" : "night"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "query.is_saddled"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.kraken.charge" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"charge" : "query.is_charging"
+						}
+					]
+				},
+				"charge" : {
+					"particle_effects" : [
+						{
+							"effect" : "charge"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "!query.is_charging"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.werewolf.roar" : {
+			"initial_state" : "default",
+			"states" : {
+				"roar" : {
+					"animations" : [ "roar" ],
+					"transitions": [
+						{
+							"default" : "!query.is_roaring"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"roar": "query.is_roaring"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.sword_dog.eye" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"flaming" : "query.is_saddled"
+						}
+					]
+				},
+				"flaming" : {
+					"particle_effects" : [
+						{
+							"effect" : "eye_effect",
+							"locator" : "eye12"
+						},
+						{
+							"effect" : "eye_effect",
+							"locator" : "eyeth"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "!query.is_saddled"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.necro2" : {
+			"initial_state" : "default",
+			"states" : {
+				"casting" : {
+					"animations" : [ "casting" ],
+					"transitions": [
+						{
+							"default" : "!query.is_casting"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"casting": "query.is_casting"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.soul_wither.spawn" : {
+			"initial_state" : "default",
+			"states" : {
+				"spawn" : {
+					"animations" : [ "spawn" ],
+					"transitions": [
+						{
+							"default" : "!query.is_stunned"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"spawn": "query.is_stunned"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.teragon.target" : {
+			"initial_state" : "default",
+			"states" : {
+				"spawn" : {
+					"animations" : [ "target" ],
+					"transitions": [
+						{
+							"default" : "!query.has_target"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"spawn": "query.has_target"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.teragon.no_target" : {
+			"initial_state" : "default",
+			"states" : {
+				"spawn" : {
+					"animations" : [ "no_target" ],
+					"transitions": [
+						{
+							"default" : "query.has_target"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"spawn": "!query.has_target"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.teragon.idle" : {
+			"initial_state" : "default",
+			"states" : {
+				"spawn" : {
+					"animations" : [ "idle" ],
+					"transitions": [
+						{
+							"default" : "query.is_in_love"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"spawn": "!query.is_in_love"
+						}
+					]
+				}
+			}
+		},
+				"controller.animation.teragon.fire" : {
+			"initial_state" : "default",
+			"states" : {
+				"spawn" : {
+					"animations" : [ "fire" ],
+					"transitions": [
+						{
+							"default" : "!query.is_tamed"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"spawn": "query.is_tamed && query.has_target"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.teragon.attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"spawn" : {
+					"animations" : [ "attack" ],
+					"transitions": [
+						{
+							"default" : "!variable.attack_time"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"spawn": "variable.attack_time"
+						}
+					]
+				}
+			}
+		}
+	}
+}

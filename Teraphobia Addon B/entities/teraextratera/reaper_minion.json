@@ -1,0 +1,104 @@
+
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+      "identifier": "tera:reaper_minion",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:nameable": {},
+			"minecraft:health": {
+				"value": 10,
+				"max": 10
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1
+			},
+			"minecraft:movement": {
+				"value": 0.015
+			},
+			"minecraft:persistent": {
+			},
+			"minecraft:navigation.float": {
+				"can_path_over_water": true
+			},
+			"minecraft:behavior.float_wander": {
+				"priority": 2,
+				"must_reach": true
+			},
+			"minecraft:can_fly": {},
+			"minecraft:shooter": {
+				"def": "tera:giant_skull"
+			},
+			"minecraft:type_family": {
+				"family": ["soulvision","ghast", "tera_monster","monster", "mob"]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "fall",
+					"deals_damage": false
+				}
+			},
+			"minecraft:jump.static": {},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:behavior.ranged_attack": {
+				"priority": 1,
+				"attack_radius": 64,
+				"charge_shoot_trigger": 2,
+				"charge_charged_trigger": 1
+			},
+          "minecraft:explode": {
+              "fuse_length": 15,
+              "fuse_lit": true,
+              "power": 0.5,
+              "causes_fire": false,
+              "breaks_blocks": false,
+              "fire_affected_by_griefing": true,
+              "destroy_affected_by_griefing": true
+          },
+			"minecraft:follow_range": {
+				"value": 64,
+				"max": 64
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 1
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"entity_types": [
+					{
+						"filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							}
+						]
+						},
+						
+						"max_dist": 64
+					}
+				],
+				"must_see": true
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+		}
+	}
+}

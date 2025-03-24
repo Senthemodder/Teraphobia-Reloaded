@@ -1,0 +1,373 @@
+entity.tera:lost_ravager.name=Lost Ravager
+item.spawn_egg.entity.tera:lost_ravager.name=Spawn Lost Ravager
+entity.tera:bulky_ravager.name=Bulky Ravager
+item.spawn_egg.entity.tera:bulky_ravager.name=Spawn Bulky Ravager
+entity.tera:yeti.name=Yeti
+item.spawn_egg.entity.tera:yeti.name=Spawn Yeti
+entity.tera:tera_dragon.name=Tera Dragon
+item.spawn_egg.entity.tera:tera_dragon.name=Spawn Tera Dragon
+entity.tera:tera_golem.name=Tera Golem
+item.spawn_egg.entity.tera:tera_golem.name=Spawn Tera Golem
+entity.tera:tera_golem_boss.name=Tera Golem Boss
+item.spawn_egg.entity.tera:tera_golem_boss.name=Spawn Tera Golem Boss
+entity.tera:night_abomination.name=Night Abomination
+item.spawn_egg.entity.tera:night_abomination.name=Spawn Night Abomination
+entity.tera:basic_human_enemy.name=Basic Human Enemy
+item.spawn_egg.entity.tera:basic_human_enemy.name=Spawn Basic Human Enemy
+entity.tera:complex_human_enemy.name=Complex Human Enemy
+item.spawn_egg.entity.tera:complex_human_enemy.name=Spawn Complex Human Enemy
+item.yogsothooth:titty_sword=Why are we still here?
+
+
+item.shulker_shell.name=Shulker Shell
+
+entity.tera:prime_soul.name=Prime Soul
+item.spawn_egg.entity.tera:prime_soul.name=Spawn Prime Soul
+
+entity.tera:joseph.name=Joseph
+item.spawn_egg.entity.tera:joseph.name=Spawn Joseph
+
+entity.tera:exit_portal.name=exit_portal
+
+entity.tera:wizard_enemy.name=Wizard Enemy
+item.spawn_egg.entity.tera:wizard_enemy.name=Spawn Wizard Enemy
+
+entity.tera:3headed_wolf.name=Three-Headed Wolf
+item.spawn_egg.entity.tera:3headed_wolf.name=Spawn Three-Headed Wolf
+
+entity.tera:aggressor.name=Aggressor
+item.spawn_egg.entity.tera:aggressor.name=Spawn Aggressor
+
+entity.tera:ash_viking.name=Ash Viking
+item.spawn_egg.entity.tera:ash_viking.name=Spawn Ash Viking
+
+entity.tera:ash_crawler.name=Ash Crawler
+item.spawn_egg.entity.tera:ash_crawler.name=Spawn Ash Crawler
+
+entity.tera:blazeborn_zombie.name=Blazeborn Zombie
+item.spawn_egg.entity.tera:blazeborn_zombie.name=Spawn Blazeborn Zombie
+
+entity.tera:blinder.name=Blinder
+item.spawn_egg.entity.tera:blinder.name=Spawn Blinder
+
+entity.tera:bulky_warden.name=Bulky Warden
+item.spawn_egg.entity.tera:bulky_warden.name=Spawn Bulky Warden
+
+entity.tera:cobblestone_monster.name=Cobblestone Monster
+item.spawn_egg.entity.tera:cobblestone_monster.name=Spawn Cobblestone Monster
+
+entity.tera:deathworm.name=Deathworm
+item.spawn_egg.entity.tera:deathworm.name=Spawn Deathworm
+
+entity.tera:earth_creeper.name=Earth Creeper
+item.spawn_egg.entity.tera:earth_creeper.name=Spawn Earth Creeper
+
+entity.tera:earth_walker.name=Earth Walker
+item.spawn_egg.entity.tera:earth_walker.name=Spawn Earth Walker
+
+entity.tera:earth_zombie.name=Earth Zombie
+item.spawn_egg.entity.tera:earth_zombie.name=Spawn Earth Zombie
+
+entity.tera:ent.name=Ent
+item.spawn_egg.entity.tera:ent.name=Spawn Ent
+
+entity.tera:everlaster.name=Everlaster
+item.spawn_egg.entity.tera:everlaster.name=Spawn Everlaster
+
+entity.tera:farlander.name=Farlander
+item.spawn_egg.entity.tera:farlander.name=Spawn Farlander
+
+entity.tera:fiery_ghast.name=Fiery Ghast
+item.spawn_egg.entity.tera:fiery_ghast.name=Spawn Fiery Ghast
+
+entity.tera:flame_apostle.name=Flame Apostle
+item.spawn_egg.entity.tera:flame_apostle.name=Spawn Flame Apostle
+
+entity.tera:forest_spider.name=Forest Spider
+item.spawn_egg.entity.tera:forest_spider.name=Spawn Forest Spider
+
+entity.tera:forest_wolf.name=Forest Wolf
+item.spawn_egg.entity.tera:forest_wolf.name=Spawn Forest Wolf
+
+entity.tera:forest_tentacle.name=Forest Tentacle
+item.spawn_egg.entity.tera:forest_tentacle.name=Spawn Forest Tentacle
+
+entity.tera:giant_wither.name=Giant Wither
+item.spawn_egg.entity.tera:giant_wither.name=Spawn Giant Wither
+
+entity.tera:griffin.name=Griffin
+item.spawn_egg.entity.tera:griffin.name=Spawn Griffin
+
+entity.tera:ice_grunt.name=Ice Grunt
+item.spawn_egg.entity.tera:ice_grunt.name=Spawn Ice Grunt
+
+entity.tera:ice_searcher.name=Ice Searcher
+item.spawn_egg.entity.tera:ice_searcher.name=Spawn Ice Searcher
+
+entity.tera:kraken.name=Kraken
+item.spawn_egg.entity.tera:kraken.name=Spawn Kraken
+
+entity.tera:limbo_soul.name=Limbo Soul
+item.spawn_egg.entity.tera:limbo_soul.name=Spawn Limbo Soul
+
+entity.tera:limbo_victim.name=Limbo Victim
+item.spawn_egg.entity.tera:limbo_victim.name=Spawn Limbo Victim
+
+entity.tera:living_flame.name=Living Flame
+item.spawn_egg.entity.tera:living_flame.name=Spawn Living Flame
+
+entity.tera:living_tower.name=Living Tower
+item.spawn_egg.entity.tera:living_tower.name=Spawn Living Tower
+
+entity.tera:minotaur.name=Minotaur
+item.spawn_egg.entity.tera:minotaur.name=Spawn Minotaur
+
+entity.tera:necromancer.name=Necromancer
+item.spawn_egg.entity.tera:necromancer.name=Spawn Necromancer
+
+entity.tera:night_sender.name=Night Sender
+item.spawn_egg.entity.tera:night_sender.name=Spawn Night Sender
+
+entity.tera:night_wanderer.name=Night Wanderer
+item.spawn_egg.entity.tera:night_wanderer.name=Spawn Night Wanderer
+
+entity.tera:obsidian_golem.name=Obsidian Golem
+item.spawn_egg.entity.tera:obsidian_golem.name=Spawn Obsidian Golem
+
+entity.tera:outcast.name=Outcast
+item.spawn_egg.entity.tera:outcast.name=Spawn Outcast
+
+entity.tera:reaper.name=Reaper
+item.spawn_egg.entity.tera:reaper.name=Spawn Reaper
+
+entity.tera:recalled_dragon.name=Recalled Dragon
+item.spawn_egg.entity.tera:recalled_dragon.name=Spawn Recalled Dragon
+
+entity.tera:serpent.name=Serpent
+item.spawn_egg.entity.tera:serpent.name=Spawn Serpent
+
+entity.tera:silver_golem.name=Silver Golem
+item.spawn_egg.entity.tera:silver_golem.name=Spawn Silver Golem
+
+entity.tera:skull_loft.name=Skull Loft
+item.spawn_egg.entity.tera:skull_loft.name=Spawn Skull Loft
+
+entity.tera:sky_naga.name=Sky Naga
+item.spawn_egg.entity.tera:sky_naga.name=Spawn Sky Naga
+
+entity.tera:sorcerer.name=Sorcerer
+item.spawn_egg.entity.tera:sorcerer.name=Spawn Sorcerer
+
+entity.tera:soul_creeper.name=Soul Creeper
+item.spawn_egg.entity.tera:soul_creeper.name=Spawn Soul Creeper
+
+entity.tera:soul_ghast.name=Soul Ghast
+item.spawn_egg.entity.tera:soul_ghast.name=Spawn Soul Ghast
+
+entity.tera:soul.name=Soul
+item.spawn_egg.entity.tera:soul.name=Spawn Soul
+
+entity.tera:soul_spider.name=Soul Spider
+item.spawn_egg.entity.tera:soul_spider.name=Spawn Soul Spider
+
+entity.tera:soul_knight.name=Knight of the Damned Souls
+item.spawn_egg.entity.tera:soul_knight.name=Spawn Knight of the Damned Souls
+
+entity.tera:soul_skeleton.name=Soul Skeleton
+item.spawn_egg.entity.tera:soul_skeleton.name=Spawn Soul Skeleton
+
+entity.tera:soul_wither_skeleton.name=Soul Wither Skeleton
+item.spawn_egg.entity.tera:soul_wither_skeleton.name=Spawn Soul Wither Skeleton
+
+entity.tera:soul_wither.name=Soul Wither
+item.spawn_egg.entity.tera:soul_wither.name=Spawn Soul Wither
+
+entity.tera:basic_npc.name=Basic NPC
+item.spawn_egg.entity.tera:basic_npc.name=Spawn Basic NPC
+
+entity.tera:soul_zombie.name=Soul Zombie
+item.spawn_egg.entity.tera:soul_zombie.name=Spawn Soul Zombie
+
+entity.tera:soulfire_blaze.name=Soulfire Blaze
+item.spawn_egg.entity.tera:soulfire_blaze.name=Spawn Soulfire Blaze
+
+entity.tera:tera_flying_boss.name=Tera Flying Boss
+item.spawn_egg.entity.tera:tera_flying_boss.name=Spawn Tera Flying Boss
+
+entity.tera:spruce_monster.name=Spruce Monster
+item.spawn_egg.entity.tera:spruce_monster.name=Spawn Spruce Monster
+
+entity.tera:stalker_eye.name=Stalker Eye
+item.spawn_egg.entity.tera:stalker_eye.name=Spawn Stalker Eye
+
+entity.tera:swamp_man.name=Swamp Man
+item.spawn_egg.entity.tera:swamp_man.name=Spawn Swamp Man
+
+entity.tera:taken.name=Taken
+item.spawn_egg.entity.tera:taken.name=Spawn Taken
+
+entity.tera:teragon.name=Teragon
+item.spawn_egg.entity.tera:teragon.name=Spawn Teragon
+
+entity.tera:underworld_golem.name=Underworld Golem
+item.spawn_egg.entity.tera:underworld_golem.name=Spawn Underworld Golem
+
+entity.tera:underworld_zombie.name=Underworld Zombie
+item.spawn_egg.entity.tera:underworld_zombie.name=Spawn Underworld Zombie
+
+entity.tera:venus_man_trap.name=Venus Man Trap
+item.spawn_egg.entity.tera:venus_man_trap.name=Spawn Venus Man Trap
+
+entity.tera:werewolf.name=Werewolf
+item.spawn_egg.entity.tera:werewolf.name=Spawn Werewolf
+
+entity.tera:red_dragon.name=Red Dragon
+item.spawn_egg.entity.tera:red_dragon.name=Spawn Red Dragon
+
+entity.tera:extra_warden.name=Extra Warden
+item.spawn_egg.entity.tera:extra_warden.name=Spawn Extra Warden
+
+action.hint.exit.tera:griffin=Tap sneak to dismount
+item.tera:reaper_scythe=Reaper Scythe
+item.tera:soul_knight_sword=Sword of the Damned Souls
+item.tera:silver=Silver
+item.tera:opal=Opal
+item.tera:nythium=Nythium
+item.tera:yagazin=Yagazin
+item.tera:solos=Solos
+item.tera:agarnite=Agarnite
+item.tera:eresite=Eresite
+item.tera:damnashin=Damnashin
+item.tera:sidron=Sidron
+item.tera:deth=Deth
+item.tera:godsteel=Godsteel
+item.tera:soul=Soul
+tile.tera:soul_stone.name=Soul Stone
+
+
+item.tera:silver_helmet=Silver Helmet
+item.tera:silver_chestplate=Silver Chestplate
+item.tera:silver_leggings=Silver Leggings
+item.tera:silver_boots=Silver Boots
+
+item.tera:opal_helmet=Opal Helmet
+item.tera:opal_chestplate=Opal Chestplate
+item.tera:opal_leggings=Opal Leggings
+item.tera:opal_boots=Opal Boots
+
+item.tera:nythium_helmet=Nythium Helmet
+item.tera:nythium_chestplate=Nythium Chestplate
+item.tera:nythium_leggings=Nythium Leggings
+item.tera:nythium_boots=Nythium Boots
+
+item.tera:yagazin_helmet=Yagazin Helmet
+item.tera:yagazin_chestplate=Yagazin Chestplate
+item.tera:yagazin_leggings=Yagazin Leggings
+item.tera:yagazin_boots=Yagazin Boots
+
+item.tera:solos_helmet=Solos Helmet
+item.tera:solos_chestplate=Solos Chestplate
+item.tera:solos_leggings=Solos Leggings
+item.tera:solos_boots=Solos Boots
+
+item.tera:agarnite_helmet=Agarnite Helmet
+item.tera:agarnite_chestplate=Agarnite Chestplate
+item.tera:agarnite_leggings=Agarnite Leggings
+item.tera:agarnite_boots=Agarnite Boots
+
+item.tera:eresite_helmet=Eresite Helmet
+item.tera:eresite_chestplate=Eresite Chestplate
+item.tera:eresite_leggings=Eresite Leggings
+item.tera:eresite_boots=Eresite Boots
+
+item.tera:damnashin_helmet=Damnashin Helmet
+item.tera:damnashin_chestplate=Damnashin Chestplate
+item.tera:damnashin_leggings=Damnashin Leggings
+item.tera:damnashin_boots=Damnashin Boots
+
+item.tera:sidron_helmet=Sidron Helmet
+item.tera:sidron_chestplate=Sidron Chestplate
+item.tera:sidron_leggings=Sidron Leggings
+item.tera:sidron_boots=Sidron Boots
+
+item.tera:deth_helmet=Deth Helmet
+item.tera:deth_chestplate=Deth Chestplate
+item.tera:deth_leggings=Deth Leggings
+item.tera:deth_boots=Deth Boots
+
+item.tera:godsteel_helmet=Godsteel Helmet
+item.tera:godsteel_chestplate=Godsteel Chestplate
+item.tera:godsteel_leggings=Godsteel Leggings
+item.tera:godsteel_boots=Godsteel Boots
+
+item.tera:soul_helmet=Soul Helmet
+item.tera:soul_chestplate=Soul Chestplate
+item.tera:soul_leggings=Soul Leggings
+item.tera:soul_boots=Soul Boots
+
+item.tera:silver_sword=Silver Sword
+item.tera:soul_sword=Soul Sword
+item.tera:godsteel_sword=Godsteel Sword
+item.tera:deth_sword=Deth Sword
+item.tera:sidron_sword=Sidron Sword
+item.tera:damnashin_sword=Damnashin Sword
+item.tera:eresite_sword=Eresite Sword
+item.tera:agarnite_sword=Agarnite Sword
+item.tera:solos_sword=Solos Sword
+item.tera:yagazin_sword=Yagazin Sword
+item.tera:nythium_sword=Nythium Sword
+item.tera:opal_sword=Opal Sword
+tile.tera:soul_grass.name=Soul Grass
+tile.tera:underworld_portal.name=Underworld Portal
+tile.tera:limbo_portal.name=Limbo Portal
+tile.tera:soul_dim_portal.name=Soul Dimension Portal
+item.tera:soul_dimension_exit=Exit the Reaper's Dwelling
+tile.tera:soul_foliage.name=Soul Foliage
+tile.tera:soul_leaves.name=Soul Leaves
+tile.tera:limbo_stone.name=Limbo Stone
+tile.tera:underworld_stone.name=Underworld Stone
+item.tera:underworld_exit=Leave the Tail of Abraham
+item.tera:limbo_exit=Rise from Limbo
+item.tera:limbo_exit=Rise from Limbo
+item.tera:naga_spit=Naga Spit
+tile.tera:ash_snow.name=Ash Snow
+tile.tera:ash_leaves.name=Ash Leaves
+tile.tera:silver_ore.name=Silver Ore
+tile.tera:opal_ore.name=Opal Ore
+tile.tera:nythium_ore.name=Nythium Ore
+tile.tera:yagazin_ore.name=Yagazin Ore
+tile.tera:eresite_ore.name=Eresite Ore
+tile.tera:deth_ore.name=Deth Ore
+tile.tera:agarnite_ore.name=Agarnite Ore
+tile.tera:sidron_ore.name=Sidron Ore
+tile.tera:solos_ore.name=Solos Ore
+tile.tera:damnashin_ore.name=Damnashin Ore
+tile.tera:godsteel_ore.name=Godsteel Ore
+tile.tera:yagazin_ore_overworld.name=Yagazin Ore Overworld
+tile.tera:opal_ore_underworld.name=Opal Ore Underworld
+tile.tera:solos_ore_underworld.name=Solos Ore Underworld
+tile.tera:tier_1_table.name=Tier 1 Table
+tile.tera:tier_2_table.name=Tier 2 Table
+tile.tera:tier_3_table.name=Tier 3 Table
+tile.tera:tier_4_block.name=Tier 4 Block
+tile.tera:tier_5_table.name=Tier 5 Table
+tile.tera:tier_4_table.name=Tier 4 Table
+tile.tera:totem_table.name=Totem Table
+tile.tera:elemental_table.name=Elemental Table
+tile.tera:scroll_table.name=Scroll Table
+tile.tera:soul_wither_skull.name=Soul Wither Skull
+tile.tera:soul_wither_skull.name=Soul Wither Skull
+tile.myname:soul_wither_skull.name=Soul Wither Skull
+tile.tera:soul_wither_skull.name=Soul Wither Skull
+entity.tera:the_maw.name=The Maw
+item.spawn_egg.entity.tera:the_maw.name=Spawn The Maw
+entity.tera:small_maw.name=Small Maw
+item.spawn_egg.entity.tera:small_maw.name=Spawn Small Maw
+tile.tera:soul_floor.name=Soul Floor
+entity.tera:test_warden.name=Test Warden
+item.spawn_egg.entity.tera:test_warden.name=Spawn Test Warden
+entity.tera:dasorth.name=dasorth
+item.spawn_egg.entity.tera:dasorth.name=Spawn dasorth
+tile.tera:soul_bedrock.name=Soul Bedrock
+tile.tera:odd_wither_skull.name=Odd Wither Skull
+item.tera:teronic_guide=Teronic Guide

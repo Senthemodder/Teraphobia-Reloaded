@@ -1,0 +1,84 @@
+
+{
+	"format_version": "1.20.20",
+	"minecraft:tree_feature": {
+		"description": {
+			"identifier": "tera:tera_end/stem"
+		},
+		"may_grow_through": [
+			"minecraft:soul_soil",
+			"minecraft:muddy_mangrove_roots",
+			"minecraft:mud"
+		],
+		"may_grow_on": [
+			"minecraft:mud"
+		],
+		"base_cluster": {
+			"may_replace": [
+				"minecraft:soul_soil",
+				{
+					"name": "minecraft:mud"
+				},
+				{
+					"name": "minecraft:muddy_mangrove_roots"
+				}
+			],
+			"num_clusters": 3,
+			"cluster_radius": 3
+		},
+		"mega_trunk": {
+			"trunk_height": {
+				"base": 10,
+				"intervals": [
+					5,
+					15
+				]
+			},
+			"trunk_width": 2,
+			"trunk_block": {
+				"name": "minecraft:muddy_mangrove_roots"
+			},
+			"branches": {
+				"branch_length": 9,
+				"branch_slope": 0.4,
+				"branch_interval": {
+					"range_min": 1,
+					"range_max": 3
+				},
+				"branch_altitude_factor": {
+					"min": 0.2,
+					"max": 0.9
+				},
+				"branch_canopy": {
+					"mega_canopy": {
+						"canopy_height": {
+							"range_min": 2,
+							"range_max": 2
+						},
+						"core_width": 3,
+						"base_radius": 3,
+						"simplify_canopy": false,
+						"leaf_block": {
+							"name": "minecraft:soul_soil"
+						}
+					}
+				}
+			}
+		},
+		"mega_canopy": {
+			"canopy_height": 3,
+			"core_width": 3,
+			"base_radius": 3,
+			"leaf_block": {
+				"name": "minecraft:soul_soil"
+			}
+		},
+		"may_replace": [
+			"minecraft:air",
+			"minecraft:soul_soil",
+			"minecraft:muddy_mangrove_roots",
+			"minecraft:mud"
+		],
+		"base_block": "minecraft:mud"
+	}
+}

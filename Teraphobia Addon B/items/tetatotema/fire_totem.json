@@ -1,0 +1,44 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:fire_totem",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			
+			"minecraft:max_stack_size": 1,
+        "minecraft:projectile": {
+          "projectile_entity": "tera:fire_totem"
+        },
+        "minecraft:throwable": {
+    "do_swing_animation": true
+    },
+					
+			"minecraft:icon":  "fire_totem",
+			"minecraft:display_name": {
+				"value": "Fire Totem\n\n§8§o-Cast a fireball, and for a time, get Fire Resistance"
+			}
+		},
+		"events": {
+			"totem": {
+				"swing": {},
+				"shoot": {
+					"projectile": "tera:renva_ball",
+					"launch_power": 1,
+					"angle_offset": 0.5
+				   },
+				
+				"run_command": {
+					"command": [
+						"particle minecraft:totem_particle ~~~",
+						"playsound random.totem",
+						"replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				}
+			}
+		}
+	}
+}

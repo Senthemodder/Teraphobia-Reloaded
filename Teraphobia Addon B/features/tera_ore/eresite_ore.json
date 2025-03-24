@@ -1,0 +1,19 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "tera:tera_ore/eresite_ore"
+    },
+    "count": 4,
+    "replace_rules": [
+      {
+        "places_block": "tera:eresite_ore",
+        "may_replace": [
+          {
+            "name": "tera:soul_stone"
+          }
+        ]
+      }
+    ]
+  }
+}

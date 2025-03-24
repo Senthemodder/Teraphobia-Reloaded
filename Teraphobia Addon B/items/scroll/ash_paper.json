@@ -1,0 +1,20 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "tera:ash_paper",
+            "menu_category": {
+				"category": "equipment"
+			}
+        },
+        "components": {
+            "minecraft:allow_off_hand": true,
+			
+            "minecraft:icon": "ash_paper",
+            "minecraft:display_name": {
+                "value": "Ash Paper\n\n§8§o-Paper engulfed in ancient ash"
+            },
+            "minecraft:max_stack_size": 64
+        }
+    }
+}

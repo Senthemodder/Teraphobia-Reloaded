@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.20",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "tera:underworld/roof1"
+		},
+
+		"places_feature": "tera:underworld/rollingplains_column_grass",
+
+		"iterations": 3,
+
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [251, 253]
+		}
+	}
+}

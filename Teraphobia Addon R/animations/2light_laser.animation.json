@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.light_laser.the": {
+			"animation_length": 10,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"2.0": [0, 1210, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"2.0": [0, 1, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"2.0": {
+					"effect": "explode"
+				}
+			}
+		}
+	}
+}

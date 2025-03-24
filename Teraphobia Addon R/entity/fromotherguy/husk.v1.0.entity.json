@@ -1,0 +1,40 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:husk",
+      "materials": { "default": "drowned" },
+      "textures": { "default": "assets/minecraft/textures/entity/zombie/husk", "default2": "assets/minecraft/optifine/random/entity/zombie/husk2" },
+      "geometry": { "default": "geometry.zombie.husk" },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+          "variable.Xvar = (variable.Xvar ?? Math.random(0,999));"
+        ]
+      },
+      "animations": {
+  
+        "idle": "animation.zombie.idle",
+        "move": "animation.zombie.mover",
+        "nugget_no_tits": "animation.nugget.no_tits",
+        "attack1": "animation.zombie.attack1",
+        "attack2": "animation.zombie.attack2",
+        "attack3": "animation.zombie.attack3",
+        "attack4": "animation.zombie.attack4",
+        "attack5": "animation.mythic_mob.attack5"
+      },
+      "animation_controllers": [
+        { "nugget_no_tits": "controller.animation.nugget.no_tits" },
+        { "idle": "controller.animation.tera_general.idle" },
+        {"attack":  "controller.animation.tera_general.dynamic_attack"},
+        { "move": "controller.animation.tera_general.move" }
+      ],
+      "render_controllers": [ "controller.render.husk" ],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 28
+      }
+    }
+  }
+}

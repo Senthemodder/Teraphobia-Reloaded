@@ -1,0 +1,50 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:iron_golem",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/iron_golem"
+      },
+      "geometry": {
+        "default": "geometry.irongolem"
+      },
+      "animations": {
+        "attack_control": "controller.animation.serpent.attack",
+        "walk": "animation.iron_golem.walk",
+        "move": "animation.iron_golem.move",
+        "walk_to_target": "animation.iron_golem.walk_to_target",
+        "move_to_target": "animation.iron_golem.move_to_target",
+        "flower": "animation.iron_golem.flower",
+        "look_at_target": "animation.common.look_at_target",
+        "move_controller": "controller.animation.iron_golem.move",
+        "arm_controller": "controller.animation.iron_golem.arm_movement",
+
+        "del_attack_con":  "controller.animation.tera_general.dynamic_attack",
+
+        "attack1": "animation.irongolem.attack1",
+        "attack2": "animation.irongolem.attack2",
+        "attack3": "animation.irongolem.attack3",
+        "attack4": "animation.irongolem.attack4",
+        "attack5": "animation.mythic_mob.attack5"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.modified_tcos0 = Math.clamp(((Math.cos(query.modified_distance_moved * 13.5) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 25.0), -12.5, 12.5);"
+        ],
+        "animate": [
+          "look_at_target",
+          "move_controller",
+          "arm_controller",
+          "attack_control",
+          "die_control",
+
+          "del_attack_con"
+        ]
+      },
+      "render_controllers": [ "controller.render.iron_golem" ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:scatter_feature": {
+      "description": {
+          "identifier": "tera:limbo/limbo_spikes"
+      },
+      "iterations": "t.master_noise_1 = math.abs(query.noise(v.originx / 32, v.originz / 32)); t.master_noise_2 = math.abs(query.noise(v.originx / 32 + 1024, v.originz / 32 + 1024)); t.master_noise_3 = math.abs(query.noise(v.originx / 32 - 1024, v.originz / 32 - 1024)); t.master_noise = math.max(t.master_noise_1, math.max(t.master_noise_2, t.master_noise_3)); t.threshold = 0.61; t.master_noise < t.threshold ? {return 0;}; t.detail_noise = query.noise(v.originx / 4, v.originz / 4); t.intensity = (t.master_noise - t.threshold) / t.threshold; t.master_noise_maximum_height = 5; t.column_height = t.intensity * t.master_noise_maximum_height + t.detail_noise; return t.column_height * 8;",
+	"x": 0,
+      "z": 0,
+      "y": {
+          "distribution": "fixed_grid",
+          "extent": [
+              0,
+              "t.column_height - 1"
+          ]
+      },
+      "places_feature": "tera:limbo/random_spike"
+  }
+}

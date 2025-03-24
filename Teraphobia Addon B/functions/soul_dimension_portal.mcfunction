@@ -1,0 +1,2 @@
+execute as @s if block 75000 180 75000 tera:soul_grass [] run execute as @s[scores={tera_en=1}] run fill 75000 180 75000 75004 180 75004 bedrock
+execute as @s if block 75001 180 75001 bedrock [] run execute as @s[scores={tera_en=1}] run fill 75001 180 75001 75003 180 75003 end_portal

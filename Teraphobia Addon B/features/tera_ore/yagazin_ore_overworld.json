@@ -1,0 +1,19 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "tera:tera_ore/yagazin_ore_overworld"
+    },
+    "count": 3,
+    "replace_rules": [
+      {
+        "places_block": "tera:yagazin_ore_overworld",
+        "may_replace": [
+          {
+            "name": "minecraft:stone"
+          }
+        ]
+      }
+    ]
+  }
+}

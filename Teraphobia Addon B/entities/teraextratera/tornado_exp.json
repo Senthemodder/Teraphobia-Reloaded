@@ -1,0 +1,83 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "tera:tornado_exp",
+            "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+         "component_groups": {
+             "exp":{               
+               "minecraft:instant_despawn":{
+                 }
+                }
+         },                 "components": {
+                   "minecraft:collision_box": {
+        "width": 0.1,
+        "height": 0.1
+      },
+      "minecraft:knockback_resistance": {
+        "value": 100
+      },
+            "minecraft:behavior.knockback_roar": {
+          "priority": 1,
+          "duration": 0.1,
+          "attack_time": 0.1,
+          "cooldown_time": 0,
+          "knockback_damage": 1,
+          "knockback_strength": 5,
+          "knockback_range": 8,
+          "knockback_filters": {
+              "test": "has_tag",
+              "subject": "other",
+              "operator": "!=",
+              "value": "tornadopotion"
+          },
+          "damage_filters": {
+            "test": "has_tag",
+            "subject": "other",
+            "operator": "!=",
+            "value": "tornadopotion"
+          },
+          "on_roar_end": {
+            "event": "exp"
+          }
+        },
+        "minecraft:damage_sensor": {
+          "triggers": [          
+              {
+                  "cause": "all",
+                  "deals_damage": false
+              }
+          ]
+      },
+        "minecraft:health":{
+      "value":1,
+        "min":1,
+        "max":1
+         },        
+               "minecraft:type_family": {
+        "family": [ "summon","inanimate" ]
+      },
+            "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": true
+      }
+         },                       
+         "events": {
+          "minecraft:entity_spawned": {
+            "queue_command": {
+              "command": [
+                "spreadplayers ~ ~ 0 12 @s"
+              ]
+            }
+          },
+                 "exp": {
+        "add": {
+          "component_groups": [
+            "exp"
+          ]
+        }
+      }
+         }}}

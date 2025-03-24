@@ -1,0 +1,16 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "tera:tera_end/warping_block"
+    },
+    "places_block": {
+      "name": "minecraft:warped_hyphae"
+    },
+    "enforce_survivability_rules": false,
+    "enforce_placement_rules": true,
+    "may_replace": [
+      "minecraft:air"
+    ]
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+      "description": {
+          "identifier": "tera:deathworm",
+          "is_spawnable": true,
+          "is_summonable": true,
+          "is_experimental": false
+      },
+      "component_groups": {
+        "dead": {
+            "minecraft:movement": {
+                "value": 0.0
+            },
+            "minecraft:scale": {
+                "value": 0
+            },
+            "minecraft:spawn_entity": {
+                "entities": {
+                    "min_wait_time": 0,
+                    "max_wait_time": 0,
+                    "num_to_spawn": 50,
+                    "single_use": true,
+                    "spawn_entity": "minecraft:xp_orb"
+                }
+            }
+        },
+          "random": {
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "cause": "all",
+                        "deals_damage": false
+                    }
+                ]
+            },
+            "minecraft:behavior.circle_around_anchor": {
+                "priority": 3,
+                "radius_change": 1.0,
+                "radius_adjustment_chance": 0.004,
+                "height_adjustment_chance": 0.002857,
+                "goal_radius": 1.0,
+                "angle_change": 15.0,
+                "radius_range": [ 5.0, 15.0 ],
+                "height_offset_range": [ -4.0, 5.0 ],
+                "height_above_target_range": [ 20.0, 40.0 ]
+              },
+              "minecraft:timer": {
+                  "looping": true,
+                  "time": 8,
+                  "time_down_event": {
+                      "event": "random_do"
+                  }
+              },
+              "minecraft:is_sheared": {},
+              "minecraft:movement": {
+                  "value": 0.5
+              }
+          },
+          "attacking": {
+            "minecraft:timer": {
+                "looping": false,
+                "time": 15,
+                "time_down_event": {
+                    "event": "random"
+                }
+            },
+            "minecraft:attack": {
+                "damage": 4,
+                "effect_name": "slowness",
+                "effect_duration": 5
+            },
+            "minecraft:behavior.melee_attack": {
+                "priority": 4,
+                "track_target": true,
+                "reach_multiplier": 1.4,
+                "melee_fov": 360
+            },
+            "minecraft:movement": {
+                "value": 0.8
+            },
+
+            "minecraft:is_saddled": {},
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "on_damage": {
+                          "filters": {
+                            "all_of": [
+                              {
+                                "test": "has_damage",
+                                "subject": "self",
+                                "operator": "==",
+                                "value": "attack"
+                              }
+                            ]
+                          },
+                          "event": "random"
+                        }
+                      },
+                    {
+                        "on_damage": {
+                            "filters": {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "lightning"
+                            }
+                        },
+                        "deals_damage": false
+                    },
+                    {
+                      "on_damage": {
+                          "filters": {
+                              "test": "is_family",
+                              "subject": "other",
+                              "value": "undead"
+                          }
+                      },
+                      "deals_damage": false
+                  },
+                    {
+                        "cause": "fall",
+                        "deals_damage": false
+                    }, {
+                        "cause": "fire_tick",
+                        "deals_damage": false
+                    },
+                    {
+                        "cause": "block_explosion",
+                        "deals_damage": false
+                    },
+                    {
+                      "cause": "entity_explosion",
+                      "deals_damage": false
+                  },
+                    {
+                      "cause": "projectile",
+                      "deals_damage": false
+                  },
+                  {
+                    "cause": "void",
+                    "deals_damage": false
+                },
+                {
+                  "cause": "wither",
+                  "deals_damage": false
+              },
+                {
+                  "cause": "magic",
+                  "deals_damage": false
+              },
+                    {
+                        "cause": "fire",
+                        "deals_damage": false
+                    }, {
+                        "on_damage": {
+                            "filters": {
+                                "all_of": [{
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "irongolem"
+                                }]
+                            }
+                        },
+                        "deals_damage": false
+                    }
+                ]
+            }
+          }
+      },
+      		"components": {
+			"minecraft:loot": {
+				"table": "loot_tables/entities/tera_entity/deathworm.json"
+			},
+					
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"bamboo_sapling",
+					"beetroot",
+					"brown_mushroom",
+					"carrots",
+					"carved_pumpkin",
+					"chorus_flower",
+					"chorus_plant",
+					"deadbush",
+					"double_plant",
+					"leaves",
+					"leaves2",
+					"lit_pumpkin",
+					"melon_block",
+					"melon_stem",
+					"potatoes",
+					"pumpkin",
+					"pumpkin_stem",
+					"red_flower",
+					"red_mushroom",
+					"crimson_fungus",
+					"warped_fungus",
+					"reeds",
+					"sapling",
+					"snow_layer",
+					"sweet_berry_bush",
+					"tallgrass",
+					"turtle_egg",
+					"vine",
+					"waterlily",
+					"wheat",
+					"yellow_flower"
+				]
+			},
+        "minecraft:underwater_movement": {
+          "value": 5.0
+      },
+          "minecraft:boss": {
+              "name": "Deathworm",
+
+              "should_darken_sky": true,
+              "hud_range": 30
+          },
+          "minecraft:on_death": {
+              "event": "dead",
+              "target": "self"
+          },
+          "minecraft:is_hidden_when_invisible": {},
+
+          "minecraft:nameable": {},
+          "minecraft:breathable": {
+              "total_supply": 15,
+              "suffocate_time": 0,
+              "breathes_water": true
+          },
+          "minecraft:health": {
+              "value": 50,
+              "max": 50
+          },
+          "minecraft:knockback_resistance": {
+              "value": 100
+          },
+          "minecraft:collision_box": {
+              "width": 2.6,
+              "height": 2.5
+          },
+
+          "minecraft:movement": {
+              "value": 0.8
+          },
+          "minecraft:navigation.walk": {
+                  "can_swim": true,
+              "is_amphibious": true,
+              "avoid_sun": true,
+              "avoid_water": true
+          },
+          "minecraft:movement.basic": {},
+          "minecraft:jump.static": {},
+          "minecraft:can_climb": {},
+          "minecraft:fire_immune": {},
+          "minecraft:behavior.hurt_by_target": {
+              "priority": 1
+          },
+          "minecraft:behavior.nearest_attackable_target": {
+              "priority": 2,
+              "must_see": true,
+              "entity_types": [
+                {
+                    "filters": {
+                      "all_of":
+                      [
+                        {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "player"
+                        }
+                      ]
+                    },
+                    "max_dist": 48
+                  }
+              ]
+          },
+          "minecraft:behavior.random_stroll": {
+              "priority": 6,
+              "speed_multiplier": 1
+          },
+          "minecraft:type_family": {
+              "family": ["tera_bosses","tera_monster","monster", "mob"]
+          },
+          "minecraft:physics": {},
+          "minecraft:pushable": {
+              "is_pushable": false,
+              "is_pushable_by_piston": true
+          },
+          "minecraft:timer": {
+              "looping": false,
+              "time": 0.1,
+              "time_down_event": {
+                  "event": "random"
+              }
+          },
+          "minecraft:conditional_bandwidth_optimization": {}
+      },
+
+      "events": {
+          "random_do": {
+              "sequence": [{
+                      "filters": {
+                          "test": "has_target"
+                      },
+                      "add": {
+                          "component_groups": ["attacking"]
+                      },
+                      "remove": {
+                          "component_groups": ["random"]
+                      }
+                  }
+              ]
+          },
+          "random": {
+              "remove": {
+                  "component_groups": [
+                      "attacking"
+                  ]
+              },
+              "add": {
+                  "component_groups": [
+                      "random"
+                  ]
+              }
+          },
+          "dead": {
+            "queue_command": {
+                "command": [
+                    "particle tera:boss_flash ~ ~1.5 ~",
+                    "summon tera:deathworm_death"
+                ]
+            },
+              "add": {
+                  "component_groups": [
+                      "dead"
+                  ]
+              }
+          }
+      }
+  }
+}

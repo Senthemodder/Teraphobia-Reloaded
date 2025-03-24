@@ -1,0 +1,42 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:venus_man_trap_rest",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/venus_man_trap"
+      },
+      "geometry": {
+        "default": "geometry.venus_man_trap"
+      },
+      "scripts": {
+        "scale": "1.2",
+        "pre_animation": [
+          "variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;"
+        ]
+      },
+      "sound_effects": {
+        "attack": "mob.wither.break_block",
+        "swipe": "mob.mino_swing",
+        "roar": "mob.wither.death"
+    },
+    "particle_effects": {
+      "transform": "tera:earth_emitter"
+    },
+    "animations": {
+      "wake": "animation.venus_man_trap.wake",
+      "idle": "animation.venus_man_trap.sit"
+    },
+    "animation_controllers": [
+      {"idle":  "controller.animation.tera_general.idle"},
+      {"wake":  "controller.animation.tera_general.wake"}
+    ],
+      "render_controllers": [ "controller.render.iron_golem" ],
+			"spawn_egg": {
+				"base_color": "#00b7b9",
+				"overlay_color": "#4be3ee"
+			}
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:prime_soul_death",
+			"materials": {
+				"default": "wither_boss_armor",
+				"inside": "iron_golem"
+			},
+			"textures": {
+				"default": "textures/entity/prime_soul/prime_soul",
+				"inside": "textures/entity/prime_soul/inside"
+			},
+			"geometry": {
+				"default": "geometry.prime_soul",
+				"inside": "geometry.prime_soul.inside"
+			},
+			"sound_effects": {
+				"emerge": "mob.warden.emerge",
+				"ability1": "mob.wither.break_block",
+				"ability2": "ambient.weather.lightning.impact",
+				"ability3": "mob.wither.death",
+				"ability4": "mob.wither.shoot"
+			},
+			"scripts": {
+				"should_update_bones_and_effects_offscreen": "1.0",
+				"pre_animation": ["variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"],
+				"animate": [
+					"death",
+					"flame"
+				]
+			},
+			"particle_effects": {
+				"digging": "minecraft:warden_dig",
+				"transform": "tera:soulfire_emitter"
+			},
+			"animations": {
+				"death": "animation.prime_soul.death",
+				"flame": "controller.animation.tera_partblaze.particle"
+			},
+			"render_controllers": ["controller.render.default","controller.render.prime_soul.inside"],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"base_color": "#006b7d",
+				"overlay_color": "#0be8f5"
+			}
+		}
+	}
+}

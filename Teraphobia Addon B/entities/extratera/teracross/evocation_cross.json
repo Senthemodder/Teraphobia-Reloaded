@@ -1,0 +1,158 @@
+{
+    "format_version": "1.12.0",
+   "minecraft:entity": {
+    "description": {
+      "identifier": "tera:evocation_cross",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "runtime_identifier": "minecraft:snowball"
+    },
+  
+    "component_groups": {
+     "minecraft:exploding": {
+      "minecraft:is_tamed": {
+
+      },
+      "minecraft:explode": {
+       "fuse_length": 0,
+       "fuse_lit": true,
+       "power": 1.4,
+       "causes_fire": false,
+       "breaks_blocks": false,
+       "fire_affected_by_griefing": true,
+       "destroy_affected_by_griefing": true
+      }
+     }
+    },
+  
+    "components": {
+     "minecraft:collision_box": {
+      "width": 0.31,
+      "height": 0.31
+     },
+     "minecraft:projectile": {
+      
+      "on_hit": {
+       "definition_event": {
+        "affect_projectile": true,
+        "event_trigger": {
+              "event": "minecraft:explode",
+              "target": "self"
+        }
+       }
+      },
+      "power": 1.6,
+      "gravity": 0.0,
+      "inertia": 1,
+      "liquid_inertia": 1,
+      "uncertainty_base": 0,
+      "uncertainty_multiplier": 0,
+      "anchor": 1,
+      "offset": [ 0, -0.1, 0 ],
+      "reflect_on_hurt": true,
+      "catch_fire": true
+     },
+     "minecraft:physics": {
+     },
+     "minecraft:pushable": {
+      "is_pushable": true,
+      "is_pushable_by_piston": true
+     },
+     "minecraft:conditional_bandwidth_optimization": {
+      "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+      }
+    }
+    },
+    "events": {
+     "minecraft:explode": {
+      "queue_command": {
+        "command": [
+          "function small_impact",
+          "summon evocation_fang ~3 ~ ~3",
+          "summon evocation_fang ~4 ~ ~4",
+          "summon evocation_fang ~5 ~ ~5",
+          "summon evocation_fang ~6 ~ ~6",
+          "summon evocation_fang ~7 ~ ~7",
+          "summon evocation_fang ~8 ~ ~8",
+          "summon evocation_fang ~9 ~ ~9",
+          "summon evocation_fang ~10 ~ ~10",
+          "summon evocation_fang ~11 ~ ~11",
+          "summon evocation_fang ~-3 ~ ~3",
+          "summon evocation_fang ~-4 ~ ~4",
+          "summon evocation_fang ~-5 ~ ~5",
+          "summon evocation_fang ~-6 ~ ~6",
+          "summon evocation_fang ~-7 ~ ~7",
+          "summon evocation_fang ~-8 ~ ~8",
+          "summon evocation_fang ~-9 ~ ~9",
+          "summon evocation_fang ~-10 ~ ~10",
+          "summon evocation_fang ~-11 ~ ~11",
+          "summon evocation_fang ~3 ~ ~-3",
+          "summon evocation_fang ~4 ~ ~-4",
+          "summon evocation_fang ~5 ~ ~-5",
+          "summon evocation_fang ~6 ~ ~-6",
+          "summon evocation_fang ~7 ~ ~-7",
+          "summon evocation_fang ~8 ~ ~-8",
+          "summon evocation_fang ~9 ~ ~-9",
+          "summon evocation_fang ~10 ~ ~-10",
+          "summon evocation_fang ~11 ~ ~-11",
+          "summon evocation_fang ~-3 ~ ~-3",
+          "summon evocation_fang ~-4 ~ ~-4",
+          "summon evocation_fang ~-5 ~ ~-5",
+          "summon evocation_fang ~-6 ~ ~-6",
+          "summon evocation_fang ~-7 ~ ~-7",
+          "summon evocation_fang ~-8 ~ ~-8",
+          "summon evocation_fang ~-9 ~ ~-9",
+          "summon evocation_fang ~-10 ~ ~-10",
+          "summon evocation_fang ~-11 ~ ~-11",
+          "summon evocation_fang ~ ~ ~-3",
+          "summon evocation_fang ~ ~ ~-4",
+          "summon evocation_fang ~ ~ ~-5",
+          "summon evocation_fang ~ ~ ~-6",
+          "summon evocation_fang ~ ~ ~-7",
+          "summon evocation_fang ~ ~ ~-8",
+          "summon evocation_fang ~ ~ ~-9",
+          "summon evocation_fang ~ ~ ~-10",
+          "summon evocation_fang ~ ~ ~-11",
+          "summon evocation_fang ~ ~ ~3",
+          "summon evocation_fang ~ ~ ~4",
+          "summon evocation_fang ~ ~ ~5",
+          "summon evocation_fang ~ ~ ~6",
+          "summon evocation_fang ~ ~ ~7",
+          "summon evocation_fang ~ ~ ~8",
+          "summon evocation_fang ~ ~ ~9",
+          "summon evocation_fang ~ ~ ~10",
+          "summon evocation_fang ~ ~ ~11",
+          "summon evocation_fang ~3 ~ ~",
+          "summon evocation_fang ~4 ~ ~",
+          "summon evocation_fang ~5 ~ ~",
+          "summon evocation_fang ~6 ~ ~",
+          "summon evocation_fang ~7 ~ ~",
+          "summon evocation_fang ~8 ~ ~",
+          "summon evocation_fang ~9 ~ ~",
+          "summon evocation_fang ~10 ~ ~",
+          "summon evocation_fang ~11 ~ ~",
+          "summon evocation_fang ~-3 ~ ~",
+          "summon evocation_fang ~-4 ~ ~",
+          "summon evocation_fang ~-5 ~ ~",
+          "summon evocation_fang ~-6 ~ ~",
+          "summon evocation_fang ~-7 ~ ~",
+          "summon evocation_fang ~-8 ~ ~",
+          "summon evocation_fang ~-9 ~ ~",
+          "summon evocation_fang ~-10 ~ ~",
+          "summon evocation_fang ~-11 ~ ~"
+        ]
+    },
+      "add": {
+       "component_groups": [
+        "minecraft:exploding"
+       ]
+      }
+     }
+    }
+   }
+  }
+  

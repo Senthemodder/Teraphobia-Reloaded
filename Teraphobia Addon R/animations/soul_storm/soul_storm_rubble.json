@@ -1,0 +1,51 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.soul_storm_rubble.small": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": ["query.life_time * 100", "query.life_time * 80", "query.life_time * 60"]
+				},
+				"med": {
+					"scale": 0
+				},
+				"large": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.soul_storm_rubble.med": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": ["query.life_time * 100", "query.life_time * 80", "query.life_time * 60"]
+				},
+				"large": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.soul_storm_rubble.large": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": ["query.life_time * 100", "query.life_time * 80", "query.life_time * 60"]
+				}
+			}
+		},
+		"animation.soul_storm_rubble.spawn": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"bone": {
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.4167": [0, 0, 0],
+						"0.5": [1, 1, 1]
+					}
+				}
+			}
+		}
+	}
+}

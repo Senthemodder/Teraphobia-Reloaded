@@ -1,0 +1,20 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:structure_template_feature": {
+      "description": {
+          "identifier": "tera:boss/boss_kraken"
+      },
+      "structure_name": "mystructure:boss_kraken",
+      "adjustment_radius": 4,
+      "facing_direction": "south",
+      "constraints": {
+          "block_intersection": {
+            "block_allowlist": [
+              "minecraft:air",
+
+"minecraft:water"
+            ]
+          }
+      }
+  }
+}

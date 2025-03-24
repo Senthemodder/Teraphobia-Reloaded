@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:soul_storm_rubble",
+      "materials": {
+        "default": "iron_golem"
+      },
+      "textures": {
+        "default": "textures/entity/soul_storm/soul_storm_rubble"
+      },
+      "geometry": {
+        "default": "geometry.soul_storm_rubble"
+      },
+      "animations": {
+        "small": "animation.soul_storm_rubble.small",
+        "med": "animation.soul_storm_rubble.med",
+        "large": "animation.soul_storm_rubble.large",
+        "spawn": "animation.soul_storm_rubble.spawn"
+      },
+      "scripts": {
+        "scale": "1",
+        "animate": [
+          {
+            "small": "query.variant == 1"
+          },
+          {
+            "med": "query.variant == 2"
+          },
+          {
+            "large": "query.variant == 3"
+          },
+          "spawn"
+        ],
+        "should_update_bones_and_effects_offscreen": "1.0"
+      },
+      "render_controllers": [ 
+        { "controller.render.iron_golem": "query.variant > 0" }
+    ]
+    }
+  }
+}

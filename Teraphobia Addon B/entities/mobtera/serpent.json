@@ -1,0 +1,325 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+      "description": {
+          "identifier": "tera:serpent",
+          "is_spawnable": true,
+          "is_summonable": true,
+          "is_experimental": false
+      },
+
+      "component_groups": {
+        "nont":{},
+        "no":{
+          "minecraft:transformation": {
+            "into": "57:poof"
+          }
+        },
+          "start": {
+              "minecraft:underwater_movement": {
+                  "value": 0.4
+              },
+              "minecraft:navigation.generic": {
+                  "is_amphibious": false,
+                  "can_path_over_water": false,
+                  "can_swim": true,
+                  "can_walk": true,
+                  "can_breach": true,
+                  "can_sink": false
+              },
+              "minecraft:movement": {
+                  "value": 0.065
+              },
+              "minecraft:movement.generic": {},
+              "minecraft:behavior.random_swim": {
+                  "priority": 3,
+                  "interval": 4,
+                  "xz_dist": 10
+              },
+              "minecraft:timer": {
+                  "time": 12,
+                  "looping": true,
+                  "time_down_event": {
+                      "event": "breach_up"
+                  }
+              },
+              "minecraft:is_sheared": {}
+          },
+          "breach_up": {
+
+              "minecraft:movement": {
+                  "value": 0.0
+              },
+              "minecraft:timer": {
+                  "time": 0.5,
+                  "looping": true,
+                  "time_down_event": {
+                      "event": "breach_down"
+                  }
+              },
+              "minecraft:is_saddled": {}
+          },
+          "breach_down": {
+
+              "minecraft:movement": {
+                  "value": 0.0
+              },
+              "minecraft:timer": {
+                  "time": 1,
+                  "looping": true,
+                  "time_down_event": {
+                      "event": "breach_stop"
+                  }
+              },
+              "minecraft:is_stunned": {}
+          }
+      },
+
+      "components": {
+			"minecraft:loot": {
+				"table": "loot_tables/entities/tera_entity/serpent.json"
+			},
+        "minecraft:underwater_movement": {
+          "value": 5.0
+      },
+          "minecraft:on_death": {
+            "event": "dead",
+            "target": "self"
+        },
+        "minecraft:damage_sensor": {
+            "triggers": [
+              {
+              "cause": "fall",
+              "deals_damage": false
+            }             
+            ]
+          },
+          "minecraft:timer": {
+              "time": 0.1,
+              "looping": false,
+              "time_down_event": {
+                  "event": "start"
+              }
+          },
+          "minecraft:health": {
+              "value": 80,
+              "max": 80
+          },
+          "minecraft:follow_range": {
+              "value": 48,
+              "max": 48
+          },
+          "minecraft:attack": {
+              "damage": 3
+          },
+          "minecraft:knockback_resistance": {
+              "value": 100
+          },
+          "minecraft:behavior.hurt_by_target": {
+              "priority": 1
+          },
+          "minecraft:scale": {
+              "value": 1
+          },
+          "minecraft:behavior.delayed_attack": {
+            "priority": 2,
+            "attack_once": false,
+            "track_target": true,
+            "require_complete_path": false,
+            "random_stop_interval": 0,
+            "reach_multiplier": 3,
+            "speed_multiplier": 4,
+            "attack_duration": 0.75,
+            "hit_delay_pct": 0.5
+        },
+          "minecraft:experience_reward": {
+              "on_death": "500"
+          },
+          "minecraft:type_family": {
+              "family": ["tera_monster","monster", "fish"]
+          },
+          "minecraft:collision_box": {
+              "width": 1.8,
+              "height": 1.4
+          },
+          "minecraft:breathable": {
+              "total_supply": 15,
+              "suffocate_time": 0,
+              "breathes_air": true,
+              "breathes_water": true
+          },
+          "minecraft:hurt_on_condition": {
+              "damage_conditions": [{
+                  "filters": {
+                      "test": "in_lava",
+                      "subject": "self",
+                      "operator": "==",
+                      "value": true
+                  },
+                  "cause": "lava",
+                  "damage_per_tick": 1
+              }]
+          },
+          "minecraft:physics": {
+              "has_gravity": true
+          },
+          "minecraft:pushable": {
+              "is_pushable": true,
+              "is_pushable_by_piston": true
+          },
+          "minecraft:behavior.nearest_attackable_target": {
+              "priority": 2,
+              "must_see": true,
+              "entity_types": [{
+                  "filters": {
+                      "any_of": [
+                        {
+                              "all_of":
+                              [
+                                {
+                              "test": "is_family",
+                              "subject": "other",
+                              "value": "player"
+                                },
+                                {
+                                  "test": "has_tag",
+                                  "subject": "other",
+                                  "operator": "!=",
+                                  "value": "teraww"
+                                  }
+                              ]
+                            },
+                          {
+                              "test": "is_family",
+                              "subject": "other",
+                              "value": "villager"
+                          }
+                      ]
+                  },
+                  "max_dist": 32.0
+              }]
+          },
+          "minecraft:nameable": {},
+          "minecraft:conditional_bandwidth_optimization": {}
+      },
+
+      "events": {
+        "dead": {
+            },
+          "start": {
+              "remove": {
+                  "component_groups": [
+                      "breach_down"
+                  ]
+              },
+              "add": {
+                  "component_groups": [
+                      "start"
+                  ]
+              }
+          },
+          "breach_stop": {
+              "sequence": [{
+                  "filters": {
+                      "any_of": [
+
+                          {
+                              "test": "on_ground"
+                          },
+
+                          {
+                              "test": "in_water"
+                          }
+
+                      ]
+                  },
+                  "remove": {
+                      "component_groups": [
+                          "breach_down"
+                      ]
+                  },
+                  "add": {
+                      "component_groups": [
+                          "start"
+                      ]
+                  }
+              }]
+          },
+          "breach_up": {
+              "sequence": [{
+                  "filters": {
+                      "all_of": [
+
+                          {
+                              "test": "has_target",
+                              "operator": "!="
+                          },
+
+                          {
+                              "test": "in_water"
+                          }
+
+                      ]
+                  },
+                  
+            "queue_command": {
+                "command": [
+                    "effect @s levitation 1 30 true"
+                ]
+              },
+                  "remove": {
+                      "component_groups": [
+                          "start"
+                      ]
+                  },
+                  "add": {
+                      "component_groups": [
+                          "breach_up"
+                      ]
+                  }
+              }]
+          },
+          "chance": {
+            "randomize": [{
+              "weight": 10,
+              "remove": {
+              },
+              "add": {
+                "component_groups": [
+                  "nont"
+                ]
+              }
+            },
+            {
+              "weight": 50,
+              "remove": {
+              },
+              "add": {
+                "component_groups": [
+                  "no"
+                ]
+              }
+            }
+          ]
+          },
+          "breach_down": {
+              "sequence": [{
+                  "filters": {
+                      "test": "in_water",
+                      "operator": "!="
+                  },
+                  "remove": {
+                      "component_groups": [
+                          "breach_up"
+                      ]
+                  },
+                  "add": {
+                      "component_groups": [
+                          "breach_down"
+                      ]
+                  }
+              }]
+          }
+      }
+  }
+}

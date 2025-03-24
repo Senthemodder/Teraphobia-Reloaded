@@ -1,0 +1,14 @@
+{
+	"format_version": "1.20.20",
+
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "tera:underworld/rollingplains_column_stonespan_stone"
+		},
+
+		"places_block": "minecraft:blackstone",
+
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false
+	}
+}

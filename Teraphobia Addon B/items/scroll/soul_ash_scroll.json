@@ -1,0 +1,67 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:item": {
+      "description": {
+          "identifier": "tera:soul_ash_scroll",
+          "menu_category": {
+				"category": "equipment"
+			}
+      },
+      "components": {
+"minecraft:glint": true,
+        
+        
+        "minecraft:cooldown": {
+          "category": "soul_ash_scroll",
+          "duration": 120
+          },
+    
+          "minecraft:icon": "soul_ash_scroll",
+          "minecraft:display_name": {
+              "value": "Soul Ash Scroll\n\n§8§o-Nearby targets near you will be afflicted with a disease that drains souls from them"
+          },
+          "minecraft:max_stack_size": 1,
+        			"minecraft:tags": {
+                "tags": [
+			"tera:tera_cooldown"
+		]
+	},
+"minecraft:throwable": {
+            "do_swing_animation": true
+          },
+"minecraft:projectile": {
+          "projectile_entity": "tera:soul_ash_scroll"
+        }
+        
+        
+/*"minecraft:shooter":{
+    "ammunition" :[{
+"item" :"tera:soul_ash_scroll",
+"use_offhand" :true,
+"search_inventory" :true,
+"use_in_creative" :true
+    }],
+    "max_draw_duration": 0.1,
+    "scale_power_by_draw_duration": true,
+    "charge_on_draw": false
+}*/
+      },
+      "events": {
+        "totem": {
+          "swing": {},
+          "damage": {
+            "type": "durability",
+            "amount": 1
+            },
+          "run_command": {
+            "command": [
+              "execute @e[r=10,rm=2,family=mob] ~~~ summon tera:soul_loot ~~~",
+              "execute @e[r=10,rm=2,family=player] ~~~ summon tera:soul_loot ~~~",
+              "effect @e[r=10,rm=2] wither 30 1",
+              "playsound block.end_portal.spawn @a[r=20]"
+            ]
+          }
+        }
+      }
+  }
+}

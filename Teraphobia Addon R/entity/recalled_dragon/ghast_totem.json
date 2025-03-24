@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:ghast_totem",
+      "materials": {
+        "default": "fireball"
+      },
+      "textures": {
+        "default": "textures/items/fireball"
+      },
+      "geometry": {
+        "default": "geometry.fireball"
+      },
+			"particle_effects": {
+				"transform": "tera:hell_emitter"
+			},
+      "animations": {
+        "face_player": "animation.actor.billboard",
+        "flame": "controller.animation.tera_partblaze.particle"
+      },
+      "scripts": {
+        "scale": "3",
+        "animate": [
+          "face_player",
+        "flame"
+        ]
+      },
+      "render_controllers": [ "controller.render.fireball" ]
+    }
+  }
+}

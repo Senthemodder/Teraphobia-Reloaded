@@ -1,0 +1,37 @@
+
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:elemental_bow",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:cooldown": {
+				"category": "elemental_bow",
+				"duration": 5
+			  },
+			"minecraft:tags": {
+                "tags": [
+					"tera:tera_cooldown"
+				]
+			},
+			"minecraft:projectile": {
+				"projectile_entity": "tera:elemental_arrow"
+			  },
+			"minecraft:throwable": {
+		  		"do_swing_animation": true
+		  	},
+			"minecraft:max_stack_size": 1,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:icon": {
+				"texture": "elemental_bow"
+			},
+			"minecraft:display_name": {
+				"value": "Elemental Bow\n\n§8§o-A powerful, soul-infused bow that will shoot out any elemental arrow in your other hand"
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "tera:tera_end/blocks/flesh_masses"
+		},
+		"places_block": "minecraft:cherry_wood",
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false
+	}
+}

@@ -1,0 +1,74 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:prime_soul",
+			"materials": {
+				"default": "charged_creeper",
+				"inside": "iron_golem"
+			},
+			"textures": {
+				"default": "textures/entity/prime_soul/prime_soul",
+				"inside": "textures/entity/prime_soul/inside"
+			},
+			"geometry": {
+				"default": "geometry.prime_soul",
+				"inside": "geometry.prime_soul.inside"
+			},
+			"sound_effects": {
+				"emerge": "mob.warden.emerge",
+				"ability1": "mob.wither.break_block",
+				"ability2": "ambient.weather.lightning.impact",
+				"ability3": "mob.wither.death",
+				"ability4": "mob.wither.shoot"
+			},
+			"scripts": {
+				"should_update_bones_and_effects_offscreen": "1.0",
+				"pre_animation": ["variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"],
+				"animate": [
+					"move.con", 
+					"idle.con", 
+					"ability1.con", 
+					"ability2.con", 
+					"ability3.con", 
+					"ability4.con", 
+					"death.con",
+					"wake.con",
+					{
+						"flame":"query.health <= 750"
+					}
+				]
+			},
+			"particle_effects": {
+				"digging": "minecraft:warden_dig",
+				"transform": "tera:soulfire_emitter"
+			},
+			"animations": {
+				"move": "animation.prime_soul.move",
+				"idle": "animation.prime_soul.idle",
+				"ability1": "animation.prime_soul.ability1",
+				"ability2": "animation.prime_soul.ability2",
+				"ability3": "animation.prime_soul.ability3",
+				"ability4": "animation.prime_soul.ability4",
+				"death": "animation.prime_soul.death",
+				"wake": "animation.prime_soul.spawn",
+
+				"move.con": "controller.animation.tera_general.move_double",
+				"idle.con": "controller.animation.tera_general.idle",
+				"ability1.con": "controller.animation.tera_general.ability1",
+				"ability2.con": "controller.animation.tera_general.ability2",
+				"ability3.con": "controller.animation.tera_general.ability3",
+				"ability4.con": "controller.animation.tera_general.ability4",
+				"death.con": "controller.animation.tera_general.death",
+				"wake.con": "controller.animation.tera_general.wake.alt",
+				"flame": "controller.animation.tera_partblaze.particle"
+			},
+			"render_controllers": ["controller.render.prime_soul","controller.render.prime_soul.inside"],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"base_color": "#006b7d",
+				"overlay_color": "#0be8f5"
+			}
+		}
+	}
+}

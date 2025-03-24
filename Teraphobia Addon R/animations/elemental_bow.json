@@ -1,0 +1,31 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.elemental_bow.wield_first_person": {
+			"loop": true,
+			"bones": {
+				"pole": {
+					"rotation": [159, -19, 32],
+					"position": [-9, -3, -8],
+					"scale": 0.6
+				},
+				"boner": {
+					"position": [0, 7, 0]
+				}
+			}
+		},
+		"animation.elemental_bow.wield_third_person": {
+			"loop": true,
+			"bones": {
+				"pole": {
+					"rotation": [90, 20, 90],
+					"position": [0.75, 3.5, -14.5]
+				},
+				"boner": {
+					"rotation": [0, 0, 5],
+					"position": [0, 1, 0]
+				}
+			}
+		}
+	}
+}

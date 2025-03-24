@@ -1,0 +1,749 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.limbo_tentacle_set.idle": {
+			"loop": true,
+			"bones": {
+				"base": {
+					"rotation": [0, 2.5, 0],
+					"position": [0, 1120, 3237],
+					"scale": [12.5, 3.7, 9.8]
+				},
+				"tentacle": {
+					"rotation": [47.5, 0, "-77.5+math.cos(query.life_time * 100) * 2"]
+				},
+				"tendril": {
+					"rotation": [0, 0, "37.5+math.cos(query.life_time * 100-30) * 2"]
+				},
+				"tendril2": {
+					"rotation": [0, 0, "40+math.cos(query.life_time * 100-60) * 2"]
+				},
+				"tendril3": {
+					"rotation": [0, 0, "35+math.cos(query.life_time * 100-90) * 2"]
+				},
+				"tendril4": {
+					"rotation": [0, 0, "42.5+math.cos(query.life_time * 100-120) * 2"]
+				},
+				"tendril5": {
+					"rotation": [0, 0, "47.5+math.cos(query.life_time * 100-150) * 2"]
+				},
+				"tendril6": {
+					"rotation": [0, 0, "-42.5+math.cos(query.life_time * 100-180) * 2"]
+				},
+				"tendril7": {
+					"rotation": [0, 0, "-62.5+math.cos(query.life_time * 100-210) * 2"]
+				},
+				"tendril8": {
+					"rotation": [0, 0, "-57.5+math.cos(query.life_time * 100-240) * 2"]
+				},
+				"tendril9": {
+					"rotation": [0, 0, "-47.5+math.cos(query.life_time * 100-270) * 2"]
+				},
+				"tendril10": {
+					"rotation": [0, 0, "-62.5+math.cos(query.life_time * 100-300) * 2"]
+				},
+				"tentacle4": {
+					"rotation": [-182.11751, 4.53051, "119.9163+math.cos(query.life_time * 100-360) * 2"]
+				},
+				"tendril31": {
+					"rotation": [0, 0, "-12.5+math.cos(query.life_time * 100-30) * 2"]
+				},
+				"tendril32": {
+					"rotation": [0, 0, "-15+math.cos(query.life_time * 100-60) * 2"]
+				},
+				"tendril33": {
+					"rotation": [0, 0, "-30+math.cos(query.life_time * 100-90) * 2"]
+				},
+				"tendril34": {
+					"rotation": [0, 0, "-30+math.cos(query.life_time * 100-120) * 2"]
+				},
+				"tendril35": {
+					"rotation": [0, 0, "-25+math.cos(query.life_time * 100-150) * 2"]
+				},
+				"tendril36": {
+					"rotation": [0, 0, "-15+math.cos(query.life_time * 100-180) * 2"]
+				},
+				"tendril37": {
+					"rotation": [0, 0, "-20+math.cos(query.life_time * 100-210) * 2"]
+				},
+				"tendril38": {
+					"rotation": [0, 0, "-10+math.cos(query.life_time * 100-240) * 2"]
+				},
+				"tendril39": {
+					"rotation": [0, 0, "-12.5+math.cos(query.life_time * 100-270) * 2"]
+				},
+				"tendril40": {
+					"rotation": [0, 0, "-12.5+math.cos(query.life_time * 100-300) * 2"]
+				},
+				"tentacle3": {
+					"rotation": [0, 0, "-60+math.cos(query.life_time * 100-420) * 2"]
+				},
+				"tendril21": {
+					"rotation": [0, 0, "22.5+math.cos(query.life_time * 100-30) * 2"]
+				},
+				"tendril22": {
+					"rotation": [0, 0, "15+math.cos(query.life_time * 100-60) * 2"]
+				},
+				"tendril23": {
+					"rotation": [0, 0, "40+math.cos(query.life_time * 100-90) * 2"]
+				},
+				"tendril24": {
+					"rotation": [0, 0, "37.5+math.cos(query.life_time * 100-120) * 2"]
+				},
+				"tendril25": {
+					"rotation": [0, 0, "45+math.cos(query.life_time * 100-150) * 2"]
+				},
+				"tendril26": {
+					"rotation": [0, 0, "-35+math.cos(query.life_time * 100-180) * 2"]
+				},
+				"tendril27": {
+					"rotation": [0, 0, "-45+math.cos(query.life_time * 100-210) * 2"]
+				},
+				"tendril28": {
+					"rotation": [0, 0, "-42.5+math.cos(query.life_time * 100-240) * 2"]
+				},
+				"tendril29": {
+					"rotation": [0, 0, "-47.5+math.cos(query.life_time * 100-270) * 2"]
+				},
+				"tendril30": {
+					"rotation": [0, 0, "-30+math.cos(query.life_time * 100-300) * 2"]
+				},
+				"tentacle2": {
+					"rotation": ["99.1629+math.cos(query.life_time * 100-330) * 2", -34.73371, 46.54973]
+				},
+				"tendril11": {
+					"rotation": ["-17.5+math.cos(query.life_time * 100-30) * 2", 0, 0]
+				},
+				"tendril12": {
+					"rotation": ["-20+math.cos(query.life_time * 100-60) * 2", 0, 0]
+				},
+				"tendril13": {
+					"rotation": ["-17.5+math.cos(query.life_time * 100-90) * 2", 0, 0]
+				},
+				"tendril14": {
+					"rotation": ["-17.5+math.cos(query.life_time * 100-120) * 2", 0, 0]
+				},
+				"tendril15": {
+					"rotation": ["-20+math.cos(query.life_time * 100-150) * 2", 0, 0]
+				},
+				"tendril16": {
+					"rotation": ["-15+math.cos(query.life_time * 100-180) * 2", 0, 0]
+				},
+				"tendril17": {
+					"rotation": ["-20+math.cos(query.life_time * 100-210) * 2", 0, 0]
+				},
+				"tendril18": {
+					"rotation": ["-15+math.cos(query.life_time * 100-240) * 2", 0, 0]
+				},
+				"tendril19": {
+					"rotation": ["-10+math.cos(query.life_time * 100-270) * 2", 0, 0]
+				},
+				"tendril20": {
+					"rotation": ["-15+math.cos(query.life_time * 100-300) * 2", 0, 0]
+				},
+				"tentacle5": {
+					"rotation": ["-69.4956+math.cos(query.life_time * 100-390) * 2", 36.18007, -19.17616]
+				},
+				"tendril41": {
+					"rotation": ["15+math.cos(query.life_time * 100-30) * 2", 0, 0]
+				},
+				"tendril42": {
+					"rotation": ["17.5+math.cos(query.life_time * 100-60) * 2", 0, 0]
+				},
+				"tendril43": {
+					"rotation": ["17.5+math.cos(query.life_time * 100-90) * 2", 0, 0]
+				},
+				"tendril44": {
+					"rotation": ["13.7332+math.cos(query.life_time * 100-120) * 2", -5.86822, 24.34467]
+				},
+				"tendril45": {
+					"rotation": ["18.6669+math.cos(query.life_time * 100-150) * 2", 10.35178, 30.56363]
+				},
+				"tendril46": {
+					"rotation": ["13.8179+math.cos(query.life_time * 100-180) * 2", -5.45524, 24.43497]
+				},
+				"tendril47": {
+					"rotation": ["14.3039+math.cos(query.life_time * 100-210) * 2", -13.36231, 46.02148]
+				},
+				"tendril48": {
+					"rotation": ["17.6044+math.cos(query.life_time * 100-240) * 2", -9.36851, 28.62993]
+				},
+				"tendril49": {
+					"rotation": ["7.3241+math.cos(query.life_time * 100-270) * 2", -1.61887, 12.39638]
+				},
+				"tendril50": {
+					"rotation": ["9.3514+math.cos(query.life_time * 100-300) * 2 ", -3.74182, 19.66095]
+				},
+				"base2": {
+					"position": [3811, 1120, 0],
+					"scale": [12.4, 3.7, 12.9]
+				},
+				"tentacle6": {
+					"rotation": [47.5, 0, "-77.5+math.cos(query.life_time * 100) * 2"]
+				},
+				"tendril51": {
+					"rotation": [0, 0, "37.5+math.cos(query.life_time * 100-30) * 2"]
+				},
+				"tendril52": {
+					"rotation": [0, 0, "40+math.cos(query.life_time * 100-60) * 2"]
+				},
+				"tendril53": {
+					"rotation": [0, 0, "35+math.cos(query.life_time * 100-90) * 2"]
+				},
+				"tendril54": {
+					"rotation": [0, 0, "42.5+math.cos(query.life_time * 100-120) * 2"]
+				},
+				"tendril55": {
+					"rotation": [0, 0, "47.5+math.cos(query.life_time * 100-150) * 2"]
+				},
+				"tendril56": {
+					"rotation": [0, 0, "-42.5+math.cos(query.life_time * 100-180) * 2"]
+				},
+				"tendril57": {
+					"rotation": [0, 0, "-62.5+math.cos(query.life_time * 100-210) * 2"]
+				},
+				"tendril58": {
+					"rotation": [0, 0, "-57.5+math.cos(query.life_time * 100-240) * 2"]
+				},
+				"tendril59": {
+					"rotation": [0, 0, "-47.5+math.cos(query.life_time * 100-270) * 2"]
+				},
+				"tendril60": {
+					"rotation": [0, 0, "-62.5+math.cos(query.life_time * 100-300) * 2"]
+				},
+				"tentacle7": {
+					"rotation": ["-69.4956+math.cos(query.life_time * 100-390) * 2", 36.18007, -19.17616]
+				},
+				"tendril61": {
+					"rotation": ["15+math.cos(query.life_time * 100-30) * 2", 0, 0]
+				},
+				"tendril62": {
+					"rotation": ["17.5+math.cos(query.life_time * 100-60) * 2", 0, 0]
+				},
+				"tendril63": {
+					"rotation": ["17.5+math.cos(query.life_time * 100-90) * 2", 0, 0]
+				},
+				"tendril64": {
+					"rotation": ["13.7332+math.cos(query.life_time * 100-120) * 2", -5.86822, 24.34467]
+				},
+				"tendril65": {
+					"rotation": ["18.6669+math.cos(query.life_time * 100-150) * 2", 10.35178, 30.56363]
+				},
+				"tendril66": {
+					"rotation": ["13.8179+math.cos(query.life_time * 100-180) * 2", -5.45524, 24.43497]
+				},
+				"tendril67": {
+					"rotation": ["14.3039+math.cos(query.life_time * 100-210) * 2", -13.36231, 46.02148]
+				},
+				"tendril68": {
+					"rotation": ["17.6044+math.cos(query.life_time * 100-240) * 2", -9.36851, 28.62993]
+				},
+				"tendril69": {
+					"rotation": ["7.3241+math.cos(query.life_time * 100-270) * 2", -1.61887, 12.39638]
+				},
+				"tendril70": {
+					"rotation": ["9.3514+math.cos(query.life_time * 100-300) * 2 ", -3.74182, 19.66095]
+				},
+				"tentacle8": {
+					"rotation": [-182.11751, 4.53051, "119.9163+math.cos(query.life_time * 100-360) * 2"]
+				},
+				"tendril71": {
+					"rotation": [0, 0, "-12.5+math.cos(query.life_time * 100-30) * 2"]
+				},
+				"tendril72": {
+					"rotation": [0, 0, "-15+math.cos(query.life_time * 100-60) * 2"]
+				},
+				"tendril73": {
+					"rotation": [0, 0, "-30+math.cos(query.life_time * 100-90) * 2"]
+				},
+				"tendril74": {
+					"rotation": [0, 0, "-30+math.cos(query.life_time * 100-120) * 2"]
+				},
+				"tendril75": {
+					"rotation": [0, 0, "-25+math.cos(query.life_time * 100-150) * 2"]
+				},
+				"tendril76": {
+					"rotation": [0, 0, "-15+math.cos(query.life_time * 100-180) * 2"]
+				},
+				"tendril77": {
+					"rotation": [0, 0, "-20+math.cos(query.life_time * 100-210) * 2"]
+				},
+				"tendril78": {
+					"rotation": [0, 0, "-10+math.cos(query.life_time * 100-240) * 2"]
+				},
+				"tendril79": {
+					"rotation": [0, 0, "-12.5+math.cos(query.life_time * 100-270) * 2"]
+				},
+				"tendril80": {
+					"rotation": [0, 0, "-12.5+math.cos(query.life_time * 100-300) * 2"]
+				},
+				"tentacle9": {
+					"rotation": [0, 0, "-60+math.cos(query.life_time * 100-420) * 2"]
+				},
+				"tendril81": {
+					"rotation": [0, 0, "22.5+math.cos(query.life_time * 100-30) * 2"]
+				},
+				"tendril82": {
+					"rotation": [0, 0, "15+math.cos(query.life_time * 100-60) * 2"]
+				},
+				"tendril83": {
+					"rotation": [0, 0, "40+math.cos(query.life_time * 100-90) * 2"]
+				},
+				"tendril84": {
+					"rotation": [0, 0, "37.5+math.cos(query.life_time * 100-120) * 2"]
+				},
+				"tendril85": {
+					"rotation": [0, 0, "45+math.cos(query.life_time * 100-150) * 2"]
+				},
+				"tendril86": {
+					"rotation": [0, 0, "-35+math.cos(query.life_time * 100-180) * 2"]
+				},
+				"tendril87": {
+					"rotation": [0, 0, "-45+math.cos(query.life_time * 100-210) * 2"]
+				},
+				"tendril88": {
+					"rotation": [0, 0, "-42.5+math.cos(query.life_time * 100-240) * 2"]
+				},
+				"tendril89": {
+					"rotation": [0, 0, "-47.5+math.cos(query.life_time * 100-270) * 2"]
+				},
+				"tendril90": {
+					"rotation": [0, 0, "-30+math.cos(query.life_time * 100-300) * 2"]
+				},
+				"tentacle10": {
+					"rotation": ["98.7926+math.cos(query.life_time * 100-330) * 2", -69.59732, 40.95845]
+				},
+				"tendril91": {
+					"rotation": ["-17.5+math.cos(query.life_time * 100-30) * 2", 0, 0]
+				},
+				"tendril92": {
+					"rotation": ["-20+math.cos(query.life_time * 100-60) * 2", 0, 0]
+				},
+				"tendril93": {
+					"rotation": ["-17.5+math.cos(query.life_time * 100-90) * 2", 0, 0]
+				},
+				"tendril94": {
+					"rotation": ["-17.5+math.cos(query.life_time * 100-120) * 2", 0, 0]
+				},
+				"tendril95": {
+					"rotation": ["-20+math.cos(query.life_time * 100-150) * 2", 0, 0]
+				},
+				"tendril96": {
+					"rotation": ["-15+math.cos(query.life_time * 100-180) * 2", 0, 0]
+				},
+				"tendril97": {
+					"rotation": ["-20+math.cos(query.life_time * 100-210) * 2", 0, 0]
+				},
+				"tendril98": {
+					"rotation": ["-15+math.cos(query.life_time * 100-240) * 2", 0, 0]
+				},
+				"tendril99": {
+					"rotation": ["-10+math.cos(query.life_time * 100-270) * 2", 0, 0]
+				},
+				"tendril100": {
+					"rotation": ["-15+math.cos(query.life_time * 100-300) * 2", 0, 0]
+				},
+				"base3": {
+					"rotation": [0, 65, 0],
+					"position": [-3905, 1120, 0],
+					"scale": [12.8, 3.7, 12]
+				},
+				"tentacle11": {
+					"rotation": [47.5, 0, "-77.5+math.cos(query.life_time * 100) * 2"]
+				},
+				"tendril101": {
+					"rotation": [0, 0, "37.5+math.cos(query.life_time * 100-30) * 2"]
+				},
+				"tendril102": {
+					"rotation": [0, 0, "40+math.cos(query.life_time * 100-60) * 2"]
+				},
+				"tendril103": {
+					"rotation": [0, 0, "35+math.cos(query.life_time * 100-90) * 2"]
+				},
+				"tendril104": {
+					"rotation": [0, 0, "42.5+math.cos(query.life_time * 100-120) * 2"]
+				},
+				"tendril105": {
+					"rotation": [0, 0, "47.5+math.cos(query.life_time * 100-150) * 2"]
+				},
+				"tendril106": {
+					"rotation": [0, 0, "-42.5+math.cos(query.life_time * 100-180) * 2"]
+				},
+				"tendril107": {
+					"rotation": [0, 0, "-62.5+math.cos(query.life_time * 100-210) * 2"]
+				},
+				"tendril108": {
+					"rotation": [0, 0, "-57.5+math.cos(query.life_time * 100-240) * 2"]
+				},
+				"tendril109": {
+					"rotation": [0, 0, "-47.5+math.cos(query.life_time * 100-270) * 2"]
+				},
+				"tendril110": {
+					"rotation": [0, 0, "-62.5+math.cos(query.life_time * 100-300) * 2"]
+				},
+				"tentacle12": {
+					"rotation": ["-69.4956+math.cos(query.life_time * 100-390) * 2", 36.18007, -19.17616]
+				},
+				"tendril111": {
+					"rotation": ["15+math.cos(query.life_time * 100-30) * 2", 0, 0]
+				},
+				"tendril112": {
+					"rotation": ["17.5+math.cos(query.life_time * 100-60) * 2", 0, 0]
+				},
+				"tendril113": {
+					"rotation": ["17.5+math.cos(query.life_time * 100-90) * 2", 0, 0]
+				},
+				"tendril114": {
+					"rotation": ["13.7332+math.cos(query.life_time * 100-120) * 2", -5.86822, 24.34467]
+				},
+				"tendril115": {
+					"rotation": ["18.6669+math.cos(query.life_time * 100-150) * 2", 10.35178, 30.56363]
+				},
+				"tendril116": {
+					"rotation": ["13.8179+math.cos(query.life_time * 100-180) * 2", -5.45524, 24.43497]
+				},
+				"tendril117": {
+					"rotation": ["14.3039+math.cos(query.life_time * 100-210) * 2", -13.36231, 46.02148]
+				},
+				"tendril118": {
+					"rotation": ["17.6044+math.cos(query.life_time * 100-240) * 2", -9.36851, 28.62993]
+				},
+				"tendril119": {
+					"rotation": ["7.3241+math.cos(query.life_time * 100-270) * 2", -1.61887, 12.39638]
+				},
+				"tendril120": {
+					"rotation": ["9.3514+math.cos(query.life_time * 100-300) * 2 ", -3.74182, 19.66095]
+				},
+				"tentacle13": {
+					"rotation": [-183.9705, 3.04137, "92.3947+math.cos(query.life_time * 100-360) * 2"]
+				},
+				"tendril121": {
+					"rotation": [0, 0, "-12.5+math.cos(query.life_time * 100-30) * 2"]
+				},
+				"tendril122": {
+					"rotation": [0, 0, "-15+math.cos(query.life_time * 100-60) * 2"]
+				},
+				"tendril123": {
+					"rotation": [0, 0, "-30+math.cos(query.life_time * 100-90) * 2"]
+				},
+				"tendril124": {
+					"rotation": [0, 0, "-30+math.cos(query.life_time * 100-120) * 2"]
+				},
+				"tendril125": {
+					"rotation": [0, 0, "-25+math.cos(query.life_time * 100-150) * 2"]
+				},
+				"tendril126": {
+					"rotation": [0, 0, "-15+math.cos(query.life_time * 100-180) * 2"]
+				},
+				"tendril127": {
+					"rotation": [0, 0, "-20+math.cos(query.life_time * 100-210) * 2"]
+				},
+				"tendril128": {
+					"rotation": [0, 0, "-10+math.cos(query.life_time * 100-240) * 2"]
+				},
+				"tendril129": {
+					"rotation": [0, 0, "-12.5+math.cos(query.life_time * 100-270) * 2"]
+				},
+				"tendril130": {
+					"rotation": [0, 0, "-12.5+math.cos(query.life_time * 100-300) * 2"]
+				},
+				"tentacle14": {
+					"rotation": [0, 0, "-60+math.cos(query.life_time * 100-420) * 2"]
+				},
+				"tendril131": {
+					"rotation": [0, 0, "22.5+math.cos(query.life_time * 100-30) * 2"]
+				},
+				"tendril132": {
+					"rotation": [0, 0, "15+math.cos(query.life_time * 100-60) * 2"]
+				},
+				"tendril133": {
+					"rotation": [0, 0, "40+math.cos(query.life_time * 100-90) * 2"]
+				},
+				"tendril134": {
+					"rotation": [0, 0, "37.5+math.cos(query.life_time * 100-120) * 2"]
+				},
+				"tendril135": {
+					"rotation": [0, 0, "45+math.cos(query.life_time * 100-150) * 2"]
+				},
+				"tendril136": {
+					"rotation": [0, 0, "-35+math.cos(query.life_time * 100-180) * 2"]
+				},
+				"tendril137": {
+					"rotation": [0, 0, "-45+math.cos(query.life_time * 100-210) * 2"]
+				},
+				"tendril138": {
+					"rotation": [0, 0, "-42.5+math.cos(query.life_time * 100-240) * 2"]
+				},
+				"tendril139": {
+					"rotation": [0, 0, "-47.5+math.cos(query.life_time * 100-270) * 2"]
+				},
+				"tendril140": {
+					"rotation": [0, 0, "-30+math.cos(query.life_time * 100-300) * 2"]
+				},
+				"tentacle15": {
+					"rotation": ["48.4186+math.cos(query.life_time * 100-330) * 2", -57.17533, 44.15378]
+				},
+				"tendril141": {
+					"rotation": ["-17.5+math.cos(query.life_time * 100-30) * 2", 0, 0]
+				},
+				"tendril142": {
+					"rotation": ["-20+math.cos(query.life_time * 100-60) * 2", 0, 0]
+				},
+				"tendril143": {
+					"rotation": ["-17.5+math.cos(query.life_time * 100-90) * 2", 0, 0]
+				},
+				"tendril144": {
+					"rotation": ["-17.5+math.cos(query.life_time * 100-120) * 2", 0, 0]
+				},
+				"tendril145": {
+					"rotation": ["-20+math.cos(query.life_time * 100-150) * 2", 0, 0]
+				},
+				"tendril146": {
+					"rotation": ["-15+math.cos(query.life_time * 100-180) * 2", 0, 0]
+				},
+				"tendril147": {
+					"rotation": ["-20+math.cos(query.life_time * 100-210) * 2", 0, 0]
+				},
+				"tendril148": {
+					"rotation": ["-15+math.cos(query.life_time * 100-240) * 2", 0, 0]
+				},
+				"tendril149": {
+					"rotation": ["-10+math.cos(query.life_time * 100-270) * 2", 0, 0]
+				},
+				"tendril150": {
+					"rotation": ["-15+math.cos(query.life_time * 100-300) * 2", 0, 0]
+				},
+				"base4": {
+					"rotation": [0, -200, 0],
+					"position": [0, 1120, -3110],
+					"scale": [18.1, 3.7, 14.4]
+				},
+				"tentacle16": {
+					"rotation": [47.5, 0, "-77.5+math.cos(query.life_time * 100) * 2"]
+				},
+				"tendril151": {
+					"rotation": [0, 0, "37.5+math.cos(query.life_time * 100-30) * 2"]
+				},
+				"tendril152": {
+					"rotation": [0, 0, "40+math.cos(query.life_time * 100-60) * 2"]
+				},
+				"tendril153": {
+					"rotation": [0, 0, "35+math.cos(query.life_time * 100-90) * 2"]
+				},
+				"tendril154": {
+					"rotation": [0, 0, "42.5+math.cos(query.life_time * 100-120) * 2"]
+				},
+				"tendril155": {
+					"rotation": [0, 0, "47.5+math.cos(query.life_time * 100-150) * 2"]
+				},
+				"tendril156": {
+					"rotation": [0, 0, "-42.5+math.cos(query.life_time * 100-180) * 2"]
+				},
+				"tendril157": {
+					"rotation": [0, 0, "-62.5+math.cos(query.life_time * 100-210) * 2"]
+				},
+				"tendril158": {
+					"rotation": [0, 0, "-57.5+math.cos(query.life_time * 100-240) * 2"]
+				},
+				"tendril159": {
+					"rotation": [0, 0, "-47.5+math.cos(query.life_time * 100-270) * 2"]
+				},
+				"tendril160": {
+					"rotation": [0, 0, "-62.5+math.cos(query.life_time * 100-300) * 2"]
+				},
+				"tentacle17": {
+					"rotation": ["-69.4956+math.cos(query.life_time * 100-390) * 2", 36.18007, -19.17616]
+				},
+				"tendril161": {
+					"rotation": ["15+math.cos(query.life_time * 100-30) * 2", 0, 0]
+				},
+				"tendril162": {
+					"rotation": ["17.5+math.cos(query.life_time * 100-60) * 2", 0, 0]
+				},
+				"tendril163": {
+					"rotation": ["17.5+math.cos(query.life_time * 100-90) * 2", 0, 0]
+				},
+				"tendril164": {
+					"rotation": ["13.7332+math.cos(query.life_time * 100-120) * 2", -5.86822, 24.34467]
+				},
+				"tendril165": {
+					"rotation": ["18.6669+math.cos(query.life_time * 100-150) * 2", 10.35178, 30.56363]
+				},
+				"tendril166": {
+					"rotation": ["13.8179+math.cos(query.life_time * 100-180) * 2", -5.45524, 24.43497]
+				},
+				"tendril167": {
+					"rotation": ["14.3039+math.cos(query.life_time * 100-210) * 2", -13.36231, 46.02148]
+				},
+				"tendril168": {
+					"rotation": ["17.6044+math.cos(query.life_time * 100-240) * 2", -9.36851, 28.62993]
+				},
+				"tendril169": {
+					"rotation": ["7.3241+math.cos(query.life_time * 100-270) * 2", -1.61887, 12.39638]
+				},
+				"tendril170": {
+					"rotation": ["9.3514+math.cos(query.life_time * 100-300) * 2 ", -3.74182, 19.66095]
+				},
+				"tentacle18": {
+					"rotation": [-182.11751, 4.53051, "119.9163+math.cos(query.life_time * 100-360) * 2"]
+				},
+				"tendril171": {
+					"rotation": [0, 0, "-12.5+math.cos(query.life_time * 100-30) * 2"]
+				},
+				"tendril172": {
+					"rotation": [0, 0, "-15+math.cos(query.life_time * 100-60) * 2"]
+				},
+				"tendril173": {
+					"rotation": [0, 0, "-30+math.cos(query.life_time * 100-90) * 2"]
+				},
+				"tendril174": {
+					"rotation": [0, 0, "-30+math.cos(query.life_time * 100-120) * 2"]
+				},
+				"tendril175": {
+					"rotation": [0, 0, "-25+math.cos(query.life_time * 100-150) * 2"]
+				},
+				"tendril176": {
+					"rotation": [0, 0, "-15+math.cos(query.life_time * 100-180) * 2"]
+				},
+				"tendril177": {
+					"rotation": [0, 0, "-20+math.cos(query.life_time * 100-210) * 2"]
+				},
+				"tendril178": {
+					"rotation": [0, 0, "-10+math.cos(query.life_time * 100-240) * 2"]
+				},
+				"tendril179": {
+					"rotation": [0, 0, "-12.5+math.cos(query.life_time * 100-270) * 2"]
+				},
+				"tendril180": {
+					"rotation": [0, 0, "-12.5+math.cos(query.life_time * 100-300) * 2"]
+				},
+				"tentacle19": {
+					"rotation": [0, 0, "-60+math.cos(query.life_time * 100-420) * 2"]
+				},
+				"tendril181": {
+					"rotation": [0, 0, "22.5+math.cos(query.life_time * 100-30) * 2"]
+				},
+				"tendril182": {
+					"rotation": [0, 0, "15+math.cos(query.life_time * 100-60) * 2"]
+				},
+				"tendril183": {
+					"rotation": [0, 0, "40+math.cos(query.life_time * 100-90) * 2"]
+				},
+				"tendril184": {
+					"rotation": [0, 0, "37.5+math.cos(query.life_time * 100-120) * 2"]
+				},
+				"tendril185": {
+					"rotation": [0, 0, "45+math.cos(query.life_time * 100-150) * 2"]
+				},
+				"tendril186": {
+					"rotation": [0, 0, "-35+math.cos(query.life_time * 100-180) * 2"]
+				},
+				"tendril187": {
+					"rotation": [0, 0, "-45+math.cos(query.life_time * 100-210) * 2"]
+				},
+				"tendril188": {
+					"rotation": [0, 0, "-42.5+math.cos(query.life_time * 100-240) * 2"]
+				},
+				"tendril189": {
+					"rotation": [0, 0, "-47.5+math.cos(query.life_time * 100-270) * 2"]
+				},
+				"tendril190": {
+					"rotation": [0, 0, "-30+math.cos(query.life_time * 100-300) * 2"]
+				},
+				"tentacle20": {
+					"rotation": ["174.5633+math.cos(query.life_time * 100-330) * 2", -43.49421, -11.48985]
+				},
+				"tendril191": {
+					"rotation": ["-17.5+math.cos(query.life_time * 100-30) * 2", 0, 0]
+				},
+				"tendril192": {
+					"rotation": ["-20+math.cos(query.life_time * 100-60) * 2", 0, 0]
+				},
+				"tendril193": {
+					"rotation": ["-17.5+math.cos(query.life_time * 100-90) * 2", 0, 0]
+				},
+				"tendril194": {
+					"rotation": ["-17.5+math.cos(query.life_time * 100-120) * 2", 0, 0]
+				},
+				"tendril195": {
+					"rotation": ["-20+math.cos(query.life_time * 100-150) * 2", 0, 0]
+				},
+				"tendril196": {
+					"rotation": ["-15+math.cos(query.life_time * 100-180) * 2", 0, 0]
+				},
+				"tendril197": {
+					"rotation": ["-20+math.cos(query.life_time * 100-210) * 2", 0, 0]
+				},
+				"tendril198": {
+					"rotation": ["-15+math.cos(query.life_time * 100-240) * 2", 0, 0]
+				},
+				"tendril199": {
+					"rotation": ["-10+math.cos(query.life_time * 100-270) * 2", 0, 0]
+				},
+				"tendril200": {
+					"rotation": ["-15+math.cos(query.life_time * 100-300) * 2", 0, 0]
+				}
+			}
+		},
+		"animation.limbo_tentacle_set.appear": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"bones": {
+				"base": {
+					"scale": {
+						"0.0": [0, 0.25, 0],
+						"2.0": [1, 1, 1]
+					}
+				},
+				"base2": {
+					"scale": {
+						"0.0": [0, 0.25, 0],
+						"2.0": [1, 1, 1]
+					}
+				},
+				"base3": {
+					"scale": {
+						"0.0": [0, 0.25, 0],
+						"2.0": [1, 1, 1]
+					}
+				},
+				"base4": {
+					"scale": {
+						"0.0": [0, 0.25, 0],
+						"2.0": [1, 1, 1]
+					}
+				}
+			}
+		},
+		"animation.limbo_tentacle_set.leave": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"bones": {
+				"base": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"2.0": [0, 0.25, 0]
+					}
+				},
+				"base2": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"2.0": [0, 0.25, 0]
+					}
+				},
+				"base3": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"2.0": [0, 0.25, 0]
+					}
+				},
+				"base4": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"2.0": [0, 0.25, 0]
+					}
+				}
+			}
+		}
+	}
+}

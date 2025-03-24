@@ -1,0 +1,13 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "tera:tera_end/conditions/biome_3_condition"
+		},
+		"places_feature": "tera:tera_end/blocks/stone_marks",
+		"iterations": "t.biome_idx == 3 && (math.abs(v.originx) > 200 || math.abs(v.originz) > 200)",
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

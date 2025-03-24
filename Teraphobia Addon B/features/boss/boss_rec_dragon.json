@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:structure_template_feature": {
+      "description": {
+          "identifier": "tera:boss/boss_rec_dragon"
+      },
+      "structure_name": "mystructure:boss_rec_dragon",
+      "adjustment_radius": 4,
+      "facing_direction": "south",
+      "constraints": {
+          "unburied": {},
+          "block_intersection": {
+            "block_allowlist": [
+              "minecraft:air",
+
+"minecraft:dirt",
+
+"tera:soul_grass",
+
+"tera:soul_stone"
+            ]
+          },
+          "grounded": {}
+      }
+  }
+}

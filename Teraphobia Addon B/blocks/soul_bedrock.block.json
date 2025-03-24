@@ -1,0 +1,19 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "tera:soul_bedrock",
+			"menu_category": {
+				"category": "construction"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:selection_box": true,
+			"minecraft:destructible_by_mining": false,
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:map_color": "#3a3c3d",
+			"minecraft:loot": "loot_tables/blocks/soul_bedrock.json"
+		}
+	}
+}

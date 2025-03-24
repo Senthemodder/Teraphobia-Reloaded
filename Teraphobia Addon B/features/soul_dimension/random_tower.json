@@ -1,0 +1,13 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:weighted_random_feature": {
+	  "description": {
+		"identifier": "tera:soul_dimension/random_tower"
+	  },
+	  "features": [
+		[ "tera:soul_dimension/soul_tower1", 1 ],
+		[ "tera:soul_dimension/soul_tower2", 1 ],
+		[ "tera:soul_dimension/soul_tower3", 1 ]
+	  ]
+	}
+  }

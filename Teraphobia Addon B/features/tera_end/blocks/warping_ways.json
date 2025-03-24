@@ -1,0 +1,11 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "tera:tera_end/blocks/warping_ways"
+		},
+		"places_block": "minecraft:warped_wart_block",
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false
+	}
+}

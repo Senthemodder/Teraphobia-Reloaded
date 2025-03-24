@@ -1,0 +1,809 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "tera:prime_soul",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups":{
+			"begin":{			
+				"minecraft:damage_sensor": {
+					"triggers": 
+					[
+					{
+					  "cause": "fall",
+					  "deals_damage": false
+					},
+					{
+					  "cause": "magic",
+					  "deals_damage": false
+					},
+					{
+					  "cause": "projectile",
+					  "deals_damage": false
+					},
+					{
+					  "cause": "entity_explosion",
+					  "deals_damage": false
+					},
+					{
+					  "cause": "block_explosion",
+					  "deals_damage": false
+					},
+					{
+					  "cause": "fire",
+					  "deals_damage": false
+					},
+					{
+					  "cause": "fire_tick",
+					  "deals_damage": false
+					},
+					{
+					  "on_damage": {
+						"filters": {
+						  "any_of": [
+							{
+							  "test": "is_family",
+							  "subject": "other",
+							  "operator": "!=",
+							  "value": "player"
+							}
+						  ]
+						}
+					  },
+					  "deals_damage": false
+					}
+				  ]
+				  },
+			"minecraft:behavior.random_stroll": {
+				"priority": 6,
+				"speed_multiplier": 1
+			},
+				"minecraft:behavior.hurt_by_target": {
+					"priority": 1
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 2,
+					"reselect_targets": true,
+					"must_see": true,
+					"entity_types": [
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							},
+							"max_dist": 64
+						}
+					]
+				},
+	
+				"minecraft:mark_variant":{
+    				"value": 10
+				}
+			},
+			"dead": {
+				"minecraft:scale": {
+					"value": 0
+				},
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:spawn_entity": {
+					"entities": {
+						"min_wait_time": 0,
+						"max_wait_time": 0,
+						"num_to_spawn": 40,
+						"single_use": true,
+						"spawn_entity": "minecraft:xp_orb"
+					}
+				}
+			},
+			"ability1_ex":{
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:is_saddled": {}
+			},
+			"ability1":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1,
+					"time_down_event": {
+						"event": "ability1_1"
+					}
+				}
+			},
+			"ability1_1":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.4,
+					"time_down_event": {
+						"event": "ability1_2"
+					}
+				}
+			},
+			"ability1_2":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.5,
+					"time_down_event": {
+						"event": "ability1_3"
+					}
+				}
+			},
+			"ability1_3":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.5,
+					"time_down_event": {
+						"event": "ability1_4"
+					}
+				}
+			},
+			"ability1_4":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.5,
+					"time_down_event": {
+						"event": "ability1_5"
+					}
+				}
+			},
+			"ability1_5":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.5,
+					"time_down_event": {
+						"event": "ability1_6"
+					}
+				}
+			},
+			"ability1_6":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1.6,
+					"time_down_event": {
+						"event": "random"
+					}
+				}
+			},
+
+			"ability2_ex":{
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:is_sheared": {}
+			},
+			"ability2":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1.25,
+					"time_down_event": {
+						"event": "ability2_1"
+					}
+				}
+			},
+			"ability2_1":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.3,
+					"time_down_event": {
+						"event": "ability2_2"
+					}
+				}
+			},
+			"ability2_2":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 0.1,
+					"time_down_event": {
+						"event": "ability2_3"
+					}
+				}
+			},
+			"ability2_3":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1.85,
+					"time_down_event": {
+						"event": "random"
+					}
+				}
+			},
+
+			"ability3":{
+				"minecraft:shooter": {
+					"def": "tera:prime_soul_ball"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 1,
+					"burst_shots": 2,
+					"burst_interval": 99,
+					"charge_charged_trigger": 0.0,
+					"charge_shoot_trigger": 0.0,
+					"attack_interval": 1.0,
+					"attack_radius": 99.0
+				},
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:is_ignited": {},
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1,
+					"time_down_event": {
+						"event": "ability3_do"
+					}
+				}
+			},
+			"ability3_do":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 1,
+					"time_down_event": {
+						"event": "random"
+					}
+				}
+			},
+			"ability4":{
+
+				"minecraft:behavior.knockback_roar": {
+					"priority": 1,
+					"duration": 99,
+					"attack_time": 2,
+					"knockback_damage": 10,
+					"knockback_strength": 8,
+					"knockback_range": 35,
+					"knockback_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "prime_soul"
+					},
+					"damage_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "prime_soul"
+					},
+					"on_roar_end": {
+						"event": "nothing"
+					},
+					"cooldown_time": 99
+				},
+				"minecraft:movement": {
+					"value": 0.0
+				},
+				"minecraft:is_tamed": {},
+				"minecraft:timer": {
+					"looping": false,
+					"time": 2,
+					"time_down_event": {
+						"event": "ability4_do"
+					}
+				}
+			},
+			"ability4_do":{
+				"minecraft:timer": {
+					"looping": false,
+					"time": 2,
+					"time_down_event": {
+						"event": "random"
+					}
+				}
+			},
+			"cant_jump":{
+				"minecraft:knockback_resistance": {
+					"value": 100
+				}
+			},
+			"random":{
+				"minecraft:behavior.look_at_player": {
+					"priority": 7,
+					"look_distance": 8
+				},
+				"minecraft:behavior.random_look_around": {
+					"priority": 8
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 2,
+					"time_down_event": {
+						"event": "random_do"
+					}
+				},
+				"minecraft:movement": {
+					"value": 0.15
+				},
+				"minecraft:shooter": {
+					"def": "tera:nonexistent"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 4,
+					"attack_radius": 1,
+					"charge_shoot_trigger": 99,
+					"charge_charged_trigger": 99
+				}
+
+
+			},
+			"random_phase2":{
+				"minecraft:behavior.look_at_player": {
+					"priority": 7,
+					"look_distance": 8
+				},
+				"minecraft:behavior.random_look_around": {
+					"priority": 8
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 0.5,
+					"time_down_event": {
+						"event": "random_do"
+					}
+				},
+				"minecraft:movement": {
+					"value": 0.3
+				},
+				"minecraft:shooter": {
+					"def": "tera:nonexistent"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 4,
+					"attack_radius": 1,
+					"charge_shoot_trigger": 99,
+					"charge_charged_trigger": 99
+				}
+
+
+			}
+		},
+		"components": {
+
+			"minecraft:underwater_movement": {
+				"value": 0.15
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [          
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player ? 150"
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_water": true
+			},
+			"minecraft:navigation.walk": {
+				"is_amphibious": true,
+				"avoid_sun": false,
+				"avoid_water": true,
+				"can_swim": true
+			},
+			"minecraft:environment_sensor":{
+				"triggers":[
+				   {
+					  "filters":{
+						 "all_of":[
+							{ "test": "actor_health", "subject": "self", "operator": "<=", "value": 750 },
+							{ "test": "has_tag", "subject": "self", "operator": "not", "value": "ps_phase2" }
+						 ]
+					  },
+					  "event":"phase2"
+				   }
+				]
+			 },
+		"minecraft:movement.basic": {},
+		"minecraft:jump.static": {},
+		"minecraft:can_climb": {},
+			"minecraft:boss": {
+				"name": "Prime Soul",
+				"should_darken_sky": true,
+				"hud_range": 45
+			},
+			"minecraft:health": {
+				"value": 1500,
+				"max": 1500
+			},
+			"minecraft:collision_box": {
+				"width": 0.72,
+				"height": 2.01
+			},
+
+			"minecraft:loot": {
+				"table": "loot_tables/entities/complex_human_enemy.json"
+			},
+			"minecraft:equipment": {
+				"table": "loot_tables/entities/.json"
+			},
+
+			"minecraft:movement": {
+				"value": 0.0
+			},
+
+			"minecraft:scale": {
+				"value": 1.1
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:timer": {
+				"looping": false,
+				"time": 10,
+				"time_down_event": {
+					"event": "begin"
+				}
+			},
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:on_death": {
+				"event": "dead",
+				"target": "self"
+			},
+			"minecraft:type_family": {
+				"family": ["tera_monster", "monster","prime_soul", "mob"]
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"events": {
+
+			"begin": {
+				"add": {
+					"component_groups": [
+						"random","cant_jump","begin"
+					]
+				}
+			},
+			"random_do": {
+				"randomize": [{
+						"filters": {
+							"test": "has_target"
+						},
+						"queue_command": {
+							"command": [
+								"playsound beacon.power @a[r=90]",
+								"playsound beacon.power @a[r=90]",
+								"playsound beacon.power @a[r=90]"
+							]
+						},
+						"weight": 10,
+						"add": {
+							"component_groups": ["ability1","ability1_ex"]
+						},
+						"remove": {
+							"component_groups": ["random","random_phase2"]
+						}
+					},
+					{
+						"filters": {
+							"test": "has_target"
+						},
+						"queue_command": {
+							"command": [
+								"playsound beacon.power @a[r=90]",
+								"playsound beacon.power @a[r=90]",
+								"playsound beacon.power @a[r=90]"
+							]
+						},
+						"weight": 10,
+						"add": {
+							"component_groups": ["ability2","ability2_ex"]
+						},
+						"remove": {
+							"component_groups": ["random","random_phase2"]
+						}
+					},
+					{
+						"filters": {
+							"test": "has_target"
+						},
+						"queue_command": {
+							"command": [
+								"playsound beacon.power @a[r=90]",
+								"playsound beacon.power @a[r=90]",
+								"playsound beacon.power @a[r=90]"
+							]
+						},
+						"weight": 10,
+						"add": {
+							"component_groups": ["ability3"]
+						},
+						"remove": {
+							"component_groups": ["random","random_phase2"]
+						}
+					},
+					{
+						"filters": {
+							"test": "has_target"
+						},
+						"queue_command": {
+							"command": [
+								"playsound mob.warden.sonic_charge @a[r=90]",
+								"playsound mob.warden.sonic_charge @a[r=90]",
+								"playsound beacon.power @a[r=90]",
+								"playsound beacon.power @a[r=90]",
+								"playsound beacon.power @a[r=90]",
+							"camerashake add @a[r=90] 1 0.3",
+						"summon tera:prime_soul_tp ^^0.1^-0.2 facing @s"
+							],
+					"target":"target"
+						},
+						"weight": 10,
+						"add": {
+							"component_groups": ["ability4"]
+						},
+						"remove": {
+							"component_groups": ["random","random_phase2"]
+						}
+					}
+				]
+			},
+			"random": {
+				"sequence":[
+				{
+					
+					"filters": {
+						"test": "has_tag",
+						"operator": "!=",
+						"value": "ps_phase2"
+					},
+				"remove": {
+					"component_groups": [
+						"ability1", "ability1_ex", "ability1_1", "ability1_2", "ability1_3", "ability1_4", "ability1_5", "ability1_6",
+						
+						"ability2", "ability2_ex", "ability2_1", "ability2_2", "ability2_3", 
+						
+						"ability3", 
+						
+						"ability4",
+
+						"ability3_do", "ability4_do"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"random","cant_jump"
+					]
+				}
+				},
+				{
+					
+					"filters": {
+						"test": "has_tag",
+						"operator": "==",
+						"value": "ps_phase2"
+					},
+				"remove": {
+					"component_groups": [
+						"ability1", "ability1_ex", "ability1_1", "ability1_2", "ability1_3", "ability1_4", "ability1_5", "ability1_6",
+						
+						"ability2", "ability2_ex", "ability2_1", "ability2_2", "ability2_3", 
+						
+						"ability3", 
+						
+						"ability4",
+
+						"ability3_do", "ability4_do"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"random_phase2","cant_jump"
+					]
+				}
+				}
+				]
+			},
+			"ability1_1": {
+				"queue_command": {
+					"command": [
+						"playsound beacon.power @a[r=90]",
+						"playsound beacon.power @a[r=90]",
+						"playsound beacon.power @a[r=90]",
+						"summon tera:prime_soul_tp ^^0.1^-0.2 facing @s"
+					],
+					"target":"target"
+				},
+				"add": {
+					"component_groups": [
+						"ability1_1"
+					]
+				}
+			},
+			"ability1_2": {
+				"queue_command": {
+					"command": [
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"damage @e[type=!tera:prime_soul,r=5] 2 entity_attack entity @s"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ability1_2"
+					]
+				}
+			},
+			"ability1_3": {
+				"queue_command": {
+					"command": [
+						"playsound beacon.power @a[r=90]",
+						"playsound beacon.power @a[r=90]",
+						"playsound beacon.power @a[r=90]",
+						"summon tera:prime_soul_tp ^^0.1^-0.2 facing @s"
+					],
+					"target":"target"
+				},
+				"add": {
+					"component_groups": [
+						"ability1_3"
+					]
+				}
+			},
+			"ability1_4": {
+				"queue_command": {
+					"command": [
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"damage @e[type=!tera:prime_soul,r=5] 3 entity_attack entity @s"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ability1_4"
+					]
+				}
+			},
+			"ability1_5": {
+				"queue_command": {
+					"command": [
+						"playsound beacon.power @a[r=90]",
+						"playsound beacon.power @a[r=90]",
+						"playsound beacon.power @a[r=90]",
+						"summon tera:prime_soul_tp ^^0.1^-0.2 facing @s"
+					],
+					"target":"target"
+				},
+				"add": {
+					"component_groups": [
+						"ability1_5"
+					]
+				}
+			},
+			"ability1_6": {
+				"queue_command": {
+					"command": [
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"damage @e[type=!tera:prime_soul,r=5] 4 entity_attack entity @s"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ability1_6"
+					]
+				}
+			},
+			"ability2_1": {
+				"queue_command": {
+					"command": [
+						"playsound mob.warden.sonic_charge @a[r=90]",
+						"playsound mob.warden.sonic_charge @a[r=90]",
+						"playsound beacon.power @a[r=90]",
+						"playsound beacon.power @a[r=90]",
+						"playsound beacon.power @a[r=90]"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ability2_1"
+					]
+				}
+			},
+			"ability2_2": {
+				"queue_command": {
+					"command": [
+						"summon tera:prime_soul_tp ^^0.1^-0.2 facing @s"
+					],
+					"target":"target"
+				},
+				"add": {
+					"component_groups": [
+						"ability2_2"
+					]
+				}
+			},
+			"ability2_3": {
+				"queue_command": {
+					"command": [
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"function medium_impact",
+						"damage @e[type=!tera:prime_soul,r=15] 5 entity_attack entity @s",
+						"effect @e[type=!tera:prime_soul,r=25] levitation 1 15 true",
+						"camerashake add @a[r=90] 1 0.3"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ability2_3"
+					]
+				}
+			},
+			"ability3_do": {
+				"queue_command": {
+					"command": [
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound mob.warden.sonic_boom @a[r=90]"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ability3_do"
+					]
+				}
+			},
+			"ability4_do": {
+				"queue_command": {
+					"command": [
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"function large_impact",
+						"particle tera:prime_soul_exp ~~0.5~",
+						"camerashake add @a[r=90] 1 0.3"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"ability4_do"
+					]
+				}
+			},
+			"dead": {
+				"queue_command": {
+					"command": [
+					"particle tera:boss_flash ~ ~1.2 ~",
+					"summon tera:prime_soul_death"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dead"
+					]
+				}
+			},
+			"phase2": {
+				"queue_command": {
+					"command": [
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound mob.warden.sonic_boom @a[r=90]",
+						"playsound block.end_portal.spawn @a[r=90]",
+						"playsound block.end_portal.spawn @a[r=90]",
+						"playsound block.end_portal.spawn @a[r=90]",
+						"camerashake add @a[r=90] 2 0.5",
+					"tag @s add ps_phase2"
+					]
+				},
+				"add": {
+					"component_groups": [
+						""
+					]
+				}
+			}
+		}
+	}
+}

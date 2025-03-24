@@ -1,0 +1,15 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "tera:brew_soul_vision_potion"
+    },
+
+    "tags": [ "brewing_stand" ],
+
+    "input": "tera:abnormal_potion",
+    "reagent": "minecraft:ender_eye",
+    "output": "tera:soul_vision_potion"
+  }
+
+}

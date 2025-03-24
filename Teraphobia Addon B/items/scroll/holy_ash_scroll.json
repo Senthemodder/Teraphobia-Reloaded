@@ -1,0 +1,67 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:item": {
+      "description": {
+          "identifier": "tera:holy_ash_scroll",
+          "menu_category": {
+				"category": "equipment"
+			}
+      },
+      "components": {
+"minecraft:glint": true,
+        
+        
+        "minecraft:cooldown": {
+          "category": "holy_ash_scroll",
+          "duration": 15
+          },
+    
+          "minecraft:icon": "holy_ash_scroll",
+          "minecraft:display_name": {
+              "value": "Holy Ash Scroll\n\n§8§o-For a moment, show nearby enemies the light and raise them to On High, hurting them"
+          },
+          "minecraft:max_stack_size": 1,
+        			"minecraft:tags": {
+                "tags": [
+			"tera:tera_cooldown"
+		]
+	},
+"minecraft:throwable": {
+            "do_swing_animation": true
+          },
+"minecraft:projectile": {
+          "projectile_entity": "tera:holy_ash_scroll"
+        }
+        
+        
+/*"minecraft:shooter":{
+    "ammunition" :[{
+"item" :"tera:holy_ash_scroll",
+"use_offhand" :true,
+"search_inventory" :true,
+"use_in_creative" :true
+    }],
+    "max_draw_duration": 0.1,
+    "scale_power_by_draw_duration": true,
+    "charge_on_draw": false
+}*/
+      },
+      "events": {
+        "totem": {
+          "swing": {},
+          "damage": {
+            "type": "durability",
+            "amount": 1
+            },
+          "run_command": {
+            "command": [
+              "effect @e[rm=2,r=12] levitation 1 10 true",
+              "effect @e[rm=2,r=12] wither 10 1 true",
+              "effect @e[rm=2,r=12] slow_falling 10 1 true",
+              "playsound block.end_portal.spawn @a[r=20]"
+            ]
+          }
+        }
+      }
+  }
+}

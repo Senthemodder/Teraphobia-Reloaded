@@ -1,0 +1,48 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:bulky_ravager_rest",
+			"textures": {
+				"default": "textures/entity/bulky_ravager"
+			},
+			"materials": {
+				"default": "ravager"
+			},
+			"geometry": {
+				"default": "geometry.bulky_ravager"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#4a4a4a",
+				"overlay_color": "#818181"
+			},
+			"sound_effects": {
+				"stomp": "mob.wither.break_block",
+				"scream": "mob.wither.death",
+				"slam": "ambient.weather.lightning.impact"
+			},
+			"animations": {
+	  
+			  "idle.con":  "controller.animation.tera_general.idle",
+			  "wake.con":  "controller.animation.tera_general.wake",
+	  
+			  "wake": "animation.bulky_ravager.wake",
+			  "idle": "animation.bulky_ravager.sit"
+			},
+			"scripts": {
+			  "pre_animation": [
+				"variable.modified_tcos0 = Math.clamp(((Math.cos(query.modified_distance_moved * 13.5) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 25.0), -12.5, 12.5);"
+			  ],
+			  "animate": [
+				"idle.con",
+				"wake.con"
+			  ]
+			},
+			"particle_effects": {
+				"stun_particles": "minecraft:stunned_emitter",
+				"transform": "tera:hell_emitter"
+			}
+		}
+	}
+}

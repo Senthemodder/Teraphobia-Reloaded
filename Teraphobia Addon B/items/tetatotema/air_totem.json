@@ -1,0 +1,41 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:air_totem",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			
+			"minecraft:max_stack_size": 1,
+        "minecraft:projectile": {
+          "projectile_entity": "tera:air_totem"
+        },
+        "minecraft:throwable": {
+    "do_swing_animation": true
+    },
+					
+			"minecraft:icon":  "air_totem",
+			"minecraft:display_name": {
+				"value": "Air Totem\n\n§8§o-As the wind raises others into the air, the breeze shall grant you agility"
+			}
+		},
+		"events": {
+			"totem": {
+				"swing": {},
+				"run_command": {
+					"command": [
+						"effect @e[r=30,rm=2] levitation 10 1",
+						"effect @s jump_boost 10 5",
+						"effect @s speed 10 5",
+						"particle minecraft:totem_particle ~~~",
+						"playsound random.totem",
+						"replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				}
+			}
+		}
+	}
+}

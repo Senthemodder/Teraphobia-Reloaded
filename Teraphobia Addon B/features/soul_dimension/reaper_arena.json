@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.20",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "tera:soul_dimension/reaper_arena"
+		},
+
+		"places_feature": "tera:soul_dimension/reaper_block",
+
+		"iterations": 211,
+
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [0, 210]
+		}
+	}
+}

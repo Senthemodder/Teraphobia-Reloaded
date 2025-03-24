@@ -1,0 +1,19 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "tera:tera_end/iron"
+    },
+    "count": 6,
+    "replace_rules": [
+      {
+        "places_block": "minecraft:raw_iron_block",
+        "may_replace": [
+          {
+            "name": "minecraft:end_stone"
+          }
+        ]
+      }
+    ]
+  }
+}

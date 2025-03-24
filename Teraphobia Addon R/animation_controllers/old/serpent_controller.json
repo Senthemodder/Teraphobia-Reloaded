@@ -1,0 +1,485 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.tera_delay.attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"attack" : {
+					"animations" : [ "attack" ],
+					"transitions": [
+						{
+							"default" : "!query.is_delayed_attacking"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"attack": "query.is_delayed_attacking"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.soul_knight.roar" : {
+			"initial_state" : "default",
+			"states" : {
+				"attack" : {
+					"animations" : [ "roar" ],
+					"transitions": [
+						{
+							"default" : "!query.is_baby"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"attack": "query.is_baby"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.soul_knight.slam" : {
+			"initial_state" : "default",
+			"states" : {
+				"attack" : {
+					"animations" : [ "slam" ],
+					"transitions": [
+						{
+							"default" : "!query.is_stunned"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"attack": "query.is_stunned"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.soul_knight.slash" : {
+			"initial_state" : "default",
+			"states" : {
+				"attack" : {
+					"animations" : [ "slash" ],
+					"transitions": [
+						{
+							"default" : "!query.is_saddled"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"attack": "query.is_saddled"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.soul_knight.charge" : {
+			"initial_state" : "default",
+			"states" : {
+				"attack" : {
+					"animations" : [ "charge" ],
+					"transitions": [
+						{
+							"default" : "!query.is_illager_captain"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"attack": "query.is_illager_captain"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.serpent.attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"attack" : {
+					"animations" : [ "attack" ],
+					"transitions": [
+						{
+							"default" : "!variable.attack_time"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"attack": "variable.attack_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.serpent.breach_up" : {
+			"initial_state" : "default",
+			"states" : {
+				"breach_up" : {
+					"animations" : [ "breach_up" ],
+					"transitions": [
+						{
+							"default" : "!query.is_saddled"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"breach_up": "query.is_saddled"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bulky_warden.spawn" : {
+			"initial_state" : "default",
+			"states" : {
+				"breach_up" : {
+					"animations" : [ "spawn" ],
+					"transitions": [
+						{
+							"default" : "query.is_sheared"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"breach_up": "!query.is_sheared"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.yeti.shoot" : {
+			"initial_state" : "default",
+			"states" : {
+				"shoot" : {
+					"animations" : [ "shoot" ],
+					"transitions": [
+						{
+							"default" : "!query.is_saddled"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"shoot": "query.is_saddled"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.deathworm.attacking" : {
+			"initial_state" : "default",
+			"states" : {
+				"attacking" : {
+					"animations" : [ "attacking" ],
+					"transitions": [
+						{
+							"default" : "!query.is_saddled"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"attacking": "query.is_saddled"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.deathworm.roaming" : {
+			"initial_state" : "default",
+			"states" : {
+				"roaming" : {
+					"animations" : [ "roaming" ],
+					"transitions": [
+						{
+							"default" : "query.is_saddled"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"roaming": "!query.is_saddled"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.yeti.smash" : {
+			"initial_state" : "default",
+			"states" : {
+				"smash" : {
+					"animations" : [ "smash" ],
+					"transitions": [
+						{
+							"default" : "!query.is_stunned"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"smash": "query.is_stunned"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.yeti.idle" : {
+			"initial_state" : "default",
+			"states" : {
+				"idle" : {
+					"animations" : [ "idle" ],
+					"transitions": [
+						{
+							"default" : "!query.is_sheared"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"idle": "query.is_sheared"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.serpent.breach_down" : {
+			"initial_state" : "default",
+			"states" : {
+				"breach_down" : {
+					"animations" : [ "breach_down" ],
+					"transitions": [
+						{
+							"default" : "!query.is_stunned"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"breach_down": "query.is_stunned"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.tentacle.attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"attack" : {
+					"animations" : [ "attack" ],
+					"transitions": [
+						{
+							"default" : "!query.is_delayed_attacking && query.all_animations_finished"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"attack": "query.is_delayed_attacking"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.minotuar.swing" : {
+			"initial_state" : "default",
+			"states" : {
+				"swing" : {
+					"animations" : [ "swing" ],
+					"transitions": [
+						{
+							"default" : "!query.is_baby"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"swing": "query.is_baby"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.minotuar.charge" : {
+			"initial_state" : "default",
+			"states" : {
+				"charge" : {
+					"animations" : [ "charge" ],
+					"transitions": [
+						{
+							"default" : "!query.is_chested"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"charge": "query.is_chested"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.minotuar.tired" : {
+			"initial_state" : "default",
+			"states" : {
+				"tired" : {
+					"animations" : [ "tired" ],
+					"transitions": [
+						{
+							"default" : "!query.is_stunned"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"tired": "query.is_stunned"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.minotuar.roar" : {
+			"initial_state" : "default",
+			"states" : {
+				"roar" : {
+					"animations" : [ "roar" ],
+					"transitions": [
+						{
+							"default" : "!query.is_saddled"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"roar": "query.is_saddled"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.night.scary_face" : {
+			"initial_state" : "default",
+			"states" : {
+				"scary_face" : {
+					"animations" : [ "scary_face" ],
+					"transitions": [
+						{
+							"default" : "!query.has_target"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"scary_face": "query.has_target"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.minotuar.move" : {
+			"initial_state" : "default",
+			"states" : {
+				"move" : {
+					"animations" : [ "move" ],
+					"transitions": [
+						{
+							"default" : "!query.is_moving && !query.is_sheared"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"move": "query.is_moving && query.is_sheared"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.sky_naga.idle_fly" : {
+			"initial_state" : "default",
+			"states" : {
+				"idle_fly" : {
+					"animations" : [ "idle_fly" ],
+					"transitions": [
+						{
+							"default" : "query.has_target"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"idle_fly": "!query.has_target"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.sky_naga.target_fly" : {
+			"initial_state" : "default",
+			"states" : {
+				"target_fly" : {
+					"animations" : [ "target_fly" ],
+					"transitions": [
+						{
+							"default" : "!query.has_target"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"target_fly": "query.has_target"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.sky_naga.target_idle" : {
+			"initial_state" : "default",
+			"states" : {
+				"target_idle" : {
+					"animations" : [ "target_idle" ],
+					"transitions": [
+						{
+							"default" : "!query.has_target"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"target_idle": "query.has_target"
+						}
+					]
+				}
+			}
+		}
+	}
+}

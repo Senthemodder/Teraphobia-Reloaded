@@ -1,0 +1,22 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "tera:diamond_arrow",
+            "menu_category": {
+				"category": "equipment"
+			}
+        },
+        "components": {
+            "minecraft:allow_off_hand": true,
+			
+            "minecraft:icon": {
+                "texture": "diamond_arrow"
+            },
+            "minecraft:display_name": {
+                "value": "Diamond Arrow\n\n§8§o-Monsters, and ONLY closeby monsters, will be struck with an energy that molds a diamond deposit from its blood"
+            },
+            "minecraft:max_stack_size": 64
+        }
+    }
+}

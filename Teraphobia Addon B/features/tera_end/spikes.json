@@ -1,0 +1,20 @@
+
+{
+	"format_version": "1.20.20",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "tera:tera_end/spikes"
+		},
+		"iterations": "t.height = q.heightmap (v.worldx,v.worldz) > 0 ? 1+(q.noise(v.originz/128,v.originx/128))*128 : 0; return t.height;",
+		"places_feature": "tera:tera_end/conditions/biome_3_condition",
+		"x": 0,
+		"z": 0,
+		"y": {
+			"extent": [
+				0,
+				"t.height"
+			],
+			"distribution": "fixed_grid"
+		}
+	}
+}

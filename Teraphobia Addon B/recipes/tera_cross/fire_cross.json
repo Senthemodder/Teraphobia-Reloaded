@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "tera:fire_cross"
+    },
+
+    
+    "tags": [ "cross_table" ],
+    "pattern": [
+      " A ",
+      "ATA",
+      " A "
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:blaze_powder"
+      },
+      "T": {
+        "item": "tera:cross"
+      }
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+  },
+    "result": {
+      "item": "tera:fire_cross"
+    }
+  }
+}

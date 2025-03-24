@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.20",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "tera:underworld/lava"
+		},
+
+		"places_feature": "tera:underworld/lava_block",
+
+		"iterations": 41,
+
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [140, 180]
+		}
+	}
+}

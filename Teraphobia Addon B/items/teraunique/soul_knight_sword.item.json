@@ -1,0 +1,44 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:soul_knight_sword",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.sword"
+			}
+		},
+		"components": {
+						"minecraft:use_modifiers": {
+                "use_duration": 9999999,
+                "movement_modifier": 0.5
+            },
+			"minecraft:display_name": {
+				"value": "Sword of the Damned Souls\n\n§8§o-You bear a sword made from the blood of the Damned\n-This will apply the Soul-Vision effect\n-This weapon will apply the Light Shedding effect\n-This will apply the Limbo Bridging effect"
+			},
+			"minecraft:use_animation": "bow",
+			"minecraft:food": {
+				"nutrition": 0,
+				"saturation_modifier": 1,
+				"can_always_eat": true
+			},
+			"minecraft:tags": {
+                "tags": [
+            "mythic:two_handed",
+			"mythic:myc_def"
+        ]
+    },
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "soul_knight_sword"
+			},
+			"minecraft:glint": true,
+			"minecraft:damage": 15,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:enchantable": {
+				"slot": "sword",
+				"value": 14
+			}
+		}
+	}
+}

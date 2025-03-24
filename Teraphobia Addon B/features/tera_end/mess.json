@@ -1,0 +1,76 @@
+
+{
+	"format_version": "1.20.20",
+	"minecraft:tree_feature": {
+		"description": {
+			"identifier": "tera:tera_end/mess"
+		},
+		"acacia_trunk": {
+			"trunk_width": 2,
+			"trunk_height": {
+				"base": 12,
+				"intervals": [
+					3,
+					7
+				]
+			},
+			"trunk_block": {
+				"name": "minecraft:sculk"
+			},
+			"trunk_lean": {
+				"allow_diagonal_growth": true,
+				"lean_height": {
+					"range_min": 5,
+					"range_max": 9
+				},
+				"lean_steps": {
+					"range_min": 2,
+					"range_max": 6
+				}
+			},
+			"branches": {
+				"branch_chance": 100,
+				"branch_length": {
+					"range_min": 4,
+					"range_max": 8
+				},
+				"branch_position": {
+					"range_min": 1,
+					"range_max": 7
+				},
+				"branch_canopy": {
+					"acacia_canopy": {
+						"canopy_size": 3,
+						"leaf_block": {
+							"name": "minecraft:prismarine"
+						},
+						"simplify_canopy": true
+					}
+				}
+			}
+		},
+		"acacia_canopy": {
+			"canopy_size": 5,
+			"leaf_block": {
+				"name": "minecraft:prismarine"
+			}
+		},
+		"base_block": [
+			"minecraft:sculk"
+		],
+		"may_grow_on": [
+			"minecraft:sculk"
+		],
+		"may_replace": [
+			"minecraft:sculk",
+			"minecraft:air",
+			"minecraft:prismarine"
+		],
+		"may_grow_through": [
+			"minecraft:sculk",
+			"minecraft:air",
+			"minecraft:end_stone",
+			"minecraft:prismarine"
+		]
+	}
+}

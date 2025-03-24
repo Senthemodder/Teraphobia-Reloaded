@@ -1,0 +1,116 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+      "description": {
+          "identifier": "tera:underworld_golem_sit",
+          "is_spawnable": false,
+          "is_summonable": true,
+          "is_experimental": false
+      },
+      "component_groups": {
+              "transform":{
+                "minecraft:transformation": {
+                    "into": "tera:underworld_golem<minecraft:entity_spawned>"
+                  }
+              },
+          "wake": {
+            "minecraft:is_stackable": {},
+            "minecraft:timer": {
+                "looping": false,
+                "time": 5.1,
+                "time_down_event": {
+                    "event": "transform"
+                }
+            }
+          }
+      },
+      "components": {
+        "minecraft:knockback_resistance": {
+            "value": 100
+          },
+          "minecraft:nameable": {},
+          "minecraft:type_family": {
+              "family": ["summon","inanimate"]
+          },
+          "minecraft:on_target_acquired":{
+    "event": "wake",
+    "target": "self"
+},
+"minecraft:behavior.nearest_attackable_target": {
+    "priority": 2,
+    "reselect_targets": true,
+    "must_see": true,
+    "entity_types": [
+        {
+            "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            "max_dist": 10
+        }
+    ]
+},
+
+"minecraft:follow_range": {
+    "value": 64
+},
+"minecraft:scale": {
+    "value": 2
+},
+          "minecraft:collision_box": {
+            "width": 0.2,
+            "height": 0.4
+          },
+          "minecraft:health": {
+              "value": 2000,
+              "max": 2000,
+              "min": 2000
+          },
+          "minecraft:fire_immune": true,
+          "minecraft:damage_sensor": {
+            "triggers": {
+                "cause": "all",
+                "deals_damage": false
+            }
+        },
+
+          "minecraft:physics": {
+              "has_gravity": true,
+              "has_collision": true
+          },
+          "minecraft:pushable": {
+              "is_pushable": false,
+              "is_pushable_by_piston": false
+          }
+      },
+      "events": {
+        "wake": {
+            "queue_command": {
+                "command": [
+                    "playsound mob.wither.spawn @a[r=55]"
+                ]
+            },
+            "add": {
+                "component_groups": [
+                    "wake"
+                ]
+            }
+          },
+          
+        "transform": {
+            "queue_command": {
+                "command": [
+                    "playsound block.end_portal.spawn @a[r=55]"
+                ]
+            },
+            "add": {
+                "component_groups": [
+                    "transform"
+                ]
+            }
+          }
+      
+  }
+  }
+}

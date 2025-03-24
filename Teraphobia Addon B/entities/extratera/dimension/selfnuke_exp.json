@@ -1,0 +1,71 @@
+{
+  "format_version": "1.16.0",
+ "minecraft:entity": {
+  "description": {
+    "identifier": "tera:selfnuke_exp",
+    "is_spawnable": false,
+    "is_summonable": true,
+    "is_experimental": false
+  },
+
+  "component_groups": {
+   "minecraft:exploding": {
+    "minecraft:explode": {
+      "fuse_length": 0.1,
+     "fuse_lit": true,
+     "power": 5,
+     "causes_fire": false,
+     "fire_affected_by_griefing": true,
+     "destroy_affected_by_griefing": true
+    }
+   }
+  },
+
+  "components": {
+    "minecraft:despawn": {
+      "despawn_from_distance": {}
+    },
+   "minecraft:collision_box": {
+    "width": 0.31,
+    "height": 0.31
+   },
+   "minecraft:physics": {
+   },
+   "minecraft:persistent": {
+  },
+   "minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+   },
+   "minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+      "max_optimized_distance": 80.0,
+      "max_dropped_ticks": 10,
+      "use_motion_prediction_hints": true
+    }
+  }
+  },
+  "events": {
+    "minecraft:entity_spawned":{
+      "queue_command": {
+        "command": [
+          "summon lightning_bolt ~~~"
+        ]
+      },
+      "add": {
+       "component_groups": [
+        "minecraft:exploding"
+       ]
+      }
+
+    },
+   "minecraft:explode": {
+    "add": {
+     "component_groups": [
+      "minecraft:exploding"
+     ]
+    }
+   }
+  }
+ }
+}

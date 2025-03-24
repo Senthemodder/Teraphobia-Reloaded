@@ -1,0 +1,17 @@
+{
+	"format_version": "1.20.20",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "tera:soul_dimension/cave/cave_terrain_block"
+		},
+
+		"places_feature": "tera:soul_dimension/cave/air",
+
+		"iterations": "t.y1_xzinterpolation + (t.y2_xzinterpolation - t.y1_xzinterpolation) * math.hermite_blend(v.originy / 32) - 1.5 * math.pow((v.originy - 16) / 16, 4) > -0.25",
+
+		"x": 0,
+		"z": 0,
+		"y": 142
+	}
+}

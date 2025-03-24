@@ -1,0 +1,490 @@
+{
+	"texture_data": {
+		"teronic_guide": {
+			"textures": "textures/items/teronic_guide.png"
+		},
+		"soul_tainted_beacon": {
+			"textures": "textures/items/soul_tainted_beacon.png"
+		},
+		"teragon_gauntlet": {
+			"textures": "textures/items/teragon_gauntlet.png"
+		},
+		"teragon_talon": {
+			"textures": "textures/items/teragon_talon.png"
+		},
+		"giant_wither_spine": {
+			"textures": "textures/items/giant_wither_spine.png"
+		},
+		"red_dragon_heart": {
+			"textures": "textures/items/red_dragon_heart.png"
+		},
+		"tera_dodge_on": {
+			"textures": "textures/items/tera_dodge_on.png"
+		},
+		"tera_dodge_off": {
+			"textures": "textures/items/tera_dodge_off.png"
+		},
+		"naga_spit": {
+			"textures": "textures/items/naga_spit.png"
+		},
+		"limbo_exit": {
+			"textures": "textures/items/limbo_exit.png"
+		},
+		"underworld_exit": {
+			"textures": "textures/items/underworld_exit.png"
+		},
+		"soul_dimension_exit": {
+			"textures": "textures/items/soul_dimension_exit.png"
+		},
+		"opal_sword": {
+			"textures": "textures/items/opal_sword.png"
+		},
+		"nythium_sword": {
+			"textures": "textures/items/nythium_sword.png"
+		},
+		"yagazin_sword": {
+			"textures": "textures/items/yagazin_sword.png"
+		},
+		"solos_sword": {
+			"textures": "textures/items/solos_sword.png"
+		},
+		"agarnite_sword": {
+			"textures": "textures/items/agarnite_sword.png"
+		},
+		"eresite_sword": {
+			"textures": "textures/items/eresite_sword.png"
+		},
+		"damnashin_sword": {
+			"textures": "textures/items/damnashin_sword.png"
+		},
+		"sidron_sword": {
+			"textures": "textures/items/sidron_sword.png"
+		},
+		"deth_sword": {
+			"textures": "textures/items/deth_sword.png"
+		},
+		"godsteel_sword": {
+			"textures": "textures/items/godsteel_sword.png"
+		},
+		"soul_sword": {
+			"textures": "textures/items/soul_sword.png"
+		},
+		"silver_sword": {
+			"textures": "textures/items/silver_sword.png"
+		},
+		"silver_boots": {
+			"textures": "textures/items/silver_boots.png"
+		},
+		"silver_leggings": {
+			"textures": "textures/items/silver_leggings.png"
+		},
+		"silver_chestplate": {
+			"textures": "textures/items/silver_chestplate.png"
+		},
+		"silver_helmet": {
+			"textures": "textures/items/silver_helmet.png"
+		},
+		"soul_boots": {
+			"textures": "textures/items/soul_boots.png"
+		},
+		"soul_leggings": {
+			"textures": "textures/items/soul_leggings.png"
+		},
+		"soul_chestplate": {
+			"textures": "textures/items/soul_chestplate.png"
+		},
+		"soul_helmet": {
+			"textures": "textures/items/soul_helmet.png"
+		},
+		"godsteel_boots": {
+			"textures": "textures/items/godsteel_boots.png"
+		},
+		"godsteel_leggings": {
+			"textures": "textures/items/godsteel_leggings.png"
+		},
+		"godsteel_chestplate": {
+			"textures": "textures/items/godsteel_chestplate.png"
+		},
+		"godsteel_helmet": {
+			"textures": "textures/items/godsteel_helmet.png"
+		},
+		"deth_boots": {
+			"textures": "textures/items/deth_boots.png"
+		},
+		"deth_leggings": {
+			"textures": "textures/items/deth_leggings.png"
+		},
+		"deth_chestplate": {
+			"textures": "textures/items/deth_chestplate.png"
+		},
+		"deth_helmet": {
+			"textures": "textures/items/deth_helmet.png"
+		},
+		"sidron_boots": {
+			"textures": "textures/items/sidron_boots.png"
+		},
+		"sidron_leggings": {
+			"textures": "textures/items/sidron_leggings.png"
+		},
+		"sidron_chestplate": {
+			"textures": "textures/items/sidron_chestplate.png"
+		},
+		"sidron_helmet": {
+			"textures": "textures/items/sidron_helmet.png"
+		},
+		"damnashin_boots": {
+			"textures": "textures/items/damnashin_boots.png"
+		},
+		"damnashin_leggings": {
+			"textures": "textures/items/damnashin_leggings.png"
+		},
+		"damnashin_chestplate": {
+			"textures": "textures/items/damnashin_chestplate.png"
+		},
+		"damnashin_helmet": {
+			"textures": "textures/items/damnashin_helmet.png"
+		},
+		"eresite_boots": {
+			"textures": "textures/items/eresite_boots.png"
+		},
+		"eresite_leggings": {
+			"textures": "textures/items/eresite_leggings.png"
+		},
+		"eresite_chestplate": {
+			"textures": "textures/items/eresite_chestplate.png"
+		},
+		"eresite_helmet": {
+			"textures": "textures/items/eresite_helmet.png"
+		},
+		"agarnite_boots": {
+			"textures": "textures/items/agarnite_boots.png"
+		},
+		"agarnite_leggings": {
+			"textures": "textures/items/agarnite_leggings.png"
+		},
+		"agarnite_chestplate": {
+			"textures": "textures/items/agarnite_chestplate.png"
+		},
+		"agarnite_helmet": {
+			"textures": "textures/items/agarnite_helmet.png"
+		},
+		"solos_boots": {
+			"textures": "textures/items/solos_boots.png"
+		},
+		"solos_leggings": {
+			"textures": "textures/items/solos_leggings.png"
+		},
+		"solos_chestplate": {
+			"textures": "textures/items/solos_chestplate.png"
+		},
+		"solos_helmet": {
+			"textures": "textures/items/solos_helmet.png"
+		},
+		"yagazin_boots": {
+			"textures": "textures/items/yagazin_boots.png"
+		},
+		"yagazin_leggings": {
+			"textures": "textures/items/yagazin_leggings.png"
+		},
+		"yagazin_chestplate": {
+			"textures": "textures/items/yagazin_chestplate.png"
+		},
+		"yagazin_helmet": {
+			"textures": "textures/items/yagazin_helmet.png"
+		},
+		"nythium_boots": {
+			"textures": "textures/items/nythium_boots.png"
+		},
+		"nythium_leggings": {
+			"textures": "textures/items/nythium_leggings.png"
+		},
+		"nythium_chestplate": {
+			"textures": "textures/items/nythium_chestplate.png"
+		},
+		"nythium_helmet": {
+			"textures": "textures/items/nythium_helmet.png"
+		},
+		"opal_boots": {
+			"textures": "textures/items/opal_boots.png"
+		},
+		"opal_leggings": {
+			"textures": "textures/items/opal_leggings.png"
+		},
+		"opal_chestplate": {
+			"textures": "textures/items/opal_chestplate.png"
+		},
+		"opal_helmet": {
+			"textures": "textures/items/opal_helmet.png"
+		},
+		"soul": {
+			"textures": "textures/items/soul.png"
+		},
+		"godsteel": {
+			"textures": "textures/items/godsteel.png"
+		},
+		"deth": {
+			"textures": "textures/items/deth.png"
+		},
+		"sidron": {
+			"textures": "textures/items/sidron.png"
+		},
+		"damnashin": {
+			"textures": "textures/items/damnashin.png"
+		},
+		"eresite": {
+			"textures": "textures/items/eresite.png"
+		},
+		"agarnite": {
+			"textures": "textures/items/agarnite.png"
+		},
+		"solos": {
+			"textures": "textures/items/solos.png"
+		},
+		"yagazin": {
+			"textures": "textures/items/yagazin.png"
+		},
+		"nythium": {
+			"textures": "textures/items/nythium.png"
+		},
+		"opal": {
+			"textures": "textures/items/opal.png"
+		},
+		"silver": {
+			"textures": "textures/items/silver.png"
+		},
+		"soul_knight_sword": {
+			"textures": "textures/items/soul_knight_sword.png"
+		},
+		"reaper_scythe": {
+			"textures": "textures/items/reaper_scythe.png"
+		},
+		"titty_sword": {
+			"textures": "textures/items/titty_sword.png"
+		},
+		"underworld_potion": {
+			"textures": "textures/items/terapotion/underworld_potion.png"
+		},
+		"fire_potion": {
+			"textures": "textures/items/terapotion/fire_potion.png"
+		},
+		"nausea_potion": {
+			"textures": "textures/items/terapotion/nausea_potion.png"
+		},
+		"soul_potion": {
+			"textures": "textures/items/terapotion/soul_potion.png"
+		},
+		"sky_potion": {
+			"textures": "textures/items/terapotion/sky_potion.png"
+		},
+		"hell_potion": {
+			"textures": "textures/items/terapotion/hell_potion.png"
+		},
+		"smoke_potion": {
+			"textures": "textures/items/terapotion/smoke_potion.png"
+		},
+		"abnormal_potion": {
+			"textures": "textures/items/terapotion/abnormal_potion.png"
+		},
+		"frost_potion": {
+			"textures": "textures/items/terapotion/frost_potion.png"
+		},
+		"void_potion": {
+			"textures": "textures/items/terapotion/void_potion.png"
+		},
+		"drunk_potion": {
+			"textures": "textures/items/terapotion/drunk_potion.png"
+		},
+		"miner_potion": {
+			"textures": "textures/items/terapotion/miner_potion.png"
+		},
+		"chorus_potion": {
+			"textures": "textures/items/terapotion/chorus_potion.png"
+		},
+		"undying_potion": {
+			"textures": "textures/items/terapotion/undying_potion.png"
+		},
+		"light_potion": {
+			"textures": "textures/items/terapotion/light_potion.png"
+		},
+		"tornado_potion": {
+			"textures": "textures/items/terapotion/tornado_potion.png"
+		},
+		"limbo_potion": {
+			"textures": "textures/items/terapotion/limbo_potion.png"
+		},
+		"poison_resistance_potion": {
+			"textures": "textures/items/terapotion/poison_resistance_potion.png"
+		},
+		"ghast_potion": {
+			"textures": "textures/items/terapotion/ghast_potion.png"
+		},
+		"sun_potion": {
+			"textures": "textures/items/terapotion/sun_potion.png"
+		},
+		"beacon_potion": {
+			"textures": "textures/items/terapotion/beacon_potion.png"
+		},
+		"soul_vision_potion": {
+			"textures": "textures/items/terapotion/soul_vision_potion.png"
+		},
+		"selfnuke_potion": {
+			"textures": "textures/items/terapotion/selfnuke_potion.png"
+		},
+		"cross": {
+			"textures": "textures/items/teracross/cross"
+		},
+		"moon_cross": {
+			"textures": "textures/items/teracross/moon_cross"
+		},
+		"lightning_cross": {
+			"textures": "textures/items/teracross/lightning_cross"
+		},
+		"evocation_cross": {
+			"textures": "textures/items/teracross/evocation_cross"
+		},
+		"fire_cross": {
+			"textures": "textures/items/teracross/fire_cross"
+		},
+		"light_cross": {
+			"textures": "textures/items/teracross/light_cross"
+		},
+		"soul_ash_scroll": {
+			"textures": "textures/items/terascroll/soul_ash_scroll"
+		},
+		"dust_ash_scroll": {
+			"textures": "textures/items/terascroll/dust_ash_scroll"
+		},
+		"toxic_ash_scroll": {
+			"textures": "textures/items/terascroll/toxic_ash_scroll"
+		},
+		"meteor_ash_scroll": {
+			"textures": "textures/items/terascroll/meteor_ash_scroll"
+		},
+		"night_ash_scroll": {
+			"textures": "textures/items/terascroll/night_ash_scroll"
+		},
+		"light_ash_scroll": {
+			"textures": "textures/items/terascroll/light_ash_scroll"
+		},
+		"plasma_ash_scroll": {
+			"textures": "textures/items/terascroll/plasma_ash_scroll"
+		},
+		"wind_ash_scroll": {
+			"textures": "textures/items/terascroll/wind_ash_scroll"
+		},
+		"earth_ash_scroll": {
+			"textures": "textures/items/terascroll/earth_ash_scroll"
+		},
+		"netherite_ash_scroll": {
+			"textures": "textures/items/terascroll/netherite_ash_scroll"
+		},
+		"emerald_ash_scroll": {
+			"textures": "textures/items/terascroll/emerald_ash_scroll"
+		},
+		"thunder_ash_scroll": {
+			"textures": "textures/items/terascroll/thunder_ash_scroll"
+		},
+		"holy_ash_scroll": {
+			"textures": "textures/items/terascroll/holy_ash_scroll"
+		},
+		"nether_ash_scroll": {
+			"textures": "textures/items/terascroll/nether_ash_scroll"
+		},
+		"farland_ash_scroll": {
+			"textures": "textures/items/terascroll/farland_ash_scroll"
+		},
+		"ender_ash_scroll": {
+			"textures": "textures/items/terascroll/ender_ash_scroll"
+		},
+		"teleport_ash_scroll": {
+			"textures": "textures/items/terascroll/teleport_ash_scroll"
+		},
+		"sky_ash_scroll": {
+			"textures": "textures/items/terascroll/sky_ash_scroll"
+		},
+		"agility_ash_scroll": {
+			"textures": "textures/items/terascroll/agility_ash_scroll"
+		},
+		"stealth_ash_scroll": {
+			"textures": "textures/items/terascroll/stealth_ash_scroll"
+		},
+		"ice_ash_scroll": {
+			"textures": "textures/items/terascroll/ice_ash_scroll"
+		},
+		"fire_ash_scroll": {
+			"textures": "textures/items/terascroll/fire_ash_scroll"
+		},
+		"ash_scroll": {
+			"textures": "textures/items/terascroll/ash_scroll"
+		},
+		"ash_paper": {
+			"textures": "textures/items/terascroll/ash_paper"
+		},
+		"icy_ash_paper": {
+			"textures": "textures/items/terascroll/icy_ash_paper"
+		},
+		"moon_totem": {
+			"textures": "textures/items/teratotem/moon_totem"
+		},
+		"blood_totem": {
+			"textures": "textures/items/teratotem/blood_totem"
+		},
+		"hell_totem": {
+			"textures": "textures/items/teratotem/hell_totem"
+		},
+		"ice_totem": {
+			"textures": "textures/items/teratotem/ice_totem"
+		},
+		"ghast_totem": {
+			"textures": "textures/items/teratotem/ghast_totem"
+		},
+		"strength_totem": {
+			"textures": "textures/items/teratotem/strength_totem"
+		},
+		"netherite_totem": {
+			"textures": "textures/items/teratotem/netherite_totem"
+		},
+		"thunder_totem": {
+			"textures": "textures/items/teratotem/thunder_totem"
+		},
+		"air_totem": {
+			"textures": "textures/items/teratotem/air_totem"
+		},
+		"stone_totem": {
+			"textures": "textures/items/teratotem/stone_totem"
+		},
+		"fire_totem": {
+			"textures": "textures/items/teratotem/fire_totem"
+		},
+		"fire_akin_axe": {
+			"textures": "textures/items/fire_akin_axe"
+		},
+		"soul_hammer": {
+			"textures": "textures/items/soul_hammer"
+		},
+		"joseph_blade": {
+			"textures": "textures/items/joseph_blade"
+		},
+		"lightning_arrow": {
+			"textures": "textures/items/terabow/lightning_arrow"
+		},
+		"earth_arrow": {
+			"textures": "textures/items/terabow/earth_arrow"
+		},
+		"diamond_arrow": {
+			"textures": "textures/items/terabow/diamond_arrow"
+		},
+		"iron_arrow": {
+			"textures": "textures/items/terabow/iron_arrow"
+		},
+		"ice_arrow": {
+			"textures": "textures/items/terabow/ice_arrow"
+		},
+		"fire_arrow": {
+			"textures": "textures/items/terabow/fire_arrow"
+		},
+		"elemental_bow": {
+			"textures": "textures/items/terabow/elemental_bow"
+		}
+	}
+}

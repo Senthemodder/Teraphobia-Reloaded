@@ -1,0 +1,46 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:wither_skeleton",
+      "min_engine_version": "1.8.0",
+      "materials": { "default": "iron_golem",
+      "myc": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/skeleton/wither_skeleton",
+        "myc": "textures/entity/skeleton/wither_skeleton"
+      },
+      "geometry": {
+        "default": "geometry.skeleton.wither.myc",
+        "myc": "geometry.skeleton.wither.myc"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ]
+      },
+      "animations": {
+        "idle": "animation.zombie.idle",
+        "move": "animation.zombie.mover",
+
+        "attack1": "animation.zombie.attack1",
+        "attack2": "animation.zombie.attack2",
+        "attack3": "animation.zombie.attack3",
+        "attack4": "animation.zombie.attack4",
+        "attack5": "animation.mythic_mob.attack5"
+      },
+      "animation_controllers": [
+        { "idle": "controller.animation.tera_general.idle" },
+        { "move": "controller.animation.tera_general.move" },
+
+        {"attack":  "controller.animation.tera_general.dynamic_attack"}
+      ],
+      "render_controllers": [ "controller.render.iron_golemmyc", "controller.render.iron_golem" ],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 29
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tera:kraken",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/kraken"
+      },
+      "geometry": {
+        "default": "geometry.tera_flying_boss.kraken"
+      },
+			"spawn_egg": {
+				"base_color": "#4a4a4a",
+				"overlay_color": "#818181"
+			},
+			"sound_effects": {
+				"dash": "mob.wither.shoot",
+				"swoop": "mob.wither.death",
+				"summon": "mob.warden.death"
+			},
+      "animations": {
+
+        "ability1.con":  "controller.animation.tera_general.ability1",
+        "ability2.con":  "controller.animation.tera_general.ability2",
+        "ability3.con":  "controller.animation.tera_general.ability3",
+        "idle.con":  "controller.animation.tera_general.idle",
+        "death.con":  "controller.animation.tera_general.death",
+
+        "ability1": "animation.tera_flying_boss.ability1",
+        "ability2": "animation.tera_flying_boss.kraken_ability2",
+        "ability3": "animation.tera_flying_boss.ability3",
+        "idle": "animation.tera_flying_boss.kraken_idle",
+        "death": "animation.tera_flying_boss.death"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.modified_tcos0 = Math.clamp(((Math.cos(query.modified_distance_moved * 13.5) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 25.0), -12.5, 12.5);"
+        ],
+        "animate": [
+          "idle.con",
+          "del_attack_con",
+          "death.con",
+          "ability1.con",
+          "ability2.con",
+          "ability3.con"
+        ]
+      },
+      "render_controllers": [ "controller.render.iron_golem" ]
+    }
+  }
+}

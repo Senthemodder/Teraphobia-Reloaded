@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:ghast_potion",
+            "menu_category": {
+                "group": "itemGroup.name.potion",
+                "category": "equipment",
+                "is_hidden_in_commands": false
+            }
+        },
+		"components": {
+			
+			"minecraft:max_stack_size": 1,
+			"minecraft:entity_placer": {
+				"entity": "tera:ghast_potion_effect"
+			},
+			
+			"minecraft:glint": true,
+			
+			"minecraft:icon": "ghast_potion",
+			"minecraft:display_name": {
+				"value": "Potion of Ghast's Blessing\n\n§8§o-Use on ground\n-A grateful soul of a once suicidal beast gives you its own ability"
+			}
+		}
+	}
+}

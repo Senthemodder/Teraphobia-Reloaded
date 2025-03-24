@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.10",
+	"minecraft:recipe_shaped": {
+	  "description": {
+	  "identifier": "tera:limbo_exit"
+	  },
+  
+	  
+	  "tags": [ "crafting_table" ],
+	  "pattern": [
+		"RG"
+	  ],
+	  "key": {
+		"R": {
+		  "item": "tera:limbo_stone"
+		},
+		"G": {
+		  "item": "tera:solos"
+		}
+	  },
+	  "unlock": {
+		"context": "AlwaysUnlocked"
+	},
+	  "result": {
+		"item": "tera:limbo_exit"
+	  }
+	}
+  }
+  

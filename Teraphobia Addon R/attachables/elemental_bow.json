@@ -1,0 +1,59 @@
+{
+  "format_version": "1.10",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "tera:elemental_bow",
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/entity/elemental_bow",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.elemental_bow"
+      },
+      "animations": {
+        "wield": "controller.animation.elemental_bow.wield",
+        "wield_first_person": "animation.elemental_bow.wield_first_person",
+        "wield_third_person": "animation.elemental_bow.wield_third_person",
+        "fire_arrow": "animation.elemental_bow.fire_arrow",
+        "ice_arrow": "animation.elemental_bow.ice_arrow",
+        "lightning_arrow": "animation.elemental_bow.lightning_arrow",
+        "diamond_arrow": "animation.elemental_bow.diamond_arrow",
+        "iron_arrow": "animation.elemental_bow.iron_arrow",
+        "earth_arrow": "animation.elemental_bow.earth_arrow"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.charge_amount = math.clamp((query.main_hand_item_max_duration - (query.main_hand_item_use_duration - query.frame_alpha + 1.0)) / 10.0, 0.0, 1.0f);"
+        ],
+        "animate": [
+          "wield",
+          {
+            "fire_arrow": "query.get_equipped_item_name(1) != 'fire_arrow'"
+          },
+          {
+            "ice_arrow": "query.get_equipped_item_name(1) != 'ice_arrow'"
+          },
+          {
+            "lightning_arrow": "query.get_equipped_item_name(1) != 'lightning_arrow'"
+          },
+          {
+            "diamond_arrow": "query.get_equipped_item_name(1) != 'diamond_arrow'"
+          },
+          {
+            "iron_arrow": "query.get_equipped_item_name(1) != 'iron_arrow'"
+          },
+          {
+            "earth_arrow": "query.get_equipped_item_name(1) != 'earth_arrow'"
+          }
+        ]
+      },
+      "render_controllers": [
+         "controller.render.item_default"
+       ]
+    }
+  }
+}

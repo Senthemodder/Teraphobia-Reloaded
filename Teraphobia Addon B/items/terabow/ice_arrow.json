@@ -1,0 +1,22 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "tera:ice_arrow",
+            "menu_category": {
+				"category": "equipment"
+			}
+        },
+        "components": {
+            "minecraft:allow_off_hand": true,
+			
+            "minecraft:icon": {
+                "texture": "ice_arrow"
+            },
+            "minecraft:display_name": {
+                "value": "Ice Arrow\n\n§8§o-Freezing earthly material, nearby targets will be frozen in place"
+            },
+            "minecraft:max_stack_size": 64
+        }
+    }
+}

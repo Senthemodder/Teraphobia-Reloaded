@@ -1,0 +1,108 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "tera:ice_totem",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball"
+		  },
+		
+		  "component_groups": {
+		   "minecraft:exploding": {
+			"minecraft:is_tamed": {
+	  
+			},
+			"minecraft:explode": {
+			 "fuse_length": 0.1,
+			 "fuse_lit": true,
+			 "power": 0,
+			 "causes_fire": false,
+			 "breaks_blocks": false,
+			 "fire_affected_by_griefing": true,
+			 "destroy_affected_by_griefing": true
+			}
+		   }
+		  },
+		
+		  "components": {
+		   "minecraft:collision_box": {
+			"width": 0.2,
+			"height": 0.2
+		   },
+		   "minecraft:projectile": {
+			
+			"on_hit": {
+			 "definition_event": {
+			  "affect_projectile": true,
+			  "event_trigger": {
+					"event": "minecraft:explode",
+					"target": "self"
+			  }
+			 }
+			},
+			"power": 1.6,
+			"gravity": 0.0,
+			"inertia": 1,
+			"liquid_inertia": 1,
+			"uncertainty_base": 0,
+			"uncertainty_multiplier": 0,
+			"anchor": 1,
+			"offset": [ 0, -0.1, 0 ],
+			"reflect_on_hurt": true,
+			"catch_fire": true
+		   },
+		   "minecraft:physics": {
+		   },
+		   "minecraft:pushable": {
+			"is_pushable": true,
+			"is_pushable_by_piston": true
+		   },
+		   "minecraft:conditional_bandwidth_optimization": {
+			"default_values": {
+			  "max_optimized_distance": 80.0,
+			  "max_dropped_ticks": 10,
+			  "use_motion_prediction_hints": true
+			}
+		  }
+		  },
+		  "events": {
+			      "minecraft:explode": {
+        "queue_command": {
+          "command": [
+            ""
+          ]
+      },
+        "add": {
+         "component_groups": [
+          "minecraft:exploding"
+         ]
+        }
+       },
+      "minecraft:entity_spawned": {
+				"add": {
+         "component_groups": [
+          "minecraft:exploding"
+         ]
+        },
+				"queue_command": {
+					"command": [
+						"execute as @e[r=30,rm=2,family=mob] run execute at @s positioned as @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 ice [] hollow",
+						"effect @e[r=30,rm=2,family=mob] slowness 10 10",
+						"execute as @e[r=30,rm=2,family=player] run execute at @s positioned as @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 ice [] hollow",
+						"effect @e[r=30,rm=2,family=player] slowness 10 10",
+						"particle minecraft:totem_particle ~~~",
+						"particle minecraft:totem_particle ~~1~",
+						"particle minecraft:totem_particle ~1~~",
+						"particle minecraft:totem_particle ~-1~~",
+						"particle minecraft:totem_particle ~~~1",
+						"particle minecraft:totem_particle ~~~-1",
+						"playsound random.totem @a[r=35] ~~~"
+					],
+"target":"other"
+				}
+			}
+		}
+	}
+}

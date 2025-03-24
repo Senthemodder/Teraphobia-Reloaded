@@ -1,0 +1,26 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+      "description": {
+        "identifier": "tera:light_cross",
+		"menu_category": {
+			"category": "equipment"
+		}
+      },
+      "components": {
+		"minecraft:glint": true,
+		"minecraft:icon": "light_cross",
+		"minecraft:display_name": {
+			"value": "Light Cross\n\n§8§o-Light from On High shall come and strike nearby"
+		},
+        "minecraft:max_stack_size": 4,
+        "minecraft:projectile": {
+          "projectile_entity": "tera:light_cross"
+        },
+        "minecraft:throwable": {
+          "do_swing_animation": true
+        }
+      }
+    }
+  }
+  

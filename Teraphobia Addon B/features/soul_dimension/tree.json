@@ -1,0 +1,61 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:tree_feature": {
+    "description": {
+      "identifier": "tera:soul_dimension/tree"
+    },
+    "mega_trunk": {
+      "trunk_width": 2,
+      "trunk_height": {
+        "base": 13,
+        "intervals": [
+          3,
+          15
+        ]
+      },
+      "trunk_block": {
+        "name": "minecraft:warped_stem"
+      }
+    },
+    "mega_pine_canopy": {
+      "canopy_height": {
+        "range_min": 13,
+        "range_max": 18
+      },
+      "base_radius": 0,
+      "radius_step_modifier": 3.5,
+      "core_width": 2,
+      "leaf_block": {
+        "name": "tera:soul_leaves"
+      }
+    },
+    "base_block": "tera:soul_grass",
+    "base_cluster": {
+      "may_replace": [
+        "tera:soul_grass",
+        {
+          "name": "minecraft:dirt",
+          "states": {
+            "dirt_type": "normal"
+          }
+        }
+      ],
+      "num_clusters": 5,
+      "cluster_radius": 2
+    },
+    "may_grow_on": [
+      "tera:soul_grass",
+      "minecraft:dirt"
+    ],
+    "may_replace": [
+      "minecraft:air",
+      "tera:soul_leaves",
+      "tera:soul_foliage"
+    ],
+    "may_grow_through": [
+      "minecraft:dirt",
+      "tera:soul_grass",
+      "tera:soul_foliage"
+    ]
+  }
+}

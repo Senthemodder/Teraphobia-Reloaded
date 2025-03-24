@@ -1,0 +1,42 @@
+{
+	"format_version": "1.20.20",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "tera:tera_end/flesh_rock",
+			"places_feature": "tera:tera_end/flesh_rock"
+		},
+
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": {
+				"any_of": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "the_end"
+					}
+				]
+			}
+		},
+
+		"distribution": {
+			"iterations": "(v.originx > -50000 && v.originz > -50000 && v.originx < 50000 && v.originz < 50000) * (t.biome_idx == 0 && (math.abs(v.originx) > 700 || math.abs(v.originz) > 700)*5)",
+			"x": {
+			  "distribution": "fixed_grid",
+			  "extent": [
+				0,
+				15
+			  ]
+			},
+			"y": "q.heightmap(v.worldx, v.worldz)",
+			"z": {
+			  "distribution": "fixed_grid",
+			  "extent": [
+				0,
+				15
+			  ]
+			}
+		}
+	}
+}

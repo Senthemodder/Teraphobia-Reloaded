@@ -1,0 +1,57 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:feature_rules": {
+      "description": {
+          "identifier": "tera:joseph_loader",
+          "places_feature": "tera:joseph_loader"
+      },
+      "conditions": {
+          "placement_pass": "final_pass"
+          /*"minecraft:biome_filter": [
+              {
+                "any_of": [
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "overworld"
+                  },
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "overworld_generation"
+                  },
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "caves"
+                  },
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "ocean"
+                  }
+                ]
+              }
+            ]*/
+          },
+          "distribution": {
+						"iterations": "
+							v.target_x = 0;
+							v.target_z = -500;
+							v.target_y = 62;
+							
+							v.chunk_x = math.mod(v.target_x, 16) + 16 * (v.target_x < 0);
+							v.chunk_z = math.mod(v.target_z, 16) + 16 * (v.target_z < 0);
+							
+							return
+								v.originx == 16 * math.floor(v.target_x / 16)
+								&& v.originz == 16 * math.floor(v.target_z / 16)
+							;
+						",
+						
+						"x": "v.chunk_x",
+						"z": "v.chunk_z",
+						"y": "q.heightmap - 24"
+				}
+  }
+}

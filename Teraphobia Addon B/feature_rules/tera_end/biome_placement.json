@@ -1,0 +1,40 @@
+
+{
+	"format_version": "1.20.20",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "tera:tera_end/biome_placement",
+			"places_feature": "tera:tera_end/biomes/determinant"
+		},
+		"conditions": {
+			"placement_pass": "before_surface_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"test": "has_biome_tag",
+						"value": "the_end",
+						"operator": "=="
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": "(v.originx > -50000 && v.originz > -50000 && v.originx < 50000 && v.originz < 50000)*256",
+			"x": {
+				"distribution": "fixed_grid",
+				"extent": [
+					0,
+					15
+				]
+			},
+			"y": "q.heightmap(v.worldx, v.worldz) - 1",
+			"z": {
+				"distribution": "fixed_grid",
+				"extent": [
+					0,
+					15
+				]
+			}
+		}
+	}
+}

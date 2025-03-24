@@ -1,0 +1,17 @@
+{
+	"format_version": "1.20.20",
+	"minecraft:weighted_random_feature": {
+	  "description": {
+		"identifier": "tera:limbo/random_ruin"
+	  },
+	  "features": [
+		[ "tera:limbo/ruin/limbo_ruin1", 24 ],
+		[ "tera:limbo/ruin/limbo_ruin2", 24 ],
+		[ "tera:limbo/ruin/limbo_ruin3", 24 ],
+		[ "tera:limbo/ruin/limbo_ruin4", 24 ],
+		[ "tera:limbo/ruin/limbo_ruin5", 24 ],
+		[ "tera:limbo/ruin/limbo_ruin6", 24 ],
+		[ "tera:limbo/ruin/limbo_ruin7", 24 ]
+	  ]
+	}
+  }

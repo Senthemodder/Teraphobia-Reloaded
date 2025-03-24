@@ -1,0 +1,71 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tera:taken",
+			"materials": {
+				"default": "iron_golem"
+			},
+			"textures": {
+				"default": "textures/entity/taken"
+			},
+			"geometry": {
+				"default": "geometry.complex_human_enemy.small_texture"
+			},
+			"sound_effects": {
+				"ability1": "mob.wither.break_block",
+				"ability2": "ambient.weather.lightning.impact",
+				"ability3": "mob.warden.roar",
+				"ability4": "mob.wither.shoot"
+			},
+			"particle_effects": {
+			  "transform": "tera:soulfire_emitter"
+			},
+			"scripts": {
+				"pre_animation": ["variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"],
+				"animate": [
+					"move.con", 
+					"idle.con", 
+					"attack.con", 
+					"stun.con", 
+					"ability1.con", 
+					"ability2.con", 
+					"ability3.con", 
+					"ability4.con", 
+					"death.con",
+					"flame"
+				]
+			},
+			"animations": {
+				"move": "animation.complex_human_enemy.creepy_move",
+				"idle": "animation.basic_human_enemy.less_creepy_idle",
+				"attack1": "animation.basic_human_enemy.savage_attack1",
+				"attack2": "animation.basic_human_enemy.savage_attack2",
+				"attack3": "animation.basic_human_enemy.savage_attack3",
+				"stun": "animation.complex_human_enemy.stun",
+				"ability1": "animation.complex_human_enemy.ability1",
+				"ability2": "animation.complex_human_enemy.ability2",
+				"ability3": "animation.complex_human_enemy.ability3",
+				"ability4": "animation.complex_human_enemy.ability4",
+				"death": "animation.complex_human_enemy.death",
+
+				"move.con": "controller.animation.tera_general.move",
+				"idle.con": "controller.animation.tera_general.idle",
+				"attack.con": "controller.animation.tera_general.dynamic_attack",
+				"stun.con": "controller.animation.tera_general.stun",
+				"ability1.con": "controller.animation.tera_general.ability1",
+				"ability2.con": "controller.animation.tera_general.ability2",
+				"ability3.con": "controller.animation.tera_general.ability3",
+				"ability4.con": "controller.animation.tera_general.ability4",
+				"death.con": "controller.animation.tera_general.death",
+        "flame": "controller.animation.tera_partblaze.particle"
+			},
+			"render_controllers": ["controller.render.default"],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"base_color": "#006b7d",
+				"overlay_color": "#0be8f5"
+			}
+		}
+	}
+}

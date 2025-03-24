@@ -1,0 +1,49 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "tera:godsteel_chestplate",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.chestplate"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+                "tags": [
+            "mythic:myc_hev"
+        ]
+    },
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "godsteel_chestplate"
+			},
+			"minecraft:display_name": {
+				"value": "Godsteel Chestplate\n\n§8§o-From the blood of Samael, you will be seen from On High like an angel...\n-Full set needed for effect\n-Will apply the Soul-Vision effect\n-All negative effects cannot harm you\n-You will never starve\n-You will heal over time"
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.chest",
+				"protection": 11
+			},
+			"minecraft:enchantable": {
+				"slot": "armor_torso",
+				"value": 9
+			},
+			"minecraft:durability": {
+				"damage_chance": {
+					"min": 0,
+					"max": 100
+			},
+				"max_durability": 4200
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": ["tera:godsteel"],
+						"repair_amount": 999
+					}
+				]
+			}
+		}
+	}
+}

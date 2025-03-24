@@ -1,0 +1,41 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:feature_rules": {
+      "description": {
+          "identifier": "tera:soul_knight_loader",
+          "places_feature": "tera:soul_knight_loader"
+      },
+      "conditions": {
+          "placement_pass": "first_pass",
+          "minecraft:biome_filter": [
+              {
+                "any_of": [
+                  {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "the_end"
+                  }
+                ]
+              }
+            ]
+          },
+          "distribution": {
+            "iterations": "
+            v.target_x = 75000;
+            v.target_z = -24800;
+            v.target_y = 182;
+      
+            v.chunk_x = math.mod(v.target_x, 16) + 16 * (v.target_x < 0);
+            v.chunk_z = math.mod(v.target_z, 16) + 16 * (v.target_z < 0);
+      
+            return
+            v.originx == 16 * math.floor(v.target_x / 16) &&
+            v.originz == 16 * math.floor(v.target_z / 16);
+            ",
+      
+            "x": "v.chunk_x",
+            "z": "v.chunk_z",
+            "y": "v.target_y"
+          }
+  }
+}
